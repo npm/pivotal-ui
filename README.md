@@ -23,9 +23,8 @@ To contribute, see the [contributing readme](CONTRIBUTING.md).
 
 # Using Pivotal UI on your project
 
-The prefered way to consume Pivotal UI is through NPM, even for Rails
-projects. Using NPM to install PUI will ensure proper dependency management on
-your project.
+The prefered way to consume Pivotal UI is through npm. Using npm to install PUI
+will ensure proper dependency management on your project.
 
 1. Run `npm init` if you don't have a package.json file already.
 
