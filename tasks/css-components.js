@@ -4,7 +4,6 @@ import mergeStream from 'merge-stream';
 import runSequence from 'run-sequence';
 import license from './helpers/license-helper';
 import {readme, packageJson} from './helpers/css-components-helper';
-import {publishPackages, publishFakePackages} from './helpers/publish-helper';
 import path from 'path';
 
 const plugins = require('gulp-load-plugins')();
@@ -77,18 +76,3 @@ gulp.task('css-build', callback => runSequence('css-clean', [
   'css-build-assets',
   'css-build-variables-and-mixins-package'
 ], callback));
-
-gulp.task('css-publish', ['css-build'], async () => {
-  if (!argv.component) {
-    return new Error('Usage: gulp css-publish --component <component-name>');
-  }
-
-  const publish = argv.dry ? publishFakePackages() : publishPackages();
-
-  await publish([
-    {
-      name: `pui-css-${argv.component}`,
-      dir: path.join('dist', 'css', argv.component)
-    }
-  ]);
-});
