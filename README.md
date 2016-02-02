@@ -12,7 +12,6 @@ To contribute, see the [contributing readme](CONTRIBUTING.md).
 - [Check it out!](#check-it-out)
 - [Using Pivotal UI on your project](#using-pivotal-ui-on-your-project)
   - [Customizing your PUI build](#customizing-your-pui-build)
-- [Legacy - Using Pivotal UI on your project](#legacy---using-pivotal-ui-on-your-project)
 - [Including SCSS variables and mixins (optional, beta)](#including-scss-variables-and-mixins-optional-beta)
 - [Contributing](#contributing)
 - [Copyright Notice](#copyright-notice)
@@ -143,36 +142,6 @@ app that only has typography and buttons.
    If you're using gulp or grunt or some other task runner,
    look at the [Dr. Frankenstyle docs](http://github.com/pivotal-cf/dr-frankenstyle)
    for how to make this step part of your task workflow.
-
-# Legacy - Using Pivotal UI on your project
-
-If you really don't want to use NPM, you can use our compiled PUI monolith.
-Be warned, you will have to manage updates and dependencies yourself.
-
-1. [Download the latest release](https://github.com/pivotal-cf/pivotal-ui/releases).
-1. Unzip the release archive and move the resulting directory into your project.
-1. Link to the css file in your html template to include the styles.
-1. Add a script tag to your html template to use the javascript.
-1. Use the css classes (reference the [styleguide](https://github.com/pivotal-cf/pivotal-ui#styleguide) for examples and usage)
-
-```html
-<html>
-  <head>
-    <title>...</title>
-    <link rel="stylesheet" href="/path/to/release/pivotal-ui.css">
-    <script src="/path/to/release/pivotal-ui.js"></script>
-  </head>
-  <body>
-    <p class='type-brand-1'>Hello, world!</p>
-  </body>
-</html>
-```
-
-You'll need to maintain the structure in the release directory to have fonts
-and assets work properly. **Do not modify the release files directly**. If you
-need a component and you cannot find it in the styleguide, write your own
-styles and javascript separately. Doing so will make it easier to update to
-newer versions.
 
 # Including SCSS variables and mixins (optional, beta)
 
