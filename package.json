@@ -176,7 +176,8 @@
   "scripts": {
     "test": "gulp ci --fatal",
     "test-accessibility": "gulp accessibility-ci || :",
-    "pui-update": "scripts/pui-update.js"
+    "pui-update": "scripts/pui-update.js",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
