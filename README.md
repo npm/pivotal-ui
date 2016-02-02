@@ -10,9 +10,8 @@ To contribute, see the [contributing readme](CONTRIBUTING.md).
 # Table of Contents
 
 - [Check it out!](#check-it-out)
-- [Using Pivotal UI on your project (without React)](#using-pivotal-ui-on-your-project-without-react)
+- [Using Pivotal UI on your project](#using-pivotal-ui-on-your-project)
   - [Customizing your PUI build](#customizing-your-pui-build)
-- [Special instructions for Rails users](#special-instructions-for-rails-users)
 - [Legacy - Using Pivotal UI on your project](#legacy---using-pivotal-ui-on-your-project)
 - [Including SCSS variables and mixins (optional, beta)](#including-scss-variables-and-mixins-optional-beta)
 - [Contributing](#contributing)
@@ -144,10 +143,6 @@ app that only has typography and buttons.
    If you're using gulp or grunt or some other task runner,
    look at the [Dr. Frankenstyle docs](http://github.com/pivotal-cf/dr-frankenstyle)
    for how to make this step part of your task workflow.
-
-# Special instructions for Rails users
-
-Coming soon!
 
 # Legacy - Using Pivotal UI on your project
 
