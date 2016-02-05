@@ -56,19 +56,19 @@ parent: type
 Set font sizes using headings and modifier classes.
 
 ```html_example_table
-<h1 class="title">h1.title 2.625em (base: 42px)</h1>
+<h1 class="title">h1.title 42px</h1>
 
-<h1>h1 2.25em (base: 36px)</h1>
+<h1>h1 36px</h1>
 
-<h2>h2 1.35em (base: 21px)</h2>
+<h2>h2 21px</h2>
 
-<h3>h3 1.25em (base: 20px)</h3>
+<h3>h3 20px</h3>
 
-<h4>h4 1.125em (base: 18px)</h4>
+<h4>h4 18px</h4>
 
-<h5>h5 1em (base: 16px)</h5>
+<h5>h5 16px</h5>
 
-<h6>h6 .825em (base: 13px)</h6>
+<h6>h6 13px</h6>
 
 <p>base font size 16px</p>
 

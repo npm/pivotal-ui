@@ -305,28 +305,28 @@ $headings-padding:        1em * ($former-headings-line-height - $headings-line-h
 $headings-color:          null;
 
 //TODO: create a mixin that will determine multiplers based on px-size
-$font-size-h1:            2.25em;
+$font-size-h1:            36px;
 $font-weight-h1:          400;
 
-$font-size-h2:            1.35em;
+$font-size-h2:            21px;
 $font-weight-h2:          400;
 
-$font-size-h3:            1.25em;
+$font-size-h3:            20px;
 $font-weight-h3:          400;
 
-$font-size-h4:            1.125em;
+$font-size-h4:            18px;
 $font-weight-h4:          400;
 
-$font-size-h5:            1em;
+$font-size-h5:            16px;
 $font-weight-h5:          400;
 
-$font-size-h6:            .8125em;
+$font-size-h6:            13px;
 $font-weight-h6:          400;
 
 $line-height-base:        1.5; //1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
-$font-size-title:         2.625em;
+$font-size-title:         42px;
 
 // Whitespace
 // -------------------------
