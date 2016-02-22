@@ -99,6 +99,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
+    "git-create-deploy-branch": "^1.0.1",
     "lodash": "^2.4.2",
     "prismjs": "0.0.1",
     "pui-css-alerts": "2.0.0",
@@ -174,6 +175,8 @@
     "pui-react-typography": "2.0.0"
   },
   "scripts": {
+    "deploy:staging": "git create-deploy-branch && git push origin +deploy/master:deploy-staging",
+    "start": "node server.js",
     "test": "gulp ci --fatal",
     "test-accessibility": "gulp accessibility-ci || :",
     "pui-update": "scripts/pui-update.js",
