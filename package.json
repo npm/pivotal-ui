@@ -31,7 +31,7 @@
     "event-stream": "^3.3.1",
     "font-awesome": "^4.3.0",
     "glob": "^5.0.10",
-    "gulp": "^3.8.8",
+    "gulp": "^3.9.1",
     "gulp-babel": "^5.1.0",
     "gulp-bump": "^0.1.11",
     "gulp-compass": "^1.3.1",
@@ -176,7 +176,8 @@
   "scripts": {
     "test": "gulp ci --fatal",
     "test-accessibility": "gulp accessibility-ci || :",
-    "pui-update": "scripts/pui-update.js"
+    "pui-update": "scripts/pui-update.js",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
