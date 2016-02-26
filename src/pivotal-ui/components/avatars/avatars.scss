@@ -25,7 +25,6 @@ Regular avatars are expected to by 100px by 100px.
 
 */
 .avatar {
-  border: $avatar-border;
   box-sizing: border-box;
 }
 
@@ -54,8 +53,24 @@ Regular avatars are expected to by 100px by 100px.
 
 /*doc
 ---
+title: Avatar Sizes
+name: avatar_01_sizes
+parent: avatar
+---
+
+Avatars can be any size. In order to change to a custom size, change the `height` and `width`. The following are the typical sizes:
+
+```html_example
+<img alt="..." class="img-circle avatar" height="100" src="http://placehold.it/100x100" width="100">
+<img alt="..." class="img-circle avatar" height="45" src="http://placehold.it/45x45" width="45">
+<img alt="..." class="img-circle avatar" height="20" src="http://placehold.it/20x20" width="20">
+```
+*/
+
+/*doc
+---
 title: Small Gravatar
-name: avatar_01_gravatar_small
+name: avatar_10_gravatar_small
 parent: avatar
 ---
 
@@ -81,7 +96,7 @@ To use in a view, simply call
 /*doc
 ---
 title: Small with Envelope
-name: avatar_02_gravatar_small_with_envelope
+name: avatar_11_gravatar_small_with_envelope
 parent: avatar
 ---
 
@@ -146,7 +161,7 @@ To use in a view, simply call
 /*doc
 ---
 title: Large Gravatar
-name: avatar_03_gravatar_large
+name: avatar_12_gravatar_large
 parent: avatar
 ---
 
