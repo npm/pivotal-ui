@@ -111,7 +111,7 @@ You can use inline lists to lay out elements. Here's an example of a header next
 /*doc
 ---
 title: Ordered
-name: list_ordered
+name: list_01_ordered
 parent: list
 ---
 
@@ -128,14 +128,17 @@ parent: list
     meep
   </li>
 </ol>
+
+<p>There is some space between a list and text following it.</p>
 ```
+
 
 */
 
 /*doc
 ---
 title: Unordered
-name: list_unordered
+name: list_02_unordered
 parent: list
 ---
 
@@ -155,8 +158,11 @@ parent: list
 
 */
 
+
+
 .list-unordered {
   padding-left: 0;
+  list-style-type: disc;
   > li {
     margin-left: 17px;
   }
@@ -164,8 +170,44 @@ parent: list
 
 /*doc
 ---
+title: Indentation
+name: list_03_indentation
+parent: list
+---
+
+Nested bullets follow GH indentation.
+
+```html_example
+<ol>
+  <li>
+    feep
+  </li>
+  <li>
+    fop
+  </li>
+  <li>
+    meep
+    <ul class="list-unordered">
+      <li>
+        beep
+      </li>
+      <li>
+        boop
+      </li>
+      <li>
+        bop
+      </li>
+    </ul>
+  </li>
+</ol>
+```
+
+*/
+
+/*doc
+---
 title: Unstyled
-name: list_unstyled
+name: list_04_unstyled
 parent: list
 ---
 
