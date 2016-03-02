@@ -56,23 +56,23 @@ parent: type
 Set font sizes using headings and modifier classes.
 
 ```html_example_table
-<h1 class="title">h1.title 42px</h1>
+<h1 class="title">h1.title 48px</h1>
 
-<h1>h1 31px</h1>
+<h1>h1 42px</h1>
 
-<h2>h2 25px</h2>
+<h2>h2 36px</h2>
 
-<h3>h3 20px</h3>
+<h3>h3 26px</h3>
 
-<h4>h4 18px</h4>
+<h4>h4 20px</h4>
 
-<h5>h5 16px</h5>
+<h5>h5 18px</h5>
 
-<h6>h6 13px</h6>
+<h6>h6 14px</h6>
 
 <p>base font size 16px</p>
 
-<p class="type-sm">small text 14px</p>
+<p class="type-sm">small text 13px</p>
 
 <p class="type-xs">extra small text 12px</p>
 ```
@@ -139,33 +139,6 @@ h4, .h4, h5, .h5, h6, .h6 {
     margin-top: $whitespace-screen-sm-l;
     margin-bottom: $whitespace-screen-sm-l;
   }
-}
-
-// We handle font-weight here, bootstrap handles font-size and color
-
-h1 {
-  //If you add new h1 styles, make sure to update the h1 mixin
-  font-weight: $font-weight-h1;
-}
-
-h2 {
-  font-weight: $font-weight-h2;
-}
-
-h3 {
-  font-weight: $font-weight-h3;
-}
-
-h4 {
-  font-weight: $font-weight-h4;
-}
-
-h5 {
-  font-weight: $font-weight-h5;
-}
-
-h6 {
-  font-weight: $font-weight-h6;
 }
 
 

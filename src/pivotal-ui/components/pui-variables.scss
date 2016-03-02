@@ -287,7 +287,7 @@ $font-size-base:          16px !default;
 $font-size-extra-large:   ceil($font-size-base * 1.5) !default; // ~21px
 $font-size-large:         ceil($font-size-base * 1.25) !default; // ~18px
 $font-size-medium:        ceil($font-size-base * 1.14) !default; // ~16px
-$font-size-small:         14px;
+$font-size-small:         13px;
 $font-size-extra-small:   12px;
 
 
@@ -298,35 +298,35 @@ $font-weight-em-max:      900;
 
 
 $headings-font-family:    null;
-$headings-font-weight:    400 !default;
+$headings-font-weight:    600 !default;
 $former-headings-line-height: 1.5;
 $headings-line-height:    1.286 !default;
 $headings-padding:        1em * ($former-headings-line-height - $headings-line-height) / 2;
 $headings-color:          null;
 
 //TODO: create a mixin that will determine multiplers based on px-size
-$font-size-h1:            31px;
+$font-size-h1:            42px;
 $font-weight-h1:          400;
 
-$font-size-h2:            25px;
+$font-size-h2:            36px;
 $font-weight-h2:          400;
 
-$font-size-h3:            20px;
+$font-size-h3:            26px;
 $font-weight-h3:          400;
 
-$font-size-h4:            18px;
+$font-size-h4:            20px;
 $font-weight-h4:          400;
 
-$font-size-h5:            16px;
+$font-size-h5:            18px;
 $font-weight-h5:          400;
 
-$font-size-h6:            13px;
+$font-size-h6:            14px;
 $font-weight-h6:          400;
 
-$line-height-base:        1.5; //1.428571429 !default; // 20/14
-$line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
+$line-height-base:        1.35;
+$line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~22px
 
-$font-size-title:         42px;
+$font-size-title:         48px;
 
 // Whitespace
 // -------------------------
