@@ -1,12 +1,11 @@
 import gulp from 'gulp';
 import promisify from 'es6-promisify';
-import npm from 'npm';
+// import npm from 'npm';
 import runSequence from 'run-sequence';
 import glob from 'glob';
 import fs from 'fs';
 
 import {getPackageInfo, publishFakePackages} from './helpers/publish-helper';
-import localNpm from './helpers/local-npm-helper';
 
 gulp.task('my-name-is-nic-i-do-acceptance', (done) =>
     runSequence(
@@ -31,12 +30,10 @@ gulp.task('release-push-fake-npm-publish', ['css-build', 'react-build'], async (
 });
 
 gulp.task('clean-local', async () => {
-  const npmLoad = promisify(npm.load);
-  await npmLoad({});
 
-  const cleanPromise = promisify(npm.commands.cache.clean);
+  const cleanPromise = async function () {
+    return await promisify(exec)(`npm cache clean`);
+  };
 
-  await localNpm.clean();
-
-  await cleanPromise([]);
+  await cleanPromise();
 });
