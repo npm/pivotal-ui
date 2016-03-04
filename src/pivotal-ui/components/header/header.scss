@@ -1,0 +1,419 @@
+@import "../pui-variables";
+
+/*doc
+---
+title: Header
+name: header
+categories:
+ - css_base_header
+ - css_all
+---
+
+```html_example
+
+  <header class="logged-in">
+    <div class="header-item brand-container">
+      <div class="logo-container" id='npm-logo'>
+        <a href="/"><img src="/static/images/npm-logo.svg" alt="npm logo" /></a>
+      </div>
+    </div>
+
+    <div class="header-item header-search-container">
+      <form class="site-search" id="npm-search" action="/search" method="get" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+        <meta itemprop="target" content="{{env.CANONICAL_HOST}}/search?q={q}">
+        <div id="site-search-container" class="form-group form-group-search">
+            <input class="searchInput" name="q" value="{{q}}" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" />
+        </div>
+        <input type="submit"/>
+      </form>
+    </div>
+
+    <div class="header-item user-info-container">
+      <div class="user-info">
+          <div class="drop-down-menu-container">
+
+            <a class="drop-down-menu-toggle" href="#user-info-menu"><span class="a11y-only">Toggle User Menu</span>
+              <span class="user-info-salutation" data-user-name="wombat" data-is-paid="true">Greetings, wombat</span>
+              <img alt="" src="{{user.avatar.small}}" />
+            </a>
+
+            <div id="user-info-menu" class="drop-down-menu">
+              <div class="drop-down-menu-section">
+                <ul>
+                  <li><a href="/~wombat">profile</a></li>
+                  <li><a href="/profile-edit">personal info</a></li>
+                  <li><a href="/settings/billing">billing</a></li>
+                  <li><a href="/settings/tokens">tokens</a></li>
+                  <li><form method="POST" action="/logout"><button type="submit" class="btn-link">logout</button></form></li>
+                </ul>
+              </div> <!-- .drop-down-menu-section -->
+            </div> <!-- .drop-down-menu -->
+          </div> <!-- .drop-down-menu-container -->
+      </div> <!-- .user-info -->
+    </div>
+
+    <div class="header-item header-nav-menu-container">
+      <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">node package manager</a>
+
+      <div class="nav-menu-container">
+        <a class="nav-toggle drop-down-menu-toggle" href="#product-navigation"><span class="a11y-only">Toggle Navigation</span>
+          <img alt="mobile navigation menu" src="/static/images/mobile-menu.png" />
+        </a>
+
+        <div class="drop-down-menu-container">
+        <span>BOOM</span>
+          <nav id="product-navigation" class="product-navigation drop-down-menu">
+            <ul class="drop-down-menu-section products-list">
+              <li><a href="/npm/on-site">npm On-Site</a></li>
+              <li><a href="/npm/private-packages" data-event-trigger="click" data-event-name="private-modules-nav-link">npm Private Packages</a></li>
+              <li><a href="/npm/open-source">npm Open Source</a></li>
+              <li><a href="https://docs.npmjs.com">documentation</a></li>
+              <li><a href="/support">support</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+  ```
+
+  */
+
+header {
+  padding: .875em 20px .0625em;
+  border-bottom: 1px solid lightgrey;
+  background: header-color;
+  color: header-text-color;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: magenta;
+}
+
+.header-item {
+  flex: 1 auto;
+}
+
+.brand-container {
+  order: 1;
+  width: 50%;
+}
+
+.header-search-container {
+  order: 4;
+}
+
+.user-info-container {
+  order: 2;
+  width: calc(50% - 60px);
+  text-align: right;
+}
+
+.header-nav-menu-container {
+  order: 3;
+  width: 60px;
+  text-align: right;
+}
+
+ul, li, ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: header-subtle-text-color;
+
+  &:hover {
+    color: header-text-color;
+    text-decoration: none;
+  }
+}
+
+.logo-container {
+  padding: 0;
+  width: 80px;
+  vertical-align: middle;
+
+  img {
+    max-width: 100%;
+  }
+
+  .cobrand {
+    font-weight: bold;
+  }
+
+  .cobrand::before {
+    content: "♥︎";
+    font-size: 150%;
+    color: npmred;
+    vertical-align: middle;
+    padding: 0 0.5em;
+  }
+}
+
+.npm-expansions {
+  display: none;
+  text-align: left;
+}
+
+.nav-toggle {
+  width: 54px;
+  padding: 0 5px;
+
+  img {
+    max-width: 100%;
+  }
+
+  &:after {
+    content: none;
+  }
+}
+
+.nav-toggle.toggle-is-open {
+  &:after {
+    content: none;
+  }
+}
+
+.site-search {
+  position: relative;
+}
+
+.site-search input[type=search] {
+  background-color: transparent;
+  color: header-text-color;
+  border-color: rgba(255,255,255,0.2);
+  border-radius: 0;
+  padding-left: 15px;
+}
+
+.site-search input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 0;
+  height: 45px;
+  width: 45px;
+  border: 0;
+  text-indent: -9999em;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  // background: url("../images/ico-search.svg") no-repeat 80% 43%;
+  background-size: 16px 16px;
+}
+
+.user-info {
+  img {
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.logged-in .user-info,
+.logged-in .user-info-container {
+  text-align: right;
+}
+
+.logged-in .user-info-salutation {
+  display: none;
+  vertical-align: middle;
+  max-width: 200px;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: elilipsis;
+  color: header-text-color;
+}
+
+.anonymous .brand-container {
+  width: 30%;
+}
+
+.anonymous .user-info-container {
+  width: calc(70% - 44px);
+}
+
+.anonymous .user-info-salutation {
+  display: flex;
+  align-items: center;
+
+  > li {
+    flex: 1 auto;
+  }
+
+  > li:first-child {
+    width: calc(100% - 45px);
+  }
+
+  > li:last-child {
+    width: 45px;
+  }
+}
+
+.anonymous .header-nav-menu-container {
+  width: 44px;
+}
+
+
+@media (min-width: $screen-sm) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    padding: 0 20px;
+    align-items: stretch;
+  }
+
+  .header-item {
+    flex-basis: auto;
+    flex-shrink: 0;
+    padding: 1.25em 0;
+  }
+
+  .brand-container {
+    order: 1;
+    flex-grow: 1;
+    width: auto;
+  }
+
+  .header-search-container {
+    order: 2;
+    flex-grow: 10;
+    width: auto;
+  }
+
+  .user-info-container {
+    order: 3;
+    flex-grow: 0;
+    width: auto;
+    padding-left: 10px;
+    min-width: 212px;
+    text-align: left;
+  }
+
+  .header-nav-menu-container {
+    order: 4;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.625em 20px;
+    margin: 0 -20px;
+    background-color: npm-menu-red;
+    display: flex;
+    align-content: space-between;
+
+    .npm-expansions,
+    .nav-menu-container {
+      flex: 1 auto;
+    }
+
+    .nav-menu-container {
+      max-width: 550px;
+    }
+  }
+
+  &.hero-transparent {
+    background: transparent;
+    border-bottom: 0;
+
+    + .pane {
+      margin-top: -6em;
+      padding-top: 6em;
+    }
+  }
+
+  &.anonymous {
+    .brand-container,
+    .user-info-container {
+      width: auto;
+      min-width: auto;
+    }
+
+    .user-info-container,
+    .user-info {
+      text-align: right;
+    }
+
+    .header-nav-menu-container {
+      width: 100%;
+    }
+  }
+
+  .header-nav-menu-container a {
+    font-size: 0.9rem;
+  }
+
+  .drop-down-menu-container {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-menu-container .drop-down-menu-container li a {
+    text-align: right;
+  }
+
+  .npm-expansions {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .header-item .product-navigation,
+  .header-item .product-navigation.hidden {
+    display: block !important;
+    position: static;
+    background-color: transparent;
+    border-radius: 0;
+    width: auto;
+  }
+
+  .header-item .products-list {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+  }
+
+  .header-item .products-list li {
+    padding: 0 0 0 .9375em;
+    border-bottom: 0;
+    flex: 1 auto;
+
+    a {
+      padding: 0;
+      color: header-subtle-text-color;
+
+      &:hover {
+        color: header-text-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .logo-container {
+    width: 125px;
+  }
+
+  .site-search input[type=search] {
+    height: 3.125em;
+    margin: 0;
+  }
+
+  .site-search input[type=submit] {
+    width: 70px;
+    height: 2.777em;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    text-indent: -9999em;
+    // background: url("../images/ico-search.svg") no-repeat 50% 50%;
+    background-size: 16px 16px;
+  }
+
+  .logged-in .user-info-salutation {
+    display: inline-block;
+  }
+}
