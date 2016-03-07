@@ -1311,3 +1311,17 @@ $baseGutter:                $grid-gutter-width;
 $bg-color-example-output: $neutral-11;
 $bg-color-inverse-example-output: $navy-1;
 $bg-color-example-code: $neutral-10;
+
+/* npm carry over colors for the header REFACTOR EVENTUALLY PLSNTHXU
+   ========================================================================== */
+$npmred: #cb3837;
+$npm-menu-red: #C12127;
+$npm-navy: #2a333c;
+$header-color: $npm-navy;
+$header-secondary: #283546;
+$header-text-color: white;
+$header-subtle-text-color: rgba(255,255,255,0.8);
+$header-nav-highlight-bg: #a42b2b;
+$desktopMinWidth: $screen-sm;
+$greigh: rgba(195,195,195,1); // median greigh
+$greigh3: rgba(black, 0.6);

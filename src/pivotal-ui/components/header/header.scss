@@ -11,69 +11,79 @@ categories:
 
 ```html_example
 
-  <header class="logged-in">
+<header class="logged-in">
+    <!-- logo -->
     <div class="header-item brand-container">
-      <div class="logo-container" id='npm-logo'>
-        <a href="/"><img src="/static/images/npm-logo.svg" alt="npm logo" /></a>
+      <div class="logo-container" id="npm-logo">
+        <a href="/" class="active"><img src="/static/images/npm-logo.svg" alt="npm logo"></a>
       </div>
     </div>
+    <!-- /logo -->
 
+
+    <!-- search -->
     <div class="header-item header-search-container">
-      <form class="site-search" id="npm-search" action="/search" method="get" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-        <meta itemprop="target" content="{{env.CANONICAL_HOST}}/search?q={q}">
-        <div id="site-search-container" class="form-group form-group-search">
-            <input class="searchInput" name="q" value="{{q}}" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" />
+      <form class="site-search" id="npm-search" action="/search" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+        <meta itemprop="target" content="https://www.npmjs.com/search?q={q}">
+        <div id="site-search-container">
+            <input name="q" value="" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
         </div>
-        <input type="submit"/>
+        <input type="submit">
       </form>
     </div>
 
+    <!-- menu 1 -->
     <div class="header-item user-info-container">
       <div class="user-info">
-          <div class="drop-down-menu-container">
+          <div class="drop-down-menu-container" role="navigation">
 
-            <a class="drop-down-menu-toggle" href="#user-info-menu"><span class="a11y-only">Toggle User Menu</span>
-              <span class="user-info-salutation" data-user-name="wombat" data-is-paid="true">Greetings, wombat</span>
-              <img alt="" src="{{user.avatar.small}}" />
+            <a id="user-info-drop-down-menu-toggle" class="drop-down-menu-toggle" href="#user-info-menu" role="button" aria-haspopup="true" aria-owns="user-info-menu"><span class="a11y-only">Toggle User Menu</span>
+              <span class="user-info-salutation" data-user-name="rockbot" data-is-paid="">Greetings, <span id="salutation-username">rockbot</span></span>
+              <img alt="" src="https://s.gravatar.com/avatar/583a0cfd3e0ec851166c5c6fa5e506a5?size=50&amp;default=retro">
             </a>
 
-            <div id="user-info-menu" class="drop-down-menu">
+            <div role="menu" id="user-info-menu" class="drop-down-menu" aria-labelledby="user-info-drop-down-menu-toggle">
               <div class="drop-down-menu-section">
                 <ul>
-                  <li><a href="/~wombat">profile</a></li>
+                  <li><a href="/~rockbot">profile</a></li>
                   <li><a href="/profile-edit">personal info</a></li>
                   <li><a href="/settings/billing">billing</a></li>
                   <li><a href="/settings/tokens">tokens</a></li>
-                  <li><form method="POST" action="/logout"><button type="submit" class="btn-link">logout</button></form></li>
+                  <li><form method="POST" action="/logout">  <input type="hidden" name="crumb" value="jSXg5k67i29hI9QD2ShPcL1Olq77qMooJV2OsN8yYKA">
+<button type="submit" class="btn-link">logout</button></form></li>
                 </ul>
               </div> <!-- .drop-down-menu-section -->
             </div> <!-- .drop-down-menu -->
           </div> <!-- .drop-down-menu-container -->
       </div> <!-- .user-info -->
     </div>
+    <!-- /menu 1 -->
 
+    <!-- menu 2 -->
     <div class="header-item header-nav-menu-container">
-      <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">node package manager</a>
+      <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">New Project, Monday</a>
 
-      <div class="nav-menu-container">
+      <div class="nav-menu-container" role="navigation">
         <a class="nav-toggle drop-down-menu-toggle" href="#product-navigation"><span class="a11y-only">Toggle Navigation</span>
-          <img alt="mobile navigation menu" src="/static/images/mobile-menu.png" />
+          <img alt="mobile navigation menu" src="/static/images/mobile-menu.png">
         </a>
 
-        <div class="drop-down-menu-container">
-        <span>BOOM</span>
+
+        <div class="drop-down-menu-container" role="menu">
           <nav id="product-navigation" class="product-navigation drop-down-menu">
             <ul class="drop-down-menu-section products-list">
-              <li><a href="/npm/on-site">npm On-Site</a></li>
-              <li><a href="/npm/private-packages" data-event-trigger="click" data-event-name="private-modules-nav-link">npm Private Packages</a></li>
-              <li><a href="/npm/open-source">npm Open Source</a></li>
-              <li><a href="https://docs.npmjs.com">documentation</a></li>
-              <li><a href="/support">support</a></li>
+              <li><a href="/npm/on-site" class="h6">npm On-Site</a></li>
+              <li><a href="/npm/private-packages" class="h6" data-event-trigger="click" data-event-name="private-modules-nav-link">npm Private Packages</a></li>
+              <li><a href="/npm/open-source" class="h6">npm Open Source</a></li>
+              <li><a href="https://docs.npmjs.com" class="h6">documentation</a></li>
+              <li><a href="/support" class="h6">support</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
+    <!-- /menu 2 -->
+
 
 
   </header>
@@ -81,116 +91,243 @@ categories:
 
   */
 
+.drop-down-menu {
+  display: none;
+  position: absolute;
+  background-color: $header-secondary;
+  z-index: 10;
+  right: 0;
+  top: 3.9rem;
+  width: 100%;
+  height: 100%;
+}
+.drop-down-menu.main-navigation {
+  top: 4.4rem;
+}
+@media only screen and (min-width: $desktopMinWidth) {
+  .drop-down-menu {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    top: 3rem;
+    left: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+  .drop-down-menu.main-navigation {
+    top: 0;
+  }
+}
+.drop-down-menu a,
+.drop-down-menu button {
+  color: $greigh;
+  text-align: left;
+  display: block;
+  font-weight: normal;
+}
+.drop-down-menu a:hover,
+.drop-down-menu button:hover {
+  color: #fff;
+  text-decoration: none;
+  text-weight: 600;
+}
+.drop-down-menu:target {
+  display: block;
+}
+.drop-down-menu-container {
+  position: static;
+  display: block;
+  vertical-align: middle;
+}
+@media only screen and (min-width: $desktopMinWidth) {
+  .drop-down-menu-container {
+    position: relative;
+    display: inline-block;
+  }
+}
+.drop-down-menu-section a {
+  color: $greigh;
+  background: inherit;
+  border-bottom: none;
+  padding: 0;
+  line-height: 25px;
+}
+.drop-down-menu-section ul,
+.drop-down-menu-section li {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+}
+.drop-down-menu-section ul {
+  float: none;
+}
+.drop-down-menu-section li {
+  border-bottom: 1px solid #808080;
+  padding: 0;
+  display: block;
+  font-size: 1rem;
+}
+.drop-down-menu-section li:last-child {
+  border-bottom: 0;
+}
+.drop-down-menu-section li > a,
+.drop-down-menu-section li .btn-link {
+  padding: 1rem 20px;
+  display: block;
+}
+.drop-down-menu-section .btn-link {
+  padding: 0;
+}
+.drop-down-menu-section .btn-link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.drop-down-menu-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+}
+.drop-down-menu-toggle {
+  position: relative;
+  display: inline-block;
+  z-index: 99999;
+  color: $greigh3;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+@media (min-width: $desktopMinWidth) {
+  .drop-down-menu-toggle {
+    display: block;
+  }
+}
+.drop-down-menu-toggle:after {
+  content: '';
+  background-repeat: no-repeat;
+  background-image: url("/static/images/arrow-down.svg");
+  width: 10px;
+  height: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.drop-down-menu-toggle:hover,
+.drop-down-menu-toggle:focus {
+  text-decoration: none;
+  background-color: $header-secondary;
+  border-radius: 5px;
+}
+.drop-down-menu-toggle.toggle-is-open {
+  background-color: $header-secondary;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.drop-down-menu-toggle.toggle-is-open:after {
+  background-image: url("/static/images/arrow-up.svg");
+}
+.drop-down-menu-toggle.toggle-is-closed {
+  background-color: none;
+}
+
 header {
-  padding: .875em 20px .0625em;
-  border-bottom: 1px solid lightgrey;
-  background: header-color;
-  color: header-text-color;
+  padding: 0.875em 20px 0.0625em;
+  border-bottom: 1px solid #d3d3d3;
+  background: $header-color;
+  color: $header-text-color;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: magenta;
 }
-
-.header-item {
+header > .header-item {
   flex: 1 auto;
 }
-
-.brand-container {
+header > .brand-container {
   order: 1;
   width: 50%;
 }
-
-.header-search-container {
+header > .header-search-container {
   order: 4;
 }
-
-.user-info-container {
+header > .user-info-container {
   order: 2;
   width: calc(50% - 60px);
   text-align: right;
 }
-
-.header-nav-menu-container {
+header > .header-nav-menu-container {
   order: 3;
   width: 60px;
   text-align: right;
 }
-
-ul, li, ul li {
+header ul,
+header li,
+header ul li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-a {
-  color: header-subtle-text-color;
-
-  &:hover {
-    color: header-text-color;
-    text-decoration: none;
-  }
+header a {
+  color: $header-subtle-text-color;
 }
-
+header a:hover {
+  color: $header-text-color;
+  text-decoration: none;
+  transition: color 0.1s ease, background 0.1s ease;
+}
 .logo-container {
   padding: 0;
   width: 80px;
   vertical-align: middle;
-
-  img {
-    max-width: 100%;
-  }
-
-  .cobrand {
-    font-weight: bold;
-  }
-
-  .cobrand::before {
-    content: "♥︎";
-    font-size: 150%;
-    color: npmred;
-    vertical-align: middle;
-    padding: 0 0.5em;
-  }
 }
-
+.logo-container img {
+  max-width: 100%;
+}
+.logo-container .cobrand {
+  font-weight: bold;
+}
+.logo-container .cobrand::before {
+  content: "♥︎";
+  font-size: 150%;
+  color: $npmred;
+  vertical-align: middle;
+  padding: 0 0.5em;
+}
 .npm-expansions {
   display: none;
   text-align: left;
 }
-
 .nav-toggle {
   width: 54px;
   padding: 0 5px;
-
-  img {
-    max-width: 100%;
-  }
-
-  &:after {
-    content: none;
-  }
 }
-
-.nav-toggle.toggle-is-open {
-  &:after {
-    content: none;
-  }
+.nav-toggle img {
+  max-width: 100%;
 }
-
+.nav-toggle:after {
+  content: none;
+}
+.nav-toggle.toggle-is-open:after {
+  content: none;
+}
 .site-search {
   position: relative;
 }
-
 .site-search input[type=search] {
   background-color: transparent;
-  color: header-text-color;
+  color: $header-text-color;
   border-color: rgba(255,255,255,0.2);
   border-radius: 0;
   padding-left: 15px;
 }
-
 .site-search input[type=submit] {
   position: absolute;
   top: 0;
@@ -201,26 +338,22 @@ a {
   border: 0;
   text-indent: -9999em;
   cursor: pointer;
+  outline: 0;
   border-radius: 0 2px 2px 0;
-  // background: url("../images/ico-search.svg") no-repeat 80% 43%;
+  background: url("styleguide/ico-search.svg") no-repeat 80% 43%;
   background-size: 16px 16px;
 }
-
-.user-info {
-  img {
-    border-radius: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    width: 38px;
-    height: 38px;
-  }
+.user-info img {
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 38px;
+  height: 38px;
 }
-
 .logged-in .user-info,
 .logged-in .user-info-container {
   text-align: right;
 }
-
 .logged-in .user-info-salutation {
   display: none;
   vertical-align: middle;
@@ -228,66 +361,53 @@ a {
   margin-right: 10px;
   overflow: hidden;
   text-overflow: elilipsis;
-  color: header-text-color;
+  color: $header-text-color;
 }
-
 .anonymous .brand-container {
   width: 30%;
 }
-
 .anonymous .user-info-container {
   width: calc(70% - 44px);
 }
-
 .anonymous .user-info-salutation {
   display: flex;
   align-items: center;
-
-  > li {
-    flex: 1 auto;
-  }
-
-  > li:first-child {
-    width: calc(100% - 45px);
-  }
-
-  > li:last-child {
-    width: 45px;
-  }
 }
-
+.anonymous .user-info-salutation > li {
+  flex: 1 auto;
+}
+.anonymous .user-info-salutation > li:first-child {
+  width: calc(100% - 45px);
+}
+.anonymous .user-info-salutation > li:last-child {
+  width: 45px;
+}
 .anonymous .header-nav-menu-container {
   width: 44px;
 }
-
-
-@media (min-width: $screen-sm) {
+@media (min-width: $desktopMinWidth) {
   header {
     flex-direction: row;
     flex-wrap: wrap-reverse;
     padding: 0 20px;
     align-items: stretch;
   }
-
-  .header-item {
+  header > .header-item {
     flex-basis: auto;
     flex-shrink: 0;
     padding: 1.25em 0;
   }
-
-  .brand-container {
+  header > .brand-container {
     order: 1;
     flex-grow: 1;
     width: auto;
   }
-
-  .header-search-container {
+  header > .header-search-container {
     order: 2;
     flex-grow: 10;
     width: auto;
   }
-
-  .user-info-container {
+  header > .user-info-container {
     order: 3;
     flex-grow: 0;
     width: auto;
@@ -295,75 +415,62 @@ a {
     min-width: 212px;
     text-align: left;
   }
-
-  .header-nav-menu-container {
+  header > .header-nav-menu-container {
     order: 4;
     flex-grow: 1;
     width: 100%;
-    padding: 0.625em 20px;
+    padding: 0 20px;
     margin: 0 -20px;
-    background-color: npm-menu-red;
+    background-color: $npm-menu-red;
     display: flex;
     align-content: space-between;
-
-    .npm-expansions,
-    .nav-menu-container {
-      flex: 1 auto;
-    }
-
-    .nav-menu-container {
-      max-width: 550px;
-    }
   }
-
-  &.hero-transparent {
+  header > .header-nav-menu-container .npm-expansions,
+  header > .header-nav-menu-container .nav-menu-container {
+    flex: 1 auto;
+  }
+  header > .header-nav-menu-container .nav-menu-container {
+    max-width: 550px;
+  }
+  header.hero-transparent {
     background: transparent;
     border-bottom: 0;
-
-    + .pane {
-      margin-top: -6em;
-      padding-top: 6em;
-    }
   }
-
-  &.anonymous {
-    .brand-container,
-    .user-info-container {
-      width: auto;
-      min-width: auto;
-    }
-
-    .user-info-container,
-    .user-info {
-      text-align: right;
-    }
-
-    .header-nav-menu-container {
-      width: 100%;
-    }
+  header.hero-transparent + .pane {
+    margin-top: -6em;
+    padding-top: 6em;
   }
-
+  header.anonymous .brand-container,
+  header.anonymous .user-info-container {
+    width: auto;
+    min-width: auto;
+  }
+  header.anonymous .user-info-container,
+  header.anonymous .user-info {
+    text-align: right;
+  }
+  header.anonymous .header-nav-menu-container {
+    width: 100%;
+  }
   .header-nav-menu-container a {
     font-size: 0.9rem;
   }
-
   .drop-down-menu-container {
     display: block;
     text-align: center;
   }
-
   .nav-menu-container .drop-down-menu-container li a {
-    text-align: right;
+    text-align: center;
   }
-
+  .nav-menu-container .drop-down-menu-container li a:hover {
+    background: header-nav-highlight-bg;
+  }
   .npm-expansions {
     display: block;
   }
-
   .nav-toggle {
     display: none;
   }
-
   .header-item .product-navigation,
   .header-item .product-navigation.hidden {
     display: block !important;
@@ -372,47 +479,44 @@ a {
     border-radius: 0;
     width: auto;
   }
-
   .header-item .products-list {
     display: flex;
     flex-direction: row;
     align-content: flex-end;
   }
-
   .header-item .products-list li {
-    padding: 0 0 0 .9375em;
+    padding: 0 0 0 0.9375em;
     border-bottom: 0;
     flex: 1 auto;
-
-    a {
-      padding: 0;
-      color: header-subtle-text-color;
-
-      &:hover {
-        color: header-text-color;
-        text-decoration: none;
-      }
-    }
   }
-
+  .header-item .products-list li a,
+  .npm-expansions {
+    padding: 0.625em 0;
+    color: $header-subtle-text-color;
+  }
+  .header-item .products-list li a:hover,
+  .npm-expansions:hover {
+    color: $header-text-color;
+    text-decoration: none;
+  }
   .logo-container {
     width: 125px;
   }
-
-  .site-search input[type=search] {
+  .site-search input[type="search"] {
     height: 3.125em;
     margin: 0;
   }
-
-  .site-search input[type=submit] {
+  .site-search input[type="submit"] {
     width: 70px;
     height: 2.777em;
     border-left: 1px solid rgba(255,255,255,0.2);
     text-indent: -9999em;
-    // background: url("../images/ico-search.svg") no-repeat 50% 50%;
+    background: url("../images/ico-search.svg") no-repeat 50% 50%;
     background-size: 16px 16px;
   }
-
+  .site-search input[type="submit"]:focus {
+    border: 1px solid rgba(255,255,255,0.8);
+  }
   .logged-in .user-info-salutation {
     display: inline-block;
   }

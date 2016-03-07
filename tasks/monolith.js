@@ -31,7 +31,6 @@ gulp.task('monolith-build-css-from-cache', () => {
     map((cssDependency, callback) => {
       if (puiCssPrefixRegexp.test(cssDependency.packageName)) {
         const componentName = cssDependency.packageName.replace(puiCssPrefixRegexp, '');
-        console.log('componentName:', componentName)
         read(`src/pivotal-ui/components/${componentName}/${componentName}.scss`, callback);
       } else {
         callback();
@@ -42,8 +41,6 @@ gulp.task('monolith-build-css-from-cache', () => {
     plugins.cssnext(),
 
     map((file, callback) => {
-      console.log('file: ', file)
-
       callback(null, {
         packageName: `pui-css-${path.basename(file.path, '.css')}`,
         contents: file.contents.toString()
