@@ -178,17 +178,23 @@ header a:hover {
 .site-search input[type=search] {
   background-color: transparent;
   color: $header-text-color;
-  border-color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 0;
+  padding: 5px;
   padding-left: 15px;
+  font-size: 1em;
+  display: block;
+  width: 100%;
+  outline: 0;
 }
 .site-search input[type=submit] {
   position: absolute;
   top: 0;
   right: 0;
-  margin-bottom: 0;
   height: 45px;
   width: 45px;
+  margin: 0 0 4px;
+  margin-bottom: 0px;
   border: 0;
   text-indent: -9999em;
   cursor: pointer;
@@ -198,6 +204,18 @@ header a:hover {
   background-repeat: no-repeat;
   background-position: 80% 43%;
   background-size: 16px 16px;
+  display: block;
+  text-align: center;
+  padding: 0 35px;
+  line-height: 47px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none !important;
+  clear: both;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
 }
 .user-info img {
   border-radius: 100%;
