@@ -208,7 +208,7 @@ categories:
 .drop-down-menu-toggle:after {
   content: '';
   background-repeat: no-repeat;
-  background-image: url("/static/images/arrow-down.svg");
+  background-image: url("<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='-3300 3394 10 6'><style>.st0{fill:#FFFFFF;}</style><path class='st0' d='M-3295 3397.2l3.5-3.2 1.5 1.4-5 4.6-5-4.6 1.5-1.4 3.5 3.2z'/></svg>");
   width: 10px;
   height: 6px;
   display: inline-block;
@@ -232,7 +232,7 @@ categories:
   border-bottom-left-radius: 0;
 }
 .drop-down-menu-toggle.toggle-is-open:after {
-  background-image: url("/static/images/arrow-up.svg");
+  background-image: url("<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='-3300 3394 10 6'><style>.st0{fill:#FFFFFF;}</style><path class='st0' d='M-3295 3396.8l-3.5 3.2-1.5-1.4 5-4.6 5 4.6-1.5 1.4-3.5-3.2z'/></svg>");
 }
 .drop-down-menu-toggle.toggle-is-closed {
   background-color: none;
