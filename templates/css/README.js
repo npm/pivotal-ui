@@ -15,20 +15,16 @@ function usageSection(usage, name, homepage) {
       '',
       `You can find more examples of the ${name} component in the [pui style guide](${homepage})`
     ].join('\n');
-  }
-  else {
+  } else {
     return '';
   }
 }
 
 const readmeTemplate = function(name, options = {}) {
-  const {additionalIntro='',
-    usage='',
-    description=defaultDescription(name),
-    homepage='http://styleguide.pivotal.io'} = options;
+  const {additionalIntro='', usage='', description=defaultDescription(name), homepage='http://styleguide.pivotal.io'} = options;
 
   return [
-    `# pui-css-${name}`,
+    `# @npmcorp/pui-css-${name}`,
     '',
     description,
     '',
