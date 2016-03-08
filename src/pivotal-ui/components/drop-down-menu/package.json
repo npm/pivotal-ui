@@ -1,7 +1,9 @@
 {
   "homepage": "http://styleguide.pivotal.io/objects.html#drop-down-menu",
+  "main": "drop-down-menu.js",
   "dependencies": {
+      "jquery": "^2.1.4",
       "pui-css-typography": "^2.0.0"
     },
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
