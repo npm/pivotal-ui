@@ -36,7 +36,7 @@ const StyleguideNav = React.createClass({
   render() {
     const {navTree, defaultLanguage, defaultComponentType} = this.props;
 
-    const languageNames = ['React', 'CSS'];
+    const languageNames = ['CSS', 'React'];
     const tabs = languageNames.map((language) => {
       const componentTypes = navTree[language];
       const componentTypeNames = Object.keys(componentTypes).sort();

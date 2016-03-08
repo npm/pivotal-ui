@@ -11,7 +11,7 @@ function getComponentPath(path) {
   }
 
   return {
-    language: 'react',
+    language: 'css',
     componentType: 'base'
   }
 }
