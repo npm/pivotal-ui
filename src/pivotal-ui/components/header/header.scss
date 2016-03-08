@@ -239,6 +239,7 @@ categories:
 }
 
 header {
+  font-size: 16px;
   padding: 0.875em 20px 0.0625em;
   border-bottom: 1px solid #d3d3d3;
   background: $header-color;
@@ -455,7 +456,7 @@ header a:hover {
     width: 100%;
   }
   .header-nav-menu-container a {
-    font-size: 0.9rem;
+    font-size: 0.9em;
   }
   .drop-down-menu-container {
     display: block;
