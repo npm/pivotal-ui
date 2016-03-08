@@ -182,7 +182,8 @@
     "test": "gulp ci --fatal",
     "test-accessibility": "gulp accessibility-ci || :",
     "pui-update": "scripts/pui-update.js",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build-monolith": "gulp monolith-build-css-from-scratch"
   },
   "repository": {
     "type": "git",
