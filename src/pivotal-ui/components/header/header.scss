@@ -259,6 +259,15 @@ header a:hover {
 .anonymous .header-nav-menu-container {
   width: 44px;
 }
+
+.icon-wombat-head-login {
+  background-image: url("static/images/wombat-head-login.svg");
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+}
+
 @media (min-width: $desktopMinWidth) {
   header {
     flex-direction: row;
