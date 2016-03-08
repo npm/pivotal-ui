@@ -852,3 +852,30 @@ Headings are spaced so their line height and padding are consistent on one or ma
 ```
 
 */
+
+/*doc
+---
+title: Helpers
+name: type_helpers
+parent: type
+---
+
+Helpers exist to provide utilities to our typography, so as accessiblity-only based text
+
+```html_example_table
+<span class="a11y-only">Screen reader only!</span>
+
+<span class="a11y-only">I am only to be read by screen readers</span>
+```
+
+*/
+
+
+.a11y-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
