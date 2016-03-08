@@ -208,7 +208,7 @@ categories:
 .drop-down-menu-toggle:after {
   content: '';
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%27-3300%203394%2010%206%27%3E%3Cstyle%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C/style%3E%3Cpath%20class%3D%27st0%27%20d%3D%27M-3295%203397.2l3.5-3.2%201.5%201.4-5%204.6-5-4.6%201.5-1.4%203.5%203.2z%27/%3E%3C/svg%3E");
+  background-image: url("static/images/arrow-down.svg");
   width: 10px;
   height: 6px;
   display: inline-block;
@@ -232,7 +232,7 @@ categories:
   border-bottom-left-radius: 0;
 }
 .drop-down-menu-toggle.toggle-is-open:after {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%27-3300%203394%2010%206%27%3E%3Cstyle%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C/style%3E%3Cpath%20class%3D%27st0%27%20d%3D%27M-3295%203396.8l-3.5%203.2-1.5-1.4%205-4.6%205%204.6-1.5%201.4-3.5-3.2z%27/%3E%3C/svg%3E");
+  background-image: url("static/images/arrow-up.svg");
 }
 .drop-down-menu-toggle.toggle-is-closed {
   background-color: none;
@@ -340,7 +340,7 @@ header a:hover {
   cursor: pointer;
   outline: 0;
   border-radius: 0 2px 2px 0;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2734%27%20height%3D%2734%27%20viewBox%3D%270%200%2034%2034%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Ctitle%3EOval%201%20+%20Line%3C/title%3E%3Cg%20transform%3D%27translate%282%202%29%27%20stroke%3D%27%23BABABA%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27%3E%3Cellipse%20stroke-width%3D%274%27%20cx%3D%2711.5%27%20cy%3D%2711%27%20rx%3D%2711.5%27%20ry%3D%2711%27/%3E%3Cpath%20d%3D%27M20.5%2020.5l7.172%207.172%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27square%27/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("static/images/ico-search.svg");
   background-repeat: no-repeat;
   background-position: 80% 43%;
   background-size: 16px 16px;
