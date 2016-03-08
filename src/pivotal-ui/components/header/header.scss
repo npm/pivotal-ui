@@ -340,7 +340,9 @@ header a:hover {
   cursor: pointer;
   outline: 0;
   border-radius: 0 2px 2px 0;
-  background: url("styleguide/ico-search.svg") no-repeat 80% 43%;
+  background-image: url("<svg width='34' height='34' viewBox='0 0 34 34' xmlns='http://www.w3.org/2000/svg'><title>Oval 1 + Line</title><g transform='translate(2 2)' stroke='#BABABA' fill='none' fill-rule='evenodd'><ellipse stroke-width='4' cx='11.5' cy='11' rx='11.5' ry='11'/><path d='M20.5 20.5l7.172 7.172' stroke-width='5' stroke-linecap='square'/></g></svg>");
+  background-repeat: no-repeat;
+  background-position: 80% 43%;
   background-size: 16px 16px;
 }
 .user-info img {
@@ -511,7 +513,7 @@ header a:hover {
     height: 2.777em;
     border-left: 1px solid rgba(255,255,255,0.2);
     text-indent: -9999em;
-    background: url("../images/ico-search.svg") no-repeat 50% 50%;
+    background-position: 50% 50%;
     background-size: 16px 16px;
   }
   .site-search input[type="submit"]:focus {
