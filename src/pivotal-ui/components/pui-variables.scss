@@ -11,6 +11,45 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 // --------------------------------------------------
 
 
+// npm colors
+// -------------------------
+
+
+// brand
+$npm-brand: #cb3837;
+
+// warm
+
+$npm-warm-1: #B03489;
+$npm-warm-2: #F05759;
+$npm-warm-3: #f09233;
+
+// blue
+
+$npm-blue-1: #166B8A;
+$npm-blue-2: #2a79a7;
+$npm-blue-3: #1A8BCB; // also use for #1d80b9
+
+// pastels
+
+$npm-pastel-1: #88ACA1;
+$npm-pastel-2: #94BECC;
+$npm-pastel-3: #A4BBD7;
+$npm-pastel-4: #BDCAC8;
+$npm-pastel-5: #E6E2C4;
+$npm-pastel-6: #dddFDF;
+$npm-pastel-7: #F1EFE0;
+$npm-pastel-8: #D7E3E7;
+$npm-pastel-9: #f0f0f0;
+
+// navy
+
+$npm-navy-1: #273547;
+$npm-navy-2: #34495e; //button
+$npm-navy-headings: #373d48;
+$npm-navy-text: #6d7986;
+
+
 // Accent colors - teal for now
 // -------------------------
 

@@ -40,14 +40,145 @@ $tabs-active-bg-color: $gray-2;
 ```
 
 <div class="color-chip-row">
+    <div class="chip">
+      <div class="chip-color bg-npm-brand"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-brand</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-warm-1"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-warm-1</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-warm-2"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-warm-2</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-warm-3"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-warm-3</p>
+      </div>
+    </div>
+</div>
 
+
+<div class="color-chip-row">
+    <div class="chip">
+      <div class="chip-color bg-npm-blue-1"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-blue-1</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-blue-2"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-blue-2</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-blue-3"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-blue-3</p>
+      </div>
+    </div>
+</div>
+
+<div class="color-chip-row">
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-1"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-1</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-2"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-2</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-3"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-3</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-4"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-4</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-5"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-5</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-6"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-6</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-7"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-7</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-8"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-8</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-pastel-9"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-pastel-9</p>
+      </div>
+    </div>
+</div>
+
+<div class="color-chip-row">
+    <div class="chip">
+      <div class="chip-color bg-npm-navy-1"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-navy-1</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-navy-2"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-navy-2</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-navy-text"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-navy-text</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-navy-headings"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-navy-headings</p>
+      </div>
+    </div>
+</div>
+
+<div class="color-chip-row">
     <div class="chip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
       <div class="chip-color bg-neutral-1"></div>
       <div class="chip-color-name">
         <p class="mvn">neutral-1</p> </ul>
       </div>
     </div>
-
     <div class="chip">
       <div class="chip-color bg-neutral-2"></div>
       <div class="chip-color-name">
@@ -431,6 +562,99 @@ $tabs-active-bg-color: $gray-2;
 
 */
 
+// npm-specific
+// brand
+.bg-npm-brand {
+  background-color: $npm-brand !important;
+}
+
+// warm
+.bg-npm-warm-1 {
+  background-color: $npm-warm-1 !important;
+}
+
+.bg-npm-warm-2 {
+  background-color: $npm-warm-2 !important;
+}
+
+.bg-npm-warm-3 {
+  background-color: $npm-warm-3 !important;
+}
+
+// blue
+
+.bg-npm-blue-1 {
+  background-color: $npm-blue-1 !important;
+}
+
+.bg-npm-blue-2 {
+  background-color: $npm-blue-2 !important;
+}
+
+.bg-npm-blue-3 {
+  background-color: $npm-blue-3 !important;
+}
+
+// pastels
+
+.bg-npm-pastel-1 {
+  background-color: $npm-pastel-1 !important;
+}
+
+.bg-npm-pastel-2 {
+  background-color: $npm-pastel-2 !important;
+}
+
+.bg-npm-pastel-3 {
+  background-color: $npm-pastel-3 !important;
+}
+
+.bg-npm-pastel-4 {
+  background-color: $npm-pastel-4 !important;
+}
+
+.bg-npm-pastel-5 {
+  background-color: $npm-pastel-5 !important;
+}
+
+.bg-npm-pastel-6 {
+  background-color: $npm-pastel-6 !important;
+}
+
+.bg-npm-pastel-7 {
+  background-color: $npm-pastel-7 !important;
+}
+
+.bg-npm-pastel-8 {
+  background-color: $npm-pastel-8 !important;
+}
+
+.bg-npm-pastel-9 {
+  background-color: $npm-pastel-9 !important;
+}
+
+
+// navy
+
+.bg-npm-navy-1 {
+  background-color: $npm-navy-1 !important;
+}
+
+.bg-npm-navy-2 {
+  background-color: $npm-navy-2 !important;
+}
+
+.bg-npm-navy-headings {
+  background-color: $npm-navy-headings !important;
+}
+
+.bg-npm-navy-text {
+  background-color: $npm-navy-text !important;
+}
+
+
+
+// Neutrals
 .bg-neutral-1 {
   background-color: $neutral-1 !important;
 }
