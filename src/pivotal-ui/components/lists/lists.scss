@@ -689,6 +689,12 @@ As the browser width changes, list-cards fill in one after another. There are tw
     <p>list-card-2</p>
   </li>
 </ul>
+
+<ul class="list-cards list-card-3 list-cards-xs">
+  <li class="bg-neutral-7">
+    <p>list-card-3</p>
+  </li>
+</ul>
 ```
 
 You can specify the breakpoint in which the cards stack by using the `list-card-*` classes. If the breakpoint is not
@@ -697,11 +703,11 @@ specified, the cards fill 100% of the `list-cards` width.
 
 List Card Breakpoints | Class Names
 --------------------- | ---------------
-extra-small           | `.list-card-xs`
-small                 | `.list-card-sm`
-medium                | `.list-card-md`
-large                 | `.list-card-lg`
-extra-large           | `.list-card-xl`
+extra-small           | `.list-cards-xs`
+small                 | `.list-cards-sm`
+medium                | `.list-cards-md`
+large                 | `.list-cards-lg`
+extra-large           | `.list-cards-xl`
 
 <div class="alert alert-info mbxl">
   <p class="em-high">The cards list should only be used in fully liquid layouts, otherwise grids are a better choice.</p>
@@ -808,6 +814,7 @@ wrap all the inner content in `a` with class `list-card-link`.
 
 @include makeCard(126px, 435px, 1);
 @include makeCard(196px, 284px, 2);
+@include makeCard(100px, 370px, 3);
 
 
 /*doc
