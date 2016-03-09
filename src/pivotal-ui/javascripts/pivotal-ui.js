@@ -6,3 +6,4 @@ require('pui-prismjs');
 
 require('./scale')();
 require('pui-react-back-to-top/jquery-plugin');
+require('@npmcorp/pui-css-drop-down-menu');

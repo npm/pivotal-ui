@@ -5,7 +5,7 @@
   "version": "2.0.0",
   "main": "gulpfile.js",
   "devDependencies": {
-    "@npmcorp/dr-frankenstyle": "^0.3.0",
+    "@npmcorp/dr-frankenstyle": "^0.4.1",
     "a11y": "^0.3.3",
     "accessibility-developer-tools": "pivotal-cf/accessibility-developer-tools#dist",
     "axios": "^0.5.4",
@@ -99,6 +99,7 @@
     "zeroclipboard": "^2.1.6"
   },
   "dependencies": {
+    "@npmcorp/pui-css-header": "^1.7.0",
     "express": "^4.13.4",
     "git-create-deploy-branch": "^1.0.1",
     "lodash": "^2.4.2",
@@ -181,7 +182,8 @@
     "test": "gulp ci --fatal",
     "test-accessibility": "gulp accessibility-ci || :",
     "pui-update": "scripts/pui-update.js",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build-monolith": "gulp monolith-build-css-from-scratch"
   },
   "repository": {
     "type": "git",

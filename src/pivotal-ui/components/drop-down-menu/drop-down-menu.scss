@@ -1,0 +1,183 @@
+@import "../pui-variables";
+
+/*doc
+---
+title: Drop Down Menu
+name: drop-down-menu
+categories:
+ - css_all
+---
+
+```html_example
+
+<div class="drop-down-menu-container" role="navigation">
+
+  <a id="user-info-drop-down-menu-toggle" class="drop-down-menu-toggle" href="#user-info-menu" role="button" aria-haspopup="true" aria-owns="user-info-menu"><span class="a11y-only">Toggle User Menu</span>
+    <span class="user-info-salutation" data-user-name="rockbot" data-is-paid="">Greetings, <span id="salutation-username">rockbot</span></span>
+    <img alt="" src="https://s.gravatar.com/avatar/583a0cfd3e0ec851166c5c6fa5e506a5?size=50&amp;default=retro">
+  </a>
+
+  <div role="menu" id="user-info-menu" class="drop-down-menu" aria-labelledby="user-info-drop-down-menu-toggle">
+    <div class="drop-down-menu-section">
+      <ul>
+        <li><a href="/~rockbot">profile</a></li>
+        <li><a href="/profile-edit">personal info</a></li>
+        <li><a href="/settings/billing">billing</a></li>
+        <li><a href="/settings/tokens">tokens</a></li>
+        <li><form method="POST" action="/logout">  <input type="hidden" name="crumb" value="jSXg5k67i29hI9QD2ShPcL1Olq77qMooJV2OsN8yYKA">
+<button type="submit" class="btn-link">logout</button></form></li>
+      </ul>
+    </div> <!-- .drop-down-menu-section -->
+  </div> <!-- .drop-down-menu -->
+</div> <!-- .drop-down-menu-container -->
+  ```
+
+  */
+
+.drop-down-menu {
+  display: none;
+  position: absolute;
+  background-color: $header-secondary;
+  z-index: 10;
+  right: 0;
+  top: 3.9em;
+  width: 100%;
+  height: 100%;
+}
+.drop-down-menu.main-navigation {
+  top: 4.4em;
+}
+@media only screen and (min-width: $desktopMinWidth) {
+  .drop-down-menu {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    top: 3em;
+    left: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+  .drop-down-menu.main-navigation {
+    top: 0;
+  }
+}
+.drop-down-menu a,
+.drop-down-menu button {
+  color: $greigh;
+  text-align: left;
+  display: block;
+  font-weight: normal;
+}
+.drop-down-menu a:hover,
+.drop-down-menu button:hover {
+  color: #fff;
+  text-decoration: none;
+  text-weight: 600;
+}
+.drop-down-menu:target {
+  display: block;
+}
+.drop-down-menu-container {
+  font-size: 16px;
+  position: static;
+  display: block;
+  vertical-align: middle;
+}
+@media only screen and (min-width: $desktopMinWidth) {
+  .drop-down-menu-container {
+    position: relative;
+    display: inline-block;
+  }
+}
+.drop-down-menu-section a {
+  color: $greigh;
+  background: inherit;
+  border-bottom: none;
+  padding: 0;
+  line-height: 25px;
+}
+.drop-down-menu-section ul,
+.drop-down-menu-section li {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+}
+.drop-down-menu-section ul {
+  float: none;
+}
+.drop-down-menu-section li {
+  border-bottom: 1px solid #808080;
+  padding: 0;
+  display: block;
+  font-size: 1em;
+}
+.drop-down-menu-section li:last-child {
+  border-bottom: 0;
+}
+.drop-down-menu-section li > a,
+.drop-down-menu-section li .btn-link {
+  padding: 1em 20px;
+  display: block;
+}
+.drop-down-menu-section .btn-link {
+  padding: 0;
+}
+.drop-down-menu-section .btn-link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.drop-down-menu-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+}
+.drop-down-menu-toggle {
+  position: relative;
+  display: inline-block;
+  z-index: 99999;
+  color: $greigh3;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+@media (min-width: $desktopMinWidth) {
+  .drop-down-menu-toggle {
+    display: block;
+  }
+}
+.drop-down-menu-toggle:after {
+  content: '';
+  background-repeat: no-repeat;
+  background-image: url("static/images/arrow-down.svg");
+  width: 10px;
+  height: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.drop-down-menu-toggle:hover,
+.drop-down-menu-toggle:focus {
+  text-decoration: none;
+  background-color: $header-secondary;
+  border-radius: 5px;
+}
+.drop-down-menu-toggle.toggle-is-open {
+  background-color: $header-secondary;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.drop-down-menu-toggle.toggle-is-open:after {
+  background-image: url("static/images/arrow-up.svg");
+}
+.drop-down-menu-toggle.toggle-is-closed {
+  background-color: none;
+}

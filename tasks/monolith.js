@@ -26,7 +26,7 @@ gulp.task('monolith-setup-css-cache', () => {
 });
 
 gulp.task('monolith-build-css-from-cache', () => {
-  const puiCssPrefixRegexp = /^pui-css-/;
+  const puiCssPrefixRegexp = /^(@npmcorp\/)?pui-css-/;
   const processPuiCssPackages = pipeline(
     map((cssDependency, callback) => {
       if (puiCssPrefixRegexp.test(cssDependency.packageName)) {
