@@ -141,6 +141,12 @@ categories:
  - css_all
 ---
 
+Often you need to hide decoration or filler content that is a background image on some devices.
+
+The classes `.nobg-xs`, `.nobg-sm`, `.nobg-md`, `.nobg-lg` apply to those sizes specifically.
+
+The classes `.nobg-le-xs`, `.nobg-le-sm`, `.nobg-le-md`, `.nobg-le-lg` apply to those sizes and all smaller ("less than or equal to).
+
 <table class="styleguide">
   <thead>
     <tr>
@@ -193,6 +199,36 @@ categories:
       <td class="is-hidden">Hidden</td>
     </tr>
   </tbody>
+  <tbody>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-xs</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-sm</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-md</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-lg</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -217,6 +253,25 @@ categories:
   .nobg-lg {
     background-image: none !important;
   }
+}
+
+@media (max-width: $screen-xs-max) {
+  .nobg-le-xs {
+    background-image: none !important;
+  }
+}
+@media (max-width: $screen-sm-max) {
+  .nobg-le-sm {
+    background-image: none !important;
+  }
+}
+@media (max-width: $screen-md-max) {
+  .nobg-le-md {
+    background-image: none !important;
+  }
+}
+.nobg-le-lg {
+  background-image: none !important;
 }
 
 /*doc
