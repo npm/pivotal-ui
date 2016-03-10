@@ -92,6 +92,84 @@ To modify this component to use a custom image, use an inline `background-image`
 }
 
 
+/*doc
+---
+title: Contained Background
+name: background_contain
+parent: background
+---
+
+This example uses an about us hero image by default, but you can change it to any image you would like.
+
+```html_example
+<div class='pane bg-contain'>
+  <div class='container'>
+    <h1 class='type-neutral-11 txt-c'>Fill background image</h1>
+  </div>
+</div>
+  ```
+To modify this component to use a custom image, use an inline `background-image` style like so:
+
+```html_example
+<div class='pane bg-contain' style="background-image: url(styleguide/such-awesome.jpg)">
+  <div class='container'>
+    <h1 class='type-neutral-11 txt-c'>Contained background image</h1>
+  </div>
+</div>
+```
 
 
+*/
 
+.bg-contain {
+  background-image: url('images/aboutus-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/*doc
+---
+title: Positioning
+name: background_position
+parent: background
+---
+
+You may also need to use background image positioning, for example, if this is decoration that goes to the side.
+
+```html_example
+<div class='pane bg-contain bg-brand-1 bg-right' style="background-image: url(styleguide/such-awesome.jpg);">
+  <div class='container'>
+    <h1 class='type-neutral-11 txt-c'>Contained background image</h1>
+  </div>
+</div>
+```
+*/
+
+.bg-right {
+ background-position: center right;
+}
+.bg-left {
+ background-position: center left;
+}
+.bg-bottom {
+ background-position: bottom center;
+}
+.bg-top {
+ background-position: top center;
+}
+.bg-bottom-right {
+ background-position: bottom right;
+}
+.bg-bottom-left {
+ background-position: bottom left;
+}
+.bg-top-right {
+ background-position: top right;
+}
+.bg-top-left {
+ background-position: top left;
+}
