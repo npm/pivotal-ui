@@ -14,7 +14,7 @@
 
 /* Button Mixins */
 
-@mixin button-skin($color, $background, $border: null, $color-disabled: null) {
+@mixin button-skin($color, $background, $border: null, $color-disabled: null, $border-hover: null, $background-activated: null) {
   color: $color;
   background-color: $background;
   @if ($border) {
@@ -26,34 +26,62 @@
 
   &:hover,
   &:focus {
-    color: lighten($color, 5%);
-    background-color: lighten($background, 6%);
+    @if($color) {
+      color: lighten($color, 5%);
+    }
+    @if($background-activated) {
+      background-color: $background-activated;
+    } @else {
+      background-color: darken($background, 8%);
+    }
+    @if($border-hover){
+      border-color: $border-hover;
+    }
     outline: none;
   }
   .btn-group & {
     &:active,
     &.active {
-      color: darken($color, 5%);
-      background-color: darken($background, 6%);
+      @if($color) {
+        color: darken($color, 5%);
+      }
+      @if($background) {
+        background-color: darken($background, 8%);
+      }
       box-shadow: none;
       outline: none;
     }
   }
   .open & {
     &.dropdown-toggle {
-      color: darken($color, 5%);
-      background-color: darken($background, 6%);
+      @if($color) {
+        color: darken($color, 5%);
+      }
+      @if($background) {
+        background-color: darken($background, 6%);
+      }
       box-shadow: none;
       &:hover, &:focus {
-        color: darken($color, 5%);
-        background-color: darken($background, 6%);
+        @if($color){
+          color: darken($color, 5%);
+        }
+        @if($background) {
+          background-color: darken($background, 6%);
+        }
+        @if($border-hover){
+          border-color: $border-hover;
+        }
       }
     }
   }
   &:active,
   &.active {
-    color: darken($color, 5%);
-    background-color: darken($background, 6%);
+    @if($color){
+      color: darken($color, 5%);
+    }
+    @if($background) {
+      background-color: darken($background, 6%);
+    }
     box-shadow: none;
     outline: none;
   }
@@ -87,6 +115,13 @@
   &.active{
    box-shadow: none;
   }
+}
+
+@mixin pui-button-size($padding, $font-size, $line-height, $border-radius) {
+  padding: $padding;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
 }
 
 //Used for translucent borders

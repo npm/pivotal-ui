@@ -415,6 +415,7 @@ $line-height-small:              1.5 !default;
 
 $border-radius-base:             4px !default;
 $border-radius-medium:           5px !default;
+$border-radius-xl:               20px;
 $border-radius-large:            6px !default;
 $border-radius-small:            3px !default;
 $border-radius-none:             0;
@@ -460,18 +461,21 @@ $table-scrollable-body-border:   3px solid $neutral-9;
 $btn-font-weight:                600 !default;
 $btn-border-width:               0;
 
-$btn-default-color:              $link-color !default;
-$btn-default-bg:                 $neutral-11 !default;
-$btn-default-border:             $neutral-7 !default; // not currently used, but bootstrap relies on this value
-$btn-default-border-hover:       $neutral-5;
+$btn-default-color:              $npm-navy-2;
+$btn-default-bg:                 $neutral-11;
+$btn-default-bg-hover:           $neutral-11;
+$btn-default-border:             $neutral-7;
+$btn-default-border-hover:       $npm-navy-2;
 
-$btn-default-alt-color:          $link-color;
-$btn-default-alt-bg:             $neutral-11;
-$btn-default-alt-border:         $neutral-7;
+$btn-default-alt-color:          $neutral-11;
+$btn-default-alt-bg:             transparent;
+$btn-default-alt-border:         #979797;
+$btn-default-alt-border-hover:   $neutral-11;
 
-$btn-primary-color:              $accent-3; // not currently used, but bootstrap relies on this value
-$btn-primary-bg:                 white;     // not currently used, but bootstrap relies on this value
-$btn-primary-border:             #49A8D5 !default; // not currently used, but bootstrap relies on this value
+$btn-primary-color:              $neutral-11;
+$btn-primary-bg:                 $npm-navy-2;
+$btn-primary-border:             transparent;
+$btn-primary-color-disabled:     lighten($npm-navy-2, 50%);
 
 $btn-link-color:                 $link-color !default;
 $btn-link-bg:                    transparent !default;
@@ -479,19 +483,17 @@ $btn-link-bg:                    transparent !default;
 $btn-lowlight-color:             $dark-5;
 $btn-lowlight-bg:                $glow-4;
 
-$btn-highlight-color:             $neutral-11;
-$btn-highlight-color-disabled:    $accent-6;
-$btn-highlight-bg:                $accent-3;
+$btn-highlight-1-color:          $neutral-11;
+$btn-highlight-1-color-disabled: lighten($npm-brand, 30%);
+$btn-highlight-1-bg:             $npm-brand;
 
-$btn-highlight-alt-color:         $neutral-11;
-$btn-highlight-alt-color-disabled:$brand-11;
-$btn-highlight-alt-bg:            $brand-6;
+$btn-highlight-2-color:          $neutral-11;
+$btn-highlight-2-color-disabled: lighten($npm-blue-2, 30%);
+$btn-highlight-2-bg:             $npm-blue-2;
 
-
-// alternate is only used on login pages
-$btn-alternate-color:            #eee !default;
-$btn-alternate-bg:               $brand-primary !default;
-$btn-alternate-border:           darken($neutral-11, 5%) !default;
+$btn-highlight-3-color:          $neutral-11;
+$btn-highlight-3-color-disabled: lighten($npm-warm-3, 30%);
+$btn-highlight-3-bg:             $npm-warm-3;
 
 $btn-success-color:              transparent !default;
 $btn-success-bg:                 transparent !default;
@@ -504,10 +506,10 @@ $btn-warning-bg-hover:           transparent;
 $btn-warning-border:             transparent !default;
 
 $btn-danger-color:               $neutral-11;
-$btn-danger-color-disabled:      $error-6;
-$btn-danger-bg:                  $error-4 !default;
-$btn-danger-bg-hover:            $error-5 !default;
-$btn-danger-border:              $brand-danger !default;
+$btn-danger-color-disabled:      lighten($npm-brand, 40%);
+$btn-danger-bg:                  $npm-brand;
+$btn-danger-bg-hover:            darken($npm-brand, 30%);
+$btn-danger-border:              transparent;
 
 $btn-info-color:                 transparent !default;
 $btn-info-bg:                    transparent !default;
@@ -519,9 +521,9 @@ $btn-disabled-color:             $neutral-5;
 
 $btn-link-disabled-color:        $gray-light !default;
 
-$btn-border-radius-base:         $border-radius-base;
-$btn-border-radius-large:        $border-radius-large;
-$btn-border-radius-small:        $border-radius-small;
+$btn-border-radius-base:         $border-radius-xl;
+$btn-border-radius-large:        $border-radius-xl;
+$btn-border-radius-small:        $border-radius-xl;
 
 
 // Forms
