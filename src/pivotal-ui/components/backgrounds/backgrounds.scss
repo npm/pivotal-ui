@@ -92,6 +92,42 @@ To modify this component to use a custom image, use an inline `background-image`
 }
 
 
+/*doc
+---
+title: Stretched Full Bleed
+name: background_stretched
+parent: background
+---
+
+This example uses an about us hero image by default, but you can change it to any image you would like.
+Keep in mind, blurry, treated images will look better when stretched to fit a particular content area.
+
+```html_example
+<div class='pane bg-stretched'>
+  <div class='container'>
+    <h1 class='type-neutral-11 txt-c'>Stretched full bleed background image</h1>
+  </div>
+</div>
+```
+
+To modify this component to use a custom image, use an inline `background-image` style like so:
+
+```html_example
+<div class='pane bg-stretched' style="background-image: url(styleguide/such-awesome.jpg)">
+  <div class='container'>
+    <h1 class='type-neutral-11 txt-c'>Stretched full bleed background image</h1>
+  </div>
+</div>
+```
+*/
 
 
-
+.bg-stretched {
+  background-image: url('images/aboutus-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
