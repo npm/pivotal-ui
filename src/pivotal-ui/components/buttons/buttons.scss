@@ -54,7 +54,8 @@ Create block level buttons - those that span the full width of a parent - by add
 
 .btn {
   font-weight: $btn-font-weight;
-  padding: 5px 15px;
+  border-radius: $btn-border-radius-large;
+  padding: 10px 28px;
 
   &.disabled,
   &[disabled],
@@ -71,26 +72,78 @@ name: button_styles
 parent: button
 ---
 
-Button                                                             | Disabled                                                                    | Class                   | Description
------------------------------------------------------------------- | --------------------------------------------------------------------------  | ----------------------- | -----------
-<button class="btn btn-default">Default</button>                   |<button class="btn btn-default" disabled>Default</button>                    | `btn btn-default`       | This is what buttons look like, this is the go to button style.
-<button class="btn btn-default-alt">Default alternate</button>     |<button class="btn btn-default-alt" disabled>Default alternate</button>      | `btn btn-default-alt`   | This is what buttons look like, this is the go to button style (on white backgrounds).
-<button class="btn btn-lowlight">Lowlight</button>                 |<button class="btn btn-lowlight" disabled>Lowlight</button>                  | `btn btn-lowlight`      | Use this button for other actions, like cancel/dismiss
-<button class="btn btn-danger">Delete</button>                     |<button class="btn btn-danger" disabled>Delete</button>                      | `btn btn-danger`        | This button is for delete actions, these actions should also have a confirmation dialog
-<button class="btn btn-highlight">Highlight</button>               |<button class="btn btn-highlight" disabled>Highlight</button>               | `btn btn-highlight`      | Use this button for other important actions, e.g. restarting apps
-<button class="btn btn-highlight-alt">Highlight alternate</button> |<button class="btn btn-highlight-alt" disabled>Highlight alternate</button> | `btn btn-highlight-alt`  | Use this button for other important actions, e.g. marketing call to actions
+
+<table class="styleguide">
+    <tbody>
+    <tr>
+        <th>Button</th>
+        <th>Disabled</th>
+        <th>Class</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><button class="btn btn-default">Default</button></td>
+        <td><button class="btn btn-default" disabled="">Default</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-default</code></td>
+        <td>This is what buttons look like, this is the go to button style.</td>
+    </tr>
+    <tr class="bg-npm-blue-2">
+        <td><button class="btn btn-default-alt">Default alternate</button></td>
+        <td><button class="btn btn-default-alt" disabled="">Default alternate</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-default-alt</code></td>
+        <td class="type-neutral-11">This is what buttons look like, this is the go to button style (on dark backgrounds).</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-primary">Primary</button></td>
+        <td><button class="btn btn-primary" disabled="">Primary</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-primary</code></td>
+        <td>Use this button for the primary action on a page/section</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-highlight-1">Highlight 1</button></td>
+        <td><button class="btn btn-highlight-1" disabled="">Highlight  1</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-highlight-1</code></td>
+        <td>Use this button for other important actions</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-highlight-2">Highlight 2</button></td>
+        <td><button class="btn btn-highlight-2" disabled="">Highlight  2</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-highlight-2</code></td>
+        <td>Use this button for other important actions</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-highlight-3">Highlight 1</button></td>
+        <td><button class="btn btn-highlight-3" disabled="">Highlight  3</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-highlight-3</code></td>
+        <td>Use this button for other important actions</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-lowlight">Lowlight</button></td>
+        <td><button class="btn btn-lowlight" disabled="">Lowlight</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-lowlight</code></td>
+        <td>Use this button for unimportant or dangerous secondary actions like cancel/dismiss/delete</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-danger">Delete</button></td>
+        <td><button class="btn btn-danger" disabled="">Delete</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-danger</code></td>
+        <td>This button is for delete actions, within the confirmation dialog, destructive actions should be lowlight within the app</td>
+    </tr>
+    </tbody>
+</table>
+
 */
 
 .btn-default {
-  @include button-skin($btn-default-color, $btn-default-bg, $btn-default-border);
+  @include button-skin($btn-default-color, $btn-default-bg, $btn-default-border, null, $btn-default-border-hover, $background-activated: $btn-default-bg-hover);
 }
 
 .btn-default-alt {
-  @include button-skin($btn-default-alt-color, $btn-default-alt-bg, $btn-default-alt-border);
-  @include button-shadow;
-  &:hover, &:focus {
-    border-color: $btn-default-border-hover;
-  }
+  @include button-skin($btn-default-alt-color, $btn-default-alt-bg, $btn-default-alt-border, null, $btn-default-alt-border-hover);
+}
+
+.btn-primary {
+  @include button-skin($btn-primary-color, $btn-primary-bg, $border: null, $color-disabled: $btn-primary-color-disabled);
 }
 
 .btn-link {
@@ -104,18 +157,19 @@ Button                                                             | Disabled   
 // Danger and error appear as red
 .btn-danger {
   @include button-skin($btn-danger-color, $btn-danger-bg, $border: null, $color-disabled: $btn-danger-color-disabled);
-  @include button-shadow;
 }
 
-.btn-highlight {
-  @include button-skin($btn-highlight-color, $btn-highlight-bg, $border: null, $color-disabled: $btn-highlight-color-disabled);
-  @include button-shadow;
+.btn-highlight-1 {
+  @include button-skin($btn-highlight-1-color, $btn-highlight-1-bg, $border: null, $color-disabled: $btn-highlight-1-color-disabled);
+}
+.btn-highlight-2 {
+  @include button-skin($btn-highlight-2-color, $btn-highlight-2-bg, $border: null, $color-disabled: $btn-highlight-2-color-disabled);
+}
+.btn-highlight-3 {
+  @include button-skin($btn-highlight-3-color, $btn-highlight-3-bg, $border: null, $color-disabled: $btn-highlight-3-color-disabled);
 }
 
-.btn-highlight-alt {
-  @include button-skin($btn-highlight-alt-color, $btn-highlight-alt-bg, $border: null, $color-disabled: $btn-highlight-alt-color-disabled);
-  @include button-shadow;
-}
+
 
 
 /*doc
@@ -129,15 +183,22 @@ There are two sizes for buttons: Large and default. Simply apply the
 size modifier class for the desired size.
 
 ```html_example_table
-<button class="btn btn-default btn-lg">Large</button>
+<button class="btn btn-default btn-sm">Small</button>
 
 <button class="btn btn-default">Default</button>
 ```
 
 */
 
-.btn-lg {
+$btn-sm-padding: 4px 20px;
+$btn-sm-font-size: $font-size-small;
+$btn-sm-line-height: $line-height-small;
+$btn-sm-border-radius: $border-radius-xl;
+
+
+.btn-sm {
+  text-transform: uppercase;
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-medium, $line-height-large, $border-radius-small);
+  @include pui-button-size($btn-sm-padding, $btn-sm-font-size, $btn-sm-line-height, $btn-sm-border-radius);
 }
 
