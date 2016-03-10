@@ -2239,3 +2239,16 @@ $grids-debug: false;
   }
 
 }
+
+/*doc
+---
+title: Containers
+name: 11_grid_container
+parent: grid
+---
+
+Grids must be inside of a `.container` class, which contains the floated elements so that following content does not pile up on to of your layout.
+
+Plain containers also constrain the width with screen-size-appropriate widths, leaving auto margins to take up the edges. 
+
+*/
