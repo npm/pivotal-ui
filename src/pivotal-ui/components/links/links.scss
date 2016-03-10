@@ -35,6 +35,7 @@ Link                                                                            
 <a class="link-text" href="http://bit.ly/1ulOAW7" target="_blank">default link</a>                                | `link-text`                     | Important links
 <a class="link-text link-lowlight" href="http://bit.ly/1ulOAW7" target="_blank">lowlight link</a>                 | `link-text link-lowlight`       | Less important links
 <a class="link-text link-inverse bg-dark-1" href="http://bit.ly/1ulOAW7" target="_blank">inverse link</a>         | `link-text link-inverse`        | I go on a non-white background
+<a class="link-text link-lowlight link-hover" href=http://bit.ly/1ulOAW7" target="_blank">hover highlight link</a>      | `link-text link-lowlight link-hover`        | Links that change color on hover
 
 ```html_example
 Here's a <a class="link-text link-lowlight" href="http://bit.ly/1wO7Nhv">less important link</a>
@@ -48,8 +49,6 @@ a{
 
   &:hover, &:focus {
     cursor: pointer;
-    text-decoration: none;
-    color: lighten($link-color, 6%);
   }
 
   &:active, &.active{
@@ -84,6 +83,13 @@ a{
 
   &:active, &.active {
     color: darken($link-inverse-color, 6%);
+  }
+}
+
+.link-hover {
+  &:hover, &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
   }
 }
 

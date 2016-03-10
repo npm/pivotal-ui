@@ -304,11 +304,11 @@ $text-color:            $neutral-3 !default;
 // Links
 // -------------------------
 
-$link-color:                              $accent-3;
-$link-hover-color:                        $accent-4;
+$link-color:                              $npm-brand;
+$link-hover-color:                        $npm-brand;
 $link-hover-decoration:                   underline !default;
 
-$link-lowlight-color:                     $dark-5;
+$link-lowlight-color:                     $gray-1;
 $link-lowlight-font-weight:               600;
 
 $link-inverse-color:                      $accent-5;
