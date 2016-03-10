@@ -337,7 +337,7 @@ $font-weight-em-max:      900;
 
 
 $headings-font-family:    null;
-$headings-font-weight:    600 !default;
+$headings-font-weight:    $font-weight-em-high;
 $former-headings-line-height: 1.5;
 $headings-line-height:    1.286 !default;
 $headings-padding:        1em * ($former-headings-line-height - $headings-line-height) / 2;
@@ -345,22 +345,22 @@ $headings-color:          null;
 
 //TODO: create a mixin that will determine multiplers based on px-size
 $font-size-h1:            42px;
-$font-weight-h1:          400;
+$font-weight-h1:          $headings-font-weight;
 
 $font-size-h2:            36px;
-$font-weight-h2:          400;
+$font-weight-h2:          $headings-font-weight;
 
 $font-size-h3:            26px;
-$font-weight-h3:          400;
+$font-weight-h3:          $headings-font-weight;
 
 $font-size-h4:            20px;
-$font-weight-h4:          400;
+$font-weight-h4:          $headings-font-weight;
 
 $font-size-h5:            18px;
-$font-weight-h5:          400;
+$font-weight-h5:          $headings-font-weight;
 
 $font-size-h6:            14px;
-$font-weight-h6:          400;
+$font-weight-h6:          $headings-font-weight;
 
 $line-height-base:        1.35;
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~22px
