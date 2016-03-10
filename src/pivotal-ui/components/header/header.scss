@@ -95,12 +95,21 @@ header {
   font-size: 16px;
   padding: 0.875em 20px 0.0625em;
   border-bottom: 1px solid #d3d3d3;
+  max-height: $header-height-max-sm;
   background: $header-color;
   color: $header-text-color;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+}
+header.hero-transparent {
+  background: transparent;
+  border-bottom: 0;
+}
+header.hero-transparent + .pane {
+  margin-top: $header-height-max-sm;
+  padding-top: -($header-height-max-sm);
 }
 header > .header-item {
   flex: 1 auto;
@@ -271,6 +280,7 @@ header a:hover {
 
 @media (min-width: $desktopMinWidth) {
   header {
+    max-height: $header-height-max-lg;
     flex-direction: row;
     flex-wrap: wrap-reverse;
     padding: 0 20px;
@@ -315,10 +325,6 @@ header a:hover {
   }
   header > .header-nav-menu-container .nav-menu-container {
     max-width: 550px;
-  }
-  header.hero-transparent {
-    background: transparent;
-    border-bottom: 0;
   }
   header.hero-transparent + .pane {
     margin-top: -6em;
