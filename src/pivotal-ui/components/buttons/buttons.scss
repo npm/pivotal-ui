@@ -183,21 +183,20 @@ There are two sizes for buttons: Large and default. Simply apply the
 size modifier class for the desired size.
 
 ```html_example_table
-<button class="btn btn-default btn-sm">Small</button>
+<button class="btn btn-default btn-sm em-alt">Small</button>
 
 <button class="btn btn-default">Default</button>
 ```
 
 */
 
-$btn-sm-padding: 4px 20px;
+$btn-sm-padding: 5px 20px 4px 20px;
 $btn-sm-font-size: $font-size-small;
 $btn-sm-line-height: $line-height-small;
 $btn-sm-border-radius: $border-radius-xl;
 
 
 .btn-sm {
-  text-transform: uppercase;
   // line-height: ensure even-numbered height of button next to large input
   @include pui-button-size($btn-sm-padding, $btn-sm-font-size, $btn-sm-line-height, $btn-sm-border-radius);
 }
