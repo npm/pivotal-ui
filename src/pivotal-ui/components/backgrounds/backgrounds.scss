@@ -131,7 +131,45 @@ To modify this component to use a custom image, use an inline `background-image`
   background-size: contain;
 }
 
+/*doc
+---
+title: Positioning
+name: background_position
+parent: background
+---
 
+You may also need to use background image positioning, for example, if this is decoration that goes to the side.
 
+```html_example
+<div class='pane bg-contain bg-brand-1 bg-right' style="background-image: url(styleguide/such-awesome.jpg);">
+  <div class='container'>
+    <h1 class='type-neutral-11 txt-c'>Contained background image</h1>
+  </div>
+</div>
+```
+*/
 
-
+.bg-right {
+ background-position: center right;
+}
+.bg-left {
+ background-position: center left;
+}
+.bg-bottom {
+ background-position: bottom center;
+}
+.bg-top {
+ background-position: top center;
+}
+.bg-bottom-right {
+ background-position: bottom right;
+}
+.bg-bottom-left {
+ background-position: bottom left;
+}
+.bg-top-right {
+ background-position: top right;
+}
+.bg-top-left {
+ background-position: top left;
+}
