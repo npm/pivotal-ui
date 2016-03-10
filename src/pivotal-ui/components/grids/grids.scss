@@ -2251,4 +2251,10 @@ Grids must be inside of a `.container` class, which contains the floated element
 
 Plain containers also constrain the width with screen-size-appropriate widths, leaving auto margins to take up the edges. 
 
+When doing full-width work, you may need the `.container-fullwidth` class in addition.
+
 */
+
+.container-fullwidth {
+ width: auto !important;
+}
