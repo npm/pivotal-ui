@@ -49,7 +49,7 @@ to come through
 */
 
 .viewport-pane {
-  min-height: calc(100vh - $header-height-max-sm);
+  min-height: calc(100vh - #{$header-height-max-sm});
 }
 
 .hero-transparent + .viewport-pane {
@@ -58,6 +58,6 @@ to come through
 
 @media (min-height: $screen-sm-min) {
   .viewport-pane {
-    min-height: calc(75vh - $header-height-max-lg);
+    min-height: calc(75vh - #{$header-height-max-lg});
   }
 }
