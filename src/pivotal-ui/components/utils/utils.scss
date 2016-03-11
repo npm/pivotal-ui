@@ -1,6 +1,4 @@
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
+@import "../pui-variables";
 
 /*doc
 ---
@@ -131,6 +129,150 @@ So, for extra small (`xs`) screens for example, the available `.visible-*-*` cla
 - `.visible-xs-inline-block`
 
 */
+
+/*doc
+---
+title: Background Images
+name: responsive_background_images
+parent: responsive_utilities
+categories:
+ - css_utilities_responsive-utilities
+ - react_utilities_responsive-utilities
+ - css_all
+---
+
+Often you need to hide decoration or filler content that is a background image on some devices.
+
+The classes `.nobg-xs`, `.nobg-sm`, `.nobg-md`, `.nobg-lg` apply to those sizes specifically.
+
+The classes `.nobg-le-xs`, `.nobg-le-sm`, `.nobg-le-md`, `.nobg-le-lg` apply to those sizes and all smaller ("less than or equal to).
+
+<table class="styleguide">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        Extra small devices
+        <small>Phones (&lt;768px)</small>
+      </th>
+      <th>
+        Small devices
+        <small>Tablets (&geq;768px)</small>
+      </th>
+      <th>
+        Medium devices
+        <small>Desktops (&geq;992px)</small>
+      </th>
+      <th>
+        Large devices
+        <small>Desktops (&geq;1200px)</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="no-wrap"><code>.nobg-xs</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-sm</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-md</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-lg</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-xs</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-sm</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-md</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-le-lg</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-hidden">Hidden</td>
+    </tr>
+  </tbody>
+</table>
+
+
+*/
+
+@media (max-width: $screen-xs-max) {
+  .nobg-xs {
+    background-image: none !important;
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .nobg-sm {
+    background-image: none !important;
+  }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .nobg-md {
+    background-image: none !important;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .nobg-lg {
+    background-image: none !important;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .nobg-le-xs {
+    background-image: none !important;
+  }
+}
+@media (max-width: $screen-sm-max) {
+  .nobg-le-sm {
+    background-image: none !important;
+  }
+}
+@media (max-width: $screen-md-max) {
+  .nobg-le-md {
+    background-image: none !important;
+  }
+}
+.nobg-le-lg {
+  background-image: none !important;
+}
 
 /*doc
 ---
