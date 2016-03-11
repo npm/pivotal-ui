@@ -48,7 +48,6 @@ a{
 
   &:hover, &:focus {
     cursor: pointer;
-    text-decoration: none;
     color: lighten($link-color, 6%);
   }
 
