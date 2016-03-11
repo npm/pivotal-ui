@@ -56,7 +56,7 @@ to come through
   box-sizing: content-box;
 }
 
-@media (min-height: $screen-sm-min) {
+@media (min-height: $screen-height-sm) {
   .viewport-pane {
     min-height: calc(75vh - #{$header-height-max-lg});
   }
