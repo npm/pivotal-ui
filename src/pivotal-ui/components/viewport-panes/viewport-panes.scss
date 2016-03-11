@@ -56,8 +56,8 @@ to come through
   box-sizing: content-box;
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-height: $screen-sm-min) {
   .viewport-pane {
-    min-height: calc(80vh - $header-height-max-lg);
+    min-height: calc(75vh - $header-height-max-lg);
   }
 }
