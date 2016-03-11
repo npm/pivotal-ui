@@ -83,7 +83,7 @@ gulp.task('monolith-build-css-from-cache', () => {
 
 gulp.task('monolith-build-css-from-scratch', callback => runSequence('monolith-setup-css-cache', 'monolith-build-css-from-cache', callback));
 
-gulp.task('monolith-html', () => gulp.src('src/styleguide/pane.html')
+gulp.task('monolith-html', () => gulp.src('src/styleguide/*.html')
     .pipe(gulp.dest('build'))
 );
 
