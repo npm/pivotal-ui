@@ -1,9 +1,9 @@
 {
   "homepage": "http://styleguide.pivotal.io/layout.html#pane",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "2.0.0",
-    "@npmcorp/pui-css-panes": "2.0.0",
-    "@npmcorp/pui-css-header": "2.0.0"
+    "@npmcorp/pui-css-bootstrap": "^2.0.0",
+    "@npmcorp/pui-css-panes": "^2.0.0",
+    "@npmcorp/pui-css-header": "^2.0.0"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
