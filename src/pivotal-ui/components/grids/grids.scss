@@ -2247,14 +2247,20 @@ name: 11_grid_container
 parent: grid
 ---
 
-Grids must be inside of a `.container` class, which contains the floated elements so that following content does not pile up on to of your layout.
+Grids must be inside of a `.container` class, which contains the floated
+elements so that following content does not pile up on to of your layout.
 
-Plain containers also constrain the width with screen-size-appropriate widths, leaving auto margins to take up the edges. 
+Plain containers also constrain the width with screen-size-appropriate widths,
+leaving auto margins to take up the edges. 
 
-When doing full-width work, you may need the `.container-fullwidth` class in addition.
+When doing full-width work, you may need the `.container-fullwidth` class in
+addition.
+
+Because this relies on a wide viewport to show, it's best demoed on [containers 
+page](/containers.html).
 
 */
 
 .container-fullwidth {
- width: auto !important;
+ max-width: initial !important;
 }
