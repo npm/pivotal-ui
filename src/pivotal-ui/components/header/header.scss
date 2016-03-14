@@ -108,8 +108,8 @@ header.hero-transparent {
   border-bottom: 0;
 }
 header.hero-transparent + .pane {
-  margin-top: $header-height-max-sm;
-  padding-top: -($header-height-max-sm);
+  margin-top: -($header-height-max-sm);
+  padding-top: $header-height-max-sm;
 }
 header > .header-item {
   flex: 1 auto;
