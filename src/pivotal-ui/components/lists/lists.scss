@@ -161,13 +161,13 @@ Use a different type of bullet in an unordered list (`<ul>`) with `list-unordere
 ```html_example
 <ul class="list-unordered-alt">
   <li>
-    feep
+    Bear claw jelly-o jujubes candy muffin chocolate bar sweet roll powder. Topping cake chocolate cake candy toffee. Toffee danish candy pie halvah danish. Bear claw toffee candy liquorice.
   </li>
   <li>
-    fop
+    Tootsie roll gummi bears cake. Fruitcake caramels jelly-o cake. Gummi bears jelly-o macaroon gingerbread. Marshmallow brownie candy ice cream candy canes gingerbread icing sweet roll.
   </li>
   <li>
-    meep
+    Chupa chups bonbon cupcake. Tootsie roll gummies bonbon ice cream muffin dessert icing. Brownie dragée sesame snaps biscuit cake macaroon donut gummies tootsie roll. Cotton candy apple pie cake muffin danish toffee.
   </li>
 </ul>
 ```
@@ -186,6 +186,11 @@ Use a different type of bullet in an unordered list (`<ul>`) with `list-unordere
 .list-unordered-alt {
   list-style: none;
   padding: 0px;
+}
+
+.list-unordered-alt li {
+  padding-left: 23px;
+  text-indent: -23px;
 }
 
 .list-unordered-alt li:before
