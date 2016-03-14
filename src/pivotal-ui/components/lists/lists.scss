@@ -156,9 +156,24 @@ parent: list
 </ul>
 ```
 
+Use a different type of bullet in an unordered list (`<ul>`) with `list-unordered-alt`.
+
+```html_example
+<ul class="list-unordered-alt">
+  <li>
+    Bear claw jelly-o jujubes candy muffin chocolate bar sweet roll powder. Topping cake chocolate cake candy toffee. Toffee danish candy pie halvah danish. Bear claw toffee candy liquorice.
+  </li>
+  <li>
+    Tootsie roll gummi bears cake. Fruitcake caramels jelly-o cake. Gummi bears jelly-o macaroon gingerbread. Marshmallow brownie candy ice cream candy canes gingerbread icing sweet roll.
+  </li>
+  <li>
+    Chupa chups bonbon cupcake. Tootsie roll gummies bonbon ice cream muffin dessert icing. Brownie dragée sesame snaps biscuit cake macaroon donut gummies tootsie roll. Cotton candy apple pie cake muffin danish toffee.
+  </li>
+</ul>
+```
+
+
 */
-
-
 
 .list-unordered {
   padding-left: 0;
@@ -166,6 +181,24 @@ parent: list
   > li {
     margin-left: 17px;
   }
+}
+
+.list-unordered-alt {
+  list-style: none;
+  padding: 0px;
+}
+
+.list-unordered-alt li {
+  padding-left: 23px;
+  text-indent: -23px;
+}
+
+.list-unordered-alt li:before
+{
+  content: '\2022';
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
 }
 
 /*doc
@@ -201,7 +234,6 @@ Nested bullets follow GH indentation.
   </li>
 </ol>
 ```
-
 */
 
 /*doc
@@ -211,7 +243,7 @@ name: list_04_unstyled
 parent: list
 ---
 
-Places all list items on a single line with `display: inline-block;` and some light padding. The `.list-unstyled` class can be applied to either a `<ul>` or and `<ol>`.
+Places all list items on a single line with `display: inline-block;` and some light padding. The `.list-unstyled` class can be applied to either a `<ul>` or `<ol>`.
 
 ```html_example
 <ul class="list-unstyled">
@@ -226,7 +258,6 @@ Places all list items on a single line with `display: inline-block;` and some li
   </li>
 </ul>
 ```
-
 */
 
 /*doc
