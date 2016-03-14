@@ -158,8 +158,6 @@ parent: list
 
 */
 
-
-
 .list-unordered {
   padding-left: 0;
   list-style-type: disc;
@@ -202,7 +200,30 @@ Nested bullets follow GH indentation.
 </ol>
 ```
 
+To remove the indentation, use the `list-no-indent` class. It can be applied to both `<ul>`s and `<ol>`s.
+
+```html_example
+
+<p>The following list is in line with this paragraph.</p>
+
+<ul class="list-no-indent">
+  <li>
+    feep
+  </li>
+  <li>
+    fop
+  </li>
+  <li>
+    meep
+  </li>
+</ul>
+```
 */
+
+.list-no-indent {
+  list-style-position: inside;
+  padding: 0;
+}
 
 /*doc
 ---
