@@ -232,7 +232,7 @@ name: list_04_unstyled
 parent: list
 ---
 
-Places all list items on a single line with `display: inline-block;` and some light padding. The `.list-unstyled` class can be applied to either a `<ul>` or and `<ol>`.
+Places all list items on a single line with `display: inline-block;` and some light padding. The `.list-unstyled` class can be applied to either a `<ul>` or `<ol>`.
 
 ```html_example
 <ul class="list-unstyled">
@@ -247,8 +247,45 @@ Places all list items on a single line with `display: inline-block;` and some li
   </li>
 </ul>
 ```
+*/
+
+/*doc
+---
+title: Bullet sizes
+name: list_05_bullets
+parent: list
+---
+
+Uses tiny bullets in an unordered list (`<ul>`) with `list-style-tiny`.
+
+```html_example
+<ul class="list-style-tiny">
+  <li>
+    feep
+  </li>
+  <li>
+    fop
+  </li>
+  <li>
+    meep
+  </li>
+</ul>
+```
 
 */
+
+.list-style-tiny {
+  list-style: none;
+  padding: 0px;
+}
+
+.list-style-tiny li:before
+{
+  content: '\2022';
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
+}
 
 /*doc
 ---
