@@ -156,6 +156,23 @@ parent: list
 </ul>
 ```
 
+Use a different type of bullet in an unordered list (`<ul>`) with `list-unordered-alt`.
+
+```html_example
+<ul class="list-unordered-alt">
+  <li>
+    feep
+  </li>
+  <li>
+    fop
+  </li>
+  <li>
+    meep
+  </li>
+</ul>
+```
+
+
 */
 
 .list-unordered {
@@ -164,6 +181,19 @@ parent: list
   > li {
     margin-left: 17px;
   }
+}
+
+.list-unordered-alt {
+  list-style: none;
+  padding: 0px;
+}
+
+.list-unordered-alt li:before
+{
+  content: '\2022';
+  margin-right: 15px;
+  position: relative;
+  top: -1px;
 }
 
 /*doc
@@ -224,44 +254,6 @@ Places all list items on a single line with `display: inline-block;` and some li
 </ul>
 ```
 */
-
-/*doc
----
-title: Bullet sizes
-name: list_05_bullets
-parent: list
----
-
-Uses tiny bullets in an unordered list (`<ul>`) with `list-style-tiny`.
-
-```html_example
-<ul class="list-style-tiny">
-  <li>
-    feep
-  </li>
-  <li>
-    fop
-  </li>
-  <li>
-    meep
-  </li>
-</ul>
-```
-
-*/
-
-.list-style-tiny {
-  list-style: none;
-  padding: 0px;
-}
-
-.list-style-tiny li:before
-{
-  content: '\2022';
-  margin-right: 15px;
-  position: relative;
-  top: -1px;
-}
 
 /*doc
 ---
