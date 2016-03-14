@@ -299,7 +299,7 @@ $navbar-width:              210px;
 
 $html-bg:               $neutral-11;
 $body-bg:               transparent;
-$text-color:            $neutral-3 !default;
+$text-color:            $npm-navy-text;
 
 // Links
 // -------------------------
@@ -341,7 +341,7 @@ $headings-font-weight:    $font-weight-em-high;
 $former-headings-line-height: 1.5;
 $headings-line-height:    1.286 !default;
 $headings-padding:        1em * ($former-headings-line-height - $headings-line-height) / 2;
-$headings-color:          null;
+$headings-color:          $npm-navy-headings;
 
 //TODO: create a mixin that will determine multiplers based on px-size
 $font-size-h1:            42px;
