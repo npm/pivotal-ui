@@ -74,6 +74,11 @@ a{
   }
 }
 
+.link-simple {
+  @extends .link-lowlight;
+  text-decoration: underline;
+}
+
 .link-inverse {
   color: $link-inverse-color;
 
