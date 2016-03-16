@@ -452,6 +452,66 @@ Alternate panels can be in a default, off, or danger state.
 
 /*doc
 ---
+title: Basic Accent
+name: panel_basic_accent
+parent: panel
+---
+
+These panels are for the pricing pane.
+
+```html_example_table
+<div class="panel panel-basic-accent panel-accent-npm-brand">
+  <div class="panel-body">
+    Red panel
+  </div>
+</div>
+
+<div class="panel panel-basic-accent panel-accent-npm-blue-2">
+  <div class="panel-body">
+    Blue panel
+  </div>
+</div>
+
+<div class="panel panel-basic-accent panel-accent-npm-warm-3">
+  <div class="panel-body">
+    Gold panel
+  </div>
+</div>
+```
+
+*/
+
+.panel-basic-accent {
+  @extend .panel-basic-alt;
+  border-width: 1px;
+  border-top-color: $panel-basic-alt-border;
+  border-top-width: 7px;
+  border-radius: 7px;
+}
+
+.panel-accent-npm-brand { border-top-color: $npm-brand; }
+.panel-accent-npm-warm-1 { border-top-color: $npm-warm-1; }
+.panel-accent-npm-warm-2 { border-top-color: $npm-warm-2; }
+.panel-accent-npm-warm-3 { border-top-color: $npm-warm-3; }
+.panel-accent-npm-blue-1 { border-top-color: $npm-blue-1; }
+.panel-accent-npm-blue-2 { border-top-color: $npm-blue-2; }
+.panel-accent-npm-blue-3 { border-top-color: $npm-blue-3; }
+.panel-accent-npm-pastel-1 { border-top-color: $npm-pastel-1; }
+.panel-accent-npm-pastel-2 { border-top-color: $npm-pastel-2; }
+.panel-accent-npm-pastel-3 { border-top-color: $npm-pastel-3; }
+.panel-accent-npm-pastel-4 { border-top-color: $npm-pastel-4; }
+.panel-accent-npm-pastel-5 { border-top-color: $npm-pastel-5; }
+.panel-accent-npm-pastel-6 { border-top-color: $npm-pastel-6; }
+.panel-accent-npm-pastel-7 { border-top-color: $npm-pastel-7; }
+.panel-accent-npm-pastel-8 { border-top-color: $npm-pastel-8; }
+.panel-accent-npm-pastel-9 { border-top-color: $npm-pastel-9; }
+.panel-accent-npm-navy-1 { border-top-color: $npm-navy-1; }
+.panel-accent-npm-navy-2 { border-top-color: $npm-navy-2; }
+.panel-accent-npm-navy-headings { border-top-color: $npm-navy-headings; }
+.panel-accent-npm-navy-text { border-top-color: $npm-navy-text; }
+
+/*doc
+---
 title: Shadow
 name: panel_shadow
 parent: panel
