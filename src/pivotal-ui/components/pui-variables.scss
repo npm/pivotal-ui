@@ -317,7 +317,7 @@ $link-inverse-color:                      $accent-5;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  'Source Sans Pro', 'SourceSansPro', sans-serif !default;
+$font-family-sans-serif:  'Open Sans', 'OpenSans', sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
@@ -330,10 +330,10 @@ $font-size-small:         13px;
 $font-size-extra-small:   12px;
 
 
-$font-weight-em-low:      200;
+$font-weight-em-low:      300;
 $font-weight-em-default:  400;
-$font-weight-em-high:     600;
-$font-weight-em-max:      900;
+$font-weight-em-high:     700;
+$font-weight-em-max:      800;
 
 
 $headings-font-family:    null;
