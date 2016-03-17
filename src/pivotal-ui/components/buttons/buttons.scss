@@ -124,6 +124,12 @@ parent: button
         <td>Use this button for unimportant or dangerous secondary actions like cancel/dismiss/delete</td>
     </tr>
     <tr>
+        <td><button class="btn btn-lowlight">Link</button></td>
+        <td><button class="btn btn-link" disabled="">Link</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-link</code></td>
+        <td>Use this button to contrast navigation with action</td>
+    </tr>
+    <tr>
         <td><button class="btn btn-danger">Delete</button></td>
         <td><button class="btn btn-danger" disabled="">Delete</button></td>
         <td style="white-space: nowrap"><code class="styleguide">btn btn-danger</code></td>
