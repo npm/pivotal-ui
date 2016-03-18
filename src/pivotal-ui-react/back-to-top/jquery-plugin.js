@@ -7,7 +7,7 @@ var {getScrollTop} = require('./scroll-top');
  *
  * @description
  * A component for scrolling to the top of a page using jQuery
- * Included in your JavaScript with `require('pui-react-back-to-top/jquery-plugin')`
+ * Included in your JavaScript with `require('@npmcorp/pui-react-back-to-top/jquery-plugin')`
  *
  * @example ```html
  * <a class="back-to-top" data-position="back-to-top" href="#" target="_blank" style="display: inline;"></a>

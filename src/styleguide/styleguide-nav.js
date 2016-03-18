@@ -1,7 +1,7 @@
 const React = global.React || require('react');
-const SimpleTabs = global.SimpleTabs || require('pui-react-tabs').SimpleTabs;
-const Tab = global.Tab || require('pui-react-tabs').Tab;
-const Collapse = global.Collapse || require('pui-react-collapse').Collapse;
+const SimpleTabs = global.SimpleTabs || require('@npmcorp/pui-react-tabs').SimpleTabs;
+const Tab = global.Tab || require('@npmcorp/pui-react-tabs').Tab;
+const Collapse = global.Collapse || require('@npmcorp/pui-react-collapse').Collapse;
 
 const ComponentTypeCollapse = React.createClass({
   render() {

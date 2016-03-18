@@ -1,7 +1,7 @@
 var React = require('react/addons');
-var {DefaultH4} = require('pui-react-typography');
+var {DefaultH4} = require('@npmcorp/pui-react-typography');
 require('classlist-polyfill');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 /**
@@ -11,10 +11,10 @@ var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
  * @property title {String} Header text for the modal window
  *
  * @example ```js
- * var Modal = require('pui-react-modals').Modal;
- * var ModalBody = require('pui-react-modals').ModalBody;
- * var ModalFooter = require('pui-react-modals').ModalFooter;
- * var DefaultButton = require('pui-react-buttons').DefaultButton;
+ * var Modal = require('@npmcorp/pui-react-modals').Modal;
+ * var ModalBody = require('@npmcorp/pui-react-modals').ModalBody;
+ * var ModalFooter = require('@npmcorp/pui-react-modals').ModalFooter;
+ * var DefaultButton = require('@npmcorp/pui-react-buttons').DefaultButton;
  * var MyComponent = React.createClass({
  *   openModal() {
  *    this.refs.modal.open();
@@ -172,7 +172,7 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-modals --save
+npm install @npmcorp/pui-react-modals --save
 </i>
 </code>
 
@@ -181,9 +181,9 @@ For the example, you also need to install [Buttons](#button_react) and require `
 Require the subcomponent:
 
 ```
-var Modal = require('pui-react-modals').Modal;
-var ModalBody = require('pui-react-modals').ModalBody;
-var ModalFooter = require('pui-react-modals').ModalFooter;
+var Modal = require('@npmcorp/pui-react-modals').Modal;
+var ModalBody = require('@npmcorp/pui-react-modals').ModalBody;
+var ModalFooter = require('@npmcorp/pui-react-modals').ModalFooter;
 ```
 
 We provide 3 components that can be used to assemble modals:

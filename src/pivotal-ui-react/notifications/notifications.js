@@ -1,9 +1,9 @@
 var React = require('react');
 var types = React.PropTypes;
-var {Icon} = require('pui-react-iconography');
-var {LinkDropdown, DropdownItem} = require('pui-react-dropdowns');
+var {Icon} = require('@npmcorp/pui-react-iconography');
+var {LinkDropdown, DropdownItem} = require('@npmcorp/pui-react-dropdowns');
 var classnames = require('classnames');
-var {mergeProps} = require('pui-react-helpers');
+var {mergeProps} = require('@npmcorp/pui-react-helpers');
 
 
 /**
@@ -11,11 +11,11 @@ var {mergeProps} = require('pui-react-helpers');
  * @description A dropdown for showing a count (in the trigger) and list (in the menu) of notifications
  *
  * @example ```js
- * var Notifications = require('pui-react-notifications').Notifications;
- * var Flag = require('pui-react-media').Flag;
- * var DefaultH3 = require('pui-react-typography').DefaultH3;
- * var DefaultH5 = require('pui-react-typography').DefaultH5;
- * var Label = require('pui-react-labels').Label;
+ * var Notifications = require('@npmcorp/pui-react-notifications').Notifications;
+ * var Flag = require('@npmcorp/pui-react-media').Flag;
+ * var DefaultH3 = require('@npmcorp/pui-react-typography').DefaultH3;
+ * var DefaultH5 = require('@npmcorp/pui-react-typography').DefaultH5;
+ * var Label = require('@npmcorp/pui-react-labels').Label;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -68,10 +68,10 @@ var Notifications = React.createClass({
  * @description A dropdown for showing a list of notifications with an alert icon in the trigger if there are notifications
  *
  * @example ```js
- * var AlertNotifications = require('pui-react-notifications').AlertNotifications;
- * var Flag = require('pui-react-media').Flag;
- * var Icon = require('pui-react-iconography').Icon;
- * var DefaultH5 = require('pui-react-typography').DefaultH5;
+ * var AlertNotifications = require('@npmcorp/pui-react-notifications').AlertNotifications;
+ * var Flag = require('@npmcorp/pui-react-media').Flag;
+ * var Icon = require('@npmcorp/pui-react-iconography').Icon;
+ * var DefaultH5 = require('@npmcorp/pui-react-typography').DefaultH5;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -154,7 +154,7 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-notifications --save
+npm install @npmcorp/pui-react-notifications --save
 </i>
 </code>
 
@@ -164,9 +164,9 @@ For the examples, you also need to require `Flag` from [Media](#media_react), `L
 Require the subcomponent:
 
 ```
-var Notifications = require('pui-react-notifications').Notifications;
-var AlertNotifications = require('pui-react-notifications').AlertNotifications;
-var NotificationItem = require('pui-react-notifications').NotificationItem;
+var Notifications = require('@npmcorp/pui-react-notifications').Notifications;
+var AlertNotifications = require('@npmcorp/pui-react-notifications').AlertNotifications;
+var NotificationItem = require('@npmcorp/pui-react-notifications').NotificationItem;
 ```
 
 Here's an example if there are no notifications:

@@ -1,6 +1,6 @@
 var React = require('react');
 var types = React.PropTypes;
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 var DividerProps = {
   propTypes: {
@@ -16,7 +16,7 @@ var DividerProps = {
  * @property size {String} If set to `large`, makes the line thicker
  *
  * @example ```js
- * var Divider = require('pui-react-dividers').Divider;
+ * var Divider = require('@npmcorp/pui-react-dividers').Divider;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -74,7 +74,7 @@ module.exports = {
    * @property size {String} If set to `large`, makes the line thicker
    *
    * @example ```js
-   * var InverseDivider = require('pui-react-dividers').InverseDivider;
+   * var InverseDivider = require('@npmcorp/pui-react-dividers').InverseDivider;
    * var MyComponent = React.createClass({
    *   render() {
    *     return (
@@ -106,15 +106,15 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-dividers --save
+npm install @npmcorp/pui-react-dividers --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var Divider = require('pui-react-dividers').Divider;
-var InverseDivider = require('pui-react-dividers').InverseDivider;
+var Divider = require('@npmcorp/pui-react-dividers').Divider;
+var InverseDivider = require('@npmcorp/pui-react-dividers').InverseDivider;
 ```
 
 

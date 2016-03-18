@@ -36,8 +36,8 @@ var MediaObject = React.createClass({
  * @property rightMediaSpacing {String} One of `small`, `medium`, `large` (default), or `xlarge`--sets the amount of space between the right media and the content
  *
  * @example ```js
- * var Media = require('pui-react-media').Media;
- * var Image = require('pui-react-image').Image;
+ * var Media = require('@npmcorp/pui-react-media').Media;
+ * var Image = require('@npmcorp/pui-react-image').Image;
  * var MyComponent = React.createClass({
  *   render() {
  *     var image = <Image src="http://placehold.it/50x50"/>;
@@ -122,7 +122,7 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-media --save
+npm install @npmcorp/pui-react-media --save
 </i>
 </code>
 
@@ -132,8 +132,8 @@ For the example, you also need to install [Images](#image_react) and require `Im
 Require the subcomponents:
 
 ```
-var Media = require('pui-react-media').Media;
-var Flag = require('pui-react-media').Flag;
+var Media = require('@npmcorp/pui-react-media').Media;
+var Flag = require('@npmcorp/pui-react-media').Flag;
 ```
 
 ## General media object modifiers

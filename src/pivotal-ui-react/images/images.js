@@ -1,6 +1,6 @@
 var React = require('react');
 var types = React.PropTypes;
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 
 /**
@@ -12,7 +12,7 @@ import {mergeProps} from 'pui-react-helpers';
  * @property href {String} If given a URL, makes the image link to that URL
  *
  * @example ```js
- * var Image = require('pui-react-images').Image;
+ * var Image = require('@npmcorp/pui-react-images').Image;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <Image src="http://placehold.it/1000x100" responsive={true} href="https://google.com"/>;
@@ -55,14 +55,14 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-images --save
+npm install @npmcorp/pui-react-images --save
 </i>
 </code>
 
 Require the subcomponent:
 
 ```
-var Image = require('pui-react-images');
+var Image = require('@npmcorp/pui-react-images');
 ```
 
 

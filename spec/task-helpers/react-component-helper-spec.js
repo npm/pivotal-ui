@@ -31,7 +31,7 @@ describe('packageJson', () => {
 
       const jsonContents = JSON.parse(result[0].contents.toString());
       expect(jsonContents).toEqual(jasmine.objectContaining({
-        name: 'pui-react-foo',
+        name: '@npmcorp/pui-react-foo',
         version: '0.0.1',
         description: 'foo',
         main: 'foo.js',

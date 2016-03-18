@@ -4,8 +4,8 @@ module.exports = {
    * @description When paired with `<OverlayTrigger>`, displays a tooltip on a specified user action
    *
    * @example ```js
-   * var OverlayTrigger = require('pui-react-overlay-trigger').OverlayTrigger;
-   * var Tooltip = require('pui-react-overlay-tooltip').Tooltip;
+   * var OverlayTrigger = require('@npmcorp/pui-react-overlay-trigger').OverlayTrigger;
+   * var Tooltip = require('@npmcorp/pui-react-overlay-tooltip').Tooltip;
    * var MyComponent = React.createClass({
    *   render() {
    *     return (
@@ -34,15 +34,15 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-tooltip pui-react-overlay-trigger --save
+npm install @npmcorp/pui-react-tooltip @npmcorp/pui-react-overlay-trigger --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var Tooltip = require('pui-react-tooltip').Tooltip;
-var OverlayTrigger = require('pui-react-overlay-trigger').OverlayTrigger;
+var Tooltip = require('@npmcorp/pui-react-tooltip').Tooltip;
+var OverlayTrigger = require('@npmcorp/pui-react-overlay-trigger').OverlayTrigger;
 ```
 
 

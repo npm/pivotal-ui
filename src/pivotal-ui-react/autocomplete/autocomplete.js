@@ -124,7 +124,7 @@ module.exports = {
    * @property value {String} The value of the input.
    *
    * @example ```js
-   * var Autocomplete = require('pui-react-autocomplete').Autocomplete;
+   * var Autocomplete = require('@npmcorp/pui-react-autocomplete').Autocomplete;
    * var initialItems = ['Pivotal Labs', 'Cloud Foundry', 'Data Services'];
    * var onInitializeItems = function(callback) { callback(initialItems) };
    * var onPick = function(value) { console.log(value); };
@@ -155,14 +155,14 @@ module.exports = {
 
  <code class="pam">
  <i class="fa fa-download" alt="Install the Component">
- npm install pui-react-autocomplete --save
+ npm install @npmcorp/pui-react-autocomplete --save
  </i>
  </code>
 
  Require the subcomponent:
 
  ```
- var Autocomplete = require('pui-react-autocomplete');
+ var Autocomplete = require('@npmcorp/pui-react-autocomplete');
  ```
 
  ```jsx_example

@@ -42,8 +42,8 @@ function defList(tagName, spacingType, classNames, childClassNames) {
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var UnorderedList = require('pui-react-lists').UnorderedList;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var UnorderedList = require('@npmcorp/pui-react-lists').UnorderedList;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -76,8 +76,8 @@ var UnorderedList = defList(
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var OrderedList = require('pui-react-lists').OrderedList;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var OrderedList = require('@npmcorp/pui-react-lists').OrderedList;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -103,8 +103,8 @@ var OrderedList = defList('ol', 'lv', ({unstyled}) => classnames({'list-unstyled
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var InlineList = require('pui-react-lists').InlineList;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var InlineList = require('@npmcorp/pui-react-lists').InlineList;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -130,8 +130,8 @@ var InlineList = defList('ul', 'lh', ({divider}) => classnames('list-inline', {'
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var GroupList = require('pui-react-lists').GroupList;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var GroupList = require('@npmcorp/pui-react-lists').GroupList;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -157,8 +157,8 @@ var GroupList = defList('ul', 'lv', () => classnames('list-group'), 'list-group-
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var GroupListInverse = require('pui-react-lists').GroupListInverse;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var GroupListInverse = require('@npmcorp/pui-react-lists').GroupListInverse;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -184,8 +184,8 @@ var GroupListInverse = defList('ul', 'lv', () => classnames('list-group-inverse'
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var StepList = require('pui-react-lists').StepList;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var StepList = require('@npmcorp/pui-react-lists').StepList;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -211,8 +211,8 @@ var StepList = defList('ol', 'lh', () => classnames('list-steps'));
  * @property spacing {String} One of `n`, `s`, `m`, `l`, or `xl`: sets the amount of space between list items
  *
  * @example ```js
- * var BreadcrumbList = require('pui-react-lists').BreadcrumbList;
- * var ListItem = require('pui-react-lists').ListItem;
+ * var BreadcrumbList = require('@npmcorp/pui-react-lists').BreadcrumbList;
+ * var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -253,7 +253,7 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-lists --save
+npm install @npmcorp/pui-react-lists --save
 </i>
 </code>
 
@@ -268,8 +268,8 @@ parent: list_react
 Require the subcomponents:
 
 ```
-var BreadcrumbList = require('pui-react-lists').BreadcrumbList;
-var ListItem = require('pui-react-lists').ListItem;
+var BreadcrumbList = require('@npmcorp/pui-react-lists').BreadcrumbList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
 ```
 
 ```react_example
@@ -291,8 +291,8 @@ parent: list_react
 Require the subcomponents:
 
 ```
-var UnorderedList = require('pui-react-lists').UnorderedList;
-var ListItem = require('pui-react-lists').ListItem;
+var UnorderedList = require('@npmcorp/pui-react-lists').UnorderedList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
 ```
 
 ```react_example
@@ -350,8 +350,8 @@ List Spacing can be changed setting the size of the spacing property.
  Require the subcomponents:
 
  ```
-var GroupList = require('pui-react-lists').GroupList;
-var ListItem = require('pui-react-lists').ListItem;
+var GroupList = require('@npmcorp/pui-react-lists').GroupList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  ```
 
  ```react_example
@@ -373,8 +373,8 @@ parent: list_react
  Require the subcomponents:
 
  ```
-var GroupListInverse = require('pui-react-lists').GroupListInverse;
-var ListItem = require('pui-react-lists').ListItem;
+var GroupListInverse = require('@npmcorp/pui-react-lists').GroupListInverse;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  ```
 
 ```react_example
@@ -397,8 +397,8 @@ parent: list_react
  Require the subcomponents:
 
  ```
-var InlineList = require('pui-react-lists').InlineList;
-var ListItem = require('pui-react-lists').ListItem;
+var InlineList = require('@npmcorp/pui-react-lists').InlineList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
  ```
 
 ```react_example_table
@@ -429,8 +429,8 @@ parent: list_react
 Require the subcomponents:
 
 ```
-var OrderedList = require('pui-react-lists').OrderedList;
-var ListItem = require('pui-react-lists').ListItem;
+var OrderedList = require('@npmcorp/pui-react-lists').OrderedList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
 ```
 
 ```react_example_table
@@ -460,8 +460,8 @@ parent: list_react
 Require the subcomponent:
 
 ```
-var StepList = require('pui-react-lists').StepList;
-var ListItem = require('pui-react-lists').ListItem;
+var StepList = require('@npmcorp/pui-react-lists').StepList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
 ```
 
 ```react_example
@@ -483,8 +483,8 @@ parent: list_react
 Require the subcomponents:
 
 ```
-var UnorderedList = require('pui-react-lists').UnorderedList;
-var ListItem = require('pui-react-lists').ListItem;
+var UnorderedList = require('@npmcorp/pui-react-lists').UnorderedList;
+var ListItem = require('@npmcorp/pui-react-lists').ListItem;
 ```
 
 ```react_example_table

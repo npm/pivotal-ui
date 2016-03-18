@@ -2,7 +2,7 @@ var React = require('react/addons');
 var types = React.PropTypes;
 var classnames = require('classnames');
 var move = require('./move_helper');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 var HoverMixin = {
   getInitialState() {
@@ -33,8 +33,8 @@ function childrenIndices(children) {
  * @property onDrop {Function} A callback called when the user re-orders list items
  *
  * @example ```js
- * var DraggableList = require('pui-react-draggable-list').DraggableList;
- * var DraggableListItem = require('pui-react-draggable-list').DraggableListItem;
+ * var DraggableList = require('@npmcorp/pui-react-draggable-list').DraggableList;
+ * var DraggableListItem = require('@npmcorp/pui-react-draggable-list').DraggableListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -180,15 +180,15 @@ parent: list_react
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-draggable-list --save
+npm install @npmcorp/pui-react-draggable-list --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var DraggableList = require('pui-react-draggable-list').DraggableList;
-var DraggableListItem = require('pui-react-draggable-list').DraggableListItem;
+var DraggableList = require('@npmcorp/pui-react-draggable-list').DraggableList;
+var DraggableListItem = require('@npmcorp/pui-react-draggable-list').DraggableListItem;
 ```
 Creates a draggable list.
 

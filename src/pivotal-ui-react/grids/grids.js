@@ -1,7 +1,7 @@
 var React = require('react');
 var types = React.PropTypes;
 var BootstrapRow = require('react-bootstrap/lib/Row');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component Row
@@ -10,8 +10,8 @@ import {mergeProps} from 'pui-react-helpers';
  * @property gutter {String} Sets the spacing between columns (either `sm`, `md`, or `lg`).
  *
  * @example ```js
- * var Row = require('pui-react-grids').Row;
- * var Col = require('pui-react-grids').Col;
+ * var Row = require('@npmcorp/pui-react-grids').Row;
+ * var Col = require('@npmcorp/pui-react-grids').Col;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -96,15 +96,15 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-grids --save
+npm install @npmcorp/pui-react-grids --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var Row = require('pui-react-grids').Row;
-var Col = require('pui-react-grids').Col;
+var Row = require('@npmcorp/pui-react-grids').Row;
+var Col = require('@npmcorp/pui-react-grids').Col;
 ```
 
 The react grids depend on [React-Bootstrap](http://react-bootstrap.github.io/components.html#grids). Check out their docs

@@ -45,7 +45,7 @@ module.exports = {
    * h2, h3, h4, h5, h6, sm, xs) or a FA size (lg, 2x, 3x, 4x, 5x).
    *
    * @example ```js
-   * var Icon = require('pui-react-iconography').Icon;
+   * var Icon = require('@npmcorp/pui-react-iconography').Icon;
    * var MyComponent = React.createClass({
    *   render() {
    *     return <Icon name="plus" size="h5"/>;
@@ -72,14 +72,14 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-iconography --save
+npm install @npmcorp/pui-react-iconography --save
 </i>
 </code>
 
 Require the subcomponent:
 
 ```
-var Icon = require('pui-react-iconography');
+var Icon = require('@npmcorp/pui-react-iconography');
 ```
 
 

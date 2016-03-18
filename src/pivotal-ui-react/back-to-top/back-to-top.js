@@ -2,7 +2,7 @@ var React = require('react');
 var AnimationMixin = require('pui-react-animation');
 var throttle = require('lodash.throttle');
 var {getScrollTop, setScrollTop} = require('./scroll-top');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 
 /**
@@ -10,7 +10,7 @@ import {mergeProps} from 'pui-react-helpers';
  * @description A component for scrolling to the top of a page
  *
  * @example ```js
- * var BackToTop = require('pui-react-back-to-top').BackToTop;
+ * var BackToTop = require('@npmcorp/pui-react-back-to-top').BackToTop;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <BackToTop/>;
@@ -77,14 +77,14 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-back-to-top --save
+npm install @npmcorp/pui-react-back-to-top --save
 </i>
 </code>
 
 Require the subcomponent:
 
 ```
-var BackToTop = require('pui-react-back-to-top').BackToTop;
+var BackToTop = require('@npmcorp/pui-react-back-to-top').BackToTop;
 ```
 
 You can use this component to scroll to the top of a page.

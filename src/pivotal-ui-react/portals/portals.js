@@ -25,7 +25,7 @@ function reset() {
  * @property name {String} Identifier for linking source and destination portals
  *
  * @example ```js
- * var PortalSource = require('pui-react-portals').PortalSource;
+ * var PortalSource = require('@npmcorp/pui-react-portals').PortalSource;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -135,15 +135,15 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-portals --save
+npm install @npmcorp/pui-react-portals --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var PortalSource = require('pui-react-portals').PortalSource;
-var PortalDestination = require('pui-react-portals').PortalDestination;
+var PortalSource = require('@npmcorp/pui-react-portals').PortalSource;
+var PortalDestination = require('@npmcorp/pui-react-portals').PortalDestination;
 ```
 
 The `Portal` components render DOM nodes elsewhere on the page. This is useful for things like

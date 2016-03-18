@@ -1,6 +1,6 @@
 var packageTemplate = function(name, {dependencies: dependencyOverrides, ...overrides}) {
   return JSON.stringify({
-    name: `pui-react-${name}`,
+    name: `@npmcorp/pui-react-${name}`,
     version: '0.0.1',
     description: name,
     main: `${name}.js`,

@@ -1,7 +1,7 @@
 const React = global.React || require('react');
-const BasePane = global.BasePane || require('pui-react-panes').BasePane;
-const Button = global.DefaultButton || require('pui-react-buttons').DefaultButton;
-const TileLayout = global.TileLayout || require('pui-react-tile-layout');
+const BasePane = global.BasePane || require('@npmcorp/pui-react-panes').BasePane;
+const Button = global.DefaultButton || require('@npmcorp/pui-react-buttons').DefaultButton;
+const TileLayout = global.TileLayout || require('@npmcorp/pui-react-tile-layout');
 
 const IntroPage = React.createClass({
   render() {

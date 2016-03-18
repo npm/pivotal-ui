@@ -1,6 +1,6 @@
 var React = require('react');
 var types = React.PropTypes;
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component BasePane
@@ -10,8 +10,8 @@ import {mergeProps} from 'pui-react-helpers';
  * @property innerClass {String} Class names to apply to the content
  *
  * @example ```js
- * var BasePane = require('pui-react-panes').BasePane;
- * var DefaultH1 = require('pui-react-typography').DefaultH1;
+ * var BasePane = require('@npmcorp/pui-react-panes').BasePane;
+ * var DefaultH1 = require('@npmcorp/pui-react-typography').DefaultH1;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -52,8 +52,8 @@ var BasePane = React.createClass({
  * @property innerClass {String} Class names to apply to the content
  *
  * @example ```js
- * var Pane = require('pui-react-panes').Pane;
- * var DefaultH1 = require('pui-react-typography').DefaultH1;
+ * var Pane = require('@npmcorp/pui-react-panes').Pane;
+ * var DefaultH1 = require('@npmcorp/pui-react-typography').DefaultH1;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -91,7 +91,7 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-panels --save
+npm install @npmcorp/pui-react-panels --save
 </i>
 </code>
 
@@ -100,8 +100,8 @@ For the example, you also need to install [Typography](#type_react) and require 
 Require the subcomponent:
 
 ```
-var Pane = require('pui-react-panels').Pane;
-var BasePane = require('pui-react-panels').BasePane;
+var Pane = require('@npmcorp/pui-react-panels').Pane;
+var BasePane = require('@npmcorp/pui-react-panels').BasePane;
 ```
 
 The `Pane` component is a straightforward implementation of the [Pane][pane] styling.
