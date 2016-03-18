@@ -75,6 +75,8 @@ Set font sizes using headings and modifier classes.
 <p class="type-sm">small text 13px</p>
 
 <p class="type-xs">extra small text 12px</p>
+
+<p class="type-gigantic">gigantic 71px</p>
 ```
 
 <div class="alert alert-info mbxl">
@@ -180,6 +182,10 @@ small,
 
 .title {
   font-size: $font-size-title;
+}
+
+.type-gigantic {
+  font-size: $font-size-gigantic;
 }
 
 /*doc
