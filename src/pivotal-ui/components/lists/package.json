@@ -3,7 +3,7 @@
   "dependencies": {
     "@npmcorp/pui-css-bootstrap": "^2.0.0",
     "@npmcorp/pui-css-iconography": "^2.0.0",
-    "@npmcorp/pui-css-typography": "^2.0.0"
+    "@npmcorp/pui-css-typography": "^3.0.0"
   },
   "version": "2.2.1"
 }
