@@ -623,8 +623,8 @@ For example, the draggable list package, which exports `DraggableList` and
  * @property onDrop {Function} A callback called when the user re-orders list items
  *
  * @example ```js
- * var DraggableList = require('pui-react-draggable-list').DraggableList;
- * var DraggableListItem = require('pui-react-draggable-list').DraggableListItem;
+ * var DraggableList = require('@npcorp/pui-react-draggable-list').DraggableList;
+ * var DraggableListItem = require('@npcorp/pui-react-draggable-list').DraggableListItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (

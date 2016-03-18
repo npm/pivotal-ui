@@ -96,8 +96,8 @@ If you're ready to try PUI with React, follow these instructions!
    Javascript:
    ```jsx
    var React = require('react');
-   var DefaultH1 = require('pui-react-typography').DefaultH1;
-   var DefaultButton = require('pui-react-buttons').DefaultButton;
+   var DefaultH1 = require('@npcorp/pui-react-typography').DefaultH1;
+   var DefaultButton = require('@npcorp/pui-react-buttons').DefaultButton;
 
    var MyTestPage = React.createClass({
      getInitialState: function() {
