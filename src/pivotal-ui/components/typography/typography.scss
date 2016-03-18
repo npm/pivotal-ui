@@ -2,7 +2,7 @@
 
 @mixin font-helper($name, $weight, $style) {
   @font-face {
-    font-family: 'SourceSansPro';
+    font-family: 'OpenSans';
     src: url("fonts/#{$name}.eot");
     src: url("fonts/#{$name}.eot?#iefix") format("embedded-opentype"),
     url("fonts/#{$name}.woff") format("woff"),
@@ -12,11 +12,12 @@
     font-style: $style;
   }
 }
-@include font-helper('sourcesanspro-light-webfont', 200, normal);
-@include font-helper('sourcesanspro-regular-webfont', 400, normal);
-@include font-helper('sourcesanspro-it-webfont', 400, italic);
-@include font-helper('sourcesanspro-bold-webfont', 600, normal);
-@include font-helper('sourcesanspro-black-webfont', 900, normal);
+@include font-helper('OpenSans-Light-webfont', 300, normal);
+@include font-helper('OpenSans-Regular-webfont', 400, normal);
+@include font-helper('OpenSans-Italic-webfont', 400, italic);
+@include font-helper('OpenSans-Semibold-webfont', 600, normal);
+@include font-helper('OpenSans-Bold-webfont', 700, normal);
+@include font-helper('OpenSans-ExtraBold-webfont', 800, normal);
 
 /*doc
 ---
