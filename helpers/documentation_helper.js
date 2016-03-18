@@ -60,14 +60,14 @@ function parseCommentNodes(commentNodes) {
     // Only process documentation blocks
     .filter(commentNode => commentNode.value.match(/^\*[\s\S]*@component/))
     // Extract @annotations
-    .map(commentNode => commentNode.value.match(/@[^@]+/g))
+    .map(commentNode => commentNode.value.match(/@(component|description|example|param|property|return|see)\s+[^@]+/g))
     // Remove `*` characters and extra new lines
     .map(rawAnnotations => rawAnnotations.map(
         rawAnnotation => rawAnnotation.replace(/(?:\s*\n)?\s*\* ?/g, '\n').trim()
     ))
     // Extract `name` and `text` from a string that looks like '@name text'
     .map(annotationStrings => annotationStrings.map(
-        annotationString => annotationString.match(/^@(\S+)\s+([\s\S]*)/).slice(1, 3)
+        annotationString => annotationString.match(/^@(component|description|example|param|property|return|see)\s+([\s\S]*)/).slice(1, 3)
     ))
     // Convert the result into JSON
     .map(annotationTuples => annotationTuples.reduce(
