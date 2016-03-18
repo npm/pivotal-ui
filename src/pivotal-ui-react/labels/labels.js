@@ -1,12 +1,12 @@
 var React = require('react');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component Label
  * @description Highlighted pill of text
  *
  * @example ```js
- * var Label = require('pui-react-labels').Label;
+ * var Label = require('@npmcorp/pui-react-labels').Label;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <Label>New</Label>;
@@ -41,7 +41,7 @@ categories:
 
 <code class="pam">
  <i class="fa fa-download" alt="Install the Component">
- npm install pui-react-labels --save
+ npm install @npmcorp/pui-react-labels --save
  </i>
  </code>
 
@@ -50,7 +50,7 @@ For the example, you also need to install [Typography](#type_react) and require 
 Require the subcomponent:
 
 ```
-var Label = require('pui-react-labels');
+var Label = require('@npmcorp/pui-react-labels');
 ```
 
 Labels are a straightforward implementation of the [Label][label] style.

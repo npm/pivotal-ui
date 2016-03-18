@@ -1,7 +1,7 @@
 var React = require('react');
 var types = React.PropTypes;
 var classnames = require('classnames');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 var paddingTypes = [
   for (type of ['p', 'm'])
@@ -32,7 +32,7 @@ var PanelTypes = {
  * @property title {String} Text to show as the header of the `<Panel>`
  *
  * @example ```js
- * var Panel = require('pui-react-panels').Panel;
+ * var Panel = require('@npmcorp/pui-react-panels').Panel;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <Panel title="Header Text">Content Text</Panel>;
@@ -204,22 +204,22 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-panels --save
+npm install @npmcorp/pui-react-panels --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var Panel = require('pui-react-panels').Panel;
-var BasicPanelAlt = require('pui-react-panels').BasicPanelAlt;
-var BasicPanel = require('pui-react-panels').BasicPanel;
-var ClickablePanel = require('pui-react-panels').ClickablePanel;
-var ClickableAltPanel = require('pui-react-panels').ClickableAltPanel;
-var HighlightPanel = require('pui-react-panels').HighlightPanel;
-var ScrollablePanel = require('pui-react-panels').ScrollablePanel;
-var ShadowPanel = require('pui-react-panels').ShadowPanel;
-var SimplePanel = require('pui-react-panels').SimplePanel;
+var Panel = require('@npmcorp/pui-react-panels').Panel;
+var BasicPanelAlt = require('@npmcorp/pui-react-panels').BasicPanelAlt;
+var BasicPanel = require('@npmcorp/pui-react-panels').BasicPanel;
+var ClickablePanel = require('@npmcorp/pui-react-panels').ClickablePanel;
+var ClickableAltPanel = require('@npmcorp/pui-react-panels').ClickableAltPanel;
+var HighlightPanel = require('@npmcorp/pui-react-panels').HighlightPanel;
+var ScrollablePanel = require('@npmcorp/pui-react-panels').ScrollablePanel;
+var ShadowPanel = require('@npmcorp/pui-react-panels').ShadowPanel;
+var SimplePanel = require('@npmcorp/pui-react-panels').SimplePanel;
 ```
 
 

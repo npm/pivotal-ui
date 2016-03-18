@@ -1,5 +1,5 @@
 var React = require('react');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 var TypographyMixin = {
   propTypes: {
@@ -52,7 +52,7 @@ function defHeader(props) {
  * @description A level 1 header
  *
  * @example ```js
- * var DefaultH1 = require('pui-react-typography').DefaultH1;
+ * var DefaultH1 = require('@npmcorp/pui-react-typography').DefaultH1;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <DefaultH1>Content Title</DefaultH1>;
@@ -251,32 +251,32 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-typography --save
+npm install @npmcorp/pui-react-typography --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var DefaultH1 = require('pui-react-typography').DefaultH1;
-var DefaultH2 = require('pui-react-typography').DefaultH2;
-var DefaultH3 = require('pui-react-typography').DefaultH3;
-var DefaultH4 = require('pui-react-typography').DefaultH4;
-var DefaultH5 = require('pui-react-typography').DefaultH5;
-var DefaultH6 = require('pui-react-typography').DefaultH6;
-var AlternateH1 = require('pui-react-typography').AlternateH1;
-var AlternateH2 = require('pui-react-typography').AlternateH2;
-var AlternateH3 = require('pui-react-typography').AlternateH3;
-var AlternateH4 = require('pui-react-typography').AlternateH4;
-var AlternateH5 = require('pui-react-typography').AlternateH5;
-var AlternateH6 = require('pui-react-typography').AlternateH6;
-var MarketingH1 = require('pui-react-typography').MarketingH1;
-var MarketingH2 = require('pui-react-typography').MarketingH2;
-var MarketingH3 = require('pui-react-typography').MarketingH3;
-var MarketingH4 = require('pui-react-typography').MarketingH4;
-var MarketingH5 = require('pui-react-typography').MarketingH5;
-var MarketingH6 = require('pui-react-typography').MarketingH6;
-var Heading = require('pui-react-typography').Heading;
+var DefaultH1 = require('@npmcorp/pui-react-typography').DefaultH1;
+var DefaultH2 = require('@npmcorp/pui-react-typography').DefaultH2;
+var DefaultH3 = require('@npmcorp/pui-react-typography').DefaultH3;
+var DefaultH4 = require('@npmcorp/pui-react-typography').DefaultH4;
+var DefaultH5 = require('@npmcorp/pui-react-typography').DefaultH5;
+var DefaultH6 = require('@npmcorp/pui-react-typography').DefaultH6;
+var AlternateH1 = require('@npmcorp/pui-react-typography').AlternateH1;
+var AlternateH2 = require('@npmcorp/pui-react-typography').AlternateH2;
+var AlternateH3 = require('@npmcorp/pui-react-typography').AlternateH3;
+var AlternateH4 = require('@npmcorp/pui-react-typography').AlternateH4;
+var AlternateH5 = require('@npmcorp/pui-react-typography').AlternateH5;
+var AlternateH6 = require('@npmcorp/pui-react-typography').AlternateH6;
+var MarketingH1 = require('@npmcorp/pui-react-typography').MarketingH1;
+var MarketingH2 = require('@npmcorp/pui-react-typography').MarketingH2;
+var MarketingH3 = require('@npmcorp/pui-react-typography').MarketingH3;
+var MarketingH4 = require('@npmcorp/pui-react-typography').MarketingH4;
+var MarketingH5 = require('@npmcorp/pui-react-typography').MarketingH5;
+var MarketingH6 = require('@npmcorp/pui-react-typography').MarketingH6;
+var Heading = require('@npmcorp/pui-react-typography').Heading;
 ```
 
 We have three type systems. Which one you choose depends on your product.

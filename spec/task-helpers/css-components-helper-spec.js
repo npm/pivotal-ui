@@ -30,7 +30,7 @@ describe('packageJson', () => {
     it('returns a package json file with default values', function() {
       expect(result[0].path).toEqual('foo/package.json');
       expect(JSON.parse(result[0].contents.toString())).toEqual(jasmine.objectContaining({
-        name: 'pui-css-foo',
+        name: '@npmcorp/pui-css-foo',
         style: 'foo.css',
         version: '0.0.1',
         description: 'foo css component for Pivotal UI based on Bootstrap',
@@ -105,13 +105,13 @@ describe('readme', () => {
       expect(result.length).toEqual(3);
 
       expect(result[0].path).toEqual('bootstrap/README.md');
-      expect(result[0].contents.toString()).toContain('pui-css-bootstrap');
+      expect(result[0].contents.toString()).toContain('@npmcorp/pui-css-bootstrap');
 
       expect(result[1].path).toEqual('alerts/README.md');
-      expect(result[1].contents.toString()).toContain('pui-css-alerts');
+      expect(result[1].contents.toString()).toContain('@npmcorp/pui-css-alerts');
 
       expect(result[2].path).toEqual('code/README.md');
-      expect(result[2].contents.toString()).toContain('pui-css-code');
+      expect(result[2].contents.toString()).toContain('@npmcorp/pui-css-code');
     });
   });
 
@@ -120,7 +120,7 @@ describe('readme', () => {
 
     it('generates a readme with the supplied name, homepage, and description', () => {
       expect(result[0].contents.toString().trim()).toEqual(`
-# pui-css-bootstrap
+# @npmcorp/pui-css-bootstrap
 
 Custom build of Bootstrap for Pivotal UI
 
@@ -153,7 +153,7 @@ This is a component of Pivotal UI. It is a Pivotal specific implementation of Bo
     it('includes a usage statement in the readme', () => {
       expect(result[0].contents.toString().trim()).toContain(`
 \`\`\`
-npm install pui-css-alerts
+npm install @npmcorp/pui-css-alerts
 \`\`\`
 
 ## Usage

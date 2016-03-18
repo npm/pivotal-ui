@@ -1,13 +1,13 @@
 var React = require('react');
 var types = React.PropTypes;
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component SearchInput
  * @description A text input for inputting search queries
  *
  * @example ```js
- * var SearchInput = require('pui-react-search-input').SearchInput;
+ * var SearchInput = require('@npmcorp/pui-react-search-input').SearchInput;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <SearchInput name="query" placeholder="Search this site" />;
@@ -47,14 +47,14 @@ parent: form_react
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-search-input --save
+npm install @npmcorp/pui-react-search-input --save
 </i>
 </code>
 
 Require the subcomponent:
 
 ```
-var SearchInput = require('pui-react-search-input').SearchInput;
+var SearchInput = require('@npmcorp/pui-react-search-input').SearchInput;
 ```
 
 A `SearchInput` component can be used on its own as an input. It accepts standard

@@ -1,7 +1,7 @@
 const classnames = require('classnames');
 const React = require('react');
 const sortBy = require('lodash.sortby');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 import findindex from 'lodash.findindex';
 
 /**
@@ -70,7 +70,7 @@ export const TableRow = React.createClass({
  * @property `headers` {Array<Object>} A list of `TableHeader` components
  *
  * @example ```js
- * var {SortableTable, TableHeader, TableRow, TableCell} = require('pui-react-sortable-table');
+ * var {SortableTable, TableHeader, TableRow, TableCell} = require('@npmcorp/pui-react-sortable-table');
  * var MyComponent = React.createClass({
  *   render() {
  *     var headers = [
@@ -179,17 +179,17 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-sortable-table --save
+npm install @npmcorp/pui-react-sortable-table --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var SortableTable = require('pui-react-sortable-table').SortableTable;
-var TableHeader = require('pui-react-sortable-table').TableHeader;
-var TableRow = require('pui-react-sortable-table').TableRow;
-var TableCell = require('pui-react-sortable-table').TableCell;
+var SortableTable = require('@npmcorp/pui-react-sortable-table').SortableTable;
+var TableHeader = require('@npmcorp/pui-react-sortable-table').TableHeader;
+var TableRow = require('@npmcorp/pui-react-sortable-table').TableRow;
+var TableCell = require('@npmcorp/pui-react-sortable-table').TableCell;
 ```
 
 ---

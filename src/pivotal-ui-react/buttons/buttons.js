@@ -1,5 +1,5 @@
 var React = require('react/addons');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component UIButton
@@ -10,7 +10,7 @@ import {mergeProps} from 'pui-react-helpers';
  * @property large {Boolean} Enlarges the button
  *
  * @example ```js
- * var UIButton = require('pui-react-buttons').UIButton;
+ * var UIButton = require('@npmcorp/pui-react-buttons').UIButton;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <UIButton>The action was successful.</UIButton>;
@@ -165,20 +165,20 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-buttons --save
+npm install @npmcorp/pui-react-buttons --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var DefaultButton = require('pui-react-buttons').DefaultButton;
-var DefaultAltButton = require('pui-react-buttons').DefaultAltButton;
-var LowlightButton = require('pui-react-buttons').LowlightButton;
-var DangerButton = require('pui-react-buttons').DangerButton;
-var HighlightButton = require('pui-react-buttons').HighlightButton;
-var HighlightAltButton = require('pui-react-buttons').HighlightAltButton;
-var UIButton = require('pui-react-buttons').UIButton;
+var DefaultButton = require('@npmcorp/pui-react-buttons').DefaultButton;
+var DefaultAltButton = require('@npmcorp/pui-react-buttons').DefaultAltButton;
+var LowlightButton = require('@npmcorp/pui-react-buttons').LowlightButton;
+var DangerButton = require('@npmcorp/pui-react-buttons').DangerButton;
+var HighlightButton = require('@npmcorp/pui-react-buttons').HighlightButton;
+var HighlightAltButton = require('@npmcorp/pui-react-buttons').HighlightAltButton;
+var UIButton = require('@npmcorp/pui-react-buttons').UIButton;
 ```
 
 

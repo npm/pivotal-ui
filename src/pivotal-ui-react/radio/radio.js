@@ -1,5 +1,5 @@
 var React = require('react');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component Radio
@@ -13,7 +13,7 @@ import {mergeProps} from 'pui-react-helpers';
  * @property id {String} An identifier for the radio that can be used, for example, with labels
  *
  * @example ```js
- * var Radio = require('pui-react-radio').Radio;
+ * var Radio = require('@npmcorp/pui-react-radio').Radio;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <Radio name="Question 1" value="Choice 1">Label Text</Radio>;

@@ -16,7 +16,7 @@ import classnames from 'classnames';
  * the two style hashes, with precedence given to `reactInstanceProps`'s style.
  *
  * @example ```js
- * var {mergeProps} = require('pui-react-helpers');
+ * var {mergeProps} = require('@npmcorp/pui-react-helpers');
  *
  * var Ribbon = React.createClass({
  *   render() {

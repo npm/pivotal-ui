@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 import React from 'react';
 
 /**
@@ -9,7 +9,7 @@ import React from 'react';
  * @property disabled {Boolean} Whether to disable the select.
  *
  * @example ```js
- * var SelectFancy = require('pui-react-select-fancy').SelectFancy;
+ * var SelectFancy = require('@npmcorp/pui-react-select-fancy').SelectFancy;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (

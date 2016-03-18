@@ -138,8 +138,8 @@ npm install --save pui-react-buttons
 
     ```
     var React = require('react');
-    var DefaultH1 = require('pui-react-typography').DefaultH1;
-    var DefaultButton = require('pui-react-buttons').DefaultButton;
+    var DefaultH1 = require('@npmcorp/pui-react-typography').DefaultH1;
+    var DefaultButton = require('@npmcorp/pui-react-buttons').DefaultButton;
 
     var MyTestPage = React.createClass({
      getInitialState: function() {

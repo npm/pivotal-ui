@@ -5,7 +5,7 @@ require('../../../node_modules/bootstrap/js/tooltip');
 require('pui-prismjs');
 
 require('./scale')();
-require('pui-react-back-to-top/jquery-plugin');
+require('@npmcorp/pui-react-back-to-top/jquery-plugin');
 
 global.React = require('react/addons');
 

@@ -6,8 +6,8 @@ var Collapse = require('react-bootstrap/lib/Collapse');
  * @description A button that when clicked, shows or hides the content in the corresponding ExpanderContent
  *
  * @example ```js
- * var ExpanderTrigger = require('pui-react-expander').ExpanderTrigger;
- * var ExpanderContent = require('pui-react-expander').ExpanderContent;
+ * var ExpanderTrigger = require('@npmcorp/pui-react-expander').ExpanderTrigger;
+ * var ExpanderContent = require('@npmcorp/pui-react-expander').ExpanderContent;
  * var MyComponent = React.createClass({
  *   componentDidMount() {
  *     this.refs.trigger.setTarget(this.refs.content);
@@ -93,15 +93,15 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-expander --save
+npm install @npmcorp/pui-react-expander --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var ExpanderContent = require('pui-react-expander').ExpanderContent;
-var ExpanderTrigger = require('pui-react-expander').ExpanderTrigger;
+var ExpanderContent = require('@npmcorp/pui-react-expander').ExpanderContent;
+var ExpanderTrigger = require('@npmcorp/pui-react-expander').ExpanderTrigger;
 ```
 
 

@@ -60,7 +60,7 @@ const BaseTabs = React.createClass({
     return (
       <div {...props}>
         <div className={largeScreenClasses}>
-          <Tabs id={uniqueid('pui-react-tabs-')} position={position} tabWidth={tabWidth}
+          <Tabs id={uniqueid('@npmcorp/pui-react-tabs-')} position={position} tabWidth={tabWidth}
                 paneWidth={paneWidth} activeKey={this.state.activeKey}
                 onSelect={this.handleSelect}>
             {children}
@@ -83,8 +83,8 @@ const BaseTabs = React.createClass({
  *
 
  * @example ```js
- * var SimpleTabs = require('pui-react-tabs').SimpleTabs;
- * var Tab = require('pui-react-tabs').Tab;
+ * var SimpleTabs = require('@npmcorp/pui-react-tabs').SimpleTabs;
+ * var Tab = require('@npmcorp/pui-react-tabs').Tab;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -131,8 +131,8 @@ const SimpleTabs = React.createClass({
  * @description `<SimpleTabs>` with different styling
  *
  * @example ```js
- * var SimpleAltTabs = require('pui-react-tabs').SimpleAltTabs;
- * var Tab = require('pui-react-tabs').Tab;
+ * var SimpleAltTabs = require('@npmcorp/pui-react-tabs').SimpleAltTabs;
+ * var Tab = require('@npmcorp/pui-react-tabs').Tab;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -179,8 +179,8 @@ const SimpleAltTabs = React.createClass({
  * @description Tabs with the nav stacked on the left
  *
  * @example ```js
- * var LeftTabs = require('pui-react-tabs').LeftTabs;
- * var Tab = require('pui-react-tabs').Tab;
+ * var LeftTabs = require('@npmcorp/pui-react-tabs').LeftTabs;
+ * var Tab = require('@npmcorp/pui-react-tabs').Tab;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -274,17 +274,17 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-tabs --save
+npm install @npmcorp/pui-react-tabs --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var SimpleTabs = require('pui-react-tabs').SimpleTabs;
-var SimpleAltTabs = require('pui-react-tabs').SimpleAltTabs;
-var LeftTabs = require('pui-react-tabs').LeftTabs;
-var Tab = require('pui-react-tabs').Tab;
+var SimpleTabs = require('@npmcorp/pui-react-tabs').SimpleTabs;
+var SimpleAltTabs = require('@npmcorp/pui-react-tabs').SimpleAltTabs;
+var LeftTabs = require('@npmcorp/pui-react-tabs').LeftTabs;
+var Tab = require('@npmcorp/pui-react-tabs').Tab;
 ```
 
 

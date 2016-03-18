@@ -1,12 +1,12 @@
 var React = require('react');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component Ribbon
  * @description Flashy text used to call out access, status, environment, etc.
  *
  * @example ```js
- * var Ribbon = require('pui-react-ribbons').Ribbon;
+ * var Ribbon = require('@npmcorp/pui-react-ribbons').Ribbon;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <Ribbon>Acceptance Environment</Ribbon>
@@ -30,7 +30,7 @@ var Ribbon = React.createClass({
  * @description A `<Ribbon>` with an emphasized background color
  *
  * @example ```js
- * var PrimaryRibbon = require('pui-react-ribbons').PrimaryRibbon;
+ * var PrimaryRibbon = require('@npmcorp/pui-react-ribbons').PrimaryRibbon;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <PrimaryRibbon>Acceptance Environment</PrimaryRibbon>
@@ -54,7 +54,7 @@ var PrimaryRibbon = React.createClass({
  * @description A larger, emphasized `<Ribbon>`
  *
  * @example ```js
- * var Banner = require('pui-react-ribbons').Banner;
+ * var Banner = require('@npmcorp/pui-react-ribbons').Banner;
  * var MyComponent = React.createClass({
  *   render() {
  *     return <Banner>Acceptance Environment</Banner>
@@ -87,16 +87,16 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-ribbons --save
+npm install @npmcorp/pui-react-ribbons --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var Ribbon = require('pui-react-ribbons').Ribbon;
-var PrimaryRibbon = require('pui-react-ribbons').PrimaryRibbon;
-var Banner = require('pui-react-ribbons').Banner;
+var Ribbon = require('@npmcorp/pui-react-ribbons').Ribbon;
+var PrimaryRibbon = require('@npmcorp/pui-react-ribbons').PrimaryRibbon;
+var Banner = require('@npmcorp/pui-react-ribbons').Banner;
 ```
 
 `Ribbon` components are straightforward implementations of the [Ribbon][ribbon] styles.

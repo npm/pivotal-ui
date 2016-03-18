@@ -1,7 +1,7 @@
 var React = require('react');
 var types = React.PropTypes;
 var BsPanel = require('react-bootstrap/lib/Panel');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component BaseCollapse
@@ -11,7 +11,7 @@ import {mergeProps} from 'pui-react-helpers';
  * @property divider {Boolean} Adds a line between the accordion header and accordion body
  *
  * @example ```js
- * var BaseCollapse = require('pui-react-collapse').BaseCollapse;
+ * var BaseCollapse = require('@npmcorp/pui-react-collapse').BaseCollapse;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -64,7 +64,7 @@ var BaseCollapse = React.createClass({
  * @property divider {Boolean} Adds a line between the accordion header and accordion body
  *
  * @example ```js
- * var Collapse = require('pui-react-collapse').Collapse;
+ * var Collapse = require('@npmcorp/pui-react-collapse').Collapse;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -112,7 +112,7 @@ var Collapse = React.createClass({
  * @property divider {Boolean} Adds a line between the accordion header and accordion body
  *
  * @example ```js
- * var AltCollapse = require('pui-react-collapse').AltCollapse;
+ * var AltCollapse = require('@npmcorp/pui-react-collapse').AltCollapse;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -166,16 +166,16 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-collapse --save
+npm install @npmcorp/pui-react-collapse --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var BaseCollapse = require('pui-react-collapse').BaseCollapse;
-var AltCollapse = require('pui-react-collapse').AltCollapse;
-var Collapse = require('pui-react-collapse').Collapse;
+var BaseCollapse = require('@npmcorp/pui-react-collapse').BaseCollapse;
+var AltCollapse = require('@npmcorp/pui-react-collapse').AltCollapse;
+var Collapse = require('@npmcorp/pui-react-collapse').Collapse;
 ```
 
 

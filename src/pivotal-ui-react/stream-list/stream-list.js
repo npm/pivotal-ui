@@ -1,6 +1,6 @@
 import React from 'react/addons';
-import {UIButton} from 'pui-react-buttons';
-import {GroupList, ListItem} from 'pui-react-lists';
+import {UIButton} from '@npmcorp/pui-react-buttons';
+import {GroupList, ListItem} from '@npmcorp/pui-react-lists';
 import AnimationMixin from 'pui-react-animation';
 
 /**
@@ -11,9 +11,9 @@ import AnimationMixin from 'pui-react-animation';
  * @property pluralNewItemsText {string} Text to be displayed when there are multiple new list items available
  *
  * @example ```jsx
- *  var DefaultButton = require('pui-react-buttons').DefaultButton;
- *  var ListItem = require('pui-react-lists').ListItem;
- *  var StreamList = require('pui-react-stream-list').StreamList;
+ *  var DefaultButton = require('@npmcorp/pui-react-buttons').DefaultButton;
+ *  var ListItem = require('@npmcorp/pui-react-lists').ListItem;
+ *  var StreamList = require('@npmcorp/pui-react-stream-list').StreamList;
  *
  *  var counter = (function() {
  *  var i = 4;
@@ -147,7 +147,7 @@ parent: list_react
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-lists pui-react-stream-list pui-react-buttons --save
+npm install @npmcorp/pui-react-lists @npmcorp/pui-react-stream-list @npmcorp/pui-react-buttons --save
 </i>
 </code>
 
@@ -156,8 +156,8 @@ For the example, you also need to install [Buttons](#button_react) and require `
 Require the subcomponents:
 
 ```js
-var StreamList = require('pui-react-stream-list').StreamList;
-var StreamListItem = require('pui-react-stream-list').StreamListItem;
+var StreamList = require('@npmcorp/pui-react-stream-list').StreamList;
+var StreamListItem = require('@npmcorp/pui-react-stream-list').StreamListItem;
 ```
 
 Use this component when you have streaming/polling data that you want to

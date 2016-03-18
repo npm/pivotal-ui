@@ -32,7 +32,7 @@ module.exports = {
    * @property overlay {Element} The HTML for the overlay
    *
    * @example ```js
-   * var OverlayTrigger = require('pui-react-overlay-trigger').OverlayTrigger;
+   * var OverlayTrigger = require('@npmcorp/pui-react-overlay-trigger').OverlayTrigger;
    * var MyComponent = React.createClass({
    *   render() {
    *     return (

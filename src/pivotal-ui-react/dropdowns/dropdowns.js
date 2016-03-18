@@ -9,8 +9,8 @@ import uniqueid from 'lodash.uniqueid';
  * @property title {String} Sets the text of the dropdown trigger button
  *
  * @example ```js
- * var Dropdown = require('pui-react-dropdowns').Dropdown;
- * var DropdownItem = require('pui-react-dropdowns').DropdownItem;
+ * var Dropdown = require('@npmcorp/pui-react-dropdowns').Dropdown;
+ * var DropdownItem = require('@npmcorp/pui-react-dropdowns').DropdownItem;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -156,21 +156,21 @@ categories:
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-dropdowns --save
+npm install @npmcorp/pui-react-dropdowns --save
 </i>
 </code>
 
 Require the subcomponents:
 
 ```
-var Dropdown = require('pui-react-dropdowns').Dropdown;
-var DropdownItem = require('pui-react-dropdowns').DropdownItem;
-var LinkDropdown = require('pui-react-dropdowns').LinkDropdown;
-var DefaultAltDropdown = require('pui-react-dropdowns').DefaultAltDropdown;
-var LowlightDropdown = require('pui-react-dropdowns').LowlightDropdown;
-var DangerDropdown = require('pui-react-dropdowns').DangerDropdown;
-var HighlightDropdown = require('pui-react-dropdowns').HighlightDropdown;
-var HighlightAltDropdown = require('pui-react-dropdowns').HighlightAltDropdown;
+var Dropdown = require('@npmcorp/pui-react-dropdowns').Dropdown;
+var DropdownItem = require('@npmcorp/pui-react-dropdowns').DropdownItem;
+var LinkDropdown = require('@npmcorp/pui-react-dropdowns').LinkDropdown;
+var DefaultAltDropdown = require('@npmcorp/pui-react-dropdowns').DefaultAltDropdown;
+var LowlightDropdown = require('@npmcorp/pui-react-dropdowns').LowlightDropdown;
+var DangerDropdown = require('@npmcorp/pui-react-dropdowns').DangerDropdown;
+var HighlightDropdown = require('@npmcorp/pui-react-dropdowns').HighlightDropdown;
+var HighlightAltDropdown = require('@npmcorp/pui-react-dropdowns').HighlightAltDropdown;
 ```
 
 This is the basic bootstrap dropdown:

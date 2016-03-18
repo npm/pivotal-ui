@@ -1,6 +1,6 @@
 var React = require('react/addons');
 var cloneWithProps = React.addons.cloneWithProps;
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component RadioGroup
@@ -11,8 +11,8 @@ import {mergeProps} from 'pui-react-helpers';
  * @property onChange {Function} A callback called when radio buttons inside of the radio group are checked or unchecked
  *
  * @example ```js
- * var RadioGroup = require('pui-react-radio-group').RadioGroup;
- * var Radio = require('pui-react-radio').Radio;
+ * var RadioGroup = require('@npmcorp/pui-react-radio-group').RadioGroup;
+ * var Radio = require('@npmcorp/pui-react-radio').Radio;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -76,7 +76,7 @@ parent: form_react
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
-npm install pui-react-radio pui-react-radio-group --save
+npm install @npmcorp/pui-react-radio @npmcorp/pui-react-radio-group --save
 </i>
 </code>
 
@@ -85,8 +85,8 @@ For the example, you also need to install [Grids](#grid_react) and require `Col`
 Require the subcomponents:
 
 ```
-var RadioGroup = require('pui-react-radio-groups');
-var Radio = require('pui-react-radio');
+var RadioGroup = require('@npmcorp/pui-react-radio-groups');
+var Radio = require('@npmcorp/pui-react-radio');
 ```
 
 Using React radio buttons in a form is fairly straightforward.

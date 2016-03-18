@@ -1,6 +1,6 @@
 const React = require('react');
 const classnames = require('classnames');
-import {mergeProps} from 'pui-react-helpers';
+import {mergeProps} from '@npmcorp/pui-react-helpers';
 
 /**
  * @component TileLayout
@@ -11,7 +11,7 @@ import {mergeProps} from 'pui-react-helpers';
  * @property noGutter {Boolean} Removes the gutter
  *
  * @example ```js
- * var TileLayout = require('pui-react-tile-layout').TileLayout;
+ * var TileLayout = require('@npmcorp/pui-react-tile-layout').TileLayout;
  * var MyComponent = React.createClass({
  *   render() {
  *     return (
@@ -79,7 +79,7 @@ const TileLayout = React.createClass({
  * @description Wrapper element for items in a tile layout
  *
  * @example ```js
- * var TileLayout = require('pui-react-tile-layout').TileLayout;
+ * var TileLayout = require('@npmcorp/pui-react-tile-layout').TileLayout;
  *
  * var MyComponent = React.createClass({
  *   render() {
@@ -123,15 +123,15 @@ export default TileLayout;
 
  <code class="pam">
  <i class="fa fa-download" alt="Install the Component">
- npm install pui-react-tile-layout pui-react-panels --save
+ npm install @npmcorp/pui-react-tile-layout @npmcorp/pui-react-panels --save
  </i>
  </code>
 
  Require the component:
 
  ```
-var TileLayout = require('pui-react-tile-layout');
-var ClickableAltPanel = require('pui-react-panels').ClickableAltPanel;
+var TileLayout = require('@npmcorp/pui-react-tile-layout');
+var ClickableAltPanel = require('@npmcorp/pui-react-panels').ClickableAltPanel;
  ```
 
  For the example, you also need to require `ClickableAltPanel` from [Panels](/react_components_panels.html).
