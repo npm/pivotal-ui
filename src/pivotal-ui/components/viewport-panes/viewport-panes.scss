@@ -16,7 +16,7 @@ npm install @npmcorp/pui-css-viewport-panes --save
 </code>
 
 Viewport panes are type of [pane](/pane.html) that have a height that is based upon
-the height of your viewport.
+the height of your viewport. They require being the pane directly following the `<header>`.
 
 You can add the `.viewport-pane` class to the top pane of a layout.
 
