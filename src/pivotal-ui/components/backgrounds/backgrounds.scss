@@ -141,7 +141,7 @@ parent: background
 You may also need to use background image positioning, for example, if this is decoration that goes to the side.
 
 ```html_example
-<div class='pane bg-contain bg-brand-1 bg-right' style="background-image: url(styleguide/such-awesome.jpg);">
+<div class='pane bg-contain bg-brand-1 bg-bottom-right' style="background-image: url(styleguide/such-awesome.jpg); height: 400px">
   <div class='container'>
     <h1 class='type-neutral-11 txt-c'>Contained background image</h1>
   </div>
@@ -153,25 +153,33 @@ You can use (clockwise from the top): `.bg-top`, `.bg-top-right`, `.bg-right`, `
 
 .bg-right {
  background-position: center right;
+ background-repeat: no-repeat;
 }
 .bg-left {
  background-position: center left;
+ background-repeat: no-repeat;
 }
 .bg-bottom {
  background-position: bottom center;
+ background-repeat: no-repeat;
 }
 .bg-top {
  background-position: top center;
+ background-repeat: no-repeat;
 }
 .bg-bottom-right {
  background-position: bottom right;
+ background-repeat: no-repeat;
 }
 .bg-bottom-left {
  background-position: bottom left;
+ background-repeat: no-repeat;
 }
 .bg-top-right {
  background-position: top right;
+ background-repeat: no-repeat;
 }
 .bg-top-left {
  background-position: top left;
+ background-repeat: no-repeat;
 }
