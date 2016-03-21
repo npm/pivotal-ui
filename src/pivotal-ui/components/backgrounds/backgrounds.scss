@@ -153,25 +153,33 @@ You can use (clockwise from the top): `.bg-top`, `.bg-top-right`, `.bg-right`, `
 
 .bg-right {
  background-position: center right;
+ background-repeat: no-repeat;
 }
 .bg-left {
  background-position: center left;
+ background-repeat: no-repeat;
 }
 .bg-bottom {
  background-position: bottom center;
+ background-repeat: no-repeat;
 }
 .bg-top {
  background-position: top center;
+ background-repeat: no-repeat;
 }
 .bg-bottom-right {
  background-position: bottom right;
+ background-repeat: no-repeat;
 }
 .bg-bottom-left {
  background-position: bottom left;
+ background-repeat: no-repeat;
 }
 .bg-top-right {
  background-position: top right;
+ background-repeat: no-repeat;
 }
 .bg-top-left {
  background-position: top left;
+ background-repeat: no-repeat;
 }
