@@ -32,6 +32,19 @@ You can add the `.viewport-pane` class to the top pane of a layout.
 
 ```
 
+For a viewport pane that shows just enough that there is a fold below, use `.viewport-pane-long`:
+
+```html_example
+<header>
+  <h1>This is the header</h1>
+</header>
+<div class="pane bg-dark-2 viewport-pane-long">
+  <div class="container bg-glow">
+    <h1 class="type-neutral-11">This is a pane</h1>
+  </div>
+</div>
+```
+
 When following a transparent header, the viewport-pane class will allow the pane's color
 to come through
 
@@ -48,7 +61,8 @@ to come through
 
 */
 
-.viewport-pane {
+.viewport-pane,
+.viewport-pane-long {
   min-height: calc(100vh - #{$header-height-max-sm});
 }
 
@@ -59,5 +73,8 @@ to come through
 @media (min-height: $screen-height-sm) {
   .viewport-pane {
     min-height: calc(75vh - #{$header-height-max-lg});
+  }
+  .viewport-pane-long {
+    min-height: calc(100vh - 2em - #{$header-height-max-lg});
   }
 }
