@@ -3,7 +3,7 @@
   "main": "drop-down-menu.js",
   "dependencies": {
       "jquery": "^2.1.4",
-      "@npmcorp/pui-css-typography": "^3.0.0"
+      "@npmcorp/pui-css-typography": "^4.0.0"
     },
-  "version": "1.3.2"
+  "version": "1.3.3"
 }
