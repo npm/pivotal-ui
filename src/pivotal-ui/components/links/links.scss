@@ -26,7 +26,7 @@ This will make the link underlined on hover (except lowlight links).
 </a>
 ```
 
-There are four different kinds of links you can use to connect related content.
+There are four main different kinds of links you can use to connect related content.
 In most cases (unless the designer specifically asks for another type of link)
 you should choose the default link.
 
@@ -38,6 +38,16 @@ Link                                                                            
 
 ```html_example
 Here's a <a class="link-text link-lowlight" href="http://bit.ly/1wO7Nhv">less important link</a>
+```
+
+There is also a vanity `.npm-loves-you` link that you can use
+
+Link                                                                               | Class                           | Description
+-------------------------------------------------------------------------------    | ----------------------------    | -----------
+<a class="npm-loves-you" href="/">npm loves you</a>                                | `npm-loves-you`                 | A whimsical love-filled display of link
+
+```html_example
+<a class="npm-loves-you" href="/">Here's an npm loves you link</a>
 ```
 
 */
@@ -90,6 +100,50 @@ a{
     color: darken($link-inverse-color, 6%);
   }
 }
+
+.npm-loves-you {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "\2665";
+    color: rgba(26,139,203,0);
+    font-size: 14px;
+    transition: all 0.3s;
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    top: 1px;
+  }
+
+  &:before {
+    left: -10px;
+  }
+
+  &:after {
+    right: -10px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #1a8bcb !important;
+
+    &:before,
+    &:after {
+      color: #1a8bcb;
+    }
+
+    &:before {
+      left: -15px;
+    }
+
+    &:after {
+      right: -15px;
+    }
+  }
+}
+
 
 /*pending
 ---
