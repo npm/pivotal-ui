@@ -161,12 +161,17 @@ categories:
         Large devices
         <small>Desktops (&geq;1200px)</small>
       </th>
+      <th>
+        Extra large devices
+        <small>Desktops (&geq;1600px)</small>
+      </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th class="no-wrap"><code>.nobg-xs</code></th>
       <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
@@ -177,6 +182,7 @@ categories:
       <td class="is-hidden">Hidden</td>
       <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
     </tr>
     <tr>
       <th class="no-wrap"><code>.nobg-md</code></th>
@@ -184,9 +190,19 @@ categories:
       <td class="is-visible">Visible</td>
       <td class="is-hidden">Hidden</td>
       <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
     </tr>
     <tr>
       <th class="no-wrap"><code>.nobg-lg</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.nobg-xl</code></th>
+      <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
       <td class="is-visible">Visible</td>
@@ -213,8 +229,13 @@ categories:
     background-image: none !important;
   }
 }
-@media (min-width: $screen-lg-min) {
+@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
   .nobg-lg {
+    background-image: none !important;
+  }
+}
+@media (min-width: $screen-xl-min) {
+  .nobg-xl {
     background-image: none !important;
   }
 }

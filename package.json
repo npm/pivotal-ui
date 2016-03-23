@@ -138,7 +138,7 @@
     "@npmcorp/pui-css-tooltips": "^2.0.2",
     "@npmcorp/pui-css-traffic-lights": "^2.0.2",
     "@npmcorp/pui-css-typography": "^3.0.1",
-    "@npmcorp/pui-css-utils": "^2.1.0-0",
+    "@npmcorp/pui-css-utils": "^2.2.0",
     "@npmcorp/pui-css-vertical-alignment": "^2.0.0",
     "@npmcorp/pui-css-viewport-panes": "^1.1.0",
     "@npmcorp/pui-css-whitespace": "^2.0.0",
