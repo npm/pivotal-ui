@@ -1,0 +1,36 @@
+/*doc
+---
+title: Logo Block
+name: logoblock
+categories:
+ - css_components_logoblock
+ - css_all
+---
+
+<code class="pam">
+<i class="fa fa-download" alt="Install the Component">
+npm install @npmcorp/pui-css-logoblock --save
+</i>
+</code>
+
+Company logo tiles, 216px by 216px.
+
+They stack inline next to each other and center the logo within.
+
+
+```html_example
+<div class="logoblock bg-npm-brand mrs">
+  <img src="styleguide/travis.svg">
+</div>
+```
+*/
+
+.logoblock {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    width: 216px;
+    height: 216px;
+    border-radius: 7px;
+}
+
