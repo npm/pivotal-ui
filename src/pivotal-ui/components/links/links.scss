@@ -109,12 +109,12 @@ a{
   &:before,
   &:after {
     content: "\2665";
-    color: rgba(26,139,203,0);
     font-size: 14px;
     transition: all 0.3s;
     transform: translate3d(0, 0, 0);
     position: absolute;
     top: 1px;
+    opacity: 0;
   }
 
   &:before {
@@ -127,11 +127,11 @@ a{
 
   &:hover {
     text-decoration: none;
-    color: #1a8bcb !important;
+    opacity: 1;
 
     &:before,
     &:after {
-      color: #1a8bcb;
+      opacity: 1;
     }
 
     &:before {
