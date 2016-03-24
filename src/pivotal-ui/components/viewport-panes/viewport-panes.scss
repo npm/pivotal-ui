@@ -92,43 +92,43 @@ These situations all assume a scenario where the viewport height at least `600px
   <tbody>
     <tr>
       <th class="no-wrap"><code>.not-full-viewport-xs</code></th>
-      <td class="is-hidden">Hidden</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Not full screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
     </tr>
     <tr>
       <th class="no-wrap"><code>.not-full-viewport-sm</code></th>
-      <td class="is-visible">Visible</td>
-      <td class="is-hidden">Hidden</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-hidden">Not full screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
     </tr>
     <tr>
       <th class="no-wrap"><code>.not-full-viewport-md</code></th>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-hidden">Hidden</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-hidden">Not full screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
     </tr>
     <tr>
       <th class="no-wrap"><code>.not-full-viewport-lg</code></th>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-hidden">Hidden</td>
-      <td class="is-visible">Visible</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-hidden">Not full screen</td>
+      <td class="is-visible">Full Screen</td>
     </tr>
     <tr>
       <th class="no-wrap"><code>.not-full-viewport-xl</code></th>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-visible">Visible</td>
-      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-visible">Full Screen</td>
+      <td class="is-hidden">Not full screen</td>
     </tr>
   </tbody>
 </table>
