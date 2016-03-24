@@ -59,6 +59,82 @@ to come through
 </div>
 ```
 
+In the case where you'd like the viewport to not show up at certain viewport sizes, you can use
+`not-full-viewport-*` syntax.
+
+These situations all assume a scenario where the viewport height at least `600px`.
+<table class="styleguide">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        Extra small devices
+        <small>Phones (&lt;768px)</small>
+      </th>
+      <th>
+        Small devices
+        <small>Tablets (&geq;768px)</small>
+      </th>
+      <th>
+        Medium devices
+        <small>Desktops (&geq;992px)</small>
+      </th>
+      <th>
+        Large devices
+        <small>Desktops (&geq;1200px)</small>
+      </th>
+      <th>
+        Extra large devices
+        <small>Desktops (&geq;1600px)</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="no-wrap"><code>.not-full-viewport-xs</code></th>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.not-full-viewport-sm</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.not-full-viewport-md</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.not-full-viewport-lg</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+      <td class="is-visible">Visible</td>
+    </tr>
+    <tr>
+      <th class="no-wrap"><code>.not-full-viewport-xl</code></th>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-visible">Visible</td>
+      <td class="is-hidden">Hidden</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 */
 
 .viewport-pane,
@@ -76,5 +152,35 @@ to come through
   }
   .viewport-pane-long {
     min-height: calc(100vh - 2em - #{$header-height-max-lg});
+  }
+}
+
+@media (min-height: $screen-height-sm) and (max-width: $screen-xs-max) {
+  .viewport-pane.not-full-viewport-xs {
+    min-height: 0 !important;
+  }
+}
+
+@media (min-height: $screen-height-sm) and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .viewport-pane.not-full-viewport-sm {
+    min-height: 0 !important;
+  }
+}
+
+@media (min-height: $screen-height-sm) and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .viewport-pane.not-full-viewport-md {
+    min-height: 0 !important;
+  }
+}
+
+@media (min-height: $screen-height-sm) and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+  .viewport-pane.not-full-viewport-lg {
+    min-height: 0 !important;
+  }
+}
+
+@media (min-height: $screen-height-sm) and (min-width: $screen-xl-min) {
+  .viewport-pane.not-full-viewport-xl {
+    min-height: 0 !important;
   }
 }
