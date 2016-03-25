@@ -3,7 +3,7 @@
   "dependencies": {
     "@npmcorp/pui-css-bootstrap": "^2.0.0",
     "@npmcorp/pui-css-panes": "^2.0.0",
-    "@npmcorp/pui-css-header": "^2.0.4"
+    "@npmcorp/pui-css-header": "^2.0.6"
   },
-  "version": "2.0.2"
+  "version": "2.0.3"
 }
