@@ -280,7 +280,7 @@ header a:hover {
 
 @media (min-width: $desktopMinWidth) {
   header {
-    max-height: $header-height-max-lg;
+    max-height: initial;
     flex-direction: row;
     flex-wrap: wrap-reverse;
     padding: 0 20px;
@@ -318,6 +318,7 @@ header a:hover {
     background-color: $npm-menu-red;
     display: flex;
     align-content: space-between;
+    align-items: center;
   }
   header > .header-nav-menu-container .npm-expansions,
   header > .header-nav-menu-container .nav-menu-container {
@@ -373,6 +374,8 @@ header a:hover {
     display: flex;
     flex-direction: row;
     align-content: flex-end;
+    justify-content: center;
+    align-items: center;
   }
   .header-item .products-list li {
     padding: 0 0 0 0.9375em;
