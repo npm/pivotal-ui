@@ -383,9 +383,9 @@ It indicates which page/step you currently are on in the page flow.
 
 ```html_example
 <ul class="list-nav-finder">
-  <li>Create an Account</li>
-  <li class="current">Payment Information</li>
-  <li>Installation</li>
+  <li>Create <span class="lvl-2">an </span>Account</li>
+  <li class="current">Payment Info<span class="lvl-2">rmation</span></li>
+  <li>Install<span class="lvl-2">ation</span></li>
 </ul>
 ```
 */
@@ -393,7 +393,7 @@ It indicates which page/step you currently are on in the page flow.
 .list-nav-finder {
   @include clearfix-micro;
 
-  display: inline-block;
+  display: block;
   padding: 0;
   margin: 0;
   font-size: .75em;
@@ -403,8 +403,8 @@ It indicates which page/step you currently are on in the page flow.
 
   > li {
     list-style: none;
-    float: left;
-    padding: .875em 25px .875em 40px;
+    float: none;
+    padding: .875em 15px .875em 15px;
     position: relative;
     z-index: 1;
 
@@ -413,7 +413,7 @@ It indicates which page/step you currently are on in the page flow.
       background-color: $gray-4;
 
 
-      &:after {
+      &::after {
         background-color: $gray-4;
 
         &:last-child {
@@ -431,7 +431,7 @@ It indicates which page/step you currently are on in the page flow.
       z-index: 0;
     }
 
-    &:after {
+    &::after {
       content: ' ';
       width: 27px;
       height: 27px;
@@ -444,6 +444,41 @@ It indicates which page/step you currently are on in the page flow.
       z-index: 2;
       background-color: $gray-11;
       border-top-right-radius: 5px;
+      display: none;
+    }
+  }
+
+  .lvl-2 {
+    @include a11y-only;
+  }
+}
+
+@media (min-width: 23.125em)  { // 370px
+  .list-nav-finder {
+    display: inline-block;
+    > li {
+      float: left;
+    }
+
+  }
+}
+
+@media (min-width: 30em)  { // 480px
+  .list-nav-finder {
+    > li {
+      padding: .875em 25px .875em 40px;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 35.3125em)  { // 565px
+  .list-nav-finder {
+    .lvl-2 {
+      @include un-a11y-only;
     }
   }
 }
