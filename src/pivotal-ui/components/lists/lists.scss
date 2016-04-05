@@ -372,6 +372,85 @@ Breadcrumbs use their own monospace font-family.
 
 /*doc
 ---
+title: Nav-Finder
+name: list_navfinder
+parent: list
+---
+
+The `.nav-finder` can be used to provide additional page navigation.
+It indicates which page/step you currently are on in the page flow.
+
+
+```html_example
+<ul class="list-nav-finder">
+  <li>Create an Account</li>
+  <li class="current">Payment Information</li>
+  <li>Installation</li>
+</ul>
+```
+*/
+
+.list-nav-finder {
+  @include clearfix-micro;
+
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: .75em;
+  list-style: none;
+  border: 1px solid $gray-8;
+  border-radius: 2px;
+
+  > li {
+    list-style: none;
+    float: left;
+    padding: .875em 25px .875em 40px;
+    position: relative;
+    z-index: 1;
+
+    &.current {
+      color: $gray-11;
+      background-color: $gray-4;
+
+
+      &:after {
+        background-color: $gray-4;
+
+        &:last-child {
+          border-top: 1px solid $gray-4;
+          border-right: 1px solid $gray-4;
+        }
+      }
+    }
+
+    &:first-child {
+      z-index: 2;
+    }
+
+    &:last-child {
+      z-index: 0;
+    }
+
+    &:after {
+      content: ' ';
+      width: 27px;
+      height: 27px;
+      transform: rotate(45deg);
+      border-top: 1px solid $gray-8;
+      border-right: 1px solid $gray-8;
+      position: absolute;
+      right: -14px;
+      top: 5px;
+      z-index: 2;
+      background-color: $gray-11;
+      border-top-right-radius: 5px;
+    }
+  }
+}
+
+
+/*doc
+---
 title: Group
 name: list_group
 parent: list
