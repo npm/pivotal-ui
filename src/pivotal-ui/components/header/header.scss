@@ -278,6 +278,28 @@ header a:hover {
   display: inline-block;
 }
 
+.autocomplete-group {
+  display: none;
+}
+
+.autocomplete-suggestions {
+  padding-left: 10px;
+}
+
+#powered-by-constructor-io {
+  background: $npm-navy;
+  color: $header-subtle-text-color;
+
+  a {
+    color: $header-subtle-text-color;
+    text-decoration: none;
+    &:hover {
+      color: $gray-11;
+    }
+  }
+}
+
+
 @media (min-width: $desktopMinWidth) {
   header {
     max-height: initial;
