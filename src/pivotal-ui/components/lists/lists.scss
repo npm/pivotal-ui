@@ -380,12 +380,24 @@ parent: list
 The `.nav-finder` can be used to provide additional page navigation.
 It indicates which page/step you currently are on in the page flow.
 
+The `nav-finder` is able to work with 2-4 elements, but more can be added
+in the future if we'd like to expand.
+
+It currently focuses on 3 breakpoints for functionality - < 480px, >= 480px && < 640px
+and > 640px. There are text helpers for this specific class that are set to this.
+They are `.lvl-2` and `.lvl-3`.
+
+If you add `.lvl-2` to text within an element, you can make the text invisible, yet
+still readable via screen readers until the second break point is hit, and then it
+is completely visible. This works with the `.lvl-3` class as well (on the third
+break point).
+
 
 ```html_example
 <ul class="list-nav-finder">
-  <li>Create <span class="lvl-2">an </span>Account</li>
-  <li class="current">Payment Info<span class="lvl-2">rmation</span></li>
-  <li>Install<span class="lvl-2">ation</span></li>
+  <li><span class="text">Create <span class="lvl-3">an </span>Account</span></li>
+  <li class="current"><span class="text">Payment Info<span class="lvl-3">rmation</span></span></li>
+  <li><span class="text">Install<span class="lvl-3">ation</span></span></li>
 </ul>
 ```
 */
@@ -403,10 +415,18 @@ It indicates which page/step you currently are on in the page flow.
 
   > li {
     list-style: none;
-    float: none;
-    padding: .875em 15px .875em 15px;
     position: relative;
+    padding: .875em 15px .875em 15px;
+    float: none;
     z-index: 1;
+
+    > .text {
+      display: block;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
     &.current {
       color: $gray-11;
@@ -448,36 +468,56 @@ It indicates which page/step you currently are on in the page flow.
     }
   }
 
-  .lvl-2 {
+  .lvl-2,
+  .lvl-3 {
     @include a11y-only;
   }
 }
 
-@media (min-width: 23.125em)  { // 370px
+@media (min-width: $screen-xs-min)  {
   .list-nav-finder {
-    display: inline-block;
     > li {
       float: left;
-    }
-
-  }
-}
-
-@media (min-width: 30em)  { // 480px
-  .list-nav-finder {
-    > li {
-      padding: .875em 25px .875em 40px;
+      padding: .875em 25px .875em 25px;
 
       &::after {
         display: block;
       }
     }
+
+    /* This is fun, we can accomodate between 2 and 4 items in the list right
+     * now. We can always add more support later if necessary */
+
+    /* two items */
+    > li:nth-child(1):nth-last-child(2),
+      li:nth-child(2):nth-last-child(1) {
+        width: 50%;
+      }
+
+    /* three items */
+    > li:nth-child(1):nth-last-child(3),
+      li:nth-child(2):nth-last-child(2),
+      li:nth-child(3):nth-last-child(1) {
+        width: 33.3333%;
+      }
+
+    /* four items */
+    > li:nth-child(1):nth-last-child(4),
+      li:nth-child(2):nth-last-child(3),
+      li:nth-child(3):nth-last-child(2),
+      li:nth-child(4):nth-last-child(1) {
+        width: 25%;
+      }
+
+    .lvl-2 {
+      @include un-a11y-only;
+    }
   }
 }
 
-@media (min-width: 35.3125em)  { // 565px
+@media (min-width: 40em)  { /* 640px - this should stand as a new BP as some point */
   .list-nav-finder {
-    .lvl-2 {
+    .lvl-3 {
       @include un-a11y-only;
     }
   }
