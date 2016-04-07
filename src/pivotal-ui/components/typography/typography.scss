@@ -212,6 +212,8 @@ Here's a table of all the emphasis modifier classes.
 
 <h1 class="em-default">Default emphasis</h1>
 
+<h1 class="em-medium">Medium emphasis</h1>
+
 <h1 class="em-high">High emphasis</h1>
 
 <h1 class="em-max">Maximum emphasis</h1>
@@ -223,6 +225,7 @@ Here's a table of all the emphasis modifier classes.
 
 .em-low { font-weight: $font-weight-em-low !important; }
 .em-default { font-weight: $font-weight-em-default !important; }
+.em-medium { font-weight: $font-weight-em-medium !important; }
 .em-high { font-weight: $font-weight-em-high !important; }
 .em-max { font-weight: $font-weight-em-max !important; }
 .em-alt { text-transform: uppercase !important; }
