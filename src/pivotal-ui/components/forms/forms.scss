@@ -1305,6 +1305,65 @@ A toggle switch is a horizontally styled checkbox which represents true with blu
   }
 }
 
+/*doc
+---
+title: Stepper
+name: form_stepper
+categories:
+ - css_components_forms
+ - css_all
+---
+
+A stepper is a component that increments and decrements a number in an associated
+text field by interacting with one of two buttons.
+
+
+
+```html_example
+<form class="styleguide-form form-inline" role="form">
+  <div class="form-group">
+    <label class="control-label" for="subscribers">Subscriber count</label>
+    <div class="form-stepper">
+      <button type="button" class="btn btn-default btn-decrement" title="decrement value"><span class="a11y-only">decrement value</span>&minus;</button>
+      <input class="form-control" min="1" max="99999" step="1" name="subscribers" required="" type="number" value=10>
+      <button type="button" class="btn btn-default btn-increment" title="increment value"><span class="a11y-only">increment value</span>+</button>
+    </div>
+  </div>
+</form>
+```
+
+*/
+
+.form-stepper {
+  /* omg hacks
+    this is to get rid of the native number spinner
+   */
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    width: 5em;
+    text-align: center;
+  }
+
+  input[type=number],
+  button {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  button {
+    border-radius: 4px;
+    padding: 10px 15px;
+    text-align: center;
+  }
+}
+
 /*pending
 ---
 title: Focus Inputs
