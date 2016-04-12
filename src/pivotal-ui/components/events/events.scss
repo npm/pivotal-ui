@@ -1,0 +1,41 @@
+/*doc
+---
+title: Event Handling
+name: event_handling
+categories:
+  - css_base_eventhandling
+---
+
+Event handling in our system is handled through a document level message bus.
+This system works by publishing events when a component performs an action and
+letting that action bubble up to the `document`. If another component needs to
+interact with the first component, it can listen for that component's events
+at the `document` level.
+
+Example:
+
+Component 💣 has a method `🔥`. In the code, you might see:
+
+
+<code class="pam">
+💣.prototype.🔥 = function(blaze){
+  //do things
+
+  // this represent the element the component is referring to
+  $(this).trigger("💣:🔥");
+};
+</code>
+
+In another component 🚰, we have a method 🌊. We know that when the 💣
+component has the 🔥 method called, the 🚰 component needs to call the 🌊
+method.
+
+<code class="pam">
+$(document).on("💣:🔥", function(){
+  🚰.🌊();
+});
+</code>
+
+
+
+*/
