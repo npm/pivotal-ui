@@ -1,4 +1,10 @@
 $fa-font-path: "fonts";
+
+/* This is arbitrary, but within a few percent of any normal typeface. Because
+ * there's no way to align an SVG to the middle of the ascender and be as tall
+ * as the cap-height in CSS, this gets us Close Enough combined with
+ * vertical-align: baseline
+ */
 $em-to-cap-height-ratio:   0.73;
 
 @import "../pui-variables";
