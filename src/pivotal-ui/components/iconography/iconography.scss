@@ -1,4 +1,5 @@
 $fa-font-path: "fonts";
+$em-to-cap-height-ratio:   0.73;
 
 @import "../pui-variables";
 
@@ -88,9 +89,9 @@ Using the [handlebars icon helper](https://www.npmjs.com/package/handlebars-help
 */
 
 .icon {
- height: 1em;
- width: 1em;
- vertical-align: middle;
+ height: 1em * $em-to-cap-height-ratio;
+ width: 1em * $em-to-cap-height-ratio;
+ vertical-align: baseline;
  fill: currentColor;
 }
 
@@ -101,72 +102,73 @@ name: iconography_sizing
 parent: iconography
 ---
 
-To vary the size of the icons, use the .fa-h1 through .fa-h6 classes, .fa-title, .fa-sm, or .fa-xs
-Don't use the typography size modifier classes (e.g. .title, .h1, .type-sm)
+To vary the size of the icons, use the .icon-h1 through .icon-h6 classes, .icon-title, .icon-sm, or .icon-xs
+Don't use the typography size modifier classes (e.g. .title, .h1, .type-sm), as they may also imply other spacing changes.
 
 ```html_example_table
-<i class="fa fa-plus fa-title"></i>
+<svg class="icon icon-title"><use xlink:href="#i-plus"/></svg>
 <span class="title">Add Stuff</span>
 
-<i class="fa fa-plus fa-h1"></i>
+<svg class="icon icon-h1"><use xlink:href="#i-plus"/></svg>
 <span class="h1">Add Stuff</span>
 
-<i class="fa fa-plus fa-h2"></i>
+<svg class="icon icon-h2"><use xlink:href="#i-plus"/></svg>
 <span class="h2">Add Stuff</span>
 
-<i class="fa fa-plus fa-h3"></i>
+<svg class="icon icon-h3"><use xlink:href="#i-plus"/></svg>
 <span class="h3">Add Stuff</span>
 
-<i class="fa fa-plus fa-h4"></i>
+<svg class="icon icon-h4"><use xlink:href="#i-plus"/></svg>
 <span class="h4">Add Stuff</span>
 
-<i class="fa fa-plus fa-h5"></i>
+<svg class="icon icon-h5"><use xlink:href="#i-plus"/></svg>
 <span class="h5">Add Stuff</span>
 
-<i class="fa fa-plus fa-h6"></i>
+<svg class="icon icon-h6"><use xlink:href="#i-plus"/></svg>
 <span class="h6">Add Stuff</span>
 
-<i class="fa fa-plus"></i>
+<svg class="icon"><use xlink:href="#i-plus"/></svg>
 <span>Add Stuff</span>
 
-<i class="fa fa-plus fa-sm"></i>
-<span class="text-sm">Add Stuff</span>
+<svg class="icon icon-sm"><use xlink:href="#i-plus"/></svg>
+<span class="type-sm">Add Stuff</span>
 
-<i class="fa fa-plus fa-xs"></i>
-<span class="text-xs">Add Stuff</span>
+<svg class="icon icon-xs"><use xlink:href="#i-plus"/></svg>
+<span class="type-xs">Add Stuff</span>
 ```
 */
 
-.fa-h1 {
-  font-size: $font-size-h1 !important;
-  line-height: $headings-line-height;
+.icon-h1 {
+  font-size: $font-size-h1;
 }
-.fa-h2 {
-  font-size: $font-size-h2 !important;
-  line-height: $headings-line-height;
+.icon-h2 {
+  font-size: $font-size-h2;
 }
-.fa-h3 {
-  font-size: $font-size-h3 !important;
-  line-height: $headings-line-height;
+.icon-h3 {
+  font-size: $font-size-h3;
 }
-.fa-h4 {
-  font-size: $font-size-h4 !important;
-  line-height: $headings-line-height;
+.icon-h4 {
+  font-size: $font-size-h4;
 }
-.fa-h5 {
-  font-size: $font-size-h5 !important;
-  line-height: $headings-line-height;
+.icon-h5 {
+  font-size: $font-size-h5;
 }
-.fa-h6 {
-  font-size: $font-size-h6 !important;
-  line-height: $headings-line-height;
+.icon-h6 {
+  font-size: $font-size-h6;
 }
-.fa-title { font-size: $font-size-title !important; }
-.fa-sm { font-size: $font-size-small !important; }
-.fa-xs { font-size: $font-size-extra-small !important; }
+.icon-title {
+  font-size: $font-size-title;
+}
+.icon-sm {
+  font-size: $font-size-small;
+}
+.icon-xs {
+  font-size: $font-size-extra-small;
+}
 
 .icon-control {
-  font-size: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 /*doc
