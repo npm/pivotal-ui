@@ -55,7 +55,7 @@ The icon instantiated:
 <svg class="icon"><use xlink:href="#i-download"/></svg>
 ```
 
-Using the [handlebars icon helper](https://www.npmjs.com/package/handlebars-helper-icon) when developing with handlebars, you can have it inline the icon for you like below.
+Using the [handlebars icon helper](https://www.npmjs.com/package/handlebars-helper-icon) when developing with handlebars, you can have it inline the icon for you like below, and it will make sure that the first instance includes the definition, so only this one helper call is required.
 
 ```hbs
 {{icon "@npmcorp/glyphish/svg/g4/331-download" class="icon type-brand-8"}}
