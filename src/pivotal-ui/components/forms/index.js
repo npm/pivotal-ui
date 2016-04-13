@@ -1,1 +1,1 @@
-require('./stepper');
+exports.stepper = require('./stepper');
