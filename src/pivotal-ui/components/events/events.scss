@@ -19,11 +19,15 @@ Component 💣 has a method `🔥`. In the code, you might see:
 
 <code class="pam">
 💣.prototype.🔥 = function(blaze){
-  $(this).trigger("💣:🔥:before");
+  $(this).trigger("💣:🔥ed:before");
   //do things
 
   // this represent the element the component is referring to
-  $(this).trigger("💣:🔥");
+  
+  // In many cases the method name is present tense and the event
+  // name is a past tense version of that method name. This is
+  // a pretty common pattern reflected here.
+  $(this).trigger("💣:🔥ed");
 };
 </code>
 
@@ -32,7 +36,7 @@ component has the 🔥 method called and that method is completed, the 🚰
 component needs to call the 🌊 method.
 
 <code class="pam">
-$(document).on("💣:🔥", function(){
+$(document).on("💣:🔥ed", function(){
   🚰.🌊();
 });
 </code>
