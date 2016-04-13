@@ -19,7 +19,7 @@ npm install @npmcorp/pui-css-iconography --save
 </code>
 
 
-We use [Glyphish](http://glyphish.comhttp://www.glyphish.com) for scalable icons. They have been packaged up as [@npmcorp/glyphish] for use, and inserting them as SVG `<symbol>` allows us to use the same icon multiple times with only a minimal bit of code for further instances.
+We use [Glyphish](http://www.glyphish.com) for scalable icons. They have been packaged up as [@npmcorp/glyphish] for use, and inserting them as SVG `<symbol>` allows us to use the same icon multiple times with only a minimal bit of code for further instances.
 
 These icons will always match the font color.
 
