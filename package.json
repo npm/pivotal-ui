@@ -120,7 +120,7 @@
     "@npmcorp/pui-css-grids": "^2.1.1",
     "@npmcorp/pui-css-header": "^2.2.0",
     "@npmcorp/pui-css-hoverable": "^2.0.0",
-    "@npmcorp/pui-css-iconography": "^2.1.3",
+    "@npmcorp/pui-css-iconography": "^3.0.0",
     "@npmcorp/pui-css-images": "^2.0.1",
     "@npmcorp/pui-css-labels": "^2.0.1",
     "@npmcorp/pui-css-links": "^2.3.0",
