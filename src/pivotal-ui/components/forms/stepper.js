@@ -5,7 +5,8 @@ var FormStepper = function(el, input, decrementButton, incrementButton){
   this.incrementButton = incrementButton || this.stepper.find(".btn-increment");
 
   this.min = parseInt(this.input.attr("min")) || 0;
-  this.max = parseInt(this.input.attr("max"));
+  var max = parseInt(this.input.attr("max"));
+  this.max = isNaN(max) ? null : max;
   this.value = parseInt(this.input.val()) || parseInt(this.min);
 };
 
@@ -24,7 +25,7 @@ FormStepper.prototype.set = function(number){
 
   if( number <= this.min ){
     number = this.min;
-  } else if (this.max && number >= this.max ){
+  } else if (this.max !== null && number >= this.max ){
     number = this.max;
   }
 
