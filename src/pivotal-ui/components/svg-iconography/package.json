@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@npmcorp/pui-css-typography": "^4.0.0"
+  },
+  "version": "1.0.0"
+}
