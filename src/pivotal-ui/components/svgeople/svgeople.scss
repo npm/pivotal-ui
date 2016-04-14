@@ -1,0 +1,117 @@
+@import "../pui-variables";
+
+/*doc
+---
+title: SVGeople
+name: svgeople
+categories:
+ - css_components_svgeople
+ - css_all
+---
+
+<code class="pam">
+<i class="fa fa-download" alt="Install the Component"></i>
+npm install --save @npmcorp/pui-css-svgeople
+</code>
+
+
+The SVGeople component is an event-driven element that loads SVG images of people into it.
+
+
+```html_example
+<div class="svgeople" data-asset-root="/styleguide/" data-amount-people-files=10 data-starting-count=1></div>
+```
+
+The svgeople component has three different settings that are modifyable via `data` attributes:
+
+* `asset-root`: This is where the people images live
+* `amount-people-files`: This lets the svgeople component know how many files it should expect
+* `starting-count`: This tells the component how many svgs it should show at the start
+
+
+The svgeople component makes the assumption that the svg images that are loaded will be
+available in the root directory given and that they will be named with the pattern: 
+`{asset-root}people_p{number}.svg` where the number will start at 0.
+
+
+Currently, the SVGeople component relies upon the `FormStepper:changed` event to be triggered by the
+form stepper component. Use the piece below to see how it works.
+
+
+
+```html_example
+<form class="styleguide-form form-inline" role="form">
+  <div class="form-group">
+    <label class="control-label" for="subscribers">Subscriber count</label>
+    <div class="form-stepper">
+      <button type="button" class="btn btn-default btn-decrement form-control" title="decrement value"><span class="a11y-only">decrement value</span>&minus;</button>
+      <input class="form-control" min="1" step="1" name="subscribers" required="" type="number" value=1>
+      <button type="button" class="btn btn-default btn-increment form-control" title="increment value"><span class="a11y-only">increment value</span>+</button>
+    </div>
+  </div>
+</form>
+
+```
+
+  */
+
+.svgeople {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  overflow-y: hidden;
+
+  .person-container {
+    flex: 1 auto;
+    transform: translateY(100%);
+    transition: transform 2s;
+
+    &.show {
+      transform: translateY(0%);
+    }
+
+    &:first-child {
+      order: 5;
+    }
+
+    &:nth-child(2) {
+      order: 6;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 7;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+    }
+
+    &:nth-child(6) {
+      order: 8;
+    }
+
+    &:nth-child(7) {
+      order: 2;
+    }
+
+    &:nth-child(8) {
+      order: 9;
+    }
+
+    &:nth-child(9) {
+      order: 1;
+    }
+
+    &:nth-child(10) {
+      order: 10;
+    }
+
+  }
+}
