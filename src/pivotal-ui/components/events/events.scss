@@ -14,30 +14,30 @@ at the `document` level.
 
 Example:
 
-Component 💣 has a method `🔥`. In the code, you might see:
+Component `FormStepper` has a method `set`. In the code, you might see:
 
 
 <code class="pam">
-💣.prototype.🔥 = function(blaze){
-  $(this).trigger("💣:🔥ed:before");
+FormStepper.prototype.set = function(){
+  $(this).trigger("FormStepper:changed:before");
   //do things
 
   // this represent the element the component is referring to
-  
+
   // In many cases the method name is present tense and the event
   // name is a past tense version of that method name. This is
   // a pretty common pattern reflected here.
-  $(this).trigger("💣:🔥ed");
+  $(this).trigger("FormStepper:changed");
 };
 </code>
 
-In another component 🚰, we have a method 🌊. We know that when the 💣
-component has the 🔥 method called and that method is completed, the 🚰
-component needs to call the 🌊 method.
+In another component `SVGeople`, we have a method `addPeople`. We know that when the `FormStepper`
+component has the `set` method called and that method is completed, the `SVGeople`
+component needs to call the `addPeople` method.
 
 <code class="pam">
-$(document).on("💣:🔥ed", function(){
-  🚰.🌊();
+$(document).on("FormStepper:changed", function(){
+  sveople.addPeople();
 });
 </code>
 
