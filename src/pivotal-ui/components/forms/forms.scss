@@ -1324,9 +1324,9 @@ text field by interacting with one of two buttons.
   <div class="form-group">
     <label class="control-label" for="subscribers">Subscriber count</label>
     <div class="form-stepper">
-      <button type="button" class="btn btn-default btn-decrement" title="decrement value"><span class="a11y-only">decrement value</span>&minus;</button>
+      <button type="button" class="btn btn-default btn-decrement form-control" title="decrement value"><span class="a11y-only">decrement value</span>&minus;</button>
       <input class="form-control" min="1" step="1" name="subscribers" required="" type="number" value=1>
-      <button type="button" class="btn btn-default btn-increment" title="increment value"><span class="a11y-only">increment value</span>+</button>
+      <button type="button" class="btn btn-default btn-increment form-control" title="increment value"><span class="a11y-only">increment value</span>+</button>
     </div>
   </div>
 </form>
@@ -1351,15 +1351,10 @@ text field by interacting with one of two buttons.
     text-align: center;
   }
 
-  input[type=number],
   button {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  button {
-    border-radius: 4px;
+    line-height: 1;
     padding: 10px 15px;
+    border-radius: 4px;
     text-align: center;
   }
 }
