@@ -280,3 +280,71 @@ Similar to the regular responsive classes, use these for toggling content for pr
 
 
 */
+
+/*doc
+---
+title: Marginalia
+name: marginalia
+categories:
+ - css_utilities_marginalia
+ - css_all
+---
+
+Marginalia are the things in the padding (yes, padding, not margins. That's a CSS distinction and the term is old) of an element — an icon aside main content, mostly.
+
+The marginalia size you use should match the padding size you use. Only sizes `xxl`, `xxxl` and `xxxxl` are available because the other spaces are too small to be useful.
+
+```html_example
+<div class="marginalia-container">
+  <div class="marginalia-xxxxl">
+    <svg width="130" height="130"><use xlink:href="#i-keyhole"/></svg>
+  </div>
+  <div class="plxxxxl">
+    <h1>This is some text!</h1>
+    <p>Bacon ipsum dolor amet filet mignon culpa porchetta velit drumstick do capicola esse chuck sint voluptate. Hamburger sunt bresaola nulla eiusmod. Meatloaf porchetta elit t-bone ut aliqua. Veniam sunt biltong ball tip. T-bone porchetta officia ad ut strip steak hamburger qui adipisicing rump.</p>
+  </div>
+</div>
+<div class="marginalia-container">
+  <div class="marginalia-xxxl">
+    <svg width="110" height="110"><use xlink:href="#i-keyhole"/></svg>
+  </div>
+  <div class="plxxxl">
+    <h1>This is some text!</h1>
+    <p>Bacon ipsum dolor amet filet mignon culpa porchetta velit drumstick do capicola esse chuck sint voluptate. Hamburger sunt bresaola nulla eiusmod. Meatloaf porchetta elit t-bone ut aliqua. Veniam sunt biltong ball tip. T-bone porchetta officia ad ut strip steak hamburger qui adipisicing rump.</p>
+  </div>
+</div>
+<div class="marginalia-container">
+  <div class="marginalia-xxl">
+    <svg width="35" height="35"><use xlink:href="#i-keyhole"/></svg>
+  </div>
+  <div class="plxxl">
+    <h1>This is some text!</h1>
+    <p>Bacon ipsum dolor amet filet mignon culpa porchetta velit drumstick do capicola esse chuck sint voluptate. Hamburger sunt bresaola nulla eiusmod. Meatloaf porchetta elit t-bone ut aliqua. Veniam sunt biltong ball tip. T-bone porchetta officia ad ut strip steak hamburger qui adipisicing rump.</p>
+  </div>
+</div>
+```
+
+  <svg style="display: none">
+    <symbol id="i-keyhole" viewBox="0 0 56 56">
+      <path d="M37 21a9 9 0 0 0-18 0c0 3.51 2.012 6.54 4.94 8.025L20 44h16l-3.94-14.975C34.987 27.54 37 24.51 37 21zm-5.846 6.24l-1.44.732.41 1.562L33.407 42H22.594l3.28-12.466.412-1.562-1.44-.73A6.97 6.97 0 0 1 21 21c0-3.86 3.14-7 7-7s7 3.14 7 7a6.97 6.97 0 0 1-3.846 6.24zM28 0C12.536 0 0 12.536 0 28s12.536 28 28 28 28-12.536 28-28S43.464 0 28 0zm0 54C13.664 54 2 42.337 2 28S13.664 2 28 2s26 11.663 26 26-11.664 26-26 26z"/>
+    </symbol>
+  </svg>
+*/
+.marginalia-container {
+  position: relative;
+}
+
+.marginalia-xxxxl {
+  position: absolute;
+  width: $whitespace-xxxxl - $whitespace-s;
+}
+
+.marginalia-xxxl {
+  position: absolute;
+  width: $whitespace-xxxl - $whitespace-s;
+}
+
+.marginalia-xxl {
+  position: absolute;
+  width: $whitespace-xxl - $whitespace-s;
+}
