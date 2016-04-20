@@ -40,6 +40,7 @@ Icon                                                    | Module and Filename
 <svg class="icon"><use xlink:href="#i-package"/></svg>  | `@npmcorp/glyphish/svg/g6/Normal/807-package@2x.svg`
 <svg class="icon"><use xlink:href="#i-users"/></svg>    | `@npmcorp/glyphish/svg/g6/Normal/895-user-group@2x.svg`
 <svg class="icon"><use xlink:href="#i-bdfl"/></svg>     | `@npmcorp/glyphish/svg/g8/Normal/1225-basket-delete@2x.svg`
+<svg class="icon"><use xlink:href="#i-module"/></svg>   | `@npmcorp/pui-css-svg-iconography/package-icon.svg`
 
 Icons must be defined inline once per page.
 
@@ -67,6 +68,9 @@ Using the [handlebars icon helper](https://www.npmjs.com/package/handlebars-help
 ```
 
 <svg style="display: none">
+  <symbol id="i-module" viewBox="0 -65 900 1024">
+    <path d="M483.84 180.736l227.328 103.936v304.64l-227.328-103.936v-304.64zM199.168 284.16l227.328-103.936v305.152l-227.328 103.936c0 0 0-305.152 0-305.152zM837.632 783.872l-321.536 162.304c-38.4 18.432-82.432 18.432-120.832 0l-322.56-162.304c-44.032-22.528-72.704-68.096-72.704-116.736v-437.76c0-49.664 28.672-95.232 72.704-116.736l321.536-162.816c38.4-18.432 82.432-18.432 120.832 0l321.536 162.304c44.032 22.528 72.704 68.096 72.704 116.736v437.248c1.024 49.664-27.648 95.232-71.68 117.76zM749.056 238.592l-280.576-127.488c-8.704-4.096-18.432-4.096-27.136 0l-280.576 127.488c-11.776 5.12-18.944 16.896-18.944 29.696v356.864c0 12.8 7.68 24.064 18.944 29.696l281.088 127.488c8.704 4.096 18.432 4.096 27.136 0l280.576-127.488c11.776-5.12 18.944-16.896 18.944-29.696v-356.864c-0.512-12.8-7.68-24.064-19.456-29.696zM244.736 630.272l210.432-95.232 210.432 95.232-210.432 95.232-210.432-95.232z"/>
+  </symbol>
   <symbol id="i-warn" viewBox="0 0 28.001 25">
     <path d="M27.634 22.212L15.594 1.15C15.158.384 14.58 0 14 0s-1.157.384-1.595 1.15L.367 22.212C-.51 23.746.24 25 2.037 25h23.93c1.793 0 2.544-1.254 1.667-2.788zM2.22 23L14 2.39 25.78 23H2.22zM14 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-1-1h2l1-9h-4l1 9z"/>
   </symbol>
