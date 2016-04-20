@@ -53,9 +53,11 @@ table {
  * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
  * <type><location><size>
  *
- * p,m 				padding,margin
+ * p,m,g			padding,margin,gutter
  * a,t,r,b,l,h,v	all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n 			small(5px),medium(10px),large(20px),none(0px)
+ *
+ * the gutter type is padding by another name for other purposes of padding.
  */
 
 $whitespace-keys: (p padding, m margin, g padding, a '', v -top -bottom, h -left -right, t -top, r -right, b -bottom, l -left);
@@ -88,7 +90,7 @@ $whitespace-keys: (p padding, m margin, g padding, a '', v -top -bottom, h -left
  * e.g. @include whitespace((), 4, (p,g));
  *
  */
-@mixin whitespace($units: (), $sizes: 4, $types: (p,m,g)) {
+@mixin whitespace($units: (), $sizes: 4, $types: (p,m)) {
   $tShirtSizes: (n,s,m,l,xl,xxl,xxxl,xxxxl);
   $locations: (a, v, h, t, r, b, l);
   $fontHeight: ($baseFontSize/1px) * $baseLineHeight;
