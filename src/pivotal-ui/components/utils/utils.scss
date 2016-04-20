@@ -290,9 +290,9 @@ categories:
  - css_all
 ---
 
-Marginalia are the things in the padding (yes, padding, not margins. That's a CSS distinction and the term is old) of an element — an icon aside main content, mostly.
+Marginalia are the things in the gutters of a block. That's a CSS distinction and the term is old) of an element — an icon aside main content, mostly.
 
-The marginalia size you use should match the padding size you use. Only sizes `xxl`, `xxxl` and `xxxxl` are available because the other spaces are too small to be useful.
+The marginalia size you use should match the gutter size you use. Only sizes `xxl`, `xxxl` and `xxxxl` are available because the other spaces are too small to be useful.
 
 ```html_example
 <div class="marginalia-container">
