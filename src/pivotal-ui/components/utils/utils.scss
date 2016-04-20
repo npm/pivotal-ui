@@ -290,16 +290,16 @@ categories:
  - css_all
 ---
 
-Marginalia are the things in the padding (yes, padding, not margins. That's a CSS distinction and the term is old) of an element — an icon aside main content, mostly.
+Marginalia are the things in the gutters of a block. That's a CSS distinction and the term is old) of an element — an icon aside main content, mostly.
 
-The marginalia size you use should match the padding size you use. Only sizes `xxl`, `xxxl` and `xxxxl` are available because the other spaces are too small to be useful.
+The marginalia size you use should match the gutter size you use. Only sizes `xxl`, `xxxl` and `xxxxl` are available because the other spaces are too small to be useful.
 
 ```html_example
 <div class="marginalia-container">
   <div class="marginalia-xxxxl">
     <svg width="130" height="130"><use xlink:href="#i-keyhole"/></svg>
   </div>
-  <div class="plxxxxl">
+  <div class="glxxxxl">
     <h1>This is some text!</h1>
     <p>Bacon ipsum dolor amet filet mignon culpa porchetta velit drumstick do capicola esse chuck sint voluptate. Hamburger sunt bresaola nulla eiusmod. Meatloaf porchetta elit t-bone ut aliqua. Veniam sunt biltong ball tip. T-bone porchetta officia ad ut strip steak hamburger qui adipisicing rump.</p>
   </div>
@@ -308,7 +308,7 @@ The marginalia size you use should match the padding size you use. Only sizes `x
   <div class="marginalia-xxxl">
     <svg width="110" height="110"><use xlink:href="#i-keyhole"/></svg>
   </div>
-  <div class="plxxxl">
+  <div class="glxxxl">
     <h1>This is some text!</h1>
     <p>Bacon ipsum dolor amet filet mignon culpa porchetta velit drumstick do capicola esse chuck sint voluptate. Hamburger sunt bresaola nulla eiusmod. Meatloaf porchetta elit t-bone ut aliqua. Veniam sunt biltong ball tip. T-bone porchetta officia ad ut strip steak hamburger qui adipisicing rump.</p>
   </div>
@@ -317,7 +317,7 @@ The marginalia size you use should match the padding size you use. Only sizes `x
   <div class="marginalia-xxl">
     <svg width="35" height="35"><use xlink:href="#i-keyhole"/></svg>
   </div>
-  <div class="plxxl">
+  <div class="glxxl">
     <h1>This is some text!</h1>
     <p>Bacon ipsum dolor amet filet mignon culpa porchetta velit drumstick do capicola esse chuck sint voluptate. Hamburger sunt bresaola nulla eiusmod. Meatloaf porchetta elit t-bone ut aliqua. Veniam sunt biltong ball tip. T-bone porchetta officia ad ut strip steak hamburger qui adipisicing rump.</p>
   </div>

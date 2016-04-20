@@ -29,11 +29,18 @@ parent: whitespace
 
 Should be used to modify the default spacing between objects (not between nodes of the same object)
 Please use judiciously. You want to be using defaults most of the time, these are exceptions!
-`<type><location><size>`
+`<type><location><size>`.
+
+Margins are outside the border.
+
+Padding is inside the border.
+
+Gutters are padding that don't collapse at mobile sizes. If you're doing layout and using marginalia
+you want to use a gutter, not padding.
 
 Letter                           | Description
 -------------------------------- | ------------------------------------------------------------------
-p, m                             | padding, margin
+p, m, g                          | padding, margin, gutter
 a, t, r, b, l, h, v              | all, top, right, bottom, left, horizontal, vertical
 n, s, m, l, xl, xxl, xxxl, xxxxl | none(0px), small(5px), medium(7px), large(10px), extra large(20px), extra extra large (40px), extra extra extra large (120px), extra extra extra extra large (140px)
 
@@ -56,10 +63,10 @@ See [list spacing][list_whitespace].
 
 */
 
-@include whitespace(($whitespace-s, $whitespace-m, $whitespace-l, $whitespace-xl, $whitespace-xxl, $whitespace-xxxl, $whitespace-xxxxl));
+@include whitespace(($whitespace-s, $whitespace-m, $whitespace-l, $whitespace-xl, $whitespace-xxl, $whitespace-xxxl, $whitespace-xxxxl), 4, (p,m,g));
 
 @media all and (max-width: $screen-sm) {
-  @include whitespace(($whitespace-screen-sm-s, $whitespace-screen-sm-m, $whitespace-screen-sm-l, $whitespace-screen-sm-xl, $whitespace-screen-sm-xxl, $whitespace-screen-sm-xxxl, $whitespace-screen-sm-xxxxl));
+  @include whitespace(($whitespace-screen-sm-s, $whitespace-screen-sm-m, $whitespace-screen-sm-l, $whitespace-screen-sm-xl, $whitespace-screen-sm-xxl, $whitespace-screen-sm-xxxl, $whitespace-screen-sm-xxxxl), 4);
 }
 
 

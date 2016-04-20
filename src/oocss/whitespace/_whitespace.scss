@@ -53,12 +53,14 @@ table {
  * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
  * <type><location><size>
  *
- * p,m 				padding,margin
+ * p,m,g			padding,margin,gutter
  * a,t,r,b,l,h,v	all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n 			small(5px),medium(10px),large(20px),none(0px)
+ *
+ * the gutter type is padding by another name for other purposes of padding.
  */
 
-$whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t -top, r -right, b -bottom, l -left);
+$whitespace-keys: (p padding, m margin, g padding, a '', v -top -bottom, h -left -right, t -top, r -right, b -bottom, l -left);
 @function expand-whitespace-key($k) {
   @each $pair in $whitespace-keys {
     $short: nth($pair, 1);
@@ -84,10 +86,12 @@ $whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t 
  * @param $sizes - how many sizes you want. Calculate sizes based on line-height
  * e.g. @include whitespace((), 4);
  *
+ * @param $types - what type of rules you want. p for padding, m for margin, g for gutter
+ * e.g. @include whitespace((), 4, (p,g));
+ *
  */
-@mixin whitespace($units: (), $sizes: 4) {
+@mixin whitespace($units: (), $sizes: 4, $types: (p,m)) {
   $tShirtSizes: (n,s,m,l,xl,xxl,xxxl,xxxxl);
-  $types: (p,m);
   $locations: (a, v, h, t, r, b, l);
   $fontHeight: ($baseFontSize/1px) * $baseLineHeight;
 //calculate font height
