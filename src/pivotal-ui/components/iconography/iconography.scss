@@ -142,7 +142,7 @@ There are a bunch of little cartoon people that we can use as avatar icons throu
 
 <div class="media">
   <div class="media-left media-middle">
-    <i class="icon icon-avatar" style="background-image: url(styleguide/avatar.svg)"></i>
+    <i class="avatar-icon" style="background-image: url(styleguide/avatar.svg)"></i>
   </div>
   <div class="media-body">
     <h4 class="media-heading">Media heading</h4>
@@ -152,7 +152,7 @@ There are a bunch of little cartoon people that we can use as avatar icons throu
 ```
 */
 
-.icon-avatar {
+.avatar-icon {
   height: 100px;
   width: 100px;
   display: inline-block;
