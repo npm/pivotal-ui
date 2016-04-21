@@ -99,6 +99,7 @@ Using the [handlebars icon helper](https://www.npmjs.com/package/handlebars-help
 .icon {
  height: 1em * $em-to-cap-height-ratio;
  width: 1em * $em-to-cap-height-ratio;
+ padding: 1px; // Forces rounding to go the right direction to keep all the lines in the icon visible.
  vertical-align: baseline;
  fill: currentColor;
 }
