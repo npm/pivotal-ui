@@ -115,6 +115,9 @@ To vary the size of the icons, use the .icon-h1 through .icon-h6 classes, .icon-
 Don't use the typography size modifier classes (e.g. .title, .h1, .type-sm), as they may also imply other spacing changes.
 
 ```html_example_table
+<svg class="icon icon-gigantic"><use xlink:href="#i-plus"/></svg>
+<span class="type-gigantic">Add Stuff</span>
+
 <svg class="icon icon-title"><use xlink:href="#i-plus"/></svg>
 <span class="title">Add Stuff</span>
 
@@ -167,6 +170,9 @@ Don't use the typography size modifier classes (e.g. .title, .h1, .type-sm), as 
 }
 .icon-title {
   font-size: $font-size-title;
+}
+.icon-gigantic {
+  font-size: $font-size-gigantic;
 }
 .icon-sm {
   font-size: $font-size-small;
