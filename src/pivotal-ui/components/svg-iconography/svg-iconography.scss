@@ -168,6 +168,9 @@ Don't use the typography size modifier classes (e.g. .title, .h1, .type-sm), as 
 .icon-title {
   font-size: $font-size-title;
 }
+.icon-gigantic {
+  font-size: $font-size-gigantic;
+}
 .icon-sm {
   font-size: $font-size-small;
 }
