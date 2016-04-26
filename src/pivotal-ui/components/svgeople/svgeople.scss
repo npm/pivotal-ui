@@ -33,6 +33,9 @@ The svgeople component makes the assumption that the svg images that are loaded 
 available in the root directory given and that they will be named with the pattern: 
 `{asset-root}people_p{number}.svg` where the number will start at 0.
 
+The svgeople component also makes the assumption that there will be no necessary
+order to the people added beyond the 10th. This can be fixed in future versions as
+we see fit.
 
 Currently, the SVGeople component relies upon the `FormStepper:changed` event to be triggered by the
 form stepper component. Use the piece below to see how it works.

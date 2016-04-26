@@ -29,9 +29,9 @@ var SVGeople = function(el, amountOfPeopleFiles, shownCount, root) {
  * index value
  */
 SVGeople.prototype.addPerson = function(idx) {
-  var id = "#svgerson_" + idx;
-  this.el.find(id).addClass("show");
-  this.el.trigger("SVGeople:personAdded", [id]);
+  var child = idx + 1;
+  this.el.find(".person-container:nth-child(" + child + ")").addClass("show");
+  this.el.trigger("SVGeople:personAdded", [idx]);
 };
 
 
@@ -43,9 +43,9 @@ SVGeople.prototype.addPerson = function(idx) {
  * index value
  */
 SVGeople.prototype.removePerson = function(idx) {
-  var id = "#svgerson_" + idx;
-  this.el.find(id).removeClass("show");
-  this.el.trigger("SVGeople:personRemoved", [id]);
+  var child = idx + 1;
+  this.el.find(".person-container:nth-child(" + child + ")").removeClass("show");
+  this.el.trigger("SVGeople:personRemoved", [idx]);
 };
 
 /**
@@ -86,7 +86,7 @@ SVGeople.prototype.getPeople = function() {
  */
 SVGeople.prototype.addPeopleToContainer = function() {
   var people = Array.prototype.map.call(arguments, function(person, idx) {
-    return "<div class='person-container' id='svgerson_" + idx + "'>" +
+    return "<div class='person-container'>" +
       person +
       "</div>";
   }).join('');
