@@ -126,6 +126,7 @@
     "@npmcorp/pui-css-links": "^2.3.0",
     "@npmcorp/pui-css-lists": "^2.4.2",
     "@npmcorp/pui-css-logoblock": "^1.0.0",
+    "@npmcorp/pui-css-marketing": "^1.0.0-alpha",
     "@npmcorp/pui-css-media": "^2.0.1",
     "@npmcorp/pui-css-meta": "^1.0.0",
     "@npmcorp/pui-css-modals": "^2.0.1",
