@@ -2,10 +2,11 @@ const React = global.React || require('react');
 const SimpleTabs = global.SimpleTabs || require('@npmcorp/pui-react-tabs').SimpleTabs;
 const Tab = global.Tab || require('@npmcorp/pui-react-tabs').Tab;
 const Collapse = global.Collapse || require('@npmcorp/pui-react-collapse').Collapse;
+const lodash = require('lodash');
 
-const ComponentTypeCollapse = React.createClass({
+const ComponentList = React.createClass({
   render() {
-    const {componentType, components, defaultExpanded} = this.props;
+    const {components} = this.props;
 
     let componentNames = Object.keys(components).sort();
 
@@ -18,11 +19,9 @@ const ComponentTypeCollapse = React.createClass({
     });
 
     return (
-      <Collapse header={componentType} className="nav-component-type" defaultExpanded={defaultExpanded}>
-        <ul className="list-unstyled mlxl">
-          {componentItems}
-        </ul>
-      </Collapse>
+      <ul className="list-unstyled mlxl">
+        {componentItems}
+      </ul>
     );
   }
 });
@@ -39,23 +38,15 @@ const StyleguideNav = React.createClass({
     const languageNames = ['CSS', 'React'];
     const tabs = languageNames.map((language) => {
       const componentTypes = navTree[language];
-      const componentTypeNames = Object.keys(componentTypes).sort();
 
-      const collapses = componentTypeNames.map((componentType) => {
-        const defaultExpanded = componentType.toLowerCase() == defaultComponentType.toLowerCase();
-        return (
-          <ComponentTypeCollapse componentType={componentType}
-                                 key={`nav-${language}-${componentType}`}
-                                 components={componentTypes[componentType]}
-                                 defaultExpanded={defaultExpanded}/>
-        );
-      });
+      const components = lodash.reduce(lodash.values(componentTypes), (e, a) => Object.assign({}, e, a), {});
 
       return (
         <Tab eventKey={language.toLowerCase()} key={`nav-tab-${language}`} title={language} className="pvn phn">
-          {collapses}
+          <ComponentList components={components} />
         </Tab>
-      )
+      );
+
     });
 
     return (
