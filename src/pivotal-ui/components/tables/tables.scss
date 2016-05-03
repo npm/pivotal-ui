@@ -26,36 +26,6 @@ Class                 | Description
 
 */
 
-/*pending
----
-title: JS Tables
-name: table_js
-categories:
-  - Objects
-  - All
----
-
-This section contains different table behaviors. See [tables][table] to see different table styles.
-*/
-
-// Terrible terrible code
-.table-hack {
-  .thead, .tbody {
-    padding: 0 15px;
-  }
-  .th {
-    padding: 8px 15px;
-  }
-  .td {
-    padding: 20px 15px;
-  }
-  .tbody {
-
-    .tr:nth-child(odd) {
-    }
-  }
-}
-
 /*doc
 ---
 title: Data
