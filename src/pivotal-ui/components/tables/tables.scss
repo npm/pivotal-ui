@@ -70,7 +70,7 @@ This is the cute rounding style on our tables
 .table-rounded {
  padding: 0 !important;
  border-radius: 10px;
- border: 1px solid $gray-7;
+ border: 1px solid $gray-8;
  overflow: hidden;
 
  > table, > .table {
@@ -137,11 +137,12 @@ This is a table used to display many rows of data (it is pretty much the default
   border: none;
   tbody, thead, .tbody, .thead {
     tr, .tr {
-      border-bottom: 1px solid $gray-7;
+      border-bottom: 1px solid $gray-8;
       th, .th {
         border-bottom: none;
-        border-color: $gray-7;
-        border-right: 1px solid $gray-7;
+        border-color: $gray-8;
+        color: $navy-3;
+        border-right: 1px solid $gray-8;
         padding: 15px 10px;
         font-size: 13px;
         font-weight: 900;
@@ -152,9 +153,10 @@ This is a table used to display many rows of data (it is pretty much the default
         &:last-child {
           border: none;
         }
-        background-color: $gray-9;
+        background-color: $gray-10;
       }
       td, .td {
+        color: $navy-3;
         padding: 10px 10px;
         border: none; // overwriting bootstrap default values which are too specific
       }
@@ -163,20 +165,16 @@ This is a table used to display many rows of data (it is pretty much the default
 
   tbody, .tbody {
     tr, .tr {
-      background-color: $gray-9;
-      &:last-child {
-        border-bottom: 2px solid $shadow-3;
-      }
+      background-color: $gray-10;
     }
   }
-  // end optical illusion bug code
 
   > thead > tr, > .thead > .tr {
     text-transform: uppercase;
     &:last-child {
     }
     > th, > .th {
-      color: $gray-3;
+      color: $navy-3;
     }
   }
 }
@@ -340,7 +338,7 @@ We are making the assumption here that table-hover will *only* be used if the ta
     }
     &:after {
       content: "\f0dc";
-      color: $gray-7;
+      color: $gray-8;
       visibility: hidden;
     }
   }
