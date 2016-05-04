@@ -28,6 +28,68 @@ Class                 | Description
 
 /*doc
 ---
+title: Rounded Tables
+name: table_rounded
+parent: table
+---
+
+This is the cute rounding style on our tables
+
+```html_example
+<div class="table-rounded">
+  <table class="table table-data">
+    <thead>
+      <tr>
+        <th>Wombat Type</th>
+        <th>Wombat Cuteness</th>
+        <th>Wombat Surprise</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cuddly</td>
+        <td>Immense</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>World's largest</td>
+        <td>Gargantuan</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Baby</td>
+        <td>Infinite</td>
+        <td>10000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+*/
+
+.table-rounded {
+ padding: 0 !important;
+ border-radius: 10px;
+ border: 1px solid $gray-7;
+ overflow: hidden;
+
+ > table, > .table {
+  margin: 0 !important;
+  border: 0 !important;
+
+  > tr:last-child, .tr:last-child {
+   border-bottom: none !important;
+  }
+  > tbody:last-child, .tbody:last-child {
+   > .tr:last-child, tr:last-child {
+    border-bottom: none !important;
+   }
+  }
+ }
+}
+
+/*doc
+---
 title: Data
 name: table_data
 parent: table
