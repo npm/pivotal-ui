@@ -23,8 +23,29 @@ Class                 | Description
 `.table`              | Base table class, applies spacing and cross browser support. Unfortunately inherits some undesirable styles from bootstrap.
 `.table-hover`        | Adds a light blue background color to table rows when the user hovers over them (use to indicate clickability)
 `.table-striped`      | Applies zebra striping to a table.
+`.table-divided`      | Adds vertical dividers to tables.
 
 */
+
+@mixin table-divided() {
+  > td:not(:last-child),
+  > .td:not(:last-child),
+  > th:not(:last-child),
+  > .th:not(:last-child) {
+    border-right: 1px solid $gray-8;
+  }
+}
+
+.table-divided {
+  > thead, > tbody, > .thead, > .tbody {
+    > tr, > .tr {
+      @include table-divided();
+    }
+  }
+  > tr, > .tr {
+    @include table-divided();
+  }
+}
 
 /*doc
 ---
@@ -37,7 +58,7 @@ This is the cute rounding style on our tables
 
 ```html_example
 <div class="table-rounded">
-  <table class="table table-data">
+  <table class="table table-data table-divided">
     <thead>
       <tr>
         <th>Wombat Type</th>
