@@ -102,12 +102,6 @@ This is a table used to display many rows of data (it is pretty much the default
   tbody, .tbody {
     tr, .tr {
       background-color: $gray-9;
-      &:hover {
-        -webkit-transition: background-color 300ms ease-out;
-        -moz-transition: background-color 300ms ease-out;
-        transition: background-color 300ms ease-out;
-        background-color: $gray-10;
-      }
       &:last-child {
         border-bottom: 2px solid $shadow-3;
       }
