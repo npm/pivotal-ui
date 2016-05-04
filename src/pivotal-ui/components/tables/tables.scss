@@ -167,7 +167,6 @@ This is a table used to display many rows of data (it is pretty much the default
   }
 
   > thead > tr, > .thead > .tr {
-    text-transform: uppercase;
     &:last-child {
     }
     > th, > .th {
@@ -234,7 +233,6 @@ specify column widths for the th/tds.
         margin: 0;
       }
       th {
-        text-transform: uppercase;
         font-weight: 800;
         text-align: left;
         color: $gray-5;
