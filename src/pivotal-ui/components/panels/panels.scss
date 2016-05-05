@@ -37,6 +37,14 @@ Panels are typically a combination of contours, backgrounds, and content includi
   font-size: inherit; // Bootstrap Override for React Collapses
 }
 
+.panel-title-alt {
+  padding: $panel-title-padding;
+  border-bottom: $panel-title-border;
+  font-weight: $panel-title-font-weight;
+  color: $panel-title-text;
+}
+
+
 /*doc
 ---
 title: Simple
@@ -56,47 +64,6 @@ parent: panel
 
 .panel-simple {
   border: $panel-simple-border;
-}
-
-/*doc
----
-title: Basic
-name: panel_basic
-parent: panel
----
-
-By default, all the .panel does is apply a basic shadow and padding to contain some content. You can have it with or without a title.
-
-```html_example
-<div class="panel panel-basic bg-neutral-11">
-  <div class="panel-header">
-    <h5 class="panel-title-alt">Basic Title</h5>
-  </div>
-  <div class="panel-body">
-    Basic Panel
-  </div>
-</div>
-
-<div class="panel panel-basic bg-neutral-11">
-  <div class="panel-body">
-    Basic Panel
-  </div>
-</div>
-```
-
-*/
-
-.panel-basic {
-  border-radius: $border-radius-medium;
-  @include background-clip-fix;
-  border-bottom: 2px solid $shadow-3;
-}
-
-.panel-title-alt {
-  padding: $panel-title-padding;
-  border-bottom: $panel-title-border;
-  font-weight: $panel-title-font-weight;
-  color: $panel-title-text;
 }
 
 /*doc
