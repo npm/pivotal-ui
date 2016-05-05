@@ -1137,9 +1137,9 @@ $panel-info-heading-bg:       $state-info-bg !default;
 // Panel Basic Alt
 // -------------------------
 $panel-basic-alt-background:      white;
-$panel-basic-alt-border:          1px solid rgba(0,0,0,.1);
-$panel-basic-alt-border-bottom:   2px solid rgba(0,0,0,.1);
-$panel-basic-alt-border-radius:   5px;
+$panel-basic-alt-border:          1px solid $gray-8;
+$panel-basic-alt-border-bottom:   1px solid $gray-8;
+$panel-basic-alt-border-radius:   10px;
 
 // Panel Titles
 // -------------------------
