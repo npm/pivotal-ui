@@ -157,6 +157,7 @@ Basic alternate panels are panels with a border. You can have a panel-basic-alt 
 .panel-basic-alt {
   border: $panel-basic-alt-border;
   border-radius: $panel-basic-alt-border-radius;
+  overflow: hidden;
   @include background-clip-fix;
   border-bottom: $panel-basic-alt-border-bottom;
   background-color: $panel-basic-alt-background;
