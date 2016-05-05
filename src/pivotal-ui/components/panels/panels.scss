@@ -44,6 +44,66 @@ Panels are typically a combination of contours, backgrounds, and content includi
   color: $panel-title-text;
 }
 
+/*doc
+---
+title: Shadow
+name: panel_shadow
+parent: panel
+---
+
+Shadow panels add a bottom shadow to the panel.
+
+```html_example_table
+<div class="panel panel-shadow-1 bg-neutral-11">
+  <div class="panel-body">
+    Shadow Panel
+  </div>
+</div>
+
+<div class="panel panel-shadow-2 bg-neutral-11">
+  <div class="panel-body">
+    Shadow Panel
+  </div>
+</div>
+
+<div class="panel panel-shadow-3 bg-neutral-11">
+  <div class="panel-body">
+    Shadow Panel
+  </div>
+</div>
+
+<div class="panel panel-shadow-4 bg-neutral-11">
+  <div class="panel-body">
+    Shadow Panel
+  </div>
+</div>
+```
+
+*/
+.panel-shadow {
+  border: none; //Bootstrap override
+  @include background-clip-fix;
+}
+
+.panel-shadow-1 {
+  @extend .panel-shadow;
+  box-shadow: 0px 4px $shadow-1;
+}
+
+.panel-shadow-2 {
+  @extend .panel-shadow;
+  box-shadow: 0px 4px $shadow-2;
+}
+
+.panel-shadow-3 {
+  @extend .panel-shadow;
+  box-shadow: 0px 4px $shadow-3;
+}
+
+.panel-shadow-4 {
+  @extend .panel-shadow;
+  box-shadow: 0px 4px $shadow-4;
+}
 
 /*doc
 ---
@@ -217,63 +277,3 @@ These panels are for the pricing pane.
 .panel-accent-npm-navy-headings { border-top-color: $npm-navy-headings; }
 .panel-accent-npm-navy-text { border-top-color: $npm-navy-text; }
 
-/*doc
----
-title: Shadow
-name: panel_shadow
-parent: panel
----
-
-Shadow panels add a bottom shadow to the panel.
-
-```html_example_table
-<div class="panel panel-shadow-1 bg-neutral-11">
-  <div class="panel-body">
-    Shadow Panel
-  </div>
-</div>
-
-<div class="panel panel-shadow-2 bg-neutral-11">
-  <div class="panel-body">
-    Shadow Panel
-  </div>
-</div>
-
-<div class="panel panel-shadow-3 bg-neutral-11">
-  <div class="panel-body">
-    Shadow Panel
-  </div>
-</div>
-
-<div class="panel panel-shadow-4 bg-neutral-11">
-  <div class="panel-body">
-    Shadow Panel
-  </div>
-</div>
-```
-
-*/
-.panel-shadow {
-  border: none; //Bootstrap override
-  @include background-clip-fix;
-}
-
-.panel-shadow-1 {
-  @extend .panel-shadow;
-  box-shadow: 0px 4px $shadow-1;
-}
-
-.panel-shadow-2 {
-  @extend .panel-shadow;
-  box-shadow: 0px 4px $shadow-2;
-}
-
-.panel-shadow-3 {
-  @extend .panel-shadow;
-  box-shadow: 0px 4px $shadow-3;
-}
-
-.panel-shadow-4 {
-  @extend .panel-shadow;
-  box-shadow: 0px 4px $shadow-4;
-}
