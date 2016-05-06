@@ -47,21 +47,8 @@ Class                 | Description
   }
 }
 
-.panel.panel-basic-alt > .panel-body {
-  /* handle interaction between panels and tables */
-  > table, > .table {
-    margin: 0 !important;
-    border: 0 !important;
-
-    > tr:last-child, .tr:last-child {
-      border-bottom: none !important;
-    }
-    > tbody:last-child, .tbody:last-child {
-      > .tr:last-child, tr:last-child {
-        border-bottom: none !important;
-      }
-    }
-  }
+table, .table {
+  border: 0;
 }
 
 /*doc
@@ -76,7 +63,7 @@ This is a table used to display many rows of data (it is pretty much the default
 ```html_example
 <div class="panel panel-basic-alt">
   <div class="panel-body pan">
-    <table class="table table-data">
+    <table class="table table-data man">
       <thead>
         <tr>
           <th>Service Instance</th>
@@ -117,18 +104,10 @@ This is a table used to display many rows of data (it is pretty much the default
   border: none;
   tbody, thead, .tbody, .thead {
     tr, .tr {
-      border-bottom: 1px solid $gray-8;
       th, .th {
-        border-bottom: none;
         border-color: $gray-8;
         color: $navy-3;
         padding: 15px 10px;
-        &:first-child {
-          border-bottom: none;
-        }
-        &:last-child {
-          border: none;
-        }
         background-color: $gray-10;
       }
       td, .td {
@@ -730,9 +709,6 @@ Design Note: The `table-scrollable` is often paired with `table-data` as in our 
 
   table {
     table-layout: fixed;
-    tr:last-child {
-      border-bottom: none;
-    }
   }
 
   .table {
