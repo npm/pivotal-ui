@@ -599,114 +599,116 @@ Design Note: The `table-scrollable` is often paired with `table-data` as in our 
 </div>
 
 ```html_example
-<div class="table-scrollable table-scrollable-sm">
-  <div class="table-scrollable-header">
-    <table class="table table-data">
-      <thead>
-        <tr>
-          <th width="10%">#</th>
-          <th width="16%">Status</th>
-          <th width="12%">CPU</th>
-          <th width="16%">Memory</th>
-          <th width="16%">Disk</th>
-          <th width="30%">Uptime</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-  <div class="table-scrollable-body">
-    <table class="table table-data">
-      <tbody>
-        <tr>
-          <td width="10%">0</td>
-          <td width="16%">Running</td>
-          <td width="12%">0%</td>
-          <td width="16%">4.16 MB</td>
-          <td width="16%">6.75 MB</td>
-          <td width="30%">27 min</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>27 min</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.14 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.08 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.16 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.03 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-      </tbody>
-    </table>
+<div class="panel panel-basic-alt">
+  <div class="panel-body pan">
+    <div class="table-scrollable table-scrollable-sm man">
+      <div class="table-scrollable-header">
+        <table class="table table-data">
+          <thead>
+            <tr>
+              <th width="10%">#</th>
+              <th width="16%">Status</th>
+              <th width="12%">CPU</th>
+              <th width="16%">Memory</th>
+              <th width="16%">Disk</th>
+              <th width="30%">Uptime</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="table-scrollable-body">
+        <table class="table table-data">
+          <tbody>
+            <tr>
+              <td width="10%">0</td>
+              <td width="16%">Running</td>
+              <td width="12%">0%</td>
+              <td width="16%">4.16 MB</td>
+              <td width="16%">6.75 MB</td>
+              <td width="30%">27 min</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>27 min</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.14 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.08 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.16 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.03 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 ```
 */
 
 .table-scrollable {
-  border: $table-scrollable-border;
-
   table {
     table-layout: fixed;
   }
