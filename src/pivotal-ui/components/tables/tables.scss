@@ -27,7 +27,7 @@ Class                 | Description
 
 */
 
-@mixin table-divided() {
+@mixin table-vert-divided() {
   > td:not(:last-child),
   > .td:not(:last-child),
   > th:not(:last-child),
@@ -36,19 +36,32 @@ Class                 | Description
   }
 }
 
+@mixin table-horz-divided() {
+  > tr:not(:last-child),
+  > .tr:not(:last-child),
+  > tr:not(:last-child),
+  > .tr:not(:last-child) {
+    border-bottom: 1px solid $gray-8;
+  }
+}
+
 .table-divided {
   > thead, > tbody, > .thead, > .tbody {
     > tr, > .tr {
-      @include table-divided();
+      @include table-vert-divided();
     }
   }
   > tr, > .tr {
-    @include table-divided();
+    @include table-vert-divided();
   }
 }
 
 table, .table {
   border: 0;
+  > thead, > tbody, > .thead, > .tbody {
+    @include table-horz-divided();
+  }
+  @include table-horz-divided();
 }
 
 /*doc
