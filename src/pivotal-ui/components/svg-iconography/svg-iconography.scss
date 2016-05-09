@@ -24,7 +24,7 @@ npm install @npmcorp/pui-css-svg-iconography --save
 </code>
 
 
-We use [Glyphish](http://www.glyphish.com) for scalable icons. They have been packaged up as [@npmcorp/glyphish] for use, and inserting them as SVG `<symbol>` allows us to use the same icon multiple times with only a minimal bit of code for further instances.
+We use [Glyphish](http://www.glyphish.com) for scalable icons. They have been packaged up as [@npm/glyphish] for use, and inserting them as SVG `<symbol>` allows us to use the same icon multiple times with only a minimal bit of code for further instances.
 
 These icons will always match the font color.
 
@@ -32,14 +32,14 @@ Here are some commonly used icons:
 
 Icon                                                    | Module and Filename
 ------------------------------------------------------- | ----------------------------------------------------
-<svg class="icon"><use xlink:href="#i-download"/></svg> | `@npmcorp/glyphish/svg/g4/331-download.svg`
-<svg class="icon"><use xlink:href="#i-plus"/></svg>     | `@npmcorp/glyphish/svg/g4/436-plus.svg`
-<svg class="icon"><use xlink:href="#i-warn"/></svg>     | `@npmcorp/glyphish/svg/g5/582-warning-sign.svg`
-<svg class="icon"><use xlink:href="#i-mbox"/></svg>     | `@npmcorp/glyphish/svg/g6/Normal/805-mailbox@2x.svg`
-<svg class="icon"><use xlink:href="#i-keyhole"/></svg>  | `@npmcorp/glyphish/svg/g6/Normal/720-keyhole@2x.svg`
-<svg class="icon"><use xlink:href="#i-package"/></svg>  | `@npmcorp/glyphish/svg/g6/Normal/807-package@2x.svg`
-<svg class="icon"><use xlink:href="#i-users"/></svg>    | `@npmcorp/glyphish/svg/g6/Normal/895-user-group@2x.svg`
-<svg class="icon"><use xlink:href="#i-bdfl"/></svg>     | `@npmcorp/glyphish/svg/g8/Normal/1225-basket-delete@2x.svg`
+<svg class="icon"><use xlink:href="#i-download"/></svg> | `@npm/glyphish/svg/g4/331-download.svg`
+<svg class="icon"><use xlink:href="#i-plus"/></svg>     | `@npm/glyphish/svg/g4/436-plus.svg`
+<svg class="icon"><use xlink:href="#i-warn"/></svg>     | `@npm/glyphish/svg/g5/582-warning-sign.svg`
+<svg class="icon"><use xlink:href="#i-mbox"/></svg>     | `@npm/glyphish/svg/g6/Normal/805-mailbox@2x.svg`
+<svg class="icon"><use xlink:href="#i-keyhole"/></svg>  | `@npm/glyphish/svg/g6/Normal/720-keyhole@2x.svg`
+<svg class="icon"><use xlink:href="#i-package"/></svg>  | `@npm/glyphish/svg/g6/Normal/807-package@2x.svg`
+<svg class="icon"><use xlink:href="#i-users"/></svg>    | `@npm/glyphish/svg/g6/Normal/895-user-group@2x.svg`
+<svg class="icon"><use xlink:href="#i-bdfl"/></svg>     | `@npm/glyphish/svg/g8/Normal/1225-basket-delete@2x.svg`
 <svg class="icon"><use xlink:href="#i-module"/></svg>   | `@npmcorp/pui-css-svg-iconography/package-icon.svg`
 
 Icons must be defined inline once per page.
@@ -64,7 +64,7 @@ The icon instantiated:
 Using the [handlebars icon helper](https://www.npmjs.com/package/handlebars-helper-icon) when developing with handlebars, you can have it inline the icon for you like below, and it will make sure that the first instance includes the definition, so only this one helper call is required.
 
 ```hbs
-{{icon "@npmcorp/glyphish/svg/g4/331-download" class="icon type-brand-8"}}
+{{icon "@npm/glyphish/svg/g4/331-download" class="icon type-brand-8"}}
 ```
 
 <svg style="display: none">
