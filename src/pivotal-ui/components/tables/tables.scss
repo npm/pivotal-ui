@@ -37,11 +37,11 @@ Class                 | Description
 }
 
 @mixin table-horz-divided() {
-  > tr:not(:last-child),
-  > .tr:not(:last-child),
-  > tr:not(:last-child),
-  > .tr:not(:last-child) {
+  > tr, > .tr {
     border-bottom: 1px solid $gray-8;
+    > th, > .th {
+      border-bottom: inherit; // Override bootstrap
+    }
   }
 }
 
@@ -62,6 +62,10 @@ table, .table {
     @include table-horz-divided();
   }
   @include table-horz-divided();
+}
+
+.table > tbody + tbody {
+    border-top: 1px solid $gray-8; // override bootstrap
 }
 
 /*doc
