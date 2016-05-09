@@ -27,7 +27,7 @@ Class                 | Description
 
 */
 
-@mixin table-divided() {
+@mixin table-vert-divided() {
   > td:not(:last-child),
   > .td:not(:last-child),
   > th:not(:last-child),
@@ -36,77 +36,32 @@ Class                 | Description
   }
 }
 
-.table-divided {
-  > thead, > tbody, > .thead, > .tbody {
-    > tr, > .tr {
-      @include table-divided();
-    }
-  }
-  > tr, > .tr {
-    @include table-divided();
+@mixin table-horz-divided() {
+  > tr:not(:last-child),
+  > .tr:not(:last-child),
+  > tr:not(:last-child),
+  > .tr:not(:last-child) {
+    border-bottom: 1px solid $gray-8;
   }
 }
 
-/*doc
----
-title: Rounded Tables
-name: table_rounded
-parent: table
----
-
-This is the cute rounding style on our tables
-
-```html_example
-<div class="table-rounded">
-  <table class="table table-data table-divided">
-    <thead>
-      <tr>
-        <th>Wombat Type</th>
-        <th>Wombat Cuteness</th>
-        <th>Wombat Surprise</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Cuddly</td>
-        <td>Immense</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>World's largest</td>
-        <td>Gargantuan</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>Baby</td>
-        <td>Infinite</td>
-        <td>10000</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-```
-*/
-
-.table-rounded {
- padding: 0 !important;
- border-radius: 10px;
- border: 1px solid $gray-8;
- overflow: hidden;
-
- > table, > .table {
-  margin: 0 !important;
-  border: 0 !important;
-
-  > tr:last-child, .tr:last-child {
-   border-bottom: none !important;
+.table-divided {
+  > thead, > tbody, > .thead, > .tbody {
+    > tr, > .tr {
+      @include table-vert-divided();
+    }
   }
-  > tbody:last-child, .tbody:last-child {
-   > .tr:last-child, tr:last-child {
-    border-bottom: none !important;
-   }
+  > tr, > .tr {
+    @include table-vert-divided();
   }
- }
+}
+
+table, .table {
+  border: 0;
+  > thead, > tbody, > .thead, > .tbody {
+    @include table-horz-divided();
+  }
+  @include table-horz-divided();
 }
 
 /*doc
@@ -119,37 +74,71 @@ parent: table
 This is a table used to display many rows of data (it is pretty much the default table). You can use grid column classes on th and td elements. See key-value table for example.
 
 ```html_example
-<table class="table table-data">
-  <thead>
-    <tr>
-      <th>Service Instance</th>
-      <th>Service Plan</th>
-      <th>Bound Apps</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>oracle-db-sct</td>
-      <td>Oracle DB</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>oracle-db-sct</td>
-      <td>Oracle DB</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>oracle-db-sct</td>
-      <td>Oracle DB</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>oracle-db-sct</td>
-      <td>Oracle DB</td>
-      <td>12</td>
-    </tr>
-  </tbody>
-</table>
+<div class="panel panel-basic-alt panel-table-wrapper">
+  <div class="panel-body pan">
+    <table class="table table-data man">
+      <thead>
+        <tr>
+          <th>Wombat Type</th>
+          <th>Surprisingness</th>
+          <th>Cuteness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Baby Wombat</td>
+          <td>100</td>
+          <td>Infinity</td>
+        </tr>
+        <tr>
+          <td>World's Largest</td>
+          <td>1000</td>
+          <td>99.5</td>
+        </tr>
+        <tr>
+          <td>In native habitat</td>
+          <td>12</td>
+          <td>315</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```
+
+With divisions between cells:
+
+```html_example
+<div class="panel panel-basic-alt panel-table-wrapper">
+  <div class="panel-body pan">
+    <table class="table table-data table-divided man">
+      <thead>
+        <tr>
+          <th>Wombat Relative</th>
+          <th>Cuteness Index</th>
+          <th>Relatedness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Numbat</td>
+          <td>2</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>Kangaroo</td>
+          <td>91</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Wallaby</td>
+          <td>31</td>
+          <td>55</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 ```
 
 */
@@ -158,18 +147,10 @@ This is a table used to display many rows of data (it is pretty much the default
   border: none;
   tbody, thead, .tbody, .thead {
     tr, .tr {
-      border-bottom: 1px solid $gray-8;
       th, .th {
-        border-bottom: none;
         border-color: $gray-8;
         color: $navy-3;
         padding: 15px 10px;
-        &:first-child {
-          border-bottom: none;
-        }
-        &:last-child {
-          border: none;
-        }
         background-color: $gray-10;
       }
       td, .td {
@@ -661,119 +642,118 @@ Design Note: The `table-scrollable` is often paired with `table-data` as in our 
 </div>
 
 ```html_example
-<div class="table-scrollable table-scrollable-sm">
-  <div class="table-scrollable-header">
-    <table class="table table-data">
-      <thead>
-        <tr>
-          <th width="10%">#</th>
-          <th width="16%">Status</th>
-          <th width="12%">CPU</th>
-          <th width="16%">Memory</th>
-          <th width="16%">Disk</th>
-          <th width="30%">Uptime</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-  <div class="table-scrollable-body">
-    <table class="table table-data">
-      <tbody>
-        <tr>
-          <td width="10%">0</td>
-          <td width="16%">Running</td>
-          <td width="12%">0%</td>
-          <td width="16%">4.16 MB</td>
-          <td width="16%">6.75 MB</td>
-          <td width="30%">27 min</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>27 min</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.14 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.08 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.16 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.03 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Running</td>
-          <td>0%</td>
-          <td>4.07 MB</td>
-          <td>6.75 MB</td>
-          <td>25 min</td>
-        </tr>
-      </tbody>
-    </table>
+<div class="panel panel-basic-alt panel-table-wrapper">
+  <div class="panel-body pan">
+    <div class="table-scrollable table-scrollable-sm man">
+      <div class="table-scrollable-header">
+        <table class="table table-data">
+          <thead>
+            <tr>
+              <th width="10%">#</th>
+              <th width="16%">Status</th>
+              <th width="12%">CPU</th>
+              <th width="16%">Memory</th>
+              <th width="16%">Disk</th>
+              <th width="30%">Uptime</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="table-scrollable-body">
+        <table class="table table-data">
+          <tbody>
+            <tr>
+              <td width="10%">0</td>
+              <td width="16%">Running</td>
+              <td width="12%">0%</td>
+              <td width="16%">4.16 MB</td>
+              <td width="16%">6.75 MB</td>
+              <td width="30%">27 min</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>27 min</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.14 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.08 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.16 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.03 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Running</td>
+              <td>0%</td>
+              <td>4.07 MB</td>
+              <td>6.75 MB</td>
+              <td>25 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 ```
 */
 
 .table-scrollable {
-  border: $table-scrollable-border;
-
   table {
     table-layout: fixed;
-    tr:last-child {
-      border-bottom: none;
-    }
   }
 
   .table {
