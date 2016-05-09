@@ -135,6 +135,8 @@ parent: panel
 
 Basic alternate panels are panels with a border. You can have a panel-basic-alt with or without a title.
 
+Add `.panel-table-wrapper` if you're containing a table.
+
 ```html_example
 <div class="panel panel-basic-alt">
   <div class="panel-header">
@@ -150,6 +152,17 @@ Basic alternate panels are panels with a border. You can have a panel-basic-alt 
     Basic Panel
   </div>
 </div>
+
+<div class="panel panel-basic-alt panel-table-wrapper">
+  <div class="panel-body pan">
+    <table class="table table-data man">
+      <tr><th>Column</th><th>Aesthetic</th></tr>
+      <tr><td>Doric</td><td>Imposing</td></tr>
+      <tr><td>Colonial</td><td>Simple</td></tr>
+      <tr><td>Revival</td><td>Classic</td></tr>
+    </table>
+  </div>
+</div>
 ```
 
 */
@@ -157,10 +170,13 @@ Basic alternate panels are panels with a border. You can have a panel-basic-alt 
 .panel-basic-alt {
   border: $panel-basic-alt-border;
   border-radius: $panel-basic-alt-border-radius;
-  overflow: hidden;
   @include background-clip-fix;
   border-bottom: $panel-basic-alt-border-bottom;
   background-color: $panel-basic-alt-background;
+}
+
+.panel-table-wrapper {
+  overflow: hidden;
 }
 
 /*doc

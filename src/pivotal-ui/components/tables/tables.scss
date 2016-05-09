@@ -74,7 +74,7 @@ parent: table
 This is a table used to display many rows of data (it is pretty much the default table). You can use grid column classes on th and td elements. See key-value table for example.
 
 ```html_example
-<div class="panel panel-basic-alt">
+<div class="panel panel-basic-alt panel-table-wrapper">
   <div class="panel-body pan">
     <table class="table table-data man">
       <thead>
@@ -109,7 +109,7 @@ This is a table used to display many rows of data (it is pretty much the default
 With divisions between cells:
 
 ```html_example
-<div class="panel panel-basic-alt">
+<div class="panel panel-basic-alt panel-table-wrapper">
   <div class="panel-body pan">
     <table class="table table-data table-divided man">
       <thead>
@@ -642,7 +642,7 @@ Design Note: The `table-scrollable` is often paired with `table-data` as in our 
 </div>
 
 ```html_example
-<div class="panel panel-basic-alt">
+<div class="panel panel-basic-alt panel-table-wrapper">
   <div class="panel-body pan">
     <div class="table-scrollable table-scrollable-sm man">
       <div class="table-scrollable-header">
