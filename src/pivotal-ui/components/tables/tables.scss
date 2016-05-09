@@ -79,31 +79,61 @@ This is a table used to display many rows of data (it is pretty much the default
     <table class="table table-data man">
       <thead>
         <tr>
-          <th>Service Instance</th>
-          <th>Service Plan</th>
-          <th>Bound Apps</th>
+          <th>Wombat Type</th>
+          <th>Surprisingness</th>
+          <th>Cuteness</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>oracle-db-sct</td>
-          <td>Oracle DB</td>
-          <td>12</td>
+          <td>Baby Wombat</td>
+          <td>100</td>
+          <td>Infinity</td>
         </tr>
         <tr>
-          <td>oracle-db-sct</td>
-          <td>Oracle DB</td>
-          <td>12</td>
+          <td>World's Largest</td>
+          <td>1000</td>
+          <td>99.5</td>
         </tr>
         <tr>
-          <td>oracle-db-sct</td>
-          <td>Oracle DB</td>
+          <td>In native habitat</td>
           <td>12</td>
+          <td>315</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```
+
+With divisions between cells:
+
+```html_example
+<div class="panel panel-basic-alt">
+  <div class="panel-body pan">
+    <table class="table table-data table-divided man">
+      <thead>
+        <tr>
+          <th>Wombat Relative</th>
+          <th>Cuteness Index</th>
+          <th>Relatedness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Numbat</td>
+          <td>2</td>
+          <td>6</td>
         </tr>
         <tr>
-          <td>oracle-db-sct</td>
-          <td>Oracle DB</td>
-          <td>12</td>
+          <td>Kangaroo</td>
+          <td>91</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Wallaby</td>
+          <td>31</td>
+          <td>55</td>
         </tr>
       </tbody>
     </table>
