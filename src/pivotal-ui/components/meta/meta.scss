@@ -1,0 +1,141 @@
+@import "../pui-variables";
+
+/*doc
+---
+title: Meta
+name: meta
+categories:
+ - css_base_meta
+ - css_all
+---
+
+This section is for all of the meta components that we will be using throughout the site. More often than not, they're examples for code that will need to be reused, but will not necessarily be components to use in and of themselves. They are meta components, composed by other components.
+
+It's super meta.
+*/
+
+/*doc
+---
+title: Sidebar Component
+name: 00_meta_sidebar
+parent: meta
+---
+
+```html_example
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-basic-alt bg-neutral-10 pvxxl phxl">
+      <div class="row">
+        <div class="col-xs-7 col-xs-offset-1 txt-c">
+          <img alt="support avatar" class="avatar" height="60" src="styleguide/avatar.svg" width="60">
+        </div>
+        <div class="col-xs-16">
+          <h4>Need help?</h4>
+          <p>We're here for you.</p>
+        </div>
+        <div class="col-xs-13 col-xs-offset-8 mtxl">
+          <a class="btn btn-default collapsed" data-toggle="collapse" href="#need-help-collapse-example" rel="noopener noreferrer">
+            <div class="when-collapsed">
+              YES PLEASE
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+*/
+
+/*doc
+---
+title: Expandable Sidebar Component
+name: 01_meta_expandable_sidebar
+parent: meta
+---
+
+```html_example
+<svg style="display: none;">
+  <symbol id="i-692-iphone-5" viewBox="0 0 18 30">
+    <path d="M16 0H2a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-5.5 1a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1zm-3 0h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1 0-1zM9 29a1 1 0 0 1 0-2 1 1 0 0 1 0 2zm7-3H2V3h14v23z"/>
+  </symbol>
+
+  <symbol id="i-563-calendar" viewBox="0 0 26 28">
+    <path d="M18 13h-2v2h2v-2zm2-9a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm-2 17h-2v2h2v-2zm4-4h-2v2h2v-2zm0-4h-2v2h2v-2zm-8 0h-2v2h2v-2zM6 4a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm12 13h-2v2h2v-2zM6 17H4v2h2v-2zm0 4H4v2h2v-2zm8-4h-2v2h2v-2zm-4 4H8v2h2v-2zM24 3h-1a3 3 0 0 1-6 0H9a3 3 0 0 1-6 0H2a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 23H2V10h22v16zm-10-5h-2v2h2v-2zm-4-8H8v2h2v-2zm0 4H8v2h2v-2z"/>
+  </symbol>
+
+  <symbol id="i-558-mailbox" viewBox="0 0 24 28">
+    <path d="M22 8H11V6h7l-2-2.913L18 0H9v8H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10v4h4v-4h6a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm0 14H4V10h5v4.277c-.596.347-1 .985-1 1.723a2 2 0 0 0 4 0c0-.738-.404-1.376-1-1.723V10h11v12z"/>
+  </symbol>
+</svg>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-basic-alt bg-neutral-10 pvxxl phxl" id="need-help-expandable">
+
+      <div class="row">
+        <div class="col-xs-7 col-xs-offset-1 txt-c">
+          <img alt="support avatar" class="avatar" height="60" src="styleguide/avatar.svg" width="60">
+        </div>
+        <div class="col-xs-16">
+          <h4>Need help?</h4>
+          <p>We're here for you.</p>
+        </div>
+        <div class="col-xs-13 col-xs-offset-7 mtxl">
+          <a class="btn btn-default collapsed need-help type-neutral-4" data-toggle="collapse" href="#need-help-collapse-example" rel="noopener noreferrer" data-parent="need-help-expandable">
+            <div class="when-collapsed">
+              YES PLEASE!
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="collapse" id="need-help-collapse-example">
+        <ul class="list-unstyled">
+          <li class="row">
+            <div class="col-xs-7 col-xs-offset-1 txt-c ptm mbxl">
+              <!-- {{icon "@npmcorp/glyphish/g5/692-iphone-5.svg" class="icon icon-title"}} -->
+              <svg class="icon icon-title"><use xlink:href="#i-692-iphone-5"/></svg>
+            </div>
+            <div class="col-xs-16">
+              <h5 class="em-low mbn mtn">Call us!</h5>
+              <a class="type-neutral-1" href="tel:8443350303">844-335-0303</a>
+            </div>
+          </li>
+          <li class="row">
+            <div class="col-xs-7 col-xs-offset-1 txt-c ptm mbxl">
+              <!-- {{icon "@npmcorp/glyphish/g5/563-calendar.svg" class="icon icon-title"}} -->
+              <svg class="icon icon-title"><use xlink:href="#i-563-calendar"/></svg>
+            </div>
+            <div class="col-xs-16">
+              <h5 class="em-low mbn mtn">Let us call you</h5>
+              <a class="type-neutral-1" href="https://calendly.com/npmteam">Schedule a time</a>
+            </div>
+          </li>
+          <li class="row">
+            <div class="col-xs-7 col-xs-offset-1 txt-c ptm">
+              <!-- {{icon "@npmcorp/glyphish/g5/558-mailbox.svg" class="icon icon-title"}} -->
+              <svg class="icon icon-title"><use xlink:href="#i-558-mailbox"/></svg>
+            </div>
+            <div class="col-xs-16">
+              <h5 class="em-low mbn mtn">Email us!</h5>
+              <a class="type-neutral-1" href="mailto:sales@npmjs.com">sales@npmjs.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+```
+*/
+
+.need-help {
+  &:not(.collapsed) {
+    display: none;
+  }
+}
