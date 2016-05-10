@@ -37,11 +37,11 @@ Class                 | Description
 }
 
 @mixin table-horz-divided() {
-  > tr:not(:last-child),
-  > .tr:not(:last-child),
-  > tr:not(:last-child),
-  > .tr:not(:last-child) {
+  > tr, > .tr {
     border-bottom: 1px solid $gray-8;
+    > th, > .th {
+      border-bottom: inherit; // Override bootstrap
+    }
   }
 }
 
@@ -62,6 +62,10 @@ table, .table {
     @include table-horz-divided();
   }
   @include table-horz-divided();
+}
+
+.table > tbody + tbody {
+    border-top: 1px solid $gray-8; // override bootstrap
 }
 
 /*doc
@@ -145,25 +149,20 @@ With divisions between cells:
 
 .table-data {
   border: none;
+  background-color: $gray-10;
+
   tbody, thead, .tbody, .thead {
     tr, .tr {
       th, .th {
         border-color: $gray-8;
         color: $navy-3;
         padding: 15px 10px;
-        background-color: $gray-10;
       }
       td, .td {
         color: $navy-3;
         padding: 10px 10px;
         border: none; // overwriting bootstrap default values which are too specific
       }
-    }
-  }
-
-  tbody, .tbody {
-    tr, .tr {
-      background-color: $gray-10;
     }
   }
 
