@@ -145,7 +145,7 @@
     "@npmcorp/pui-css-utils": "^2.2.0",
     "@npmcorp/pui-css-vertical-alignment": "^2.0.0",
     "@npmcorp/pui-css-viewport-panes": "^2.0.4",
-    "@npmcorp/pui-css-whitespace": "^2.0.0",
+    "@npmcorp/pui-css-whitespace": "^2.1.1",
     "@npmcorp/pui-react-alerts": "^2.0.3",
     "@npmcorp/pui-react-back-to-top": "^2.0.0",
     "@npmcorp/pui-react-buttons": "^2.0.0",
