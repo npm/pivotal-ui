@@ -270,7 +270,7 @@ These panels are for the pricing pane.
   border-width: 1px;
   border-top-color: $panel-basic-alt-border;
   border-top-width: 7px;
-  border-radius: 7px;
+  border-radius: $panel-border-radius;
 }
 
 .panel-accent-npm-brand { border-top-color: $npm-brand; }
