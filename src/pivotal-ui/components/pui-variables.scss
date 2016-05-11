@@ -543,9 +543,9 @@ $input-color-hover:              $accent-5;
 $input-color-active:             $accent-3;
 $input-border:                   $neutral-7 !default;
 $input-border-color-hover:       $neutral-5 !default;
-$input-border-radius:            $border-radius-small !default;
-$input-border-radius-large:      $border-radius-medium !default;
-$input-border-radius-small:      $border-radius-small !default;
+$input-border-radius:            $border-radius-large !default;
+$input-border-radius-large:      $border-radius-large !default;
+$input-border-radius-small:      $border-radius-medium !default;
 $input-border-focus:             $accent-4 !default;
 $input-border-width:             1px !default;
 
