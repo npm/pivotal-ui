@@ -417,7 +417,7 @@ $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
 $border-radius-base:             4px !default;
-$border-radius-medium:           5px !default;
+$border-radius-medium:           6px !default;
 $border-radius-xl:               20px;
 $border-radius-large:            6px !default;
 $border-radius-small:            3px !default;
@@ -544,7 +544,7 @@ $input-color-active:             $accent-3;
 $input-border:                   $neutral-7 !default;
 $input-border-color-hover:       $neutral-5 !default;
 $input-border-radius:            $border-radius-small !default;
-$input-border-radius-large:      $border-radius-large !default;
+$input-border-radius-large:      $border-radius-medium !default;
 $input-border-radius-small:      $border-radius-small !default;
 $input-border-focus:             $accent-4 !default;
 $input-border-width:             1px !default;
@@ -779,7 +779,7 @@ $nav-tabs-title-font-size:                  16px;
 $tab-responsive-bg:             $shadow-4;
 $tab-responsive-color:          $neutral-3;
 $tab-responsive-active-color:   $brand-5;
-$tab-responsive-radius:         $border-radius-large;
+$tab-responsive-radius:         $border-radius-medium;
 $tab-responsive-pane-padding:   15px;
 
 // Left tabs
