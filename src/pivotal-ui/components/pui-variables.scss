@@ -461,8 +461,18 @@ $table-scrollable-body-border:   1px solid $gray-8;
 // Buttons
 // -------------------------
 
-$btn-font-weight:                600 !default;
+$btn-font-weight:                400 !default;
 $btn-border-width:               0;
+$btn-font-size:                  18px;
+
+$btn-padding:                    7px 26px 8px 26px;
+
+$btn-sm-padding:                 5px 20px 4px 20px;
+$btn-sm-font-size:               $font-size-small;
+$btn-sm-line-height:             $line-height-small;
+$btn-sm-border-radius:           $border-radius-xl;
+
+// Button styles
 
 $btn-default-color:              $npm-navy-2;
 $btn-default-bg:                 $neutral-11;
@@ -479,6 +489,13 @@ $btn-primary-color:              $neutral-11;
 $btn-primary-bg:                 $npm-navy-2;
 $btn-primary-border:             transparent;
 $btn-primary-color-disabled:     lighten($npm-navy-2, 50%);
+
+$btn-secondary-color:            $npm-brand;
+$btn-secondary-bg:               transparent;
+$btn-secondary-bg-hover:         $neutral-11;
+$btn-secondary-border:           $npm-brand;
+$btn-secondary-border-hover:     darken($npm-brand, 10%);
+$btn-secondary-gradient-color:   rgba(202, 56, 56, 0.15);
 
 $btn-link-color:                 $link-color !default;
 $btn-link-bg:                    transparent !default;
