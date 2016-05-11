@@ -865,6 +865,48 @@ Headings are spaced so their line height and padding are consistent on one or ma
 
 /*doc
 ---
+title: Lined Heading
+name: type_lined
+parent: type
+---
+
+Lined headings jazz up a normal heading with a background divider. It's cool, trust me.
+
+Use in conjunction with a background class so the line is blocked out by the text.
+
+Also use the `txt-c` class to make sure text is center-aligned.
+
+**Note**: lined headings are not meant to be used for multiline text.
+
+```html_example_table
+<h3 class="lined-heading bg-neutral-11 txt-c"><span>One line heading</span></h3>
+```
+
+*/
+
+.lined-heading {
+  position: relative;
+  &:after {
+    display: block;
+    content: " ";
+    border-bottom: 2px solid $divider-alternate-1-color;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: calc(0.5em + 2px);
+    z-index: 0;
+  }
+}
+
+.lined-heading > span {
+    position: relative;
+    z-index: 1;
+    padding: 0 0.9375em;
+    background: inherit;
+}
+
+/*doc
+---
 title: Helpers
 name: type_helpers
 parent: type
