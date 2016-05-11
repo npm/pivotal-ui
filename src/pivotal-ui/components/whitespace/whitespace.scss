@@ -65,7 +65,7 @@ See [list spacing][list_whitespace].
 
 @include whitespace(($whitespace-s, $whitespace-m, $whitespace-l, $whitespace-xl, $whitespace-xxl, $whitespace-xxxl, $whitespace-xxxxl), 4, (p,m,g));
 
-@media all and (max-width: $screen-sm-max) {
+@media all and (max-width: $screen-xs-max) {
   @include whitespace(($whitespace-screen-sm-s, $whitespace-screen-sm-m, $whitespace-screen-sm-l, $whitespace-screen-sm-xl, $whitespace-screen-sm-xxl, $whitespace-screen-sm-xxxl, $whitespace-screen-sm-xxxxl), 4);
 }
 
