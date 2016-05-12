@@ -1359,6 +1359,45 @@ text field by interacting with one of two buttons.
   }
 }
 
+/*doc
+---
+title: Organization Scope Input
+name: form_org_scope_input
+categories:
+ - css_components_forms
+ - css_all
+---
+
+An input for an npm scope, prompting the user with an @ sign.
+
+```html_example
+<form role="form">
+  <div class="form-group">
+    <label for="orgScope">Organization Scope</label>
+      <div class="scope-input">
+        <input id="orgScope" class="scope-input-inner">
+      </div>
+    </label>
+  </div>
+</form>
+```
+*/
+
+.scope-input {
+  position: relative;
+}
+.scope-input-inner {
+  padding-left: calc(1.5em); // Not exact, but the required distance _does_ depend on typeface. This assumes @ and the line height are in a decent ratio, which seems a reasonable approximation.
+}
+.scope-input::before {
+  position: absolute;
+  content: "@";
+  speak: none;
+  padding: 3px;
+  padding-left: 0.3em;
+  color: $gray-5;
+}
+
 /*pending
 ---
 title: Focus Inputs
