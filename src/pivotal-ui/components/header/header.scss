@@ -346,8 +346,8 @@ header a:hover {
   header > .header-nav-menu-container .nav-menu-container {
     flex: 1 auto;
   }
-  header > .header-nav-menu-container .nav-menu-container {
-    max-width: 650px;
+  header > .header-nav-menu-container .npm-expansions {
+    flex-grow: 10;
   }
   header.hero-transparent + .pane {
     margin-top: -6em;
