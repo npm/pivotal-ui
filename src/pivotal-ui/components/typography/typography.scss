@@ -893,7 +893,7 @@ so the line is blocked out by the text. Also use `txt-c` to make sure text is ce
     border-bottom: 2px solid $divider-alternate-color;
     position: absolute;
     width: 100%;
-    bottom: calc(0.5em + 2px);
+    bottom: 1ex;
     z-index: 0;
   }
 }
