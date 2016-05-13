@@ -1267,6 +1267,8 @@ $ribbon-color: $neutral-11;
 
 // Hr border color
 $hr-border:                   $gray-lighter !default;
+$divider-color:               rgba(255,255,255,0.1);
+$divider-alternate-color:     rgba(0,0,0,0.1);
 
 // Horizontal forms & lists
 $component-offset-horizontal: 180px !default;

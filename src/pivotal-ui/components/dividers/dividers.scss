@@ -1,3 +1,5 @@
+@import "../pui-variables";
+
 /*doc
 ---
 title: Dividers
@@ -19,32 +21,44 @@ Dividers draw horizontal lines between different content groupings.
 ```html_example
 <hr class="divider-alternate-1"/>
 <hr class="divider-alternate-2"/>
+<hr class="divider-alternate-3"/>
 ```
 
 ```html_inverse_example
 <hr class="divider-1"/>
 <hr class="divider-2"/>
+<hr class="divider-3"/>
 ```
 
 */
 
 
 .divider-alternate-1 {
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid $divider-alternate-color;
   border-width: 1px 0 0 0;
 }
 
 .divider-alternate-2 {
-  border: 3px solid rgba(0,0,0,0.1);
+  border: 2px solid $divider-alternate-color;
+  border-width: 2px 0 0 0;
+}
+
+.divider-alternate-3 {
+  border: 3px solid $divider-alternate-color;
   border-width: 3px 0 0 0;
 }
 
 .divider-1 {
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid $divider-color;
   border-width: 1px 0 0 0;
 }
 
 .divider-2 {
-  border: 3px solid rgba(255,255,255,0.1);
+  border: 2px solid $divider-color;
+  border-width: 2px 0 0 0;
+}
+
+.divider-3 {
+  border: 3px solid $divider-color;
   border-width: 3px 0 0 0;
 }
