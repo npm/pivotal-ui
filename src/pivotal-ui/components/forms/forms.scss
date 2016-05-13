@@ -1389,11 +1389,12 @@ An input for an npm scope, prompting the user with an @ sign.
 .scope-input-inner {
   padding-left: 1.5em; // Not exact, but the required distance _does_ depend on typeface. This assumes @ and the line height are in a decent ratio, which seems a reasonable approximation.
 }
-.scope-input::before {
+.scope-input::after {
   position: absolute;
+  top: 0;
+  left: 0;
   content: "@";
   speak: none;
-  z-index: 1;
   padding: 8px;
   color: $gray-5;
 }
