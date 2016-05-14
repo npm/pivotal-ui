@@ -190,7 +190,8 @@
     "test-accessibility": "gulp accessibility-ci || :",
     "pui-update": "scripts/pui-update.js",
     "dev": "gulp dev",
-    "build-monolith": "gulp monolith-build-css-from-scratch"
+    "build-monolith": "gulp monolith-build-css-from-scratch",
+    "post-install": "gulp monolith"
   },
   "repository": {
     "type": "git",
