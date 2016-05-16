@@ -25,6 +25,8 @@ Class                 | Description
 `.table-striped`      | Applies zebra striping to a table.
 `.table-divided`      | Adds vertical dividers to tables.
 
+You can use grid column classes on `th` and `td` elements. See key-value table for example.
+
 */
 
 @mixin table-vert-divided() {
@@ -71,11 +73,11 @@ table, .table {
 /*doc
 ---
 title: Data
-name: table_data
+name: 1_table_data
 parent: table
 ---
 
-This is a table used to display many rows of data (it is pretty much the default table). You can use grid column classes on th and td elements. See key-value table for example.
+This is a table used to display many rows of data (it is pretty much the default table).
 
 ```html_example
 <div class="panel panel-basic-alt panel-table-wrapper">
@@ -88,7 +90,7 @@ This is a table used to display many rows of data (it is pretty much the default
           <th>Cuteness</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="bg-neutral-11">
         <tr>
           <td>Baby Wombat</td>
           <td>100</td>
@@ -110,7 +112,16 @@ This is a table used to display many rows of data (it is pretty much the default
 </div>
 ```
 
-With divisions between cells:
+*/
+
+/*doc
+---
+title: Alternate
+name: 2_table_alt
+parent: table
+---
+
+Another table style we intend to use.
 
 ```html_example
 <div class="panel panel-basic-alt panel-table-wrapper">
