@@ -436,3 +436,84 @@ header {
   }
 }
 
+/*doc
+---
+title: Light Header
+name: light_header
+parent: headers
+---
+
+View the [light header on its own page](/header-light.html) to see mobile sizing features.
+
+On a light background:
+
+<iframe class="styleguide-demo" src="/header-light.html"></iframe>
+
+*/
+
+header.header-light {
+  background-color: transparent;
+  color: $text-color;
+  border-bottom: 0;
+
+  > .user-info-container {
+    color: $text-color;
+  }
+
+  .site-search input[type=search] {
+    border: 1px solid $gray-8;
+  }
+  .site-search input[type=submit] {
+    color: inherit;
+  }
+
+  .drop-down-menu-toggle {
+    border: 1px solid transparent; // To avoid layout jank when the border shows on open
+  }
+
+  .drop-down-menu-toggle:hover,
+  .drop-down-menu-toggle:focus,
+  .drop-down-menu-toggle.toggle-is-open,
+  .drop-down-menu-section li:hover {
+    color: darken($text-color, 25%);
+    transition: color 0.1s ease;
+  }
+
+  .drop-down-menu-toggle:hover,
+  .drop-down-menu-toggle:focus,
+  .drop-down-menu-toggle.toggle-is-open,
+  .drop-down-menu {
+    box-shadow: 0 3px 5px $gray-8;
+    border: 1px solid $gray-8;
+    background-color: inherit;
+  }
+
+  .drop-down-menu {
+    background-color: white;
+    @media (min-width: $desktopMinWidth) {
+      border: none;
+    }
+
+    a:hover,
+    button:hover {
+      color: inherit;
+    }
+  }
+  .drop-down-menu-section li {
+    border-bottom: 1px solid $gray-8;
+    @media (min-width: $desktopMinWidth) {
+      border: 1px solid $gray-8;
+    }
+  }
+
+  @media (min-width: $desktopMinWidth) {
+    .product-navigation {
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
+      .drop-down-menu-section li {
+        border: none;
+      }
+    }
+  }
+}
