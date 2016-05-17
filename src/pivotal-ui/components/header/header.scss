@@ -179,6 +179,10 @@ header a:hover {
 }
 
 header {
+  .drop-down-menu-section li {
+    border-bottom: 1px solid #808080;
+  }
+
   .drop-down-menu-toggle,
   .drop-down-menu-section a,
   .drop-down-menu button,
