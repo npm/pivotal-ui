@@ -102,6 +102,11 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+
+  .drop-down-menu-toggle {
+    z-index: 1 !important; // WTF BOOTSTRAP WHY?!
+  }
+
 }
 header.hero-transparent {
   background: transparent;
