@@ -192,8 +192,23 @@ header {
     background-color: $header-secondary;
   }
 
+  .drop-down-menu-toggle::after {
+    display: none;
+  }
+  .drop-down-menu-toggle.toggle-is-open svg {
+    transform: rotate(180deg);
+  }
+
 }
 
+.header-drop-down-icon {
+  // Like the .icon class, but duplicated here because this has to work on non-component pages.
+  height: 0.73em;
+  width: 0.73em;
+  padding: 1px; // Forces rounding to go the right direction to keep all the lines in the icon visible.
+  vertical-align: baseline;
+  fill: currentColor;
+}
 
 .nav-toggle img {
   max-width: 100%;
