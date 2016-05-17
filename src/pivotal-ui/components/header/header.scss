@@ -143,14 +143,19 @@ header ul li {
   padding: 0;
   margin: 0;
 }
+
 header a {
   color: $header-subtle-text-color;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $header-text-color;
+    text-decoration: none;
+    transition: color 0.1s ease, background 0.1s ease;
+  }
 }
-header a:hover {
-  color: $header-text-color;
-  text-decoration: none;
-  transition: color 0.1s ease, background 0.1s ease;
-}
+
 .logo-container {
   padding: 0;
   width: 80px;
