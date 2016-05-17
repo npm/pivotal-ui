@@ -97,7 +97,7 @@ header {
   border-bottom: 1px solid #d3d3d3;
   max-height: $header-height-max-sm;
   background: $header-color;
-  color: $header-text-color;
+  color: $header-subtle-text-color;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -177,6 +177,24 @@ header a:hover {
   width: 54px;
   padding: 0 5px;
 }
+
+header {
+  .drop-down-menu-toggle,
+  .drop-down-menu-section a,
+  .drop-down-menu button,
+  .drop-down-menu {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  .drop-down-menu-toggle.toggle-is-open,
+  .drop-down-menu {
+    background-color: $header-secondary;
+  }
+
+}
+
+
 .nav-toggle img {
   max-width: 100%;
 }
@@ -191,7 +209,7 @@ header a:hover {
 }
 .site-search input[type=search] {
   background-color: transparent;
-  color: $header-text-color;
+  color: inherit;
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 0;
   margin: 0 0 20px;
@@ -250,7 +268,7 @@ header a:hover {
   margin-right: 10px;
   overflow: hidden;
   text-overflow: elilipsis;
-  color: $header-text-color;
+  color: inherit;
 }
 .anonymous .brand-container {
   width: 30%;
