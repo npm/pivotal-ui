@@ -1,0 +1,114 @@
+<header class="{{#if user}}logged-in{{else}}anonymous{{/if}} {{#if headerLight}}header-light{{/if}} {{#if heroTransparent}}hero-transparent{{/if}}">
+  <!-- logo -->
+  <div class="header-item brand-container">
+    <div class="logo-container" id='npm-logo'>
+      <a href="/">{{svg "@npmcorp/pui-css-header/npm-logo.svg"}}</a>
+      {{#if env.NPMO_COBRAND}}
+        <span class="cobrand">{{env.NPMO_COBRAND}}</span>
+      {{/if}}
+    </div>
+  </div>
+  <!-- /logo -->
+
+  <!-- search -->
+  <div class="header-item header-search-container">
+    <form class="site-search" id="npm-search" action="/search" method="get" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+      <meta itemprop="target" content="{{env.CANONICAL_HOST}}/search?q={q}">
+      <div id="site-search-container">
+        {{#if features.npmo}}
+          <input name="q" value="{{q}}" type="search" id="site-search" placeholder="find on-site packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" />
+        {{else}}
+          <input name="q" value="{{q}}" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" />
+        {{/if}}
+      </div>
+      <input type="submit"/>
+    </form>
+  </div>
+
+  {{#if features.npmo}}
+
+  <!-- menu 2 -->
+  <div class="header-item header-nav-menu-container">
+    <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">node package manager</a>
+
+    <div class="nav-menu-container" role="navigation">
+      <a class="nav-toggle drop-down-menu-toggle" href="#product-navigation"><span class="a11y-only">Toggle Navigation</span>
+        {{svg "@npmcorp/pui-css-header/menu.svg" class="header-drop-down-icon"}}
+      </a>
+
+      <div class="drop-down-menu-container" role="menu">
+        <nav id="product-navigation" class="product-navigation drop-down-menu">
+          <ul class="drop-down-menu-section products-list">
+            <li><a href="https://docs.npmjs.com">docs</a></li>
+            <li><a href="mailto:support@npmjs.com">support</a></li>
+            <li><a href="/logout">logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  {{else}}
+
+  <!-- menu 1 -->
+  <div class="header-item user-info-container">
+    <div class="user-info">
+      {{#if user}}
+        <div class="drop-down-menu-container" role="navigation">
+
+          <a id="user-info-drop-down-menu-toggle" class="drop-down-menu-toggle" href="#user-info-menu" role="button" aria-haspopup="true" aria-owns="user-info-menu"><span class="a11y-only">Toggle User Menu</span>
+            <span class="user-info-salutation" data-user-name="{{user.name}}" data-is-paid="{{#if user.isPaid}}true{{/if}}">Greetings, <span id="salutation-username">{{user.name}}</span></span>
+            <img alt="" src="{{user.avatar.small}}" />
+          </a>
+
+          <div role="menu" id="user-info-menu" class="drop-down-menu" aria-labelledby="user-info-drop-down-menu-toggle">
+            <div class="drop-down-menu-section">
+              <ul>
+                <li><a href="/~{{user.name}}">Profile</a></li>
+                <li><a href="/profile-edit">Personal Info</a></li>
+                <li><a href="/settings/billing">Billing</a></li>
+                <li><a href="/settings/tokens">Tokens</a></li>
+                <li><form method="POST" action="/logout">{{> form_security }}<button type="submit" class="btn-link">Logout</button></form></li>
+              </ul>
+            </div> <!-- .drop-down-menu-section -->
+          </div> <!-- .drop-down-menu -->
+        </div> <!-- .drop-down-menu-container -->
+      {{else}}
+        <ul class="user-info-salutation single">
+          <li><a href="/signup">sign up</a> or <a href="/login">log in</a></li>
+          <li><a href="/login"><span class="a11y-only">log in</span><span class="icon-wombat-head-login"></a></li>
+        </ul>
+      {{/if}}
+    </div> <!-- .user-info -->
+  </div>
+  <!-- /menu 1 -->
+
+  <!-- menu 2 -->
+  <div class="header-item header-nav-menu-container">
+    <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">node package manager</a>
+
+    <div class="nav-menu-container" role="navigation">
+      <a class="nav-toggle drop-down-menu-toggle" href="#product-navigation"><span class="a11y-only">Toggle Navigation</span>
+        {{svg "@npmcorp/pui-css-header/menu.svg"}}
+      </a>
+
+
+      <div class="drop-down-menu-container" role="menu">
+        <nav id="product-navigation" class="product-navigation drop-down-menu">
+          <ul class="drop-down-menu-section products-list">
+            <li><a id="nav-enterprise-link" href="/npm/enterprise">npm Enterprise</a></li>
+            <li><a id="nav-private-link" href="/npm/private-packages" data-event-trigger="click" data-event-name="private-modules-nav-link">npm Private Packages</a></li>
+            <li><a id="nav-pricing-link" href="/pricing">pricing</a></li>
+            <li><a id="nav-docs-link" href="https://docs.npmjs.com">documentation</a></li>
+            <li><a id="nav-support-link" href="/support">support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- /menu 2 -->
+
+  {{/if}}
+
+
+</header>
