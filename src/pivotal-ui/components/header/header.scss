@@ -2,94 +2,33 @@
 
 /*doc
 ---
-title: Header
-name: header
+title: Headers
+name: headers
 categories:
  - css_base_header
  - css_all
 ---
+*/
 
-```html_example
+/*doc
+---
+title: Regular Header
+name: header
+parent: headers
+---
 
-<header class="logged-in">
-    <!-- logo -->
-    <div class="header-item brand-container">
-      <div class="logo-container" id="npm-logo">
-        <a href="/" class="active"><img src="/static/images/npm-logo.svg" alt="npm logo"></a>
-      </div>
-    </div>
-    <!-- /logo -->
+View the [regular header on its own page](/header.html) to see mobile sizing features.
 
+<iframe class="styleguide-demo" src="/header.html"></iframe>
 
-    <!-- search -->
-    <div class="header-item header-search-container">
-      <form class="site-search" id="npm-search" action="/search" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
-        <meta itemprop="target" content="https://www.npmjs.com/search?q={q}">
-        <div id="site-search-container">
-            <input name="q" value="" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
-        </div>
-        <input type="submit">
-      </form>
-    </div>
+To use the helper providing the header:
 
-    <!-- menu 1 -->
-    <div class="header-item user-info-container">
-      <div class="user-info">
-          <div class="drop-down-menu-container" role="navigation">
+```
+{{fromPackage "@npmcorp/pui-css-header/header.hbs"}}
+```
+TODO: document context needed to render.
 
-            <a id="user-info-drop-down-menu-toggle" class="drop-down-menu-toggle" href="#user-info-menu" role="button" aria-haspopup="true" aria-owns="user-info-menu"><span class="a11y-only">Toggle User Menu</span>
-              <span class="user-info-salutation" data-user-name="rockbot" data-is-paid="">Greetings, <span id="salutation-username">rockbot</span></span>
-              <img alt="" src="https://s.gravatar.com/avatar/583a0cfd3e0ec851166c5c6fa5e506a5?size=50&amp;default=retro">
-            </a>
-
-            <div role="menu" id="user-info-menu" class="drop-down-menu" aria-labelledby="user-info-drop-down-menu-toggle">
-              <div class="drop-down-menu-section">
-                <ul>
-                  <li><a href="/~rockbot">profile</a></li>
-                  <li><a href="/profile-edit">personal info</a></li>
-                  <li><a href="/settings/billing">billing</a></li>
-                  <li><a href="/settings/tokens">tokens</a></li>
-                  <li><form method="POST" action="/logout">  <input type="hidden" name="crumb" value="jSXg5k67i29hI9QD2ShPcL1Olq77qMooJV2OsN8yYKA">
-<button type="submit" class="btn-link">logout</button></form></li>
-                </ul>
-              </div> <!-- .drop-down-menu-section -->
-            </div> <!-- .drop-down-menu -->
-          </div> <!-- .drop-down-menu-container -->
-      </div> <!-- .user-info -->
-    </div>
-    <!-- /menu 1 -->
-
-    <!-- menu 2 -->
-    <div class="header-item header-nav-menu-container">
-      <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">New Project, Monday</a>
-
-      <div class="nav-menu-container" role="navigation">
-        <a class="nav-toggle drop-down-menu-toggle" href="#product-navigation"><span class="a11y-only">Toggle Navigation</span>
-          <img alt="mobile navigation menu" src="/static/images/mobile-menu.png">
-        </a>
-
-
-        <div class="drop-down-menu-container" role="menu">
-          <nav id="product-navigation" class="product-navigation drop-down-menu">
-            <ul class="drop-down-menu-section products-list">
-              <li><a href="/npm/on-site" class="h6">npm On-Site</a></li>
-              <li><a href="/npm/private-packages" class="h6" data-event-trigger="click" data-event-name="private-modules-nav-link">npm Private Packages</a></li>
-              <li><a href="/npm/open-source" class="h6">npm Open Source</a></li>
-              <li><a href="https://docs.npmjs.com" class="h6">documentation</a></li>
-              <li><a href="/support" class="h6">support</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <!-- /menu 2 -->
-
-
-
-  </header>
-  ```
-
-  */
+*/
 
 header {
   font-size: 16px;
@@ -108,6 +47,19 @@ header {
   }
 
 }
+
+/*doc
+---
+title: Transparent Header
+name: transparent_header
+parent: headers
+---
+
+View the [transparent header on its own page](/header-hero-transparent.html) to see mobile sizing features.
+
+<iframe class="styleguide-demo" src="/header-hero-transparent.html"></iframe>
+*/
+
 header.hero-transparent {
   background: transparent;
   border-bottom: 0;
@@ -483,3 +435,4 @@ header {
     display: inline-block;
   }
 }
+
