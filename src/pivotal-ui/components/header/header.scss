@@ -196,31 +196,24 @@ header {
   width: 100%;
   outline: 0;
 }
-.site-search input[type=submit] {
+.site-search [type=submit] {
   position: absolute;
-  top: 0;
+  top: 1px; // So borders don't overlap, since they're rgba
   right: 0;
-  height: 45px;
-  width: 45px;
-  margin: 0 0 4px;
+  height: 34px;
+  width: 34px;
+  padding: 7px;
+  @media (min-width: $desktopMinWidth) {
+    height: 48px;
+    width: 48px;
+    padding: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
   margin-bottom: 0px;
   border: 0;
-  text-indent: -9999em;
   cursor: pointer;
-  outline: 0;
-  border-radius: 0 2px 2px 0;
-  background-image: url("static/images/ico-search.svg");
-  background-repeat: no-repeat;
-  background-position: 80% 43%;
-  background-size: 16px 16px;
   display: block;
-  text-align: center;
-  padding: 0 35px;
-  line-height: 47px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none !important;
-  clear: both;
+  color: inherit;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
