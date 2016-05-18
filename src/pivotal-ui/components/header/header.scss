@@ -8,7 +8,33 @@ categories:
  - css_base_header
  - css_all
 ---
+
+To use the helper providing the header:
+
+```
+{{fromPackage "@npmcorp/pui-css-header/header.hbs" context}}
+```
+
+Context requirements:
+
+- `user` object: If present, includes user avatar and internal navigation menu, otherwise presents login links and sign-in links.
+  - `name` property: the user's name
+  - `isPaid` property: boolean indicating whether the user is paid
+  - `avatar` object: URLs for each size of avatar (this partial uses `small`)
+- `env` object: Configuration from the environment of relevance to the display layer
+  - `NPMO_COBRAND` propery: A string to display in Enterprise mode
+  - `CANONICAL_HOST` property: URL root of this site to form self-referential URLS
+- `features` object: Feature flags
+  - 'npmo' property: If true, uses the Enterprise header.
+- `q` property: The current search terms
+
+Requirements:
+
+- `handlebars-helper-svg` helper
+- `form-security` partial
+
 */
+
 
 /*doc
 ---
@@ -20,13 +46,6 @@ parent: headers
 View the [regular header on its own page](/header.html) to see mobile sizing features.
 
 <iframe class="styleguide-demo" src="/header.html"></iframe>
-
-To use the helper providing the header:
-
-```
-{{fromPackage "@npmcorp/pui-css-header/header.hbs"}}
-```
-TODO: document context needed to render.
 
 */
 
