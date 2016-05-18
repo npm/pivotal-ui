@@ -27,6 +27,8 @@ Context requirements:
 - `features` object: Feature flags
   - 'npmo' property: If true, uses the Enterprise header.
 - `q` property: The current search terms
+- `headerLight` property: true to get the light header
+- `heroTransparent` property: true to get the transparent header
 
 Requirements:
 
