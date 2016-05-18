@@ -517,3 +517,60 @@ header.header-light {
     }
   }
 }
+
+/*doc
+---
+title: Enterprise Header
+name: enterprise_header
+parent: headers
+---
+
+View the [enterprise header on its own page](/header-enterprise.html) to see mobile sizing features.
+
+<iframe class="styleguide-demo" src="/header-enterprise.html"></iframe>
+
+*/
+
+header.header-enterprise {
+  .header-nav-menu-container {
+    @media (max-width: 479px) {
+      order: 2;
+    }
+  }
+
+  .brand-container,
+  .logo-container {
+    width: auto;
+  }
+  .brand-container {
+    flex-grow: 0;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;;
+    @media (max-width: 479px) {
+      margin-bottom: 10px
+    }
+  }
+
+  .header-search-container {
+    flex-grow: 1;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
+
+  .header-drop-down-icon {
+    font-size: 54px;
+  }
+
+  .logo-container svg {
+    width: 5em;
+    vertical-align: middle;
+  }
+
+  .cobrand {
+    @media (max-width: 479px) {
+      display: none;
+    }
+  }
+}
