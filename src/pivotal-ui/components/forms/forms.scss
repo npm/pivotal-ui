@@ -379,8 +379,8 @@ Wrap selects in grid columns, or any custom parent element, to easily enforce de
 }
 
 label {
-  font-weight: 400; //override bootstrap
-  color: $neutral-3; //override bootstrap
+  font-weight: 700;
+  color: $form-label-color;
 }
 
 // do not simplify placeholder styles, we need a separate line per browser because otherwise browser will invalidate the entire group
