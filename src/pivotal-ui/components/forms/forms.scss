@@ -564,6 +564,8 @@ them over a custom dropdown whenever possible.
     border-color: $input-border-color-hover;
   }
 
+  font-weight: 400;
+
   box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.2);
 
   &.active, &:active, &.hover, &:hover, &.focus, &:focus {
