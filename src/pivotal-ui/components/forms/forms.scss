@@ -1008,11 +1008,6 @@ add `.has-success` to the field's form group.
   @include validation-label-color()
 }
 
-.has-error {
-  .help-block {
-    font-size: $font-size-small;
-  }
-}
 
 // align bootstrap errors for checkboxes and radio buttons
 .radio,
@@ -1107,7 +1102,9 @@ Here's an example in a vertical form:
 */
 
 .help-block {
-  color: $form-label-color;
+  color: $neutral-5;
+  font-weight: 400;
+  font-size: $font-size-small;
 }
 
 // Form control sizing
