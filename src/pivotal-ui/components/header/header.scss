@@ -539,7 +539,7 @@ View the [enterprise header on its own page](/header-enterprise.html) to see mob
 
 header.header-enterprise {
   .header-nav-menu-container {
-    @media (max-width: 479px) {
+    @media (max-width: $screen-xxs-max) {
       order: 2;
     }
   }
@@ -553,7 +553,7 @@ header.header-enterprise {
     padding-right: 1em;
     display: flex;
     align-items: center;;
-    @media (max-width: 479px) {
+    @media (max-width: $screen-xxs-max) {
       margin-bottom: 10px
     }
   }
@@ -575,7 +575,7 @@ header.header-enterprise {
   }
 
   .cobrand {
-    @media (max-width: 479px) {
+    @media (max-width: $screen-xxs-max) {
       display: none;
     }
   }

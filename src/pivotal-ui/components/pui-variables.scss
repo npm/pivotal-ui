@@ -618,6 +618,10 @@ $zindex-modal:             1050 !default;
 // Media queries breakpoints
 // --------------------------------------------------
 
+// Extra extra small screen / phone
+$screen-xxs:                320px !default;
+$screen-xxs-min:            $screen-xxs;
+
 // Extra small screen / phone
 // Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
 $screen-xs:                  480px !default;
@@ -649,6 +653,7 @@ $screen-xl-min:              $screen-xl !default;
 $screen-xl-desktop:          $screen-xl-min !default;
 
 // So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:             ($screen-xs-min - 1) !default;
 $screen-xs-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
