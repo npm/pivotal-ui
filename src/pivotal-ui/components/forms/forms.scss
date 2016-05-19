@@ -557,7 +557,6 @@ them over a custom dropdown whenever possible.
 */
 
 .form-control {
-  @include button-shadow;
   padding: 8px 14px; // override bootstrap
   //-webkit-appearance: none;
   position: relative;
@@ -565,8 +564,10 @@ them over a custom dropdown whenever possible.
     border-color: $input-border-color-hover;
   }
 
-  &.active, &:active {
-    background-color: $input-bg-active;
+  box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.2);
+
+  &.active, &:active, &.hover, &:hover, &.focus, &:focus {
+    box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.4);
   }
 
   &.disabled, &:disabled {
