@@ -119,9 +119,6 @@ header ul li {
 
 header a {
   color: $header-subtle-text-color;
-  &:focus {
-    outline: none;
-  }
   &:hover {
     color: $header-text-color;
     text-decoration: none;
