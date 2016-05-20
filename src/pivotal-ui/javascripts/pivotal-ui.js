@@ -9,3 +9,4 @@ require('@npmcorp/pui-react-back-to-top/jquery-plugin');
 require('@npmcorp/pui-css-drop-down-menu');
 require('../components/forms');
 require('../components/svgeople');
+require('../components/meta');
