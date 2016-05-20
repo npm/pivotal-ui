@@ -417,9 +417,9 @@ $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
 $border-radius-base:             4px !default;
-$border-radius-medium:           5px !default;
+$border-radius-medium:           6px !default;
 $border-radius-xl:               20px;
-$border-radius-large:            6px !default;
+$border-radius-large:            10px !default;
 $border-radius-small:            3px !default;
 $border-radius-none:             0;
 
@@ -543,9 +543,9 @@ $input-color-hover:              $accent-5;
 $input-color-active:             $accent-3;
 $input-border:                   $neutral-7 !default;
 $input-border-color-hover:       $neutral-5 !default;
-$input-border-radius:            $border-radius-small !default;
+$input-border-radius:            $border-radius-large !default;
 $input-border-radius-large:      $border-radius-large !default;
-$input-border-radius-small:      $border-radius-small !default;
+$input-border-radius-small:      $border-radius-medium !default;
 $input-border-focus:             $accent-4 !default;
 $input-border-width:             1px !default;
 
@@ -1106,7 +1106,7 @@ $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
 
 $panel-inner-border:          transparent !default;
-$panel-border-radius:         $border-radius-none !default;
+$panel-border-radius:         $border-radius-large !default;
 $panel-footer-bg:             transparent !default;
 
 $panel-default-text:          $text-color !default;

@@ -269,8 +269,8 @@ These panels are for the pricing pane.
   @extend .panel-basic-alt;
   border-width: 1px;
   border-top-color: $panel-basic-alt-border;
-  border-top-width: 7px;
-  border-radius: 7px;
+  border-top-width: $panel-border-radius; // Must equal the panel-border-radius to avoid the droopy-corner effect
+  border-radius: $panel-border-radius;
 }
 
 .panel-accent-npm-brand { border-top-color: $npm-brand; }
