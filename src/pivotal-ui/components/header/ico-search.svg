@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none" stroke="currentColor">
-    <ellipse stroke-width="4" cx="15.5" cy="15" rx="13.5" ry="13"/>
-    <path d="M25 25l7.172 7.172" stroke-width="5" stroke-linecap="square"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="currentColor">
+    <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"/>
+    <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"/>
 </svg>
