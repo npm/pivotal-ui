@@ -251,6 +251,7 @@ header {
   overflow: hidden;
   text-overflow: elilipsis;
   color: inherit;
+  white-space: nowrap;
 }
 .anonymous .brand-container {
   width: 30%;
@@ -261,6 +262,7 @@ header {
 .anonymous .user-info-salutation {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .anonymous .user-info-salutation > li {
   flex: 1 auto;
