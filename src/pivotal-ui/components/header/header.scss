@@ -253,9 +253,6 @@ header {
   color: inherit;
   white-space: nowrap;
 }
-.anonymous .brand-container {
-  width: 30%;
-}
 .anonymous .user-info-container {
   width: calc(70% - 44px);
 }
@@ -322,19 +319,20 @@ header {
   }
   header > .brand-container {
     order: 1;
-    flex-grow: 1;
-    width: auto;
+    flex-grow: 0;
+    width: 125px;
   }
   header > .header-search-container {
     order: 2;
-    flex-grow: 10;
+    flex-grow: 1;
     width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   header > .user-info-container {
     order: 3;
     flex-grow: 0;
     width: auto;
-    padding-left: 10px;
     min-width: 212px;
     text-align: left;
   }
@@ -360,7 +358,6 @@ header {
     margin-top: -6em;
     padding-top: 6em;
   }
-  header.anonymous .brand-container,
   header.anonymous .user-info-container {
     width: auto;
     min-width: auto;
