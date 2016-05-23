@@ -7,7 +7,6 @@
   "devDependencies": {
     "@npmcorp/dr-frankenstyle": "^1.1.0",
     "a11y": "^0.3.3",
-    "accessibility-developer-tools": "pivotal-cf/accessibility-developer-tools#dist",
     "axios": "^0.5.4",
     "babel": "^5.0.9",
     "babel-core": "^5.8.21",
