@@ -55,7 +55,8 @@ Create block level buttons - those that span the full width of a parent - by add
 .btn {
   font-weight: $btn-font-weight;
   border-radius: $btn-border-radius-large;
-  padding: 10px 28px;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
 
   &.disabled,
   &[disabled],
@@ -92,6 +93,12 @@ parent: button
         <td><button class="btn btn-default-alt" disabled="">Default alternate</button></td>
         <td style="white-space: nowrap"><code class="styleguide">btn btn-default-alt</code></td>
         <td class="type-neutral-11">This is what buttons look like, this is the go to button style (on dark backgrounds).</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-secondary">Secondary</button></td>
+        <td><button class="btn btn-secondary" disabled="">Secondary</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-secondary</code></td>
+        <td>This button should be used for the secondary action on the page. e.g. the upgrade button in the signup flow</td>
     </tr>
     <tr>
         <td><button class="btn btn-primary">Primary</button></td>
@@ -152,6 +159,14 @@ parent: button
   @include button-skin($btn-primary-color, $btn-primary-bg, $border: null, $color-disabled: $btn-primary-color-disabled);
 }
 
+.btn-secondary {
+  @include button-skin($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border, null, $btn-secondary-border-hover, $background-activated: $btn-secondary-bg-hover);
+  background: linear-gradient(0deg, $btn-secondary-gradient-color 0%, rgba(255, 255, 255, 0) 100%);
+  &:hover {
+    background: linear-gradient(0deg, saturate($btn-secondary-gradient-color, 60%) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
 .btn-link {
   @include button-skin($btn-link-color, $btn-link-bg);
 }
@@ -195,11 +210,6 @@ size modifier class for the desired size.
 ```
 
 */
-
-$btn-sm-padding: 5px 20px 4px 20px;
-$btn-sm-font-size: $font-size-small;
-$btn-sm-line-height: $line-height-small;
-$btn-sm-border-radius: $border-radius-xl;
 
 
 .btn-sm {
