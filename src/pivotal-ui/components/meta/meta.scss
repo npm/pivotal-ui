@@ -210,6 +210,12 @@ parent: meta
 </div>
 
 ```
+
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/need-help-orgs.hbs"}}
+```
 */
 
 .need-help {
