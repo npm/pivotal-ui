@@ -24,7 +24,7 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 /*doc
 ---
 title: Highlight
-name: tab_highlight
+name: 01_tab_highlight
 parent: tab
 ---
 
@@ -139,7 +139,7 @@ parent: tab
 /*doc
 ---
 title: Simple
-name: tab_simple
+name: 02_tab_simple
 parent: tab
 ---
 
@@ -255,7 +255,7 @@ $tab-padding: 6px 19px;
 /*doc
 ---
 title: Simple Alt
-name: tab_simple_alt
+name: 03_tab_simple_alt
 parent: tab
 ---
 
@@ -337,7 +337,7 @@ You do not need the `.panel` to wrap around `.tab-simple-alt`. We have it there 
 /*doc
 ---
 title: Responsive
-name: tab_responsive
+name: 04_tab_responsive
 parent: tab
 ---
 
@@ -451,7 +451,7 @@ parent: tab
 /*doc
 ---
 title: Image
-name: tab_image
+name: 05_tab_image
 parent: tab
 ---
 
@@ -591,3 +591,16 @@ You can use any 130px by 130px svg for the icon in the center of the tab. Please
     padding: $tab-responsive-pane-padding;
   }
 }
+
+/*doc
+---
+title: Dropdown-Driven Tabs
+name: 06_tab_dropdown_driven_tabs
+parent: tab
+---
+
+Controls tabbed content via dropdown.
+
+[Find docs and code example in dropdowns.](/css_components_dropdowns.html#dropdown_dropdown_driven_tabs)
+
+*/
