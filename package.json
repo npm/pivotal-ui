@@ -137,7 +137,7 @@
     "@npmcorp/pui-css-svg-iconography": "^1.0.4",
     "@npmcorp/pui-css-svgeople": "^2.0.4",
     "@npmcorp/pui-css-tables": "^2.0.1",
-    "@npmcorp/pui-css-tabs": "^2.0.2",
+    "@npmcorp/pui-css-tabs": "^2.1.0-alpha.0",
     "@npmcorp/pui-css-tile-layout": "^2.0.0",
     "@npmcorp/pui-css-tooltips": "^2.0.3",
     "@npmcorp/pui-css-traffic-lights": "^2.0.4",
