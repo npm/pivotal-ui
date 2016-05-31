@@ -216,7 +216,7 @@ header {
   height: 34px;
   width: 34px;
   padding: 6px;
-  @media (min-width: $desktopMinWidth) {
+  @media (min-width: $screen-sm-min) {
     height: 48px;
     width: 48px;
     padding: 14px;
@@ -304,7 +304,7 @@ header {
 }
 
 
-@media (min-width: $desktopMinWidth) {
+@media (min-width: $screen-sm-min) {
   header {
     max-height: initial;
     flex-direction: row;
@@ -495,7 +495,7 @@ header.header-light {
 
   .drop-down-menu {
     background-color: white;
-    @media (min-width: $desktopMinWidth) {
+    @media (min-width: $screen-sm-min) {
       border: none;
     }
 
@@ -506,12 +506,12 @@ header.header-light {
   }
   .drop-down-menu-section li {
     border-bottom: 1px solid $gray-8;
-    @media (min-width: $desktopMinWidth) {
+    @media (min-width: $screen-sm-min) {
       border: 1px solid $gray-8;
     }
   }
 
-  @media (min-width: $desktopMinWidth) {
+  @media (min-width: $screen-sm-min) {
     .product-navigation {
       box-shadow: none;
       border: none;
