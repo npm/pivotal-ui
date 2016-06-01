@@ -207,6 +207,8 @@ size modifier class for the desired size.
 <button class="btn btn-default btn-sm em-alt">Small</button>
 
 <button class="btn btn-default">Default</button>
+
+<button class="btn btn-default btn-lg em-low">Large button test</button>
 ```
 
 */
@@ -217,3 +219,7 @@ size modifier class for the desired size.
   @include pui-button-size($btn-sm-padding, $btn-sm-font-size, $btn-sm-line-height, $btn-sm-border-radius);
 }
 
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include pui-button-size($btn-lg-padding, $btn-lg-font-size, $btn-lg-line-height, $btn-lg-border-radius);
+}
