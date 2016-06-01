@@ -417,11 +417,12 @@ $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
 
 $border-radius-base:             4px !default;
-$border-radius-medium:           6px !default;
-$border-radius-xl:               20px;
-$border-radius-large:            10px !default;
-$border-radius-small:            3px !default;
 $border-radius-none:             0;
+$border-radius-small:            3px !default;
+$border-radius-medium:           6px !default;
+$border-radius-large:            10px !default;
+$border-radius-xl:               20px;
+$border-radius-xxl:              35px;
 
 $component-active-color:         #fff !default;
 $component-active-bg:            $brand-primary !default;
@@ -471,6 +472,11 @@ $btn-sm-padding:                 5px 20px 4px 20px;
 $btn-sm-font-size:               $font-size-small;
 $btn-sm-line-height:             $line-height-small;
 $btn-sm-border-radius:           $border-radius-xl;
+
+$btn-lg-padding:                 15px 40px 15px 40px;
+$btn-lg-font-size:               $font-size-extra-large;
+$btn-lg-line-height:             $line-height-large;
+$btn-lg-border-radius:           $border-radius-xxl;
 
 // Button styles
 

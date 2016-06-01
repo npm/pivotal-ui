@@ -105,7 +105,7 @@
     "@npmcorp/pui-css-backgrounds": "^2.1.1",
     "@npmcorp/pui-css-bootstrap": "^2.0.2",
     "@npmcorp/pui-css-button-group": "^2.0.4",
-    "@npmcorp/pui-css-buttons": "^2.0.4",
+    "@npmcorp/pui-css-buttons": "^2.2.0",
     "@npmcorp/pui-css-code": "^2.0.3",
     "@npmcorp/pui-css-collapse": "^2.0.1",
     "@npmcorp/pui-css-colors": "^2.2.0",
