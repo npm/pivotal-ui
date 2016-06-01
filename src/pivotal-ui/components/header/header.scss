@@ -215,11 +215,11 @@ header {
   right: 0;
   height: 34px;
   width: 34px;
-  padding: 7px;
-  @media (min-width: $desktopMinWidth) {
+  padding: 6px;
+  @media (min-width: $screen-sm-min) {
     height: 48px;
     width: 48px;
-    padding: 12px;
+    padding: 14px;
     border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
   margin-bottom: 0px;
@@ -251,9 +251,7 @@ header {
   overflow: hidden;
   text-overflow: elilipsis;
   color: inherit;
-}
-.anonymous .brand-container {
-  width: 30%;
+  white-space: nowrap;
 }
 .anonymous .user-info-container {
   width: calc(70% - 44px);
@@ -261,6 +259,7 @@ header {
 .anonymous .user-info-salutation {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .anonymous .user-info-salutation > li {
   flex: 1 auto;
@@ -273,14 +272,6 @@ header {
 }
 .anonymous .header-nav-menu-container {
   width: 44px;
-}
-
-.icon-wombat-head-login {
-  background-image: url("static/images/wombat-head-login.svg");
-  background-repeat: no-repeat;
-  width: 45px;
-  height: 45px;
-  display: inline-block;
 }
 
 .autocomplete-group {
@@ -305,7 +296,7 @@ header {
 }
 
 
-@media (min-width: $desktopMinWidth) {
+@media (min-width: $screen-sm-min) {
   header {
     max-height: initial;
     flex-direction: row;
@@ -320,19 +311,20 @@ header {
   }
   header > .brand-container {
     order: 1;
-    flex-grow: 1;
-    width: auto;
+    flex-grow: 0;
+    width: 125px;
   }
   header > .header-search-container {
     order: 2;
-    flex-grow: 10;
+    flex-grow: 1;
     width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   header > .user-info-container {
     order: 3;
     flex-grow: 0;
     width: auto;
-    padding-left: 10px;
     min-width: 212px;
     text-align: left;
   }
@@ -358,7 +350,6 @@ header {
     margin-top: -6em;
     padding-top: 6em;
   }
-  header.anonymous .brand-container,
   header.anonymous .user-info-container {
     width: auto;
     min-width: auto;
@@ -496,7 +487,7 @@ header.header-light {
 
   .drop-down-menu {
     background-color: white;
-    @media (min-width: $desktopMinWidth) {
+    @media (min-width: $screen-sm-min) {
       border: none;
     }
 
@@ -507,12 +498,12 @@ header.header-light {
   }
   .drop-down-menu-section li {
     border-bottom: 1px solid $gray-8;
-    @media (min-width: $desktopMinWidth) {
+    @media (min-width: $screen-sm-min) {
       border: 1px solid $gray-8;
     }
   }
 
-  @media (min-width: $desktopMinWidth) {
+  @media (min-width: $screen-sm-min) {
     .product-navigation {
       box-shadow: none;
       border: none;
