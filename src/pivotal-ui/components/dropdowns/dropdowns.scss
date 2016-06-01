@@ -38,7 +38,7 @@ This is the basic bootstrap dropdown.
 
 ```html_example
 <div class="dropdown">
-  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default em-low" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
 
@@ -61,7 +61,7 @@ This is the basic bootstrap dropdown with a small button.
 
 ```html_example
 <div class="dropdown">
-  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default btn-sm em-low" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
 
@@ -84,7 +84,7 @@ This is the basic bootstrap dropdown with a large button.
 
 ```html_example
 <div class="dropdown">
-  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default btn-lg" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default btn-lg em-low" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
 
@@ -145,7 +145,7 @@ This is the basic bootstrap dropdown with a large button.
 
 ```html_example
 <div class="dropdown">
-  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default em-low" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
   </button>
@@ -177,7 +177,7 @@ Here's a crazy-complex dropdown. Not for the faint of heart.
 
 ```html_example
 <div class="dropdown btn-group">
-  <button id="dropdown-button-2" class="dropdown-toggle btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-2" class="dropdown-toggle btn btn-default em-low" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     dropdown trigger
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
   </button>
@@ -277,7 +277,7 @@ Mix and match standard dropdown and tab styling as desired.
 
 ```html_example
 <div class="dropdown dropdown-driven-tabs">
-  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default em-low" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
   </button>
