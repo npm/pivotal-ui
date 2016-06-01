@@ -19,7 +19,6 @@ npm install @npmcorp/pui-css-dropdowns --save
 
 Dropdowns are menus that can be triggered by buttons.
 
-This is the basic bootstrap dropdown.
 
 NOTE: Each of these are using the icon for the svg, which you can access with the
 icon helper:
@@ -35,9 +34,57 @@ icon helper:
 
 ```
 
+This is the basic bootstrap dropdown.
+
 ```html_example
 <div class="dropdown">
   <button id="dropdown-button-1" class="dropdown-toggle btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Button Dropdown
+    <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
+
+  </button>
+  <ul class="dropdown-menu dropdown-border" role="menu" aria-labelledby="dropdown-button-1">
+    <li role="presentation">
+      <a href="http://www.google.com" role="menuitem">Google</a>
+    </li>
+    <li role="presentation">
+      <a href="http://www.yahoo.com" role="menuitem">Yahoo</a>
+    </li>
+    </li><li role="presentation">
+      <a href="http://www.aol.com" role="menuitem">Aol</a>
+    </li>
+  </ul>
+</div>
+```
+
+This is the basic bootstrap dropdown with a small button.
+
+```html_example
+<div class="dropdown">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Button Dropdown
+    <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
+
+  </button>
+  <ul class="dropdown-menu dropdown-border" role="menu" aria-labelledby="dropdown-button-1">
+    <li role="presentation">
+      <a href="http://www.google.com" role="menuitem">Google</a>
+    </li>
+    <li role="presentation">
+      <a href="http://www.yahoo.com" role="menuitem">Yahoo</a>
+    </li>
+    </li><li role="presentation">
+      <a href="http://www.aol.com" role="menuitem">Aol</a>
+    </li>
+  </ul>
+</div>
+```
+
+This is the basic bootstrap dropdown with a large button.
+
+```html_example
+<div class="dropdown">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default btn-lg" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
     <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
 
@@ -230,9 +277,9 @@ Mix and match standard dropdown and tab styling as desired.
 
 ```html_example
 <div class="dropdown dropdown-driven-tabs">
-  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default-alt" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="dropdown-button-1" class="dropdown-toggle btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Button Dropdown
-    <span class="caret"></span>
+    <svg class="icon caret"><use xlink:href="#i-arrow-down-selected"/></svg>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-button-1">
     <li role="presentation" class="active">
@@ -401,12 +448,9 @@ This is a notification dropdown with alerts.
   .caret {
     display: inline-block;
     border: 0;
-    margin-right: -0.6em;
-    padding-top: 7px;
-    margin-left: 5px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 20px;
+    margin: 0 -0.5em 0 0.15em;
+    padding-top: 0.3em;
+    font-size: 1.25em;
   }
 }
 
