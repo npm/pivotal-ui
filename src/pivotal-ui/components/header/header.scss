@@ -66,6 +66,19 @@ header {
 
 /*doc
 ---
+title: Regular Header Logged Out
+name: header_logged_out
+parent: headers
+---
+
+View the [logged out header on its own page](/header-loggedout.html) to see mobile sizing features.
+
+<iframe class="styleguide-demo" src="/header-loggedout.html"></iframe>
+
+*/
+
+/*doc
+---
 title: Transparent Header
 name: transparent_header
 parent: headers
@@ -254,15 +267,17 @@ header {
   white-space: nowrap;
 }
 .anonymous .user-info-container {
-  width: calc(70% - 44px);
+  width: calc(50% - 44px);
 }
 .anonymous .user-info-salutation {
   display: flex;
   align-items: center;
-  white-space: nowrap;
 }
 .anonymous .user-info-salutation > li {
   flex: 1 auto;
+}
+.anonymous .user-info-salutation > li > a{
+  white-space: nowrap;
 }
 .anonymous .user-info-salutation > li:first-child {
   width: calc(100% - 45px);
