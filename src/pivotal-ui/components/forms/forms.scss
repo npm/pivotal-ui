@@ -577,7 +577,7 @@ them over a custom dropdown whenever possible.
 }
 
 select.form-control {
-  color: $link-color;
+  color: $input-color-hover;
   font-weight: $input-font-weight;
   &:hover, &:focus {
     color: $input-color-hover;
