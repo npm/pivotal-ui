@@ -4,7 +4,7 @@
     "@npmcorp/pui-css-bootstrap": "^2.0.1",
     "@npmcorp/pui-css-typography": "^4.1.0",
     "@npmcorp/pui-css-colors": "^2.2.0",
-    "@npmcorp/pui-css-buttons": "^2.2.0"
+    "@npmcorp/pui-css-buttons": "^2.3.0"
   },
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
