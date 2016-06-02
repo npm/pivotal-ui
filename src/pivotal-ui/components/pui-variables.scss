@@ -503,6 +503,12 @@ $btn-secondary-border:           $npm-brand;
 $btn-secondary-border-hover:     darken($npm-brand, 10%);
 $btn-secondary-gradient-color:   rgba(202, 56, 56, 0.15);
 
+$btn-tertiary-color:             $npm-brand;
+$btn-tertiary-bg:                $neutral-11;
+$btn-tertiary-bg-hover:          lighten($npm-brand, 47%);
+$btn-tertiary-border:            $npm-brand;
+$btn-tertiary-border-hover:      darken($npm-brand, 10%);
+
 $btn-link-color:                 $link-color !default;
 $btn-link-bg:                    transparent !default;
 
