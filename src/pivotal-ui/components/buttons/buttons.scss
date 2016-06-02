@@ -101,6 +101,12 @@ parent: button
         <td>This button should be used for the secondary action on the page. e.g. the upgrade button in the signup flow</td>
     </tr>
     <tr>
+        <td><button class="btn btn-tertiary">Tertiary</button></td>
+        <td><button class="btn btn-tertiary" disabled="">Tertiary</button></td>
+        <td style="white-space: nowrap"><code class="styleguide">btn btn-tertiary</code></td>
+        <td>This button should be used whenever necessary. e.g. the Platform dropdown on the Enterprise install page</td>
+    </tr>
+    <tr>
         <td><button class="btn btn-primary">Primary</button></td>
         <td><button class="btn btn-primary" disabled="">Primary</button></td>
         <td style="white-space: nowrap"><code class="styleguide">btn btn-primary</code></td>
@@ -165,6 +171,10 @@ parent: button
   &:hover {
     background: linear-gradient(0deg, saturate($btn-secondary-gradient-color, 60%) 0%, rgba(255, 255, 255, 0) 100%);
   }
+}
+
+.btn-tertiary {
+  @include button-skin($btn-tertiary-color, $btn-tertiary-bg, $btn-tertiary-border, null, $btn-tertiary-border-hover, $btn-tertiary-bg-hover);
 }
 
 .btn-link {
