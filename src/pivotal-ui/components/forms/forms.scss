@@ -379,8 +379,8 @@ Wrap selects in grid columns, or any custom parent element, to easily enforce de
 }
 
 label {
-  font-weight: 700;
-  color: $form-label-color;
+  font-weight: 400; //override bootstrap
+  color: $neutral-3; //override bootstrap
 }
 
 // do not simplify placeholder styles, we need a separate line per browser because otherwise browser will invalidate the entire group
@@ -557,6 +557,7 @@ them over a custom dropdown whenever possible.
 */
 
 .form-control {
+  @include button-shadow;
   padding: 8px 14px; // override bootstrap
   //-webkit-appearance: none;
   position: relative;
@@ -564,23 +565,15 @@ them over a custom dropdown whenever possible.
     border-color: $input-border-color-hover;
   }
 
-  font-weight: 400;
+  &.active, &:active {
+    background-color: $input-bg-active;
+  }
 
   &.disabled, &:disabled {
     opacity: 0.5;
   }
 
   border-radius: $input-border-radius;
-}
-
-.form-control:not([type=submit]),
-.form-control:not([type=button]),
-.form-control:not(button) {
-  box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.2);
-
-  &.active, &:active, &.hover, &:hover, &.focus, &:focus {
-    box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.4);
-  }
 }
 
 select.form-control {
@@ -1012,6 +1005,11 @@ add `.has-success` to the field's form group.
   @include validation-label-color()
 }
 
+.has-error {
+  .help-block {
+    font-size: $font-size-small;
+  }
+}
 
 // align bootstrap errors for checkboxes and radio buttons
 .radio,
@@ -1106,9 +1104,7 @@ Here's an example in a vertical form:
 */
 
 .help-block {
-  color: $neutral-5;
-  font-weight: 400;
-  font-size: $font-size-small;
+  color: $form-label-color;
 }
 
 // Form control sizing
