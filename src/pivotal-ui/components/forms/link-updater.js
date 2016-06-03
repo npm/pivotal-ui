@@ -1,6 +1,8 @@
 var $ = require('jquery');
 var isInvalid = require('npm-user-validate').username;
 
+var errorClass = "link-updater-error";
+
 var LinkUpdater = function(el){
   this.el = $(el);
   this.input = this.el.find("input");
@@ -18,12 +20,10 @@ LinkUpdater.prototype.updateValue = function(inputValue){
 };
 
 LinkUpdater.prototype.showError = function(msg){
-  var err = this.el.find(".error");
+  var err = this.el.find("." + errorClass);
 
   if(!err.length) {
-    err = $("<span />")
-    .addClass("error")
-    .text(msg);
+    err = $("<span class='" + errorClass + "'>" + msg + "</span>");
 
     this.el.append(err);
   } else {
@@ -33,7 +33,7 @@ LinkUpdater.prototype.showError = function(msg){
 };
 
 LinkUpdater.prototype.hideError = function(){
-  this.el.find(".error").remove();
+  this.el.find("." + errorClass).remove();
 };
 
 $(function(){
