@@ -133,7 +133,7 @@ header a {
     transition: color 0.1s ease, background 0.1s ease;
   }
 
-  .active {
+  &.active {
     color: currentColor;
   }
 }
