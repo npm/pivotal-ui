@@ -132,6 +132,10 @@ header a {
     text-decoration: none;
     transition: color 0.1s ease, background 0.1s ease;
   }
+
+  .active {
+    color: currentColor;
+  }
 }
 
 .logo-container {
@@ -416,7 +420,7 @@ header {
     flex: 1 auto;
   }
   .header-item .products-list li a,
-  .npm-expansions {
+  .header-item .npm-expansions {
     padding: 0.625em 0;
     color: $header-subtle-text-color;
   }
@@ -463,10 +467,32 @@ On a light background:
 
 */
 
+/*doc
+---
+title: Light Header Logged Out
+name: header_light_logged_out
+parent: headers
+---
+
+View the [logged out light header on its own page](/header-light-loggedout.html) to see mobile sizing features.
+
+<iframe class="styleguide-demo" src="/header-light-loggedout.html"></iframe>
+
+*/
+
 header.header-light {
   background-color: transparent;
   color: $text-color;
   border-bottom: 0;
+
+  a, button {
+    color: $npm-brand;
+  }
+
+  .header-item .products-list li a:hover,
+  .npm-expansions:hover {
+    color: $neutral-11;
+  }
 
   > .user-info-container {
     color: $text-color;
@@ -487,8 +513,13 @@ header.header-light {
   .drop-down-menu-toggle:focus,
   .drop-down-menu-toggle.toggle-is-open,
   .drop-down-menu-section li:hover {
-    color: darken($text-color, 25%);
+    color: $link-color;
     transition: color 0.1s ease;
+  }
+
+  .drop-down-menu a:hover,
+  .drop-down-menu button:hover {
+    color: darken($link-color, 25%);
   }
 
   .drop-down-menu-toggle:hover,
@@ -506,10 +537,6 @@ header.header-light {
       border: none;
     }
 
-    a:hover,
-    button:hover {
-      color: inherit;
-    }
   }
   .drop-down-menu-section li {
     border-bottom: 1px solid $gray-8;
