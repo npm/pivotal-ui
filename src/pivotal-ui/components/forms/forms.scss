@@ -564,6 +564,12 @@ them over a custom dropdown whenever possible.
     border-color: $input-border-color-hover;
   }
 
+  box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.2);
+
+  &.active, &:active, &.hover, &:hover, &.focus, &:focus {
+    box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.4);
+  }
+
   font-weight: 400;
 
   &.disabled, &:disabled {
@@ -573,13 +579,16 @@ them over a custom dropdown whenever possible.
   border-radius: $input-border-radius;
 }
 
-.form-control:not([type=submit]),
-.form-control:not([type=button]),
-.form-control:not(button) {
-  box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.2);
+.form-control:not([type=submit]) {
+}
+
+.form-control[type=button],
+.form-control[type=submit],
+button.form-control {
+  box-shadow: none;
 
   &.active, &:active, &.hover, &:hover, &.focus, &:focus {
-    box-shadow: inset 0 0px 20px rgba(127, 127, 127, 0.4);
+    box-shadow: none;
   }
 }
 
