@@ -151,6 +151,7 @@ gulp.task('monolith-app-config', () => gulp.src(['src/Staticfile', 'config/nginx
 gulp.task('monolith', callback => runSequence('monolith-clean', [
     'monolith-hologram',
     'monolith-html',
+    'handlebars-demos',
     'monolith-styleguide-css',
     'monolith-build-css-from-scratch',
     'monolith-build-js',
