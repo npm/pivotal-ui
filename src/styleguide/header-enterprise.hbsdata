@@ -1,0 +1,8 @@
+{
+    "features": {
+        "npmo": true
+    },
+    "env": {
+        "NPMO_COBRAND": "@wombats"
+    }
+}
