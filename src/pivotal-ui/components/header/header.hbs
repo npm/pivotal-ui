@@ -62,6 +62,7 @@
           <a id="user-info-drop-down-menu-toggle" class="drop-down-menu-toggle" href="#user-info-menu" role="button" aria-haspopup="true" aria-owns="user-info-menu"><span class="a11y-only">Toggle User Menu</span>
             <span class="user-info-salutation" data-user-name="{{user.name}}" data-is-paid="{{#if user.isPaid}}true{{/if}}">Greetings, <span id="salutation-username">{{user.name}}</span></span>
             <img alt="" src="{{user.avatar.small}}" />
+            {{svg "@npmcorp/pui-css-header/dropdown.svg" class="header-drop-down-icon"}}
           </a>
 
           <div role="menu" id="user-info-menu" class="drop-down-menu" aria-labelledby="user-info-drop-down-menu-toggle">
