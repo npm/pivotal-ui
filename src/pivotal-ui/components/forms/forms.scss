@@ -1450,7 +1450,7 @@ The link updater input updates a link underneath the input with the information 
 
 ```html_example
 <form role="form">
-  <div class="form-group">
+  <div class="form-group link-updater-container">
     <label for="username">Username</label>
     <div class="link-updater">
       <input name="username" id="username" class="form-control">
@@ -1461,12 +1461,7 @@ The link updater input updates a link underneath the input with the information 
 ```
 */
 
-.link-updater {
-  .error {
-    color: $npm-brand;
-    font-size: .9em;
-  }
-
+.link-updater-container {
   p {
     color: $form-label-color;
   }
