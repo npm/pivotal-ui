@@ -1438,26 +1438,33 @@ Add the focus-input directive to an element that should be focused if the focus-
 
 /*doc
 ---
-title: Link updater input
+title: Link Updater Input
 name: form_input_link_update
 parent: 00_form_introduction
-categories:
- - css_components_forms
- - css_all
 ---
 
 The link updater input updates a link underneath the input with the information that is inside of the input
 
 ```html_example
-<form role="form">
-  <div class="form-group link-updater-container">
-    <label for="username">Username</label>
-    <div class="link-updater">
-      <input name="username" id="username" class="form-control">
-      <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
-    </div>
+<div class="form-group link-updater-container">
+  <label for="username">Username</label>
+  <div class="link-updater">
+    <input name="username" id="username" class="form-control">
+    <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
   </div>
-</form>
+</div>
+```
+
+For an organization name input:
+
+```html_example
+<div class="form-group link-updater-container">
+  <label for="orgname">Name your Organization</label>
+  <div class="link-updater">
+    <input name="orgname" id="orgname" class="form-control">
+    <p class="mtl">https://www.npmjs.com/org/<strong>orgname</strong></p>
+  </div>
+</div>
 ```
 */
 
