@@ -5,7 +5,7 @@
 /*doc
 ---
 title: Introduction
-name: 00_form_introduction
+name: 00_forms
 categories:
  - css_components_forms
  - css_all
@@ -35,7 +35,7 @@ All textual `<input>`, `<textarea>`, and `<select>` elements with
 ---
 title: Basic Forms
 name: 0a_form_basic
-parent: 00_form_introduction
+parent: 00_forms
 ---
 
 ```html_example
@@ -63,9 +63,7 @@ parent: 00_form_introduction
 ---
 title: Inline Forms
 name: form_inline
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 Add `.form-inline` to your `<form>` for left-aligned and inline-block controls.
@@ -139,9 +137,7 @@ Add `.form-inline.inline-labels` to your `<form>` for left-aligned and inline-bl
 ---
 title: Inputs & Labels
 name: form_inputs
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 An input with the label top aligned (this is the default layout).
@@ -537,9 +533,7 @@ Add the `readonly` boolean attribute on an input to prevent user input and style
 ---
 title: Selects
 name: form_selects
-categories:
- - css_components_forms
- - css_all
+parent: form_inputs
 ---
 Selects are excellent to use because they will automatically
 behave as expected cross browser on different devices. Prefer
@@ -612,7 +606,7 @@ select.form-control {
 ---
 title: Sizing
 name: 01_form_select_sizing
-parent: form_selects
+parent: 00_forms
 ---
 
 Set heights using the form control classes `.input-lg` and `.input-sm`.
@@ -663,7 +657,7 @@ Wrap inputs in grid columns, or any custom parent element, to easily enforce des
 ---
 title: Fancy Selects
 name: 02_form_fancy_select
-parent: form_selects
+parent: 00_forms
 ---
 
 This is a fancy select!
@@ -795,9 +789,7 @@ This is a fancy select!
 ---
 title: Text Areas
 name: form_textarea
-categories:
- - css_components_forms
- - css_all
+parent: form_inputs
 ---
 
 Text areas are used for larger amounts of input.
@@ -817,9 +809,7 @@ Text areas are used for larger amounts of input.
 ---
 title: Checkboxes & Radios
 name: form_checkboxes
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.
 
@@ -910,9 +900,7 @@ Use `.checkbox-inline` or `.radio-inline` class to a series of checkboxes or rad
 ---
 title: Help Text
 name: form_help_text
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 Help text
 Block level help text for form controls.
@@ -931,9 +919,7 @@ Block level help text for form controls.
 ---
 title: Validations
 name: form_validation
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 To show validation errors on a field, add `.has-error` to the field's form group.
@@ -1037,9 +1023,7 @@ add `.has-success` to the field's form group.
 ---
 title: Disabled Controls
 name: form_disabled_controls
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 Controls will occasionally need to be disabled.
@@ -1070,9 +1054,7 @@ Inputs, selects, checkboxes, fieldsets, buttons, and other form controls can all
 ---
 title: Static Controls
 name: form_static_control
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 When you need to place plain text next to a form label within a form,
@@ -1135,9 +1117,7 @@ p.form-control-static {
 ---
 title: Autoselect Text Inputs
 name: form_autoselect_text_input
-categories:
- - css_components_forms
- - css_all
+parent: form_inputs
 ---
 
 This form is used to show information that a user may wish to copy and paste somewhere.
@@ -1252,9 +1232,7 @@ This form looks and behaves mostly like a content editable field
 ---
 title: Toggle Switches
 name: form_toggle_switch
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 A toggle switch is a horizontally styled checkbox which represents true with blue and false with gray.
@@ -1324,9 +1302,7 @@ A toggle switch is a horizontally styled checkbox which represents true with blu
 ---
 title: Stepper
 name: form_stepper
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 A stepper is a component that increments and decrements a number in an associated
@@ -1378,9 +1354,7 @@ text field by interacting with one of two buttons.
 ---
 title: Organization Scope Input
 name: form_org_scope_input
-categories:
- - css_components_forms
- - css_all
+parent: 00_forms
 ---
 
 An input for an npm scope, prompting the user with an @ sign.
@@ -1440,7 +1414,7 @@ Add the focus-input directive to an element that should be focused if the focus-
 ---
 title: Link Updater Input
 name: form_input_link_update
-parent: 00_form_introduction
+parent: 00_forms
 ---
 
 The link updater input updates a link underneath the input with the information that is inside of the input
