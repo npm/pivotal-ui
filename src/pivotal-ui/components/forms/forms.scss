@@ -1435,8 +1435,8 @@ For an organization name input:
 <div class="form-group link-updater-container">
   <label for="orgname">Name your Organization</label>
   <div class="link-updater">
-    <input name="orgname" id="orgname" class="form-control">
-    <p class="mtl">https://www.npmjs.com/org/<strong>orgname</strong></p>
+    <input name="orgname" id="orgname" class="form-control" placeholder="your-org-name">
+    <p class="mtl">https://www.npmjs.com/org/<strong>your-org-name</strong></p>
   </div>
 </div>
 ```
