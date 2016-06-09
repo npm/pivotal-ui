@@ -56,6 +56,12 @@ name: 01_meta_expandable_sidebar
 parent: meta
 ---
 
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/need-help-enterprise.hbs"}}
+```
+
 ```html_example
 <svg style="display: none;">
   <symbol id="i-692-iphone-5" viewBox="0 0 18 30">
@@ -133,12 +139,6 @@ parent: meta
 
 ```
 
-Using the `fromPackage` helper:
-
-```
-{{fromPackage "@npmcorp/pui-css-meta/need-help-enterprise.hbs"}}
-```
-
 */
 
 /*doc
@@ -147,6 +147,12 @@ title: Need Help Orgs Module
 name: 02_meta_need_help_orgs
 parent: meta
 ---
+
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/need-help-orgs.hbs"}}
+```
 
 ```html_example
 <svg style="display: none;">
@@ -210,12 +216,6 @@ parent: meta
 </div>
 
 ```
-
-Using the `fromPackage` helper:
-
-```
-{{fromPackage "@npmcorp/pui-css-meta/need-help-orgs.hbs"}}
-```
 */
 
 .need-help {
@@ -231,6 +231,12 @@ title: Orgs Features
 name: orgs_features
 parent: meta
 ---
+
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/orgs-features.hbs"}}
+```
 
 <style>
   #demo-orgs-features-sidebar {
@@ -407,12 +413,6 @@ parent: meta
 </div>
 ```
 
-Using the `fromPackage` helper:
-
-```
-{{fromPackage "@npmcorp/pui-css-meta/orgs-features.hbs"}}
-```
-
 */
 
 /*doc
@@ -421,6 +421,12 @@ title: Solo Features
 name: solo_features
 parent: meta
 ---
+
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/solo-features.hbs"}}
+```
 
 <style>
   #demo-solo-features-sidebar {
@@ -586,12 +592,6 @@ parent: meta
 </div>
 ```
 
-Using the `fromPackage` helper:
-
-```
-{{fromPackage "@npmcorp/pui-css-meta/solo-features.hbs"}}
-```
-
 */
 
 /*doc
@@ -600,6 +600,12 @@ title: Account Features
 name: account_features
 parent: meta
 ---
+
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/account-features.hbs"}}
+```
 
 <style>
   #demo-account-features-sidebar {
@@ -765,12 +771,6 @@ parent: meta
 </div>
 ```
 
-Using the `fromPackage` helper:
-
-```
-{{fromPackage "@npmcorp/pui-css-meta/account-features.hbs"}}
-```
-
 */
 
 /*doc
@@ -779,6 +779,12 @@ title: Enterprise Features
 name: enterprise_features
 parent: meta
 ---
+
+Using the `fromPackage` helper:
+
+```
+{{fromPackage "@npmcorp/pui-css-meta/enterprise-features.hbs"}}
+```
 
 <style>
   #demo-enterprise-features-sidebar {
@@ -953,12 +959,6 @@ parent: meta
     </div>
   </div>
 </div>
-```
-
-Using the `fromPackage` helper:
-
-```
-{{fromPackage "@npmcorp/pui-css-meta/orgs-features.hbs"}}
 ```
 
 */
