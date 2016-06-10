@@ -14,7 +14,7 @@ var LinkUpdater = function(el){
 LinkUpdater.prototype.updateValue = function(inputValue){
   var pathVal = inputValue;
   if(inputValue === ""){
-    pathVal = "username";
+    pathVal = this.input.attr("placeholder") || "username";
   }
   this.currentValue = inputValue;
   this.pathDisplay.text(pathVal);
