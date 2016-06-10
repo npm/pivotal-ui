@@ -7,6 +7,10 @@ var LinkUpdater = function(el){
   this.el = $(el);
   this.updater = this.el.find(".link-updater");
   this.input = this.el.find("input");
+  this.input.on("input", function(e){
+    this.updateValue(e.target.value);
+  }.bind(this));
+
   this.pathDisplay = this.el.find("p strong");
   this.demoValue = this.input.attr("placeholder") || "username";
   this.currentValue = "";
@@ -55,12 +59,7 @@ $(function(){
   var linkUpdater = $(".link-updater-container");
 
   $.each(linkUpdater, function(idx, el){
-    var lu = new LinkUpdater(el);
-
-    lu.input.on("input", function(e){
-      lu.updateValue(e.target.value);
-    });
-
+    new LinkUpdater(el);
   });
 });
 
