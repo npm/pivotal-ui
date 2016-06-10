@@ -8,14 +8,26 @@ var LinkUpdater = function(el){
   this.updater = this.el.find(".link-updater");
   this.input = this.el.find("input");
   this.pathDisplay = this.el.find("p strong");
+  this.demoValue = this.input.attr("placeholder") || "username";
   this.currentValue = "";
 };
 
 LinkUpdater.prototype.updateValue = function(inputValue){
-  var pathVal = inputValue;
-  if(inputValue === ""){
-    pathVal = this.input.attr("placeholder") || "username";
+  var err = isInvalid(inputValue);
+  if(err) {
+    inputValue = this.currentValue;
+    this.input.val(this.currentValue);
+    this.showError(err.message);
+  } else {
+    this.hideError();
   }
+
+  var pathVal = inputValue;
+
+  if(inputValue === ""){
+    pathVal = this.demoValue;
+  }
+
   this.currentValue = inputValue;
   this.pathDisplay.text(pathVal);
 };
@@ -46,14 +58,7 @@ $(function(){
     var lu = new LinkUpdater(el);
 
     lu.input.on("input", function(e){
-      var err = isInvalid(e.target.value);
-      if(err) {
-        e.target.value = lu.currentValue;
-        lu.showError(err.message);
-      } else {
-        lu.hideError();
-        lu.updateValue(e.target.value);
-      }
+      lu.updateValue(e.target.value);
     });
 
   });
