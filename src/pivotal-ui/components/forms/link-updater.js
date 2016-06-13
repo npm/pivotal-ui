@@ -7,15 +7,31 @@ var LinkUpdater = function(el){
   this.el = $(el);
   this.updater = this.el.find(".link-updater");
   this.input = this.el.find("input");
+  this.input.on("input", function(e){
+    this.updateValue(e.target.value);
+  }.bind(this));
+
   this.pathDisplay = this.el.find("p strong");
+  this.demoValue = this.input.attr("placeholder") || "username";
   this.currentValue = "";
 };
 
 LinkUpdater.prototype.updateValue = function(inputValue){
-  var pathVal = inputValue;
-  if(inputValue === ""){
-    pathVal = "username";
+  var err = isInvalid(inputValue);
+  if(err) {
+    inputValue = this.currentValue;
+    this.input.val(this.currentValue);
+    this.showError(err.message);
+  } else {
+    this.hideError();
   }
+
+  var pathVal = inputValue;
+
+  if(inputValue === ""){
+    pathVal = this.demoValue;
+  }
+
   this.currentValue = inputValue;
   this.pathDisplay.text(pathVal);
 };
@@ -43,19 +59,7 @@ $(function(){
   var linkUpdater = $(".link-updater-container");
 
   $.each(linkUpdater, function(idx, el){
-    var lu = new LinkUpdater(el);
-
-    lu.input.on("input", function(e){
-      var err = isInvalid(e.target.value);
-      if(err) {
-        e.target.value = lu.currentValue;
-        lu.showError(err.message);
-      } else {
-        lu.hideError();
-        lu.updateValue(e.target.value);
-      }
-    });
-
+    new LinkUpdater(el);
   });
 });
 
