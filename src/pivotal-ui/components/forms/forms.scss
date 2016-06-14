@@ -1427,6 +1427,10 @@ The link updater input updates a link underneath the input with the information 
     <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
   </div>
 </div>
+<div class="form-group">
+  <label for="example">Example for error handling</label>
+  <input name="example" id="example-for-error-handling" class="form-control">
+</div>
 ```
 
 For an organization name input:
@@ -1439,11 +1443,29 @@ For an organization name input:
     <p class="mtl">https://www.npmjs.com/org/<strong>your-org-name</strong></p>
   </div>
 </div>
+<div class="form-group">
+  <label for="example">Example for error handling</label>
+  <input name="example" id="example-for-error-handling-2" class="form-control">
+</div>
 ```
 */
 
 .link-updater-container {
+  transition: margin-bottom .1s;
+
+  .link-updater {
+    position: relative;
+  }
   p {
     color: $form-label-color;
+  }
+
+  &.has-error {
+    margin-bottom: 35px;
+  }
+
+  .has-error {
+    position: absolute;
+    bottom: -35px;
   }
 }
