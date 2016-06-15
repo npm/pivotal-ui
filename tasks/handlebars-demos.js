@@ -26,17 +26,17 @@ gulp.task('handlebars-demos', () => {
         }));
       }
 
-      const template = handlebars.compile(String(file.contents))
-	  const datafile = file.path.replace('hbs', 'hbsdata');
+      const template = handlebars.compile(String(file.contents));
+      const datafile = file.path.replace('hbs', 'hbsdata');
 
       fs.readFile(datafile, 'utf-8', (err, data) => {
-        if (err && err.code != 'ENOENT') return next(err);
+        if (err && err.code !== 'ENOENT') return next(err);
         file.contents = new Buffer(template(data ? JSON.parse(data) : {}));
         next(null, file);
-      })
+      });
     }))
     .pipe(rename(path => {
-      path.extname = '.html'
+      path.extname = '.html';
     }))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'));
 });
