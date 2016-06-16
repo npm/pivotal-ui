@@ -1,12 +1,11 @@
-import {map} from 'event-stream';
-import {argv} from 'yargs';
+import { map } from 'event-stream';
+import { argv } from 'yargs';
 import promisify from 'es6-promisify';
 import path from 'path';
 import through from 'through2';
 
-import {getNewVersion} from './version-helper';
-import {getLastTag, isBlank, gitDiffMixinsAndVariables,
-  getChangedComponents, getAllComponents} from './git-helper';
+import { getNewVersion } from './version-helper';
+import { getLastTag, isBlank, gitDiffMixinsAndVariables, getChangedComponents, getAllComponents } from './git-helper';
 
 const exec = promisify(require('child_process').exec);
 const read = promisify(require('vinyl-file').read);
@@ -17,8 +16,7 @@ export async function componentsWithChanges() {
   let components;
   if (argv.updateAll || mixinsAndVariablesChanged) {
     components = await getAllComponents();
-  }
-  else {
+  } else {
     components = await getChangedComponents(lastTag);
   }
   return components;
@@ -26,15 +24,12 @@ export async function componentsWithChanges() {
 
 function packageNameOf(componentPath) {
   if (componentPath.match(/src\/pivotal-ui\/components\//)) {
-    return `pui-css-${path.basename(componentPath)}`;
-  }
-  else if (componentPath.match(/src\/pivotal-ui-react\//)) {
-    return `pui-react-${path.basename(componentPath)}`;
-  }
-  else if (componentPath === './') {
+    return `@npmcorp/pui-css-${path.basename(componentPath)}`;
+  } else if (componentPath.match(/src\/pivotal-ui-react\//)) {
+    return `@npmcorp/pui-react-${path.basename(componentPath)}`;
+  } else if (componentPath === './') {
     return 'pivotal-ui-root-package';
-  }
-  else {
+  } else {
     console.error(`Unknown componentPath ${componentPath}`);
     throw new Error(`Unknown componentPath ${componentPath}`);
   }
@@ -45,8 +40,7 @@ async function componentsDependentOn(componentPath) {
   try {
     return (await exec(command)).trim().split('\n')
       .map((filename) => path.dirname(filename) + path.sep);
-  }
-  catch(error) {
+  } catch (error) {
     if (error.code === 1) { // git grep returns no results
       return [];
     }
@@ -69,7 +63,7 @@ export function componentsToUpdate() {
       try {
         let component;
         while (Boolean(component = componentsToLookThrough.shift())) {
-          for (const dependentComponent of (await componentsDependentOn(component))) {
+          for (const dependentComponent of ( await componentsDependentOn(component))) {
             if (!componentsToUpdate[dependentComponent]) {
               componentsToLookThrough.push(dependentComponent);
               componentsToUpdate[dependentComponent] = [];
@@ -85,8 +79,7 @@ export function componentsToUpdate() {
           });
         }
         callback();
-      }
-      catch(error) {
+      } catch (error) {
         console.error(error.stack);
         callback(error);
       }
@@ -109,7 +102,7 @@ export function updatePackageJsons() {
 
       packageJsonFile.contents = new Buffer(JSON.stringify(packageJsonContents, null, 2));
       callback(null, packageJsonFile);
-    } catch(error) {
+    } catch (error) {
       console.error(error.stack);
       callback(error);
     }
