@@ -1458,6 +1458,7 @@ For an organization name input:
   }
   p {
     color: $form-label-color;
+    word-break: break-all;
   }
 
   &.has-error {
