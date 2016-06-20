@@ -3,7 +3,7 @@
   "main": "index.js",
   "dependencies": {
     "@npmcorp/pui-css-bootstrap": "5.1.0",
-    "npm-user-validate": "^0.1.4"
+    "npm-user-validate": "^0.1.5"
   },
   "version": "5.1.0"
 }
