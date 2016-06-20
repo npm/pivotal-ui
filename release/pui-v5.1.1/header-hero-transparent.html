@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='pivotal-ui.css' rel='stylesheet'>
+    <script src="pivotal-ui.js"></script>
+  </head>
+  <body>
+    var $ = require('jquery');
+var isInvalid = require('npm-user-validate').username;
+
+var errorClass = "has-error";
+
+var LinkUpdater = function(el){
+  this.el = $(el);
+  this.updater = this.el.find(".link-updater");
+  this.input = this.el.find("input");
+  this.input.on("input", function(e){
+    this.updateValue(e.target.value);
+  }.bind(this));
+
+  this.pathDisplay = this.el.find("p strong");
+  this.demoValue = this.input.attr("placeholder") || "username";
+  this.currentValue = "";
+};
+
+LinkUpdater.prototype.updateValue = function(inputValue){
+  var err = isInvalid(inputValue);
+  if(err) {
+    inputValue = this.currentValue;
+    this.input.val(this.currentValue);
+    this.showError(err.message);
+  } else {
+    this.hideError();
+  }
+
+  var pathVal = inputValue;
+
+  if(inputValue === ""){
+    pathVal = this.demoValue;
+  }
+
+  this.currentValue = inputValue;
+  this.pathDisplay.text(pathVal);
+};
+
+LinkUpdater.prototype.showError = function(msg){
+  var err = this.updater.find("." + errorClass);
+
+  if(!err.length) {
+    err = $("<span class='help-block " + errorClass + "'>" + msg + "</span>");
+
+    this.el.addClass(errorClass);
+    this.updater.append(err);
+  } else {
+    err.text(msg);
+  }
+
+};
+
+LinkUpdater.prototype.hideError = function(){
+  this.el.removeClass(errorClass);
+  this.updater.find("." + errorClass).remove();
+};
+
+$(function(){
+  var linkUpdater = $(".link-updater-container");
+
+  $.each(linkUpdater, function(idx, el){
+    new LinkUpdater(el);
+  });
+});
+
+module.exports = LinkUpdater;
+
+
+    <div class="pane" style="background-image: linear-gradient(180deg, #245978, #1F698E);">
+      <div class="container bg-contain bg-bottom-right nobg-xs" style="background-image: url(/styleguide/bg-enterprise-hero.svg); ">
+        <div class="row">
+          <div class="col-sm-13 col-md-10 col-sm-offset-1 col-xs-20 col-xs-offset-2">
+            <h1 class="h1 em-high type-neutral-11">Take enterprise development to new heights</h1>
+            <p class="h5 em-default type-neutral-11 pbxl">
+              npm Enterprise helps large teams share, discover, and re-use code —
+              behind the corporate firewall — so they can build amazing things.
+            </p>
+            <a href="/on-site#free-trial" class="btn btn-highlight-1 mrl mbxl">Start a free trial</a>
+            <a href="/enterprise/license" class="btn btn-default-alt mbxl">Buy a license</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

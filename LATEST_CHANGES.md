@@ -1,3 +1,17 @@
+<a name="5.1.1"></a>
+## 5.1.1 (2016-06-20)
+
+
+### Bug Fixes
+
+* **forms:** Update npm-user-validate to 0.1.5 to get proper length limit ([9fbbb00](https://github.com/pivotal-cf/pivotal-ui/commit/9fbbb00))
+
+### Features
+
+* **forms:** allow long values in link-updater to wrap ([af7fd7a4c2a2b](https://github.com/pivotal-cf/pivotal-ui/commit/af7fd7a4c2a2b))
+
+
+
 <a name="5.1.0"></a>
 # 5.1.0 (2016-06-16)
 
