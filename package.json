@@ -183,7 +183,7 @@
     "handlebars-helper-icon": "^1.0.6",
     "handlebars-helper-svg": "^2.0.1",
     "lodash": "^2.4.2",
-    "npm-user-validate": "^0.1.2",
+    "npm-user-validate": "^0.1.5",
     "prismjs": "0.0.1",
     "pui-prismjs": "0.0.1",
     "pui-react-animation": "^0.0.7"
