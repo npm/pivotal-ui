@@ -9,6 +9,7 @@ import changelog from 'conventional-changelog';
 import {log} from 'gulp-util';
 import source from 'vinyl-source-stream';
 import semver from 'semver';
+import del from 'del';
 import {argv} from 'yargs';
 
 
@@ -81,6 +82,8 @@ gulp.task('release-generate-changelog', () => {
     .pipe(gulp.dest('.'));
 });
 
+gulp.task('release-clean-release-folder', callback => del(['release/*'], callback));
+
 gulp.task('release-generate-release-folder', ['monolith'], () => {
   const oocssStream = gulp.src([
     'src/oocss/utils/_clearfix-me.scss',
@@ -133,19 +136,15 @@ gulp.task('release-commit', () =>
   )
 );
 
-gulp.task('release-prepare', (done) => {
-  log(
-    argv.withDir
-    ? 'Will create release directory since --with-dir flag given'
-    : 'Will *NOT* create release directory since --with-dir flag not given'
-  )
+gulp.task('release-prepare', (done) =>
   runSequence(
     'release-update-version',
     [
       'release-update-package-versions',
-      'release-generate-changelog',
-      argv.withDir ? 'release-generate-release-folder' : 'monolith'
+      'release-generate-changelog'
     ],
+    'release-clean-release-folder',
+    'release-generate-release-folder',
     done
   )
-});
+);
