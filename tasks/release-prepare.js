@@ -133,14 +133,19 @@ gulp.task('release-commit', () =>
   )
 );
 
-gulp.task('release-prepare', (done) =>
+gulp.task('release-prepare', (done) => {
+  log(
+    argv.withDir
+    ? 'Will create release directory since --with-dir flag given'
+    : 'Will *NOT* create release directory since --with-dir flag not given'
+  )
   runSequence(
     'release-update-version',
     [
       'release-update-package-versions',
       'release-generate-changelog',
-      'release-generate-release-folder'
+      argv.withDir ? 'release-generate-release-folder' : 'monolith'
     ],
     done
   )
-);
+});
