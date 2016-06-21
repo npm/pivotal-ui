@@ -49,13 +49,14 @@ gulp.task('release-update-version', (done) => {
     });
 });
 
-gulp.task('release-update-package-versions', (done) => {
-  componentsWithChanges().then((components) => {
+gulp.task('release-update-package-versions', () => {
+  // return promise instead of relying on callback
+  // to avoid silent errors and incomplete tasks
+  return componentsWithChanges().then((components) => {
     readArray(components)
       .pipe(componentsToUpdate())
       .pipe(updatePackageJsons())
-      .pipe(gulp.dest('.'))
-      .on('end', done);
+      .pipe(gulp.dest('.'));
   });
 });
 
