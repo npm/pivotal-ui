@@ -1,3 +1,5 @@
+@import "../pui-variables";
+
 /*doc
 ---
 title: Alignment
@@ -59,6 +61,7 @@ take a look at [vertical alignment][vertical_align].
 
 */
 
+
 .txt-c {
   text-align: center !important;
 }
@@ -82,6 +85,319 @@ take a look at [vertical alignment][vertical_align].
 .txt-m {
   vertical-align: middle !important;
 }
+
+/*doc
+---
+title: Responsive Alignment
+name: responsive_alignment
+parent: alignment
+---
+
+Sometimes text alignment changes based upon breakpoints, use one of these classes
+
+```html_example
+<table class="table table-bordered" >
+  <tbody>
+    <tr>
+      <td class="txt-xxs-t">
+        <code>.txt-xxs-t</code>
+      </td>
+      <td class="txt-xxs-m">
+        <code>.txt-xxs-m</code>
+      </td>
+      <td class="txt-xxs-b">
+        <code>.txt-xxs-b</code>
+      </td>
+    </tr>
+    <tr>
+      <td class="txt-xxs-c">
+        <code>.txt-xxs-c</code>
+      </td>
+      <td class="txt-xxs-l">
+        <code>.txt-xxs-l</code>
+      </td>
+      <td class="txt-xxs-r">
+        <code>.txt-xxs-r</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="txt-xs-t">
+        <code>.txt-xs-t</code>
+      </td>
+      <td class="txt-xs-m">
+        <code>.txt-xs-m</code>
+      </td>
+      <td class="txt-xs-b">
+        <code>.txt-xs-b</code>
+      </td>
+    </tr>
+    <tr>
+      <td class="txt-xs-c">
+        <code>.txt-xs-c</code>
+      </td>
+      <td class="txt-xs-l">
+        <code>.txt-xs-l</code>
+      </td>
+      <td class="txt-xs-r">
+        <code>.txt-xs-r</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="txt-sm-t">
+        <code>.txt-sm-t</code>
+      </td>
+      <td class="txt-sm-m">
+        <code>.txt-sm-m</code>
+      </td>
+      <td class="txt-sm-b">
+        <code>.txt-sm-b</code>
+      </td>
+    </tr>
+    <tr>
+      <td class="txt-sm-c">
+        <code>.txt-sm-c</code>
+      </td>
+      <td class="txt-sm-l">
+        <code>.txt-sm-l</code>
+      </td>
+      <td class="txt-sm-r">
+        <code>.txt-sm-r</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="txt-md-t">
+        <code>.txt-md-t</code>
+      </td>
+      <td class="txt-md-m">
+        <code>.txt-md-m</code>
+      </td>
+      <td class="txt-md-b">
+        <code>.txt-md-b</code>
+      </td>
+    </tr>
+    <tr>
+      <td class="txt-md-c">
+        <code>.txt-md-c</code>
+      </td>
+      <td class="txt-md-l">
+        <code>.txt-md-l</code>
+      </td>
+      <td class="txt-md-r">
+        <code>.txt-md-r</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="txt-lg-t">
+        <code>.txt-lg-t</code>
+      </td>
+      <td class="txt-lg-m">
+        <code>.txt-lg-m</code>
+      </td>
+      <td class="txt-lg-b">
+        <code>.txt-lg-b</code>
+      </td>
+    </tr>
+    <tr>
+      <td class="txt-lg-c">
+        <code>.txt-lg-c</code>
+      </td>
+      <td class="txt-lg-l">
+        <code>.txt-lg-l</code>
+      </td>
+      <td class="txt-lg-r">
+        <code>.txt-lg-r</code>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="txt-xl-t">
+        <code>.txt-xl-t</code>
+      </td>
+      <td class="txt-xl-m">
+        <code>.txt-xl-m</code>
+      </td>
+      <td class="txt-xl-b">
+        <code>.txt-xl-b</code>
+      </td>
+    </tr>
+    <tr>
+      <td class="txt-xl-c">
+        <code>.txt-xl-c</code>
+      </td>
+      <td class="txt-xl-l">
+        <code>.txt-xl-l</code>
+      </td>
+      <td class="txt-xl-r">
+        <code>.txt-xl-r</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
+*/
+
+// Table alignment
+
+@media (min-width: $screen-xxs-min) {
+  .txt-xxs-c {
+    text-align: center !important;
+  }
+
+  .txt-xxs-l {
+    text-align: left !important;
+  }
+
+  .txt-xxs-r {
+    text-align: right !important;
+  }
+
+  .txt-xxs-t {
+    vertical-align: top !important;
+  }
+
+  .txt-xxs-b {
+    vertical-align: bottom !important;
+  }
+
+  .txt-xxs-m {
+    vertical-align: middle !important;
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .txt-xs-c {
+    text-align: center !important;
+  }
+
+  .txt-xs-l {
+    text-align: left !important;
+  }
+
+  .txt-xs-r {
+    text-align: right !important;
+  }
+
+  .txt-xs-t {
+    vertical-align: top !important;
+  }
+
+  .txt-xs-b {
+    vertical-align: bottom !important;
+  }
+
+  .txt-xs-m {
+    vertical-align: middle !important;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .txt-sm-c {
+    text-align: center !important;
+  }
+
+  .txt-sm-l {
+    text-align: left !important;
+  }
+
+  .txt-sm-r {
+    text-align: right !important;
+  }
+
+  .txt-sm-t {
+    vertical-align: top !important;
+  }
+
+  .txt-sm-b {
+    vertical-align: bottom !important;
+  }
+
+  .txt-sm-m {
+    vertical-align: middle !important;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .txt-md-c {
+    text-align: center !important;
+  }
+
+  .txt-md-l {
+    text-align: left !important;
+  }
+
+  .txt-md-r {
+    text-align: right !important;
+  }
+
+  .txt-md-t {
+    vertical-align: top !important;
+  }
+
+  .txt-md-b {
+    vertical-align: bottom !important;
+  }
+
+  .txt-md-m {
+    vertical-align: middle !important;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .txt-lg-c {
+    text-align: center !important;
+  }
+
+  .txt-lg-l {
+    text-align: left !important;
+  }
+
+  .txt-lg-r {
+    text-align: right !important;
+  }
+
+  .txt-lg-t {
+    vertical-align: top !important;
+  }
+
+  .txt-lg-b {
+    vertical-align: bottom !important;
+  }
+
+  .txt-lg-m {
+    vertical-align: middle !important;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  .txt-xl-c {
+    text-align: center !important;
+  }
+
+  .txt-xl-l {
+    text-align: left !important;
+  }
+
+  .txt-xl-r {
+    text-align: right !important;
+  }
+
+  .txt-xl-t {
+    vertical-align: top !important;
+  }
+
+  .txt-xl-b {
+    vertical-align: bottom !important;
+  }
+
+  .txt-xl-m {
+    vertical-align: middle !important;
+  }
+}
+
 
 /*doc
 ---
