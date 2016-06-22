@@ -47,6 +47,12 @@ $tabs-active-bg-color: $gray-2;
       </div>
     </div>
     <div class="chip">
+      <div class="chip-color bg-npm-brand-turquoise"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-brand-turquoise</p>
+      </div>
+    </div>
+    <div class="chip">
       <div class="chip-color bg-npm-warm-1"></div>
       <div class="chip-color-name">
         <p class="mvn">npm-warm-1</p>
@@ -566,6 +572,10 @@ $tabs-active-bg-color: $gray-2;
 // brand
 .bg-npm-brand {
   background-color: $npm-brand !important;
+}
+
+.bg-npm-brand-turquoise {
+  background-color: $npm-brand-turquoise !important;
 }
 
 // warm

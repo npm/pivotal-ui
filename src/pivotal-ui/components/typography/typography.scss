@@ -254,9 +254,17 @@ Here's a table of all the color classes.
   </tr>
   <tr>
     <td class="bg-neutral-11"> <p class="type-npm-brand">Type npm brand</p> </td>
+    <td class="bg-neutral-11"> <p class="type-npm-brand">Type npm brand</p> </td>
     <td class="bg-npm-blue-2"> <p class="type-npm-brand">Type npm brand</p> </td>
     <td class="bg-dark-2"> <p class="type-npm-brand">Type npm brand</p> </td>
     <td> <code>.type-npm-brand</code> </td>
+  </tr>
+  <tr>
+    <td class="bg-neutral-11"> <p class="type-npm-brand-turquoise">Type npm brand turquoise</p> </td>
+    <td class="bg-neutral-11"> <p class="type-npm-brand-turquoise">Type npm brand</p> </td>
+    <td class="bg-npm-blue-2"> <p class="type-npm-brand-turquoise">Type npm brand</p> </td>
+    <td class="bg-dark-2"> <p class="type-npm-brand-turquoise">Type npm brand</p> </td>
+    <td> <code>.type-npm-brand-turquoise</code> </td>
   </tr>
   <tr>
     <td class="bg-neutral-11"> <p class="type-npm-warm-1">Type npm warm 1</p> </td>
@@ -724,7 +732,7 @@ Here's a table of all the color classes.
 
 // -- brand
 .type-npm-brand { color: $npm-brand !important; }
-
+.type-npm-brand-turquoise { color: $npm-brand-turquoise !important; }
 // -- warm
 
 .type-npm-warm-1 { color: $npm-warm-1 !important; }
