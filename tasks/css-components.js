@@ -49,7 +49,7 @@ gulp.task('css-build-variables-and-mixins-package', function() {
     gulp.src(['PUI_VARIABLES_AND_MIXINS_README.md'])
       .pipe(plugins.rename({basename: 'README'})),
     plugins.file('package.json', JSON.stringify({
-      name: 'pui-css-variables-and-mixins',
+      name: '@npmcorp/pui-css-variables-and-mixins',
       version: require('../package.json').version,
       repository: {
         type: 'git',

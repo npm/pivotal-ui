@@ -8,7 +8,7 @@
 npm install pui-css-variables-and-mixins
 ```
 
-After installing, the files will be located in the `node_modules/pui-css-variables-and-mixins/` directory
+After installing, the files will be located in the `node_modules/@npmcorp/pui-css-variables-and-mixins/` directory
 
 
 *****************************************
