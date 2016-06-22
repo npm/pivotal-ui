@@ -47,6 +47,27 @@ $tabs-active-bg-color: $gray-2;
       </div>
     </div>
     <div class="chip">
+      <div class="chip-color bg-npm-brand-turquoise"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-brand-turquoise</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-brand-yellow-1"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-brand-yellow</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-brand-yellow-2"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-brand-yellow-2</p>
+      </div>
+    </div>
+</div>
+
+<div class="color-chip-row">
+    <div class="chip">
       <div class="chip-color bg-npm-warm-1"></div>
       <div class="chip-color-name">
         <p class="mvn">npm-warm-1</p>
@@ -84,6 +105,12 @@ $tabs-active-bg-color: $gray-2;
       <div class="chip-color bg-npm-blue-3"></div>
       <div class="chip-color-name">
         <p class="mvn">npm-blue-3</p>
+      </div>
+    </div>
+    <div class="chip">
+      <div class="chip-color bg-npm-blue-4"></div>
+      <div class="chip-color-name">
+        <p class="mvn">npm-blue-4</p>
       </div>
     </div>
 </div>
@@ -490,24 +517,6 @@ $tabs-active-bg-color: $gray-2;
         <p class="mvn">warn-3</p>
       </div>
     </div>
-    <div class="chip">
-      <div class="chip-color bg-warn-4"></div>
-      <div class="chip-color-name">
-        <p class="mvn">warn-4</p>
-      </div>
-    </div>
-    <div class="chip">
-      <div class="chip-color bg-warn-5"></div>
-      <div class="chip-color-name">
-        <p class="mvn">warn-5</p>
-      </div>
-    </div>
-    <div class="chip">
-      <div class="chip-color bg-warn-6"></div>
-      <div class="chip-color-name">
-        <p class="mvn">warn-6</p>
-      </div>
-    </div>
     <div class="chip"></div>
     <div class="chip"></div>
     <div class="chip"></div>
@@ -568,6 +577,20 @@ $tabs-active-bg-color: $gray-2;
   background-color: $npm-brand !important;
 }
 
+.bg-npm-brand-turquoise {
+  background-color: $npm-brand-turquoise !important;
+}
+
+.bg-npm-brand-yellow-1 {
+  background-color: $npm-brand-yellow-1 !important;
+}
+
+.bg-npm-brand-yellow-2 {
+  background-color: $npm-brand-yellow-2 !important;
+}
+
+
+
 // warm
 .bg-npm-warm-1 {
   background-color: $npm-warm-1 !important;
@@ -593,6 +616,10 @@ $tabs-active-bg-color: $gray-2;
 
 .bg-npm-blue-3 {
   background-color: $npm-blue-3 !important;
+}
+
+.bg-npm-blue-4 {
+  background-color: $npm-blue-4 !important;
 }
 
 // pastels
@@ -843,17 +870,6 @@ $tabs-active-bg-color: $gray-2;
   background-color: $warn-3 !important;
 }
 
-.bg-warn-4{
-  background-color: $warn-4 !important;
-}
-
-.bg-warn-5{
-  background-color: $warn-5 !important;
-}
-
-.bg-warn-6{
-  background-color: $warn-6 !important;
-}
 
 // Greens
 .bg-success-1{

@@ -17,11 +17,13 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 
 // brand
 $npm-brand: #cb3837;
+$npm-brand-turquoise: #35c7c7;
+
 
 // warm
 
-$npm-warm-1: #B03489;
-$npm-warm-2: #F05759;
+$npm-warm-1: #EA74F4;
+$npm-warm-2: #FE7570;
 $npm-warm-3: #f09233;
 
 // blue
@@ -29,6 +31,8 @@ $npm-warm-3: #f09233;
 $npm-blue-1: #166B8A;
 $npm-blue-2: #2a79a7;
 $npm-blue-3: #1A8BCB; // also use for #1d80b9
+$npm-blue-4: #DBECEC;
+
 
 // pastels
 
@@ -69,17 +73,18 @@ $teal-11: #D9FFFC;
 // Grays - use these rather than the bootstrap grays
 // -------------------------
 
-$gray-1: #282828;
-$gray-2: #424242;
-$gray-3: #686868;
-$gray-4: #8d8e8e;
-$gray-5: #b4b4b4;
-$gray-6: #c3c5c7;
-$gray-7: #d4d9d9;
-$gray-8: #e0e4e5;
-$gray-9: #ecefef;
-$gray-10: #F8F8F8;
-$gray-11: white;
+$gray-0: #000000;
+$gray-1: lighten($gray-0, 10%);
+$gray-2: lighten($gray-0, 15%);
+$gray-3: lighten($gray-0, 25%);
+$gray-4: lighten($gray-0, 40%);
+$gray-5: lighten($gray-0, 50%);
+$gray-6: lighten($gray-0, 60%);
+$gray-7: lighten($gray-0, 70%);
+$gray-8: lighten($gray-0, 80%);
+$gray-9: lighten($gray-0, 90%);
+$gray-10: lighten($gray-0, 95%);
+$gray-11: lighten($gray-0, 100%);
 
 // Shadows
 // -------------------------
@@ -142,11 +147,13 @@ $green-6: #EDFFD9;
 // Yellow
 // -------------------------
 $yellow-1: #806613;
-$yellow-2: #997B17;
-$yellow-3: #B38F1B;
-$yellow-4: #CCA41F;
-$yellow-5: #E6B822;
-$yellow-6: #FFF6D9;
+$yellow-2: #B38F1B;
+$yellow-3: #FFF6D9;
+$yellow-4: #fcef00;
+$yellow-5: #E0CA00;
+
+$npm-brand-yellow-1: $yellow-4;
+$npm-brand-yellow-2: $yellow-5;
 
 // Orange
 // -------------------------
@@ -242,9 +249,6 @@ $error-6: $red-6;
 $warn-1: $yellow-1;
 $warn-2: $yellow-2;
 $warn-3: $yellow-3;
-$warn-4: $yellow-4;
-$warn-5: $yellow-5;
-$warn-6: $yellow-6;
 
 // Success
 // -------------------------
@@ -625,7 +629,7 @@ $notifications-bell-default-size:     $font-size-h2;
 $notifications-bell-default-color:    $neutral-6;
 $notifications-badge-default-bg:      $brand-8;
 $notifications-badge-font-weight:     900;
-$notifications-alert-default-color:   $warn-3;
+$notifications-alert-default-color:   $warn-2;
 
 
 // COMPONENT VARIABLES
@@ -960,7 +964,7 @@ $state-info-bg:                  #e2df80;
 $state-info-border:              #c0b84d;
 
 $state-warning-text:             $warn-1; // bootstrap uses this for both border and text color
-$state-warning-bg:               $warn-6;
+$state-warning-bg:               $warn-3;
 $state-warning-border:           $warn-1;
 
 $state-danger-text:              $error-4; // bootstrap uses this for both border and text color
@@ -1057,7 +1061,7 @@ $alert-info-bg:               $accent-6 !default;
 $alert-info-text:             $accent-2;
 $alert-info-border:           #8AC0C4 !default;
 
-$alert-warning-bg:            $warn-6;
+$alert-warning-bg:            $warn-3;
 $alert-warning-text:          $warn-1;
 $alert-warning-border:        $warn-1;
 
@@ -1274,7 +1278,7 @@ $close-text-shadow:           0 1px 0 #fff !default;
 // ------------------------
 $code-color:                  null !default;
 $code-background-dark:        $dark-2;
-$code-color-dark:             $warn-3;
+$code-color-dark:             $warn-2;
 $code-bg:                     $neutral-10 !default;
 $code-border-radius:          3px;
 $code-chrome-border-radius:   6px;

@@ -259,6 +259,12 @@ Here's a table of all the color classes.
     <td> <code>.type-npm-brand</code> </td>
   </tr>
   <tr>
+    <td class="bg-neutral-11"> <p class="type-npm-brand-turquoise">Type npm brand turquoise</p> </td>
+    <td class="bg-npm-blue-2"> <p class="type-npm-brand-turquoise">Type npm brand</p> </td>
+    <td class="bg-dark-2"> <p class="type-npm-brand-turquoise">Type npm brand</p> </td>
+    <td> <code>.type-npm-brand-turquoise</code> </td>
+  </tr>
+  <tr>
     <td class="bg-neutral-11"> <p class="type-npm-warm-1">Type npm warm 1</p> </td>
     <td class="bg-npm-blue-2"> <p class="type-npm-warm-1">Type npm warm 1</p> </td>
     <td class="bg-dark-2"> <p class="type-npm-warm-1">Type npm warm 1</p> </td>
@@ -293,6 +299,12 @@ Here's a table of all the color classes.
     <td class="bg-npm-blue-2"> <p class="type-npm-blue-3">Type npm Blue 3</p> </td>
     <td class="bg-dark-2"> <p class="type-npm-blue-3">Type npm Blue 3</p> </td>
     <td> <code>.type-npm-blue-3</code> </td>
+  </tr>
+  <tr>
+    <td class="bg-neutral-11"> <p class="type-npm-blue-4">Type npm Blue 4</p> </td>
+    <td class="bg-npm-blue-2"> <p class="type-npm-blue-4">Type npm Blue 4</p> </td>
+    <td class="bg-dark-2"> <p class="type-npm-blue-4">Type npm Blue 4</p> </td>
+    <td> <code>.type-npm-blue-4</code> </td>
   </tr>
   <tr>
     <td class="bg-neutral-11"> <p class="type-npm-pastel-1">Type npm pastel 1</p> </td>
@@ -698,24 +710,6 @@ Here's a table of all the color classes.
     <td class="bg-dark-2"> <p class="type-warn-3">Type warn 3</p> </td>
     <td> <code>.type-warn-3</code> </td>
   </tr>
-  <tr>
-    <td class="bg-neutral-11"> <p class="type-warn-4">Type warn 4</p> </td>
-    <td class="bg-npm-blue-2"> <p class="type-warn-4">Type warn 4</p> </td>
-    <td class="bg-dark-2"> <p class="type-warn-4">Type warn 4</p> </td>
-    <td> <code>.type-warn-4</code> </td>
-  </tr>
-  <tr>
-    <td class="bg-neutral-11"> <p class="type-warn-5">Type warn 5</p> </td>
-    <td class="bg-npm-blue-2"> <p class="type-warn-5">Type warn 5</p> </td>
-    <td class="bg-dark-2"> <p class="type-warn-5">Type warn 5</p> </td>
-    <td> <code>.type-warn-5</code> </td>
-  </tr>
-  <tr>
-    <td class="bg-neutral-11"> <p class="type-warn-6">Type warn 6</p> </td>
-    <td class="bg-npm-blue-2"> <p class="type-warn-6">Type warn 6</p> </td>
-    <td class="bg-dark-2"> <p class="type-warn-6">Type warn 6</p> </td>
-    <td> <code>.type-warn-6</code> </td>
-  </tr>
 </table>
 
 */
@@ -724,7 +718,7 @@ Here's a table of all the color classes.
 
 // -- brand
 .type-npm-brand { color: $npm-brand !important; }
-
+.type-npm-brand-turquoise { color: $npm-brand-turquoise !important; }
 // -- warm
 
 .type-npm-warm-1 { color: $npm-warm-1 !important; }
@@ -736,6 +730,7 @@ Here's a table of all the color classes.
 .type-npm-blue-1 { color: $npm-blue-1 !important; }
 .type-npm-blue-2 { color: $npm-blue-2 !important; }
 .type-npm-blue-3 { color: $npm-blue-3 !important; }
+.type-npm-blue-4 { color: $npm-blue-4 !important; }
 
 // -- pastels
 
@@ -822,9 +817,6 @@ Here's a table of all the color classes.
 .type-warn-1 { color: $warn-1 !important; }
 .type-warn-2 { color: $warn-2 !important; }
 .type-warn-3 { color: $warn-3 !important; }
-.type-warn-4 { color: $warn-4 !important; }
-.type-warn-5 { color: $warn-5 !important; }
-.type-warn-6 { color: $warn-6 !important; }
 
 // green type
 
