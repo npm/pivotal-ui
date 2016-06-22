@@ -706,24 +706,6 @@ Here's a table of all the color classes.
     <td class="bg-dark-2"> <p class="type-warn-3">Type warn 3</p> </td>
     <td> <code>.type-warn-3</code> </td>
   </tr>
-  <tr>
-    <td class="bg-neutral-11"> <p class="type-warn-4">Type warn 4</p> </td>
-    <td class="bg-npm-blue-2"> <p class="type-warn-4">Type warn 4</p> </td>
-    <td class="bg-dark-2"> <p class="type-warn-4">Type warn 4</p> </td>
-    <td> <code>.type-warn-4</code> </td>
-  </tr>
-  <tr>
-    <td class="bg-neutral-11"> <p class="type-warn-5">Type warn 5</p> </td>
-    <td class="bg-npm-blue-2"> <p class="type-warn-5">Type warn 5</p> </td>
-    <td class="bg-dark-2"> <p class="type-warn-5">Type warn 5</p> </td>
-    <td> <code>.type-warn-5</code> </td>
-  </tr>
-  <tr>
-    <td class="bg-neutral-11"> <p class="type-warn-6">Type warn 6</p> </td>
-    <td class="bg-npm-blue-2"> <p class="type-warn-6">Type warn 6</p> </td>
-    <td class="bg-dark-2"> <p class="type-warn-6">Type warn 6</p> </td>
-    <td> <code>.type-warn-6</code> </td>
-  </tr>
 </table>
 
 */
@@ -830,9 +812,6 @@ Here's a table of all the color classes.
 .type-warn-1 { color: $warn-1 !important; }
 .type-warn-2 { color: $warn-2 !important; }
 .type-warn-3 { color: $warn-3 !important; }
-.type-warn-4 { color: $warn-4 !important; }
-.type-warn-5 { color: $warn-5 !important; }
-.type-warn-6 { color: $warn-6 !important; }
 
 // green type
 

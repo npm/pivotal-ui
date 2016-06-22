@@ -146,11 +146,13 @@ $green-6: #EDFFD9;
 // Yellow
 // -------------------------
 $yellow-1: #806613;
-$yellow-2: #997B17;
-$yellow-3: #B38F1B;
-$yellow-4: #CCA41F;
-$yellow-5: #E6B822;
-$yellow-6: #FFF6D9;
+$yellow-2: #B38F1B;
+$yellow-3: #FFF6D9;
+$yellow-4: #fcef00;
+$yellow-5: #E0CA00;
+
+$npm-brand-yellow-1: $yellow-4;
+$npm-brand-yellow-2: $yellow-5;
 
 // Orange
 // -------------------------
@@ -246,9 +248,6 @@ $error-6: $red-6;
 $warn-1: $yellow-1;
 $warn-2: $yellow-2;
 $warn-3: $yellow-3;
-$warn-4: $yellow-4;
-$warn-5: $yellow-5;
-$warn-6: $yellow-6;
 
 // Success
 // -------------------------
@@ -629,7 +628,7 @@ $notifications-bell-default-size:     $font-size-h2;
 $notifications-bell-default-color:    $neutral-6;
 $notifications-badge-default-bg:      $brand-8;
 $notifications-badge-font-weight:     900;
-$notifications-alert-default-color:   $warn-3;
+$notifications-alert-default-color:   $warn-2;
 
 
 // COMPONENT VARIABLES
@@ -964,7 +963,7 @@ $state-info-bg:                  #e2df80;
 $state-info-border:              #c0b84d;
 
 $state-warning-text:             $warn-1; // bootstrap uses this for both border and text color
-$state-warning-bg:               $warn-6;
+$state-warning-bg:               $warn-3;
 $state-warning-border:           $warn-1;
 
 $state-danger-text:              $error-4; // bootstrap uses this for both border and text color
@@ -1061,7 +1060,7 @@ $alert-info-bg:               $accent-6 !default;
 $alert-info-text:             $accent-2;
 $alert-info-border:           #8AC0C4 !default;
 
-$alert-warning-bg:            $warn-6;
+$alert-warning-bg:            $warn-3;
 $alert-warning-text:          $warn-1;
 $alert-warning-border:        $warn-1;
 
@@ -1278,7 +1277,7 @@ $close-text-shadow:           0 1px 0 #fff !default;
 // ------------------------
 $code-color:                  null !default;
 $code-background-dark:        $dark-2;
-$code-color-dark:             $warn-3;
+$code-color-dark:             $warn-2;
 $code-bg:                     $neutral-10 !default;
 $code-border-radius:          3px;
 $code-chrome-border-radius:   6px;
