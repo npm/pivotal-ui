@@ -303,6 +303,12 @@ Here's a table of all the color classes.
     <td> <code>.type-npm-blue-3</code> </td>
   </tr>
   <tr>
+    <td class="bg-neutral-11"> <p class="type-npm-blue-4">Type npm Blue 4</p> </td>
+    <td class="bg-npm-blue-2"> <p class="type-npm-blue-4">Type npm Blue 4</p> </td>
+    <td class="bg-dark-2"> <p class="type-npm-blue-4">Type npm Blue 4</p> </td>
+    <td> <code>.type-npm-blue-4</code> </td>
+  </tr>
+  <tr>
     <td class="bg-neutral-11"> <p class="type-npm-pastel-1">Type npm pastel 1</p> </td>
     <td class="bg-npm-blue-2"> <p class="type-npm-pastel-1">Type npm pastel 1</p> </td>
     <td class="bg-dark-2"> <p class="type-npm-pastel-1">Type npm pastel 1</p> </td>
@@ -726,6 +732,7 @@ Here's a table of all the color classes.
 .type-npm-blue-1 { color: $npm-blue-1 !important; }
 .type-npm-blue-2 { color: $npm-blue-2 !important; }
 .type-npm-blue-3 { color: $npm-blue-3 !important; }
+.type-npm-blue-4 { color: $npm-blue-4 !important; }
 
 // -- pastels
 
