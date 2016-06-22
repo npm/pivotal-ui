@@ -69,17 +69,18 @@ $teal-11: #D9FFFC;
 // Grays - use these rather than the bootstrap grays
 // -------------------------
 
-$gray-1: #282828;
-$gray-2: #424242;
-$gray-3: #686868;
-$gray-4: #8d8e8e;
-$gray-5: #b4b4b4;
-$gray-6: #c3c5c7;
-$gray-7: #d4d9d9;
-$gray-8: #e0e4e5;
-$gray-9: #ecefef;
-$gray-10: #F8F8F8;
-$gray-11: white;
+$gray-0: #000000;
+$gray-1: lighten($gray-0, 10%);
+$gray-2: lighten($gray-0, 15%);
+$gray-3: lighten($gray-0, 25%);
+$gray-4: lighten($gray-0, 40%);
+$gray-5: lighten($gray-0, 50%);
+$gray-6: lighten($gray-0, 60%);
+$gray-7: lighten($gray-0, 70%);
+$gray-8: lighten($gray-0, 80%);
+$gray-9: lighten($gray-0, 90%);
+$gray-10: lighten($gray-0, 95%);
+$gray-11: lighten($gray-0, 100%);
 
 // Shadows
 // -------------------------
