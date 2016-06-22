@@ -1,3 +1,13 @@
+<a name="5.3.0"></a>
+# 5.3.0 (2016-06-22)
+
+
+### Features
+
+* **alignment:** Add responsive text alignment ([279937c](https://github.com/pivotal-cf/pivotal-ui/commit/279937c))
+
+
+
 <a name="5.2.0"></a>
 # 5.2.0 (2016-06-22)
 
@@ -22,15 +32,5 @@
 * **colors:** Any use of prior yellow colors as background or text
 colors that were not already variables referenced elsewhere (see:
 alerts) will be broken with this change ([39951f0](https://github.com/pivotal-cf/pivotal-ui/commits/39951f0))
-
-
-<a name="5.1.1"></a>
-## 5.1.1 (2016-06-20)
-
-
-### Bug Fixes
-
-* **forms:** Update npm-user-validate to 0.1.5 to get proper length limit ([9fbbb00](https://github.com/pivotal-cf/pivotal-ui/commit/9fbbb00))
-
 
 
