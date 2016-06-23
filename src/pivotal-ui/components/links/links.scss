@@ -34,6 +34,7 @@ Link                                                                            
 --------------------------------------------------------------------------------------------------------------    | ----------------------------    | -----------
 <a class="link-text" href="http://bit.ly/1ulOAW7" target="_blank">default link</a>                                | `link-text`                     | Important links
 <a class="link-text link-alt" href="http://bit.ly/1ulOAW7" target="_blank">alternate link</a>                     | `link-text link-alt`            | Alternate link color
+<a class="link-text link-alt-2" href="http://bit.ly/1ulOAW7" target="_blank">alternate link 2</a>                 | `link-text link-alt-2`          | Alternate link color 2
 <a class="link-text link-lowlight" href="http://bit.ly/1ulOAW7" target="_blank">lowlight link</a>                 | `link-text link-lowlight`       | Less important links
 <a class="link-text link-inverse bg-dark-1" href="http://bit.ly/1ulOAW7" target="_blank">inverse link</a>         | `link-text link-inverse`        | I go on a non-white background
 
@@ -80,6 +81,18 @@ a{
 
   &:active, &.active {
     color: darken($link-alt-color, 6%);
+  }
+}
+
+.link-alt-2 {
+  color: $link-alt-2-color;
+
+  &:hover, &:focus {
+    color: lighten($link-alt-2-color, 6%);
+  }
+
+  &:active, &.active {
+    color: darken($link-alt-2-color, 6%);
   }
 }
 
