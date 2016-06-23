@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='pivotal-ui.css' rel='stylesheet'>
+    <script src="pivotal-ui.js"></script>
+  </head>
+  <body><header class="logged-in   ">
+  <!-- logo -->
+  <div class="header-item brand-container">
+    <div class="logo-container" id='npm-logo'>
+      <a href="/"><svg viewBox="0 0 18 7">
+	<path fill="#CB3837" d="M0,0v6h5v1h4v-1h9v-6"/>
+	<path fill="#FFF" d="M1,1v4h2v-3h1v3h1v-4h1v5h2v-4h1v2h-1v1h2v-4h1v4h2v-3h1v3h1v-3h1v3h1v-4"/>
+</svg></a>
+    </div>
+  </div>
+  <!-- /logo -->
+
+  <!-- search -->
+  <div class="header-item header-search-container">
+    <form class="site-search" id="npm-search" action="/search" method="get" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+      <meta itemprop="target" content="/search?q={q}">
+      <div id="site-search-container">
+          <input name="q" value="" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" />
+      </div>
+      <button tabindex="2" type="submit">
+        <span class="a11y-only">Search</span>
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
+    <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"/>
+    <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"/>
+</svg>
+      </button>
+    </form>
+  </div>
+
+
+  <!-- menu 1 -->
+  <div class="header-item user-info-container">
+    <div class="user-info">
+        <div class="drop-down-menu-container" role="navigation">
+
+          <a id="user-info-drop-down-menu-toggle" class="drop-down-menu-toggle" href="#user-info-menu" role="button" aria-haspopup="true" aria-owns="user-info-menu"><span class="a11y-only">Toggle User Menu</span>
+            <span class="user-info-salutation" data-user-name="rockbot" data-is-paid="">Greetings, <span id="salutation-username">rockbot</span></span>
+            <img alt="" src="https://s.gravatar.com/avatar/583a0cfd3e0ec851166c5c6fa5e506a5?size&#x3D;50&amp;default&#x3D;retr" />
+            <svg viewBox="0 0 10 6" class="header-drop-down-icon">
+    <path fill="currentColor" d="M 5 3.2l3.5-3.2 1.5 1.4-5 4.6-5-4.6 1.5-1.4 3.5 3.2z"/>
+</svg>
+          </a>
+
+          <div role="menu" id="user-info-menu" class="drop-down-menu" aria-labelledby="user-info-drop-down-menu-toggle">
+            <div class="drop-down-menu-section">
+              <ul>
+                <li><a href="/~rockbot">Profile</a></li>
+                <li><a href="/profile-edit">Personal Info</a></li>
+                <li><a href="/settings/billing">Billing</a></li>
+                <li><a href="/settings/tokens">Tokens</a></li>
+                <li><form method="POST" action="/logout"><button type="submit" class="btn-link">Logout</button></form></li>
+              </ul>
+            </div> <!-- .drop-down-menu-section -->
+          </div> <!-- .drop-down-menu -->
+        </div> <!-- .drop-down-menu-container -->
+    </div> <!-- .user-info -->
+  </div>
+  <!-- /menu 1 -->
+
+  <!-- menu 2 -->
+  <div class="header-item header-nav-menu-container">
+    <a href="#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">node package manager</a>
+
+    <div class="nav-menu-container" role="navigation">
+      <a class="nav-toggle drop-down-menu-toggle" href="#product-navigation"><span class="a11y-only">Toggle Navigation</span>
+        <svg viewBox="0 0 44 44">
+    <rect x="4" y="12" fill="currentColor" width="36" height="2"/>
+    <rect x="4" y="20" fill="currentColor" width="36" height="2"/>
+    <rect x="4" y="28" fill="currentColor" width="36" height="2"/>
+</svg>
+      </a>
+
+
+      <div class="drop-down-menu-container" role="menu">
+        <nav id="product-navigation" class="product-navigation drop-down-menu">
+          <ul class="drop-down-menu-section products-list">
+            <li><a id="nav-enterprise-link" href="/npm/enterprise">npm Enterprise</a></li>
+            <li><a id="nav-featurs-link" href="/features" data-event-trigger="click" data-event-name="features-nav-link">features</a></li>
+            <li><a id="nav-pricing-link" href="/pricing">pricing</a></li>
+            <li><a id="nav-docs-link" href="https://docs.npmjs.com">documentation</a></li>
+            <li><a id="nav-support-link" href="/support">support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- /menu 2 -->
+
+
+
+</header>
+</body>
+</html>
