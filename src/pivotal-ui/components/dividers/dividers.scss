@@ -22,6 +22,10 @@ Dividers draw horizontal lines between different content groupings.
 <hr class="divider-alternate-1"/>
 <hr class="divider-alternate-2"/>
 <hr class="divider-alternate-3"/>
+
+<hr class="divider-alternate-turquoise-1"/>
+<hr class="divider-alternate-turquoise-2"/>
+<hr class="divider-alternate-turquoise-3"/>
 ```
 
 ```html_inverse_example
@@ -45,6 +49,21 @@ Dividers draw horizontal lines between different content groupings.
 
 .divider-alternate-3 {
   border: 3px solid $divider-alternate-color;
+  border-width: 3px 0 0 0;
+}
+
+.divider-alternate-turquoise-1 {
+  border: 1px solid $divider-alternate-turquoise-color;
+  border-width: 1px 0 0 0;
+}
+
+.divider-alternate-turquoise-2 {
+  border: 2px solid $divider-alternate-turquoise-color;
+  border-width: 2px 0 0 0;
+}
+
+.divider-alternate-turquoise-3 {
+  border: 3px solid $divider-alternate-turquoise-color;
   border-width: 3px 0 0 0;
 }
 
