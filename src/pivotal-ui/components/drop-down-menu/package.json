@@ -3,9 +3,9 @@
   "main": "drop-down-menu.js",
   "dependencies": {
     "jquery": "^2.1.4",
-    "@npmcorp/pui-css-typography": "5.2.0",
-    "@npmcorp/pui-css-links": "5.2.0",
-    "@npmcorp/pui-css-buttons": "5.2.0"
+    "@npmcorp/pui-css-typography": "5.4.0",
+    "@npmcorp/pui-css-links": "5.4.0",
+    "@npmcorp/pui-css-buttons": "5.4.0"
   },
-  "version": "5.2.0"
+  "version": "5.4.0"
 }
