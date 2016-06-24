@@ -24,6 +24,7 @@ Class                 | Description
 `.table-hover`        | Adds a light blue background color to table rows when the user hovers over them (use to indicate clickability)
 `.table-striped`      | Applies zebra striping to a table.
 `.table-divided`      | Adds vertical dividers to tables.
+`.table-borderless`   | Removes all borders from a table
 
 You can use grid column classes on `th` and `td` elements. See key-value table for example.
 
@@ -185,6 +186,63 @@ Another table style we intend to use.
     }
   }
 }
+
+/*doc
+---
+title: Borderless
+name: 3_table_borderless
+parent: table
+---
+
+A borderless table, for those times where you don't want a border
+
+```html_example
+<div class="panel">
+  <div class="panel-body pan">
+    <table class="table table-borderless man">
+      <thead>
+        <tr>
+          <th>Wombat Relative</th>
+          <th>Cuteness Index</th>
+          <th>Relatedness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Numbat</td>
+          <td>2</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>Kangaroo</td>
+          <td>91</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Wallaby</td>
+          <td>31</td>
+          <td>55</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```
+
+*/
+
+.table-borderless,
+.table-borderless tr,
+.table-borderless td,
+.table-borderless > thead,
+.table-borderless > thead > tr,
+.table-borderless > thead > tr > td,
+.table-borderless > tbody,
+.table-borderless > tbody > tr,
+.table-borderless > tbody > tr > td {
+  border: 0;
+}
+
 
 /*doc
 ---
