@@ -1423,7 +1423,7 @@ The link updater input updates a link underneath the input with the information 
 <div class="form-group link-updater-container">
   <label for="username">Username</label>
   <div class="link-updater">
-    <input name="username" id="username" class="form-control">
+    <input name="username" id="username" class="form-control" required>
     <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
   </div>
 </div>
@@ -1459,6 +1459,101 @@ For an organization name input:
   p {
     color: $form-label-color;
     word-break: break-all;
+  }
+
+  &.has-error {
+    margin-bottom: 35px;
+  }
+
+  .has-error {
+    position: absolute;
+    bottom: -35px;
+  }
+}
+
+/*doc
+---
+title: Constraint Validation
+name: form_constraint_validation
+parent: 00_forms
+---
+
+Modern browsers understand when a form is incorrectly submitted. The constraint
+validation API allows use to take advantage of this to style our own forms in
+the way we see fit.
+
+```html_example
+<form novalidate="" action="/signup" method="post" role="form">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <div class="input-wrapper">
+          <label for="firstname">First Name</label>
+          <input id="firstname" name="firstname" class="form-control" autocorrect="off" required="" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <div class="input-wrapper">
+          <label for="lastname">Last Name</label>
+          <input id="lastname" name="lastname" class="form-control" autocorrect="off" required="" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-wrapper">
+      <label for="email">Email</label>
+      <input class="form-control" id="email" name="email" autocorrect="off" autocapitalize="off" required="" type="email">
+    </div>
+  </div>
+
+  <div class="form-group link-updater-container">
+    <label for="name">Username</label>
+    <div class="link-updater input-wrapper">
+      <input class="form-control" id="name" name="name" placeholder="username" required="" type="text">
+      <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-wrapper">
+      <label for="password">Password</label>
+      <input class="form-control" id="password" name="password" required="" type="password">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="checkbox input-wrapper">
+      <label class="em-high h6 mtn">
+        <input id="npmweekly" name="npmweekly" checked="checked" type="checkbox">Sign up for the <a href="http://us9.campaign-archive2.com/home/?u=077dfd41302a71310cef619e5&amp;id=e17fe5d778">npm Weekly</a>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="checkbox input-wrapper">
+      <label class="em-high h6 mtn">
+        <input name="eula-agreement" id="eula-agreement-cbx" required="" type="checkbox">I agree to the <a href="/policies/terms">End User License Agreement</a> and the <a href="/policies/privacy">Privacy Policy</a>.
+        <p class="mtm h5 em-low">Some account related emails will be sent, but your email will never be shared.</p>
+      </label>
+    </div>
+  </div>
+  <p class="txt-c">
+      <input name="done" value="" type="hidden">
+      <button type="submit" class="btn btn-highlight-1">Create an Account</button>
+  </p>
+</form>
+```
+*/
+
+.form-group {
+  transition: margin-bottom .1s;
+
+  .input-wrapper {
+    position: relative;
   }
 
   &.has-error {
