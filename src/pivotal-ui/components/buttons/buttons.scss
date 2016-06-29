@@ -233,3 +233,21 @@ size modifier class for the desired size.
   // line-height: ensure even-numbered height of button next to large input
   @include pui-button-size($btn-lg-padding, $btn-lg-font-size, $btn-lg-line-height, $btn-lg-border-radius);
 }
+
+/*doc
+---
+title: Listening Button
+name: button_listening
+parent: button
+---
+
+Sometimes a button just wants to hear an event calling for it.
+
+```html_example
+<button class="btn btn-default" data-button-listening="FormInput:input" data-button-type="disable" data-username="jeff">Disable Me by typing jeff into the input below</button>
+
+<input type="text" data-form-input-event="input" class="form-control" />
+
+```
+
+*/
