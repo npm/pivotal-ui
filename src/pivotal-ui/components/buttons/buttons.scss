@@ -236,17 +236,18 @@ size modifier class for the desired size.
 
 /*doc
 ---
-title: Listening Button
+title: Orgname Listening Button
 name: button_listening
 parent: button
 ---
 
-Sometimes a button just wants to hear an event calling for it.
+A pretty specific one-off component, this button listens for an input with the name `orgScope`, when that input's
+value hits the username
 
 ```html_example
-<button class="btn btn-default" data-button-listening="FormInput:input" data-button-type="disable" data-username="jeff">Disable Me by typing jeff into the input below</button>
+<button class="btn btn-default" data-button-type="disable-on-matching-username" data-username="jeff">Disable Me by typing jeff into the input below</button>
 
-<input type="text" data-form-input-event="input" class="form-control" />
+<input type="text" name="orgScope" class="form-control" />
 
 ```
 
