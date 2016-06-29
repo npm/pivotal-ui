@@ -1,14 +1,21 @@
 var upgradePanel;
+
 var handleInputChangeForUpgrade = function handleInputChangeForUpgrade(e){
-  if(e.detail.currentValue === upgradePanel.getAttribute('data-username')){
-    //jQuery because using bootstrap collapse functionality
-    $(upgradePanel).collapse('show');
-    document.removeEventListener('FormInput:input', handleInputChangeForUpgrade);
+  if(!upgradePanel) {
+    return;
+  }
+  var input = e && e.target;
+
+  if (input && input.name === 'orgScope') {
+    if (input.value === upgradePanel.getAttribute("data-username")) {
+      $(upgradePanel).collapse('show');
+      document.removeEventListener('input', handleInputChangeForUpgrade);
+    }
   }
 };
 
 document.addEventListener('DOMContentLoaded', function(){
-  upgradePanel = document.querySelector("[data-panel-listening='FormInput:input'][data-panel-type='upgrade']");
+  upgradePanel = document.querySelector("[data-panel-type='upgrade-on-matching-username']");
+  document.addEventListener('input', handleInputChangeForUpgrade, false);
 });
 
-document.addEventListener('FormInput:input', handleInputChangeForUpgrade, false);
