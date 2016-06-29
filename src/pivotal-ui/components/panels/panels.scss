@@ -294,3 +294,33 @@ These panels are for the pricing pane.
 .panel-accent-npm-navy-headings { border-top-color: $npm-navy-headings; }
 .panel-accent-npm-navy-text { border-top-color: $npm-navy-text; }
 
+
+/*doc
+---
+title: Listening Panel
+name: panel_listening
+parent: panel
+---
+
+A listening panel is a panel that listens for events and has an action based upon the panel type and the event
+
+Set the event you'd like the panel to listen for with the <code>data-panel-listening</code>, then set the panel
+type with <code>data-panel-type</code>.
+
+Any JS associated with this should reside in src/pivotal-ui/components/panels
+
+For the below example, type 'uber' into the input. The panel should become visible.
+
+```html_example
+<div class="panel panel-basic-accent panel-accent-npm-brand collapse" data-panel-type="upgrade-on-matching-username" data-username="uber">
+  <div class="panel-body pvxl phxxl txt-c">
+    <h4 class="em-low">Want to upgrade <span class="type-npm-brand">uber</span> to an <strong>Organization?</strong></h4>
+    <a class="btn btn-secondary btn-block mvxl" href="/org/transfer-user-name?orgScope=uber">Upgrade</a>
+    <p class="em-low">You'll pick a new username</p>
+  </div>
+</div>
+
+<input type="text" name="orgScope" class="form-control" />
+```
+
+*/

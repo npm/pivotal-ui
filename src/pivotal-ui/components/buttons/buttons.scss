@@ -233,3 +233,22 @@ size modifier class for the desired size.
   // line-height: ensure even-numbered height of button next to large input
   @include pui-button-size($btn-lg-padding, $btn-lg-font-size, $btn-lg-line-height, $btn-lg-border-radius);
 }
+
+/*doc
+---
+title: Orgname Listening Button
+name: button_listening
+parent: button
+---
+
+A pretty specific one-off component, this button listens for an input with the name `orgScope`, when that input's
+value hits the username
+
+```html_example
+<button class="btn btn-default" data-button-type="disable-on-matching-username" data-username="jeff">Disable Me by typing jeff into the input below</button>
+
+<input type="text" name="orgScope" class="form-control" />
+
+```
+
+*/

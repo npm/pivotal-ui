@@ -8,7 +8,7 @@ gulp.task('setup-watchers', (callback) => {
   gulp.watch(['src/pivotal-ui-react/**/*.js'], ['monolith-hologram']);
   gulp.watch(['hologram/**/**'], ['monolith-hologram']);
   gulp.watch(['src/styleguide/*.scss'], ['monolith-styleguide-css']);
-  gulp.watch(['src/styleguide/*.js'], ['monolith-styleguide-assets']);
+  gulp.watch(['src/styleguide/**/*.js'], ['monolith-styleguide-assets']);
   callback();
 });
 
