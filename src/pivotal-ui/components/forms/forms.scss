@@ -1391,7 +1391,7 @@ An input for an npm scope, prompting the user with an @ sign.
 /*pending
 ---
 title: Focus Inputs
-name: fo:rm_focus_input
+name: form_focus_input
 categories:
   - Forms
   - All
@@ -1470,3 +1470,26 @@ For an organization name input:
     bottom: -35px;
   }
 }
+
+/*doc
+---
+title: Bubbling Input
+name: form_input_bubbles
+parent: 00_forms
+---
+
+Bubbling inputs are inputs that bubble events when the input has an event triggered on it
+
+You can activate a bubbling input by adding the data attribute <code>data-form-input-event</code>
+and giving it the event you'd like to bubble on.
+
+```html_example
+
+<input type="text" data-form-input-event="input" class="form-control">
+
+<!-- example of something changing because of this event, see `src/pivotal-ui/javascripts/bubble-input-test.js` -->
+<div class="input-bubble-test"></div>
+```
+
+
+*/
