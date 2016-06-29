@@ -10,6 +10,5 @@ require('@npmcorp/pui-css-drop-down-menu');
 require('@npmcorp/pui-css-forms');
 require('@npmcorp/pui-css-svgeople');
 require('@npmcorp/pui-css-dropdowns');
-require('@npmcorp/pui-css-panels');
-require('@npmcorp/pui-css-buttons');
-require('./bubble-input-test');
+//require('@npmcorp/pui-css-panels');
+//require('@npmcorp/pui-css-buttons');
