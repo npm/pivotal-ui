@@ -1,22 +1,25 @@
-var button;
+var buttons;
 var handleInputChangeForDisable = function handleInputChangeForDiable(e){
-  if(!button){
+  if(!buttons.length){
     return;
   }
   var input = e && e.target;
 
   if (input && input.name === 'orgScope') {
-    if (input.value === button.getAttribute("data-username")) {
-      button.setAttribute("disabled", "disabled");
-    } else {
-      button.removeAttribute("disabled");
+
+    for(var i = 0; i < buttons.length; i++){
+      if (input.value === buttons[i].getAttribute("data-username")) {
+        buttons[i].setAttribute("disabled", "disabled");
+      } else {
+        buttons[i].removeAttribute("disabled");
+      }
     }
   }
 
 };
 
 document.addEventListener('DOMContentLoaded', function(){
-  button = document.querySelector("[data-button-type='disable-on-matching-username']");
+  buttons = document.querySelectorAll("[data-button-type='disable-on-matching-username']");
   document.addEventListener('input', handleInputChangeForDisable, false);
 });
 
