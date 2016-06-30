@@ -3,7 +3,7 @@
   "main": "index.js",
   "dependencies": {
     "@npmcorp/pui-css-bootstrap": "5.4.0",
-    "@npmcorp/pui-css-buttons": "5.8.0"
+    "@npmcorp/pui-css-buttons": "5.8.1"
   },
-  "version": "5.8.0"
+  "version": "5.8.1"
 }

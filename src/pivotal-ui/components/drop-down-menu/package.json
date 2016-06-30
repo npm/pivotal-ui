@@ -5,7 +5,7 @@
     "jquery": "^2.1.4",
     "@npmcorp/pui-css-typography": "5.4.0",
     "@npmcorp/pui-css-links": "5.4.0",
-    "@npmcorp/pui-css-buttons": "5.8.0"
+    "@npmcorp/pui-css-buttons": "5.8.1"
   },
-  "version": "5.8.0"
+  "version": "5.8.1"
 }
