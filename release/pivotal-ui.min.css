@@ -1994,6 +1994,10 @@ p.form-control-static{color:#404040}
 .link-updater-container p{color:#404040;word-break:break-all}
 .link-updater-container.has-error{margin-bottom:35px}
 .link-updater-container .has-error{position:absolute;bottom:-35px}
+.form-group{-webkit-transition:margin-bottom .1s;transition:margin-bottom .1s}
+.form-group .input-wrapper{position:relative}
+.form-group.has-error{margin-bottom:35px}
+.form-group .has-error{position:absolute;bottom:-35px}
 .autocomplete{position:relative}
 .form-inline .autocomplete{display:inline-block}
 .autocomplete .autocomplete-input{box-shadow:0 2px 0 #b3b3b3}

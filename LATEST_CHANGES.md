@@ -1,3 +1,23 @@
+<a name="6.0.0"></a>
+# 6.0.0 (2016-07-08)
+
+
+### Bug Fixes
+
+* **forms:** refactor and opt-in on validation ([b950834](https://github.com/pivotal-cf/pivotal-ui/commit/b950834))
+
+### Features
+
+* **forms:** add constraint validator ([b37816b](https://github.com/pivotal-cf/pivotal-ui/commit/b37816b))
+
+
+### BREAKING CHANGES
+
+* **forms:** This changes the way link updater works, as it
+separates the concerns of updating the link underneath and handling the
+validation/error showing. ([b37816b](https://github.com/pivotal-cf/pivotal-ui/commits/b37816b))
+
+
 <a name="5.8.1"></a>
 ## 5.8.1 (2016-06-30)
 
@@ -5,24 +25,6 @@
 ### Bug Fixes
 
 * **buttons:** disable button should work on all specific buttons on the page ([e6eea7e](https://github.com/pivotal-cf/pivotal-ui/commit/e6eea7e))
-
-
-
-<a name="5.8.0"></a>
-# 5.8.0 (2016-06-29)
-
-
-### Bug Fixes
-
-* **buttons:** simplify button disabling and make it a bit more specific ([98b2177](https://github.com/pivotal-cf/pivotal-ui/commit/98b2177))
-* **forms:** remove bubbling-inputs. this is redundant behavior ([f44a13e](https://github.com/pivotal-cf/pivotal-ui/commit/f44a13e))
-* **panels:** simplify listening panel, make it a bit more specific ([d966a42](https://github.com/pivotal-cf/pivotal-ui/commit/d966a42))
-
-### Features
-
-* **buttons:** add listening button ([870bbe2](https://github.com/pivotal-cf/pivotal-ui/commit/870bbe2))
-* **forms:** add bubbling input ([d12a2db](https://github.com/pivotal-cf/pivotal-ui/commit/d12a2db))
-* **panels:** Add listening panel ([07aa1c8](https://github.com/pivotal-cf/pivotal-ui/commit/07aa1c8))
 
 
 

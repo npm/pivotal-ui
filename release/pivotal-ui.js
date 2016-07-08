@@ -56,10 +56,10 @@
 	__webpack_require__(25);
 	__webpack_require__(30);
 	__webpack_require__(31);
-	__webpack_require__(35);
 	__webpack_require__(36);
-	__webpack_require__(38);
-	__webpack_require__(40);
+	__webpack_require__(37);
+	__webpack_require__(39);
+	__webpack_require__(41);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -21615,6 +21615,7 @@
 
 	exports.stepper = __webpack_require__(32);
 	exports.linkUpdater = __webpack_require__(33);
+	exports.validator = __webpack_require__(35);
 
 
 /***/ },
@@ -21692,58 +21693,27 @@
 	var $ = __webpack_require__(1);
 	var isInvalid = __webpack_require__(34).username;
 	
-	var errorClass = "has-error";
-	
 	var LinkUpdater = function(el){
 	  this.el = $(el);
 	  this.updater = this.el.find(".link-updater");
 	  this.input = this.el.find("input");
+	
 	  this.input.on("input", function(e){
 	    this.updateValue(e.target.value);
 	  }.bind(this));
 	
 	  this.pathDisplay = this.el.find("p strong");
 	  this.demoValue = this.input.attr("placeholder") || "username";
-	  this.currentValue = "";
 	};
 	
 	LinkUpdater.prototype.updateValue = function(inputValue){
-	  var err = isInvalid(inputValue);
-	  if(err) {
-	    inputValue = this.currentValue;
-	    this.input.val(this.currentValue);
-	    this.showError(err.message);
+	  if(!this.input[0].checkValidity() || isInvalid(inputValue)){
+	    if(inputValue === "") {
+	      this.pathDisplay.text(this.demoValue);
+	    }
 	  } else {
-	    this.hideError();
+	    this.pathDisplay.text(inputValue);
 	  }
-	
-	  var pathVal = inputValue;
-	
-	  if(inputValue === ""){
-	    pathVal = this.demoValue;
-	  }
-	
-	  this.currentValue = inputValue;
-	  this.pathDisplay.text(pathVal);
-	};
-	
-	LinkUpdater.prototype.showError = function(msg){
-	  var err = this.updater.find("." + errorClass);
-	
-	  if(!err.length) {
-	    err = $("<span class='help-block " + errorClass + "'>" + msg + "</span>");
-	
-	    this.el.addClass(errorClass);
-	    this.updater.append(err);
-	  } else {
-	    err.text(msg);
-	  }
-	
-	};
-	
-	LinkUpdater.prototype.hideError = function(){
-	  this.el.removeClass(errorClass);
-	  this.updater.find("." + errorClass).remove();
 	};
 	
 	$(function(){
@@ -21813,6 +21783,83 @@
 
 /***/ },
 /* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(1);
+	var isInvalidName = __webpack_require__(34).username;
+	
+	$(function(){
+	  var forms = $("form[novalidate]");
+	  console.log(forms);
+	
+	  $.each(forms, function(idx, el){
+	    $(el).on("submit", handleSubmit);
+	
+	    $.each(el, function(idx, input){
+	      $(input).on("blur", handleBlur);
+	      $(input).on("input", handleInput);
+	    });
+	  });
+	});
+	
+	var addError = function addError(input, err) {
+	  var msg = err || input.validationMessage;
+	  $(input).closest(".form-group").addClass('has-error');
+	  $(input).closest(".input-wrapper").append("<span class='help-block has-error'>" + msg + "</span>");
+	};
+	
+	var removeError = function removeError(input) {
+	  $(input).closest(".form-group").removeClass('has-error');
+	  $(input).closest(".input-wrapper").find(".has-error").remove();
+	};
+	
+	var handleSubmit = function handleSubmit(e){
+	  var form = e.target;
+	  if (!form.checkValidity()) {
+	    e.preventDefault();
+	    var inputs = $(form).find("input");
+	    $.each(inputs, function(idx, input){
+	      if(!input.checkValidity()) {
+	        removeError(input);
+	        addError(input);
+	      }
+	    });
+	  }
+	};
+	
+	var handleBlur = function handleBlur(e) {
+	  var input = e.target;
+	  if(!input.checkValidity()) {
+	    removeError(input);
+	    addError(input);
+	  } else {
+	    removeError(input);
+	  }
+	};
+	
+	var handleInput = function handleInput(e) {
+	  var input = e.target;
+	  var isLinkUpdater = $(input).closest(".form-group").hasClass("link-updater-container");
+	  if(isLinkUpdater) {
+	    var err = isInvalidName(e.target.value);
+	    if(err) {
+	      e.target.setCustomValidity(err.message);
+	    } else {
+	      e.target.setCustomValidity('');
+	    }
+	  }
+	
+	  if(!input.checkValidity()) {
+	    removeError(input);
+	    addError(input);
+	  } else {
+	    removeError(input);
+	  }
+	};
+
+
+/***/ },
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(1);
@@ -21976,16 +22023,16 @@
 
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// require dropdown-driven-tabs in order to automagically attach event listeners
 	// (nothing is explicitly exported)
-	__webpack_require__(37)
+	__webpack_require__(38)
 
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	// automatically attach a click listener to any dropdown-driven tab anchors on the page
@@ -22005,13 +22052,13 @@
 
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(39);
+	__webpack_require__(40);
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports) {
 
 	var upgradePanel;
@@ -22038,35 +22085,38 @@
 
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(41);
+	__webpack_require__(42);
 
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
-	var button;
+	var buttons;
 	var handleInputChangeForDisable = function handleInputChangeForDiable(e){
-	  if(!button){
+	  if(!buttons.length){
 	    return;
 	  }
 	  var input = e && e.target;
 	
 	  if (input && input.name === 'orgScope') {
-	    if (input.value === button.getAttribute("data-username")) {
-	      button.setAttribute("disabled", "disabled");
-	    } else {
-	      button.removeAttribute("disabled");
+	
+	    for(var i = 0; i < buttons.length; i++){
+	      if (input.value === buttons[i].getAttribute("data-username")) {
+	        buttons[i].setAttribute("disabled", "disabled");
+	      } else {
+	        buttons[i].removeAttribute("disabled");
+	      }
 	    }
 	  }
 	
 	};
 	
 	document.addEventListener('DOMContentLoaded', function(){
-	  button = document.querySelector("[data-button-type='disable-on-matching-username']");
+	  buttons = document.querySelectorAll("[data-button-type='disable-on-matching-username']");
 	  document.addEventListener('input', handleInputChangeForDisable, false);
 	});
 	
