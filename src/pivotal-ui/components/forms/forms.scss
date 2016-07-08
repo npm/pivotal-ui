@@ -1482,8 +1482,10 @@ Modern browsers understand when a form is incorrectly submitted. The constraint
 validation API allows use to take advantage of this to style our own forms in
 the way we see fit.
 
+To opt-in, add <code>data-validate</code> to the form element.
+
 ```html_example
-<form novalidate="" action="/signup" method="post" role="form">
+<form data-validate action="/signup" method="post" role="form">
   <div class="row">
     <div class="col-sm-12">
       <div class="form-group">
@@ -1549,6 +1551,8 @@ the way we see fit.
 ```
 */
 
+$form-input-error-height: 35px;
+
 .form-group {
   transition: margin-bottom .1s;
 
@@ -1557,11 +1561,11 @@ the way we see fit.
   }
 
   &.has-error {
-    margin-bottom: 35px;
+    margin-bottom: $form-input-error-height;
   }
 
   .has-error {
     position: absolute;
-    bottom: -35px;
+    bottom: -$form-input-error-height;
   }
 }

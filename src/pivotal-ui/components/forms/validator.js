@@ -2,10 +2,10 @@ var $ = require('jquery');
 var isInvalidName = require('npm-user-validate').username;
 
 $(function(){
-  var forms = $("form[novalidate]");
-  console.log(forms);
+  var forms = $("form[data-validate]");
 
   $.each(forms, function(idx, el){
+    $(el).attr("novalidate", "");
     $(el).on("submit", handleSubmit);
 
     $.each(el, function(idx, input){
@@ -26,46 +26,40 @@ var removeError = function removeError(input) {
   $(input).closest(".input-wrapper").find(".has-error").remove();
 };
 
+var reflectValidity = function(input){
+  if(!input.checkValidity()) {
+    removeError(input);
+    addError(input);
+  } else {
+    removeError(input);
+  }
+};
+
 var handleSubmit = function handleSubmit(e){
   var form = e.target;
   if (!form.checkValidity()) {
     e.preventDefault();
     var inputs = $(form).find("input");
     $.each(inputs, function(idx, input){
-      if(!input.checkValidity()) {
-        removeError(input);
-        addError(input);
-      }
+      reflectValidity(input);
     });
   }
 };
 
 var handleBlur = function handleBlur(e) {
-  var input = e.target;
-  if(!input.checkValidity()) {
-    removeError(input);
-    addError(input);
-  } else {
-    removeError(input);
-  }
+  reflectValidity(e.target);
 };
 
 var handleInput = function handleInput(e) {
   var input = e.target;
   var isLinkUpdater = $(input).closest(".form-group").hasClass("link-updater-container");
   if(isLinkUpdater) {
-    var err = isInvalidName(e.target.value);
+    var err = isInvalidName(input.value);
     if(err) {
-      e.target.setCustomValidity(err.message);
+      input.setCustomValidity(err.message);
     } else {
-      e.target.setCustomValidity('');
+      input.setCustomValidity('');
     }
   }
-
-  if(!input.checkValidity()) {
-    removeError(input);
-    addError(input);
-  } else {
-    removeError(input);
-  }
+  reflectValidity(input);
 };
