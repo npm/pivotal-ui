@@ -84,3 +84,5 @@ $(function(){
   });
 });
 
+module.exports = ValidatedForm;
+

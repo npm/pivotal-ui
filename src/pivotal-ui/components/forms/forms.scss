@@ -1475,14 +1475,83 @@ For an organization name input:
 ---
 title: Constraint Validation
 name: form_constraint_validation
-parent: 00_forms
+parent: form_validation
 ---
 
 Modern browsers understand when a form is incorrectly submitted. The constraint
 validation API allows use to take advantage of this to style our own forms in
-the way we see fit.
+the way we see fit. The constraint validation API is built-in to modern browsers
+and is incredibly comprehensive.
 
-To opt-in, add <code>data-validate</code> to the form element.
+An example of when you might want to do this, a required input can have the required
+attribute added to it:
+
+```html
+<input type="text" name="needed-input" required>
+```
+
+You can also use the HTML5 valid input types and those will be checked as well:
+
+```html
+<input type="email" name="email">
+```
+
+To see all of the options available (they are ever-growing), visit the
+<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">
+MDN site on this topic</a>.
+
+We can also add custom validation to elements! In order to do this, code will need
+to be added to the file <code>src/pivotal-ui/components/forms/validator.js</code>.
+
+Simple example, an input that shows an error unless the word 'giraffe' is typed:
+
+Specify how the input would be found, say:
+
+```html
+<input type="text" name="gotta-say-giraffe" required>
+```
+
+Now, you know that on the input element that has <code>name="gotta-say-giraffe"</code> in it
+needs to have the word "giraffe", you can work on your validator.
+
+If you'd like this taken care of on each input event, go to the
+handleInput function in the validator.js file mentioned above and
+insert this code:
+
+```js_example
+var isGiraffeInput = $(input).attr("name") === "gotta-say-giraffe";
+
+if(isGiraffeInput) {
+  if(input.value !== 'giraffe'){
+    input.setCustomValidity("This must say giraffe");
+  } else {
+    input.setCustomValidity("");
+  }
+}
+```
+
+
+For a more complex example, here is some real code for link updater
+module:
+
+```js_example
+var isLinkUpdater = $(input).closest(".form-group").hasClass("link-updater-container");
+if(isLinkUpdater) {
+  var err = isInvalidName(input.value);
+  if(err) {
+    input.setCustomValidity(err.message);
+  } else {
+    input.setCustomValidity('');
+  }
+}
+```
+
+Setting the custom validity to a value will mean you're informing the browser that
+there is indeed an error here. If you set the value to an empty string, that means
+that there no longer is an error.
+
+To use this validation on your form, add <code>data-validate</code> to the form element.
+
 
 ```html_example
 <form data-validate action="/signup" method="post" role="form">
