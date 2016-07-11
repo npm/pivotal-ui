@@ -3,7 +3,7 @@
   "homepage": "http://styleguide.pivotal.io/react.html#autocomplete_react",
   "dependencies": {
     "@npmcorp/pui-css-bootstrap": "5.4.0",
-    "@npmcorp/pui-css-forms": "6.0.0"
+    "@npmcorp/pui-css-forms": "6.0.1"
   },
-  "version": "6.0.0"
+  "version": "6.0.1"
 }

@@ -1,3 +1,13 @@
+<a name="6.0.1"></a>
+## 6.0.1 (2016-07-11)
+
+
+### Bug Fixes
+
+* **forms:** link updater always shows demoValue when empty ([abcc3e9](https://github.com/pivotal-cf/pivotal-ui/commit/abcc3e9))
+
+
+
 <a name="6.0.0"></a>
 # 6.0.0 (2016-07-08)
 
@@ -16,15 +26,5 @@
 * **forms:** This changes the way link updater works, as it
 separates the concerns of updating the link underneath and handling the
 validation/error showing. ([b37816b](https://github.com/pivotal-cf/pivotal-ui/commits/b37816b))
-
-
-<a name="5.8.1"></a>
-## 5.8.1 (2016-06-30)
-
-
-### Bug Fixes
-
-* **buttons:** disable button should work on all specific buttons on the page ([e6eea7e](https://github.com/pivotal-cf/pivotal-ui/commit/e6eea7e))
-
 
 
