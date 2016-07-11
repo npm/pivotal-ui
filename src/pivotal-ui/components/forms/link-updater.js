@@ -15,10 +15,10 @@ var LinkUpdater = function(el){
 };
 
 LinkUpdater.prototype.updateValue = function(inputValue){
-  if(!this.input[0].checkValidity() || isInvalid(inputValue)){
-    if(inputValue === "") {
-      this.pathDisplay.text(this.demoValue);
-    }
+  if(inputValue === "") {
+    this.pathDisplay.text(this.demoValue);
+  } else if (!this.input[0].checkValidity() || isInvalid(inputValue)){
+    //noop
   } else {
     this.pathDisplay.text(inputValue);
   }
