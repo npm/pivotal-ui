@@ -21847,7 +21847,7 @@
 	  this.form.on("focusout", handleBlur.bind(this));
 	};
 	
-	ValidatedForm.prototype.reflectValidity = function(input){
+	ValidatedForm.prototype.reflectValidity = function reflectValidity(input){
 	  if(!input.checkValidity()) {
 	    removeError(input);
 	    addError(input);
@@ -21870,6 +21870,8 @@
 	    vf.addListeners();
 	  });
 	});
+	
+	module.exports = ValidatedForm;
 	
 
 
