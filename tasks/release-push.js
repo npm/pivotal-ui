@@ -2,11 +2,10 @@ import { log } from 'gulp-util';
 import { exec } from 'child_process';
 import promisify from 'es6-promisify';
 import gulp from 'gulp';
-import { infoForUpdatedPackages, publishPackages, publishFakePackages } from './helpers/publish-helper';
+import { infoForUpdatedPackages, publishPackages } from './helpers/publish-helper';
 import runSequence from 'run-sequence';
 import glob from 'glob';
 import fs from 'fs';
-import { argv } from 'yargs';
 
 const execPromise = promisify(exec);
 
