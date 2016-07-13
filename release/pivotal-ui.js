@@ -21693,6 +21693,8 @@
 	var $ = __webpack_require__(1);
 	var isInvalid = __webpack_require__(34).username;
 	
+	var errorClass = "has-error";
+	
 	var LinkUpdater = function(el){
 	  this.el = $(el);
 	  this.updater = this.el.find(".link-updater");
@@ -21704,16 +21706,48 @@
 	
 	  this.pathDisplay = this.el.find("p strong");
 	  this.demoValue = this.input.attr("placeholder") || "username";
+	  this.currentValue = "";
 	};
 	
 	LinkUpdater.prototype.updateValue = function(inputValue){
-	  if(inputValue === "") {
-	    this.pathDisplay.text(this.demoValue);
-	  } else if (!this.input[0].checkValidity() || isInvalid(inputValue)){
-	    //noop
+	  var err = isInvalid(inputValue);
+	  if(err) {
+	    inputValue = this.currentValue;
+	    this.input.val(this.currentValue);
+	    this.showError(err.message);
+	  } else if(!this.input[0].checkValidity()) {
+	    this.showError(this.input[0].validationMessage);
 	  } else {
-	    this.pathDisplay.text(inputValue);
+	    this.hideError();
 	  }
+	
+	  var pathVal = inputValue;
+	
+	  if(inputValue === ""){
+	    pathVal = this.demoValue;
+	  }
+	
+	  this.currentValue = inputValue;
+	  this.pathDisplay.text(pathVal);
+	};
+	
+	LinkUpdater.prototype.showError = function(msg){
+	  var err = this.updater.find("." + errorClass);
+	
+	  if(!err.length) {
+	    err = $("<span class='help-block " + errorClass + "'>" + msg + "</span>");
+	
+	    this.el.addClass(errorClass);
+	    this.updater.append(err);
+	  } else {
+	    err.text(msg);
+	  }
+	
+	};
+	
+	LinkUpdater.prototype.hideError = function(){
+	  this.el.removeClass(errorClass);
+	  this.updater.find("." + errorClass).remove();
 	};
 	
 	$(function(){
@@ -21786,7 +21820,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(1);
-	var isInvalidName = __webpack_require__(34).username;
 	
 	var addError = function addError(input, err) {
 	  var msg = err || input.validationMessage;
@@ -21821,27 +21854,21 @@
 	  var err;
 	
 	  if(isLinkUpdater) {
-	    err = isInvalidName(input.value);
-	    if(err) {
-	      input.setCustomValidity(err.message);
-	    }
+	    return;
 	  }
 	
 	  var isNoMatch = $input.is("[data-nomatch]");
 	
 	  if(isNoMatch) {
-	
 	    var label = $input.closest(".form-group").find("label");
 	    var labelText = label.attr("data-nomatch-label") || label.text();
-	    var matchName = $input.attr("data-nomatch-name");
+	    var matchName = $input.attr("data-nomatch-name") || input.name;
 	    err = input.value === $input.attr("data-nomatch") ? new Error(labelText + " cannot match existing " + matchName) : err;
-	
-	    if(err) {
-	      input.setCustomValidity(err.message);
-	    }
 	  }
 	
-	  if(!err) {
+	  if(err) {
+	    input.setCustomValidity(err.message);
+	  } else {
 	    input.setCustomValidity('');
 	  }
 	

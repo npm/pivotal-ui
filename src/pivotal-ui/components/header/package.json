@@ -1,8 +1,8 @@
 {
   "homepage": "http://styleguide.pivotal.io/objects.html#header",
   "dependencies": {
-    "@npmcorp/pui-css-drop-down-menu": "5.8.1",
+    "@npmcorp/pui-css-drop-down-menu": "6.0.5",
     "@npmcorp/pui-css-typography": "5.4.0"
   },
-  "version": "5.8.1"
+  "version": "6.0.5"
 }

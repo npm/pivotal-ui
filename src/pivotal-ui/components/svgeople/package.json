@@ -2,7 +2,7 @@
   "homepage": "http://styleguide.pivotal.io/objects.html#svgeople",
   "dependencies": {
     "@npmcorp/pui-css-bootstrap": "5.4.0",
-    "@npmcorp/pui-css-forms": "6.0.4"
+    "@npmcorp/pui-css-forms": "6.0.5"
   },
-  "version": "6.0.4"
+  "version": "6.0.5"
 }
