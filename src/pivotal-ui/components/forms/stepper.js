@@ -1,6 +1,8 @@
-var FormStepper = function(el, input, decrementButton, incrementButton){
-  this.stepper         = $(el);
-  this.input           = input || this.stepper.find("input[type=number]");
+var $ = require('jquery');
+
+var FormStepper = function(el, input, decrementButton, incrementButton) {
+  this.stepper = $(el);
+  this.input = input || this.stepper.find("input[type=number]");
   this.decrementButton = decrementButton || this.stepper.find(".btn-decrement");
   this.incrementButton = incrementButton || this.stepper.find(".btn-increment");
 
@@ -10,22 +12,22 @@ var FormStepper = function(el, input, decrementButton, incrementButton){
   this.value = parseInt(this.input.val()) || parseInt(this.min);
 };
 
-FormStepper.prototype.increment = function(){
+FormStepper.prototype.increment = function() {
   var val = parseInt(this.value) || this.min;
   this.set(val + 1);
 };
 
-FormStepper.prototype.decrement = function(){
+FormStepper.prototype.decrement = function() {
   var val = parseInt(this.value) || this.min;
   this.set(val - 1);
 };
 
-FormStepper.prototype.set = function(number){
+FormStepper.prototype.set = function(number) {
   number = parseInt(number) || this.min;
 
-  if( number <= this.min ){
+  if (number <= this.min) {
     number = this.min;
-  } else if (this.max !== null && number >= this.max ){
+  } else if (this.max !== null && number >= this.max) {
     number = this.max;
   }
 
@@ -34,24 +36,24 @@ FormStepper.prototype.set = function(number){
   this.stepper.trigger("FormStepper:changed", [number]);
 };
 
-FormStepper.prototype.addListeners = function(){
+FormStepper.prototype.addListeners = function() {
   var self = this;
 
-  this.incrementButton.on("click", function(){
+  this.incrementButton.on("click", function() {
     self.increment();
   });
 
-  this.decrementButton.on("click", function(){
+  this.decrementButton.on("click", function() {
     self.decrement();
   });
 
-  this.input.on("change", function(){
+  this.input.on("change", function() {
     var val = parseInt(self.input.val()) || self.min;
     self.set(val);
   });
 };
 
-$(function(){
+$(function() {
   $.each($('.form-stepper'), function(i, el) {
     var fs = new FormStepper(el);
     fs.addListeners();
