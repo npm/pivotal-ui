@@ -1,6 +1,6 @@
 var test = require('tape');
 var $ = require('jquery');
-var FormStepper = require('../src/pivotal-ui/components/forms').stepper;
+var FormStepper = require('../src/pivotal-ui/components/forms/stepper');
 
 test('Creates stepper module with proper pieces', function(t) {
   var selector = 'form-stepper';

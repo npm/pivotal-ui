@@ -1,6 +1,6 @@
 var test = require('tape');
 var $ = require('jquery');
-var LinkUpdater = require('@npmcorp/pui-css-forms').linkUpdater;
+var LinkUpdater = require('../src/pivotal-ui/components/forms/link-updater');
 
 var template = '<div class="form-group link-updater-container">' +
     '<label for="orgname">Name your Organization</label>' +
