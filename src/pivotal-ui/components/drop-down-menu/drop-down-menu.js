@@ -1,10 +1,10 @@
 var $ = global.jQuery || require('jquery');
 
-var DropDownMenu = function($el) {
+var DropDownMenu = function($el, $toggle, $overlay) {
   this.menu = $el;
   this.id = this.menu.attr('id');
-  this.menuToggle = $('a[href="#' + this.id + '"]');
-  this.menuOverlay = $("<div class='drop-down-menu-overlay' data-drop-down-menu='" + this.id + "'/>").appendTo("body");
+  this.menuToggle = $toggle || $('a[href="#' + this.id + '"]');
+  this.menuOverlay = $overlay || $("<div class='drop-down-menu-overlay' data-drop-down-menu='" + this.id + "'/>").appendTo("body");
 };
 
 DropDownMenu.prototype.close = function(noPathChange) {
@@ -90,3 +90,5 @@ $(function() {
 
 
 });
+
+module.exports = DropDownMenu;
