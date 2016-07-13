@@ -29,15 +29,29 @@ var handleBlur = function handleBlur(e) {
 
 var handleInput = function handleInput(e) {
   var input = e.target;
-  var isLinkUpdater = $(input).closest(".form-group").hasClass("link-updater-container");
+  var $input = $(input);
+  var isLinkUpdater = $input.closest(".form-group").hasClass("link-updater-container");
+  var err;
+
   if(isLinkUpdater) {
-    var err = isInvalidName(input.value);
-    if(err) {
-      input.setCustomValidity(err.message);
-    } else {
-      input.setCustomValidity('');
-    }
+    err = isInvalidName(input.value);
   }
+
+  var isNoMatch = $input.is("[data-nomatch]");
+
+  if(isNoMatch) {
+    var label = $input.closest(".form-group").find("label");
+    var labelText = label.attr("data-nomatch-label") || label.text();
+    var matchName = $input.attr("data-nomatch-name") || input.name;
+    err = input.value === $input.attr("data-nomatch") ? new Error(labelText + " cannot match existing " + matchName) : err;
+  }
+
+  if(err) {
+    input.setCustomValidity(err.message);
+  } else {
+    input.setCustomValidity('');
+  }
+
   this.reflectValidity(input);
 };
 
