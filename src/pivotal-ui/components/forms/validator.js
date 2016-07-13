@@ -1,5 +1,4 @@
 var $ = require('jquery');
-var isInvalidName = require('npm-user-validate').username;
 
 var addError = function addError(input, err) {
   var msg = err || input.validationMessage;
@@ -34,7 +33,7 @@ var handleInput = function handleInput(e) {
   var err;
 
   if(isLinkUpdater) {
-    err = isInvalidName(input.value);
+    return;
   }
 
   var isNoMatch = $input.is("[data-nomatch]");
