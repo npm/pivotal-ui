@@ -1526,7 +1526,7 @@ add <code class="styleguide">.has-success</code> to the field&#39;s form group.<
 </div>
 
 
-<h3 id="form_constraint_validation" class="styleguide">Constraint Validation</h3>
+<h3 id="00_form_constraint_validation" class="styleguide">Constraint Validation</h3>
 <p class="styleguide">Modern browsers understand when a form is incorrectly submitted. The constraint
 validation API allows use to take advantage of this to style our own forms in
 the way we see fit. The constraint validation API is built-in to modern browsers
@@ -1735,6 +1735,77 @@ that there no longer is an error.</p><p class="styleguide">To use this validatio
       <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"done"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"hidden"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-highlight-1"</span><span class="nt">&gt;</span>Create an Account<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+    <button class="btn btn-default btn-copy" data-btn-copy data-placement="left">
+      Copy
+    </button>
+  </div>
+</div>
+
+<h3 id="form_input_no_match" class="styleguide">No Match Input</h3>
+<p class="styleguide">The No Match Input is a type of custom validation that breaks when the user fills
+in a value that matches something you don&#39;t want them to type.</p><p class="styleguide">To use this style of validation, add two attributes to your input:</p><p class="styleguide"><code>data-nomatch</code>: The value that the input should not match</p><p class="styleguide"><code>data-nomatch-name</code>: A human readable name for the value you don&#39;t
+want to match. Used for error reporting.</p><p class="styleguide"><code>data-nomatch-label</code> (optional): In case you have a label that doesn&#39;t
+match what you&#39;d like to show, you can put this data attribute on the label for
+error handling. If unused, the label&#39;s contents will be shown.</p><p class="styleguide">The <code>data-nomatch</code> and the <code>label</code> for the input will both
+be used in the error generation.</p><p class="styleguide">Here is a simple example, type <code>bobs-test-org</code> into the following input,
+you should see an error that says <code>Username cannot match existing Org Name</code>.</p><div class="codeExample">
+  <div class="exampleOutput"><form data-validate>
+<div class="form-group">
+  <label for="username">Username</label>
+  <div class="input-wrapper">
+    <input name="username" id="username" class="form-control" required data-nomatch="bobs-test-org" data-nomatch-name="Org Name">
+  </div>
+</div>
+<button class="btn btn-highlight-1" type="submit">Submit</button>
+</form>
+</div>
+  <div class="codeBlock" aria-hidden="true">
+    <div class="highlight" data-code-to-copy>
+      <pre><span class="nt">&lt;form</span> <span class="na">data-validate</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">required</span> <span class="na">data-nomatch=</span><span class="s">"bobs-test-org"</span> <span class="na">data-nomatch-name=</span><span class="s">"Org Name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-highlight-1"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+    <button class="btn btn-default btn-copy" data-btn-copy data-placement="left">
+      Copy
+    </button>
+  </div>
+</div>
+<p class="styleguide">Here is a more complex example, mixing two different types of validation.</p><p class="styleguide">Type <code>bobs-test-org</code> into the following input,
+you should see an error that says <code>New Username cannot match existing username</code>.</p><div class="codeExample">
+  <div class="exampleOutput"><form data-validate>
+  <div class="form-group link-updater-container">
+    <label for="new-user" data-nomatch-label="New Username">Choose a Username</label>
+    <div class="input-wrapper link-updater">
+      <input name="new-user" id="new-user" class="form-control" required data-nomatch="bobs-test-org" data-nomatch-name="username">
+      <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
+    </div>
+  </div>
+
+  <button class="btn btn-highlight-1" type="submit">Upgrade to Organization for $14/mo</button>
+  </section>
+</form>
+</div>
+  <div class="codeBlock" aria-hidden="true">
+    <div class="highlight" data-code-to-copy>
+      <pre><span class="nt">&lt;form</span> <span class="na">data-validate</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group link-updater-container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"new-user"</span> <span class="na">data-nomatch-label=</span><span class="s">"New Username"</span><span class="nt">&gt;</span>Choose a Username<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-wrapper link-updater"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"new-user"</span> <span class="na">id=</span><span class="s">"new-user"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">required</span> <span class="na">data-nomatch=</span><span class="s">"bobs-test-org"</span> <span class="na">data-nomatch-name=</span><span class="s">"username"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mtl"</span><span class="nt">&gt;</span>https://www.npmjs.com/~<span class="nt">&lt;strong&gt;</span>username<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-highlight-1"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Upgrade to Organization for $14/mo<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
 <span class="nt">&lt;/form&gt;</span></pre>
     </div>
     <button class="btn btn-default btn-copy" data-btn-copy data-placement="left">
