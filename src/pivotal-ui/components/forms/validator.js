@@ -29,12 +29,7 @@ var handleBlur = function handleBlur(e) {
 var handleInput = function handleInput(e) {
   var input = e.target;
   var $input = $(input);
-  var isLinkUpdater = $input.closest(".form-group").hasClass("link-updater-container");
   var err;
-
-  if(isLinkUpdater) {
-    return;
-  }
 
   var isNoMatch = $input.is("[data-nomatch]");
 
@@ -54,6 +49,13 @@ var handleInput = function handleInput(e) {
   this.reflectValidity(input);
 };
 
+var handleInputError = function handleInputError(e) {
+  var input = e.target;
+  var message = e.message;
+
+  this.reflectValidity(input, message);
+};
+
 var ValidatedForm = function ValidatedForm(el) {
   this.form = $(el);
   this.inputs = this.form.find("input");
@@ -71,12 +73,27 @@ ValidatedForm.prototype.addListeners = function addListners() {
   this.form.on("input", handleInput.bind(this));
   this.form.on("change", "input[type='checkbox'], input[type='radio']", handleInput.bind(this));
   this.form.on("focusout", handleBlur.bind(this));
+  this.form.on("input-error", handleInputError.bind(this));
 };
 
-ValidatedForm.prototype.reflectValidity = function reflectValidity(input){
-  if(!input.checkValidity()) {
+/*
+ * reflectValidity takes the internal state of the inputs and form and reflects
+ * them to the user in visible ways.
+ *
+ * There are two kinds of things being reflected: ongoing validity states
+ * (level triggered, but captured here on the leading edge) and transient
+ * errors (edge triggered) that we notify the user of when they happen, but
+ * clear them upon the next event.
+ *
+ * The difference between the two? the message parameter. If it's present,
+ * we're reflecting transient state; if absent, we're reflecting ongoing
+ * validity
+ *
+ */
+ValidatedForm.prototype.reflectValidity = function reflectValidity(input, message){
+  if(!input.checkValidity() || message) {
     removeError(input);
-    addError(input);
+    addError(input, message);
   } else {
     removeError(input);
   }

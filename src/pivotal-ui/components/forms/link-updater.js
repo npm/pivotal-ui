@@ -1,8 +1,6 @@
 var $ = require('jquery');
 var isInvalid = require('npm-user-validate').username;
 
-var errorClass = "has-error";
-
 var LinkUpdater = function(el){
   this.el = $(el);
   this.updater = this.el.find(".link-updater");
@@ -22,11 +20,14 @@ LinkUpdater.prototype.updateValue = function(inputValue){
   if(err) {
     inputValue = this.currentValue;
     this.input.val(this.currentValue);
-    this.showError(err.message);
-  } else if(!this.input[0].checkValidity()) {
-    this.showError(this.input[0].validationMessage);
-  } else {
-    this.hideError();
+    // setImmediate forces input-error to be triggered on the next tick, so it
+    // will follow any input
+    setImmediate(function(){
+      this.input.trigger({
+        type: "input-error",
+        message: err.message
+      });
+    }.bind(this));
   }
 
   var pathVal = inputValue;
@@ -39,24 +40,6 @@ LinkUpdater.prototype.updateValue = function(inputValue){
   this.pathDisplay.text(pathVal);
 };
 
-LinkUpdater.prototype.showError = function(msg){
-  var err = this.updater.find("." + errorClass);
-
-  if(!err.length) {
-    err = $("<span class='help-block " + errorClass + "'>" + msg + "</span>");
-
-    this.el.addClass(errorClass);
-    this.updater.append(err);
-  } else {
-    err.text(msg);
-  }
-
-};
-
-LinkUpdater.prototype.hideError = function(){
-  this.el.removeClass(errorClass);
-  this.updater.find("." + errorClass).remove();
-};
 
 $(function(){
   var linkUpdater = $(".link-updater-container");
