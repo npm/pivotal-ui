@@ -56,10 +56,10 @@
 	__webpack_require__(25);
 	__webpack_require__(30);
 	__webpack_require__(31);
-	__webpack_require__(38);
+	__webpack_require__(36);
+	__webpack_require__(37);
 	__webpack_require__(39);
 	__webpack_require__(41);
-	__webpack_require__(43);
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -21516,11 +21516,11 @@
 
 	/* WEBPACK VAR INJECTION */(function(global) {var $ = global.jQuery || __webpack_require__(1);
 	
-	var DropDownMenu = function($el) {
+	var DropDownMenu = function($el, $toggle, $overlay) {
 	  this.menu = $el;
 	  this.id = this.menu.attr('id');
-	  this.menuToggle = $('a[href="#' + this.id + '"]');
-	  this.menuOverlay = $("<div class='drop-down-menu-overlay' data-drop-down-menu='" + this.id + "'/>").appendTo("body");
+	  this.menuToggle = $toggle || $('a[href="#' + this.id + '"]');
+	  this.menuOverlay = $overlay || $("<div class='drop-down-menu-overlay' data-drop-down-menu='" + this.id + "'/>").appendTo("body");
 	};
 	
 	DropDownMenu.prototype.close = function(noPathChange) {
@@ -21607,6 +21607,8 @@
 	
 	});
 	
+	module.exports = DropDownMenu;
+	
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -21615,16 +21617,18 @@
 
 	exports.stepper = __webpack_require__(32);
 	exports.linkUpdater = __webpack_require__(33);
-	exports.validator = __webpack_require__(37);
+	exports.validator = __webpack_require__(35);
 
 
 /***/ },
 /* 32 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var FormStepper = function(el, input, decrementButton, incrementButton){
-	  this.stepper         = $(el);
-	  this.input           = input || this.stepper.find("input[type=number]");
+	var $ = __webpack_require__(1);
+	
+	var FormStepper = function(el, input, decrementButton, incrementButton) {
+	  this.stepper = $(el);
+	  this.input = input || this.stepper.find("input[type=number]");
 	  this.decrementButton = decrementButton || this.stepper.find(".btn-decrement");
 	  this.incrementButton = incrementButton || this.stepper.find(".btn-increment");
 	
@@ -21634,22 +21638,22 @@
 	  this.value = parseInt(this.input.val()) || parseInt(this.min);
 	};
 	
-	FormStepper.prototype.increment = function(){
+	FormStepper.prototype.increment = function() {
 	  var val = parseInt(this.value) || this.min;
 	  this.set(val + 1);
 	};
 	
-	FormStepper.prototype.decrement = function(){
+	FormStepper.prototype.decrement = function() {
 	  var val = parseInt(this.value) || this.min;
 	  this.set(val - 1);
 	};
 	
-	FormStepper.prototype.set = function(number){
+	FormStepper.prototype.set = function(number) {
 	  number = parseInt(number) || this.min;
 	
-	  if( number <= this.min ){
+	  if (number <= this.min) {
 	    number = this.min;
-	  } else if (this.max !== null && number >= this.max ){
+	  } else if (this.max !== null && number >= this.max) {
 	    number = this.max;
 	  }
 	
@@ -21658,24 +21662,24 @@
 	  this.stepper.trigger("FormStepper:changed", [number]);
 	};
 	
-	FormStepper.prototype.addListeners = function(){
+	FormStepper.prototype.addListeners = function() {
 	  var self = this;
 	
-	  this.incrementButton.on("click", function(){
+	  this.incrementButton.on("click", function() {
 	    self.increment();
 	  });
 	
-	  this.decrementButton.on("click", function(){
+	  this.decrementButton.on("click", function() {
 	    self.decrement();
 	  });
 	
-	  this.input.on("change", function(){
+	  this.input.on("change", function() {
 	    var val = parseInt(self.input.val()) || self.min;
 	    self.set(val);
 	  });
 	};
 	
-	$(function(){
+	$(function() {
 	  $.each($('.form-stepper'), function(i, el) {
 	    var fs = new FormStepper(el);
 	    fs.addListeners();
@@ -21685,13 +21689,12 @@
 	
 	module.exports = FormStepper;
 
-
 /***/ },
 /* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(setImmediate) {var $ = __webpack_require__(1);
-	var isInvalid = __webpack_require__(36).username;
+	var $ = __webpack_require__(1);
+	var isInvalid = __webpack_require__(34).username;
 	
 	var LinkUpdater = function(el){
 	  this.el = $(el);
@@ -21714,7 +21717,7 @@
 	    this.input.val(this.currentValue);
 	    // setImmediate forces input-error to be triggered on the next tick, so it
 	    // will follow any input
-	    setImmediate(function(){
+	    requestAnimationFrame(function(){
 	      this.input.trigger({
 	        type: "input-error",
 	        message: err.message
@@ -21742,193 +21745,10 @@
 	});
 	
 	module.exports = LinkUpdater;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(34).setImmediate))
+
 
 /***/ },
 /* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(35).nextTick;
-	var apply = Function.prototype.apply;
-	var slice = Array.prototype.slice;
-	var immediateIds = {};
-	var nextImmediateId = 0;
-	
-	// DOM APIs, for completeness
-	
-	exports.setTimeout = function() {
-	  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
-	};
-	exports.setInterval = function() {
-	  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
-	};
-	exports.clearTimeout =
-	exports.clearInterval = function(timeout) { timeout.close(); };
-	
-	function Timeout(id, clearFn) {
-	  this._id = id;
-	  this._clearFn = clearFn;
-	}
-	Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-	Timeout.prototype.close = function() {
-	  this._clearFn.call(window, this._id);
-	};
-	
-	// Does not start the time, just sets up the members needed.
-	exports.enroll = function(item, msecs) {
-	  clearTimeout(item._idleTimeoutId);
-	  item._idleTimeout = msecs;
-	};
-	
-	exports.unenroll = function(item) {
-	  clearTimeout(item._idleTimeoutId);
-	  item._idleTimeout = -1;
-	};
-	
-	exports._unrefActive = exports.active = function(item) {
-	  clearTimeout(item._idleTimeoutId);
-	
-	  var msecs = item._idleTimeout;
-	  if (msecs >= 0) {
-	    item._idleTimeoutId = setTimeout(function onTimeout() {
-	      if (item._onTimeout)
-	        item._onTimeout();
-	    }, msecs);
-	  }
-	};
-	
-	// That's not how node.js implements it but the exposed api is the same.
-	exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function(fn) {
-	  var id = nextImmediateId++;
-	  var args = arguments.length < 2 ? false : slice.call(arguments, 1);
-	
-	  immediateIds[id] = true;
-	
-	  nextTick(function onNextTick() {
-	    if (immediateIds[id]) {
-	      // fn.call() is faster so we optimize for the common use-case
-	      // @see http://jsperf.com/call-apply-segu
-	      if (args) {
-	        fn.apply(null, args);
-	      } else {
-	        fn.call(null);
-	      }
-	      // Prevent ids from leaking
-	      exports.clearImmediate(id);
-	    }
-	  });
-	
-	  return id;
-	};
-	
-	exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
-	  delete immediateIds[id];
-	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(34).setImmediate, __webpack_require__(34).clearImmediate))
-
-/***/ },
-/* 35 */
-/***/ function(module, exports) {
-
-	// shim for using process in browser
-	
-	var process = module.exports = {};
-	var queue = [];
-	var draining = false;
-	var currentQueue;
-	var queueIndex = -1;
-	
-	function cleanUpNextTick() {
-	    if (!draining || !currentQueue) {
-	        return;
-	    }
-	    draining = false;
-	    if (currentQueue.length) {
-	        queue = currentQueue.concat(queue);
-	    } else {
-	        queueIndex = -1;
-	    }
-	    if (queue.length) {
-	        drainQueue();
-	    }
-	}
-	
-	function drainQueue() {
-	    if (draining) {
-	        return;
-	    }
-	    var timeout = setTimeout(cleanUpNextTick);
-	    draining = true;
-	
-	    var len = queue.length;
-	    while(len) {
-	        currentQueue = queue;
-	        queue = [];
-	        while (++queueIndex < len) {
-	            if (currentQueue) {
-	                currentQueue[queueIndex].run();
-	            }
-	        }
-	        queueIndex = -1;
-	        len = queue.length;
-	    }
-	    currentQueue = null;
-	    draining = false;
-	    clearTimeout(timeout);
-	}
-	
-	process.nextTick = function (fun) {
-	    var args = new Array(arguments.length - 1);
-	    if (arguments.length > 1) {
-	        for (var i = 1; i < arguments.length; i++) {
-	            args[i - 1] = arguments[i];
-	        }
-	    }
-	    queue.push(new Item(fun, args));
-	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
-	    }
-	};
-	
-	// v8 likes predictible objects
-	function Item(fun, array) {
-	    this.fun = fun;
-	    this.array = array;
-	}
-	Item.prototype.run = function () {
-	    this.fun.apply(null, this.array);
-	};
-	process.title = 'browser';
-	process.browser = true;
-	process.env = {};
-	process.argv = [];
-	process.version = ''; // empty string to avoid regexp issues
-	process.versions = {};
-	
-	function noop() {}
-	
-	process.on = noop;
-	process.addListener = noop;
-	process.once = noop;
-	process.off = noop;
-	process.removeListener = noop;
-	process.removeAllListeners = noop;
-	process.emit = noop;
-	
-	process.binding = function (name) {
-	    throw new Error('process.binding is not supported');
-	};
-	
-	process.cwd = function () { return '/' };
-	process.chdir = function (dir) {
-	    throw new Error('process.chdir is not supported');
-	};
-	process.umask = function() { return 0; };
-
-
-/***/ },
-/* 36 */
 /***/ function(module, exports) {
 
 	exports.email = email
@@ -21982,7 +21802,7 @@
 
 
 /***/ },
-/* 37 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(1);
@@ -22106,7 +21926,7 @@
 
 
 /***/ },
-/* 38 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(1);
@@ -22270,16 +22090,16 @@
 
 
 /***/ },
-/* 39 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// require dropdown-driven-tabs in order to automagically attach event listeners
 	// (nothing is explicitly exported)
-	__webpack_require__(40)
+	__webpack_require__(38)
 
 
 /***/ },
-/* 40 */
+/* 38 */
 /***/ function(module, exports) {
 
 	// automatically attach a click listener to any dropdown-driven tab anchors on the page
@@ -22299,13 +22119,13 @@
 
 
 /***/ },
-/* 41 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(42);
+	__webpack_require__(40);
 
 /***/ },
-/* 42 */
+/* 40 */
 /***/ function(module, exports) {
 
 	var upgradePanel;
@@ -22332,14 +22152,14 @@
 
 
 /***/ },
-/* 43 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(44);
+	__webpack_require__(42);
 
 
 /***/ },
-/* 44 */
+/* 42 */
 /***/ function(module, exports) {
 
 	var buttons;
