@@ -1,9 +1,9 @@
 {
-  "version": "6.0.5",
+  "version": "6.0.6",
   "description": "A React component that provides styled radio buttons",
   "homepage": "http://styleguide.pivotal.io/react.html#form_radio_input_react",
   "dependencies": {
-    "@npmcorp/pui-css-forms": "6.0.5",
+    "@npmcorp/pui-css-forms": "6.0.6",
     "@npmcorp/pui-react-helpers": "5.4.0"
   }
 }
