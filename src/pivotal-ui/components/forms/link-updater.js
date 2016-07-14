@@ -20,9 +20,9 @@ LinkUpdater.prototype.updateValue = function(inputValue){
   if(err) {
     inputValue = this.currentValue;
     this.input.val(this.currentValue);
-    // setImmediate forces input-error to be triggered on the next tick, so it
+    // setTimeout 0 forces input-error to be triggered on the next tick, so it
     // will follow any input
-    setImmediate(function(){
+    requestAnimationFrame(function(){
       this.input.trigger({
         type: "input-error",
         message: err.message
