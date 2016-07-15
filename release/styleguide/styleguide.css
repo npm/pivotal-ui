@@ -105,11 +105,13 @@ main {
     line-height: 1; }
   .styleguide-header #styleguide-navbar .nav {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     text-align: center; }
     .styleguide-header #styleguide-navbar .nav > li {
       -webkit-box-flex: 1;
+      -webkit-flex: 1;
           -ms-flex: 1;
               flex: 1; }
   .styleguide-header #styleguide-navbar .nav-component-type {
@@ -131,6 +133,7 @@ main {
 
 .color-chip-row {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px; }
@@ -138,6 +141,7 @@ main {
 .chip {
   margin-top: 5px;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 0 5px; }
@@ -343,6 +347,7 @@ table.styleguide {
       padding: 5px 10px;
       margin-right: 5px;
       margin-bottom: 10px;
+      background-color: #FFFFFF;
       background-color: rgba(255, 255, 255, 0.4);
       -webkit-transition: all 300ms ease-out;
       transition: all 300ms ease-out;
@@ -370,6 +375,7 @@ h1#intro.styleguide {
 
 .aligned-item {
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: transparent; }

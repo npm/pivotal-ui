@@ -1,9 +1,9 @@
 {
-  "version": "5.4.0",
+  "version": "6.1.0",
   "description": "A collection of React components for rendering different kinds of lists",
   "homepage": "http://styleguide.pivotal.io/react.html#list_react",
   "dependencies": {
-    "@npmcorp/pui-css-lists": "5.4.0",
+    "@npmcorp/pui-css-lists": "6.1.0",
     "classnames": "^1.2.0"
   }
 }

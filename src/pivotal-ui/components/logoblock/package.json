@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@npmcorp/pui-css-colors": "5.4.0"
+    "@npmcorp/pui-css-colors": "6.1.0"
   },
-  "version": "5.4.0"
+  "version": "6.1.0"
 }

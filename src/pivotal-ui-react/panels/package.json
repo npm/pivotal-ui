@@ -1,10 +1,10 @@
 {
-  "version": "5.8.0",
+  "version": "6.1.0",
   "description": "React components that provide containers for related content",
   "homepage": "http://styleguide.pivotal.io/react.html#panel_react",
   "dependencies": {
     "classnames": "^1.2.0",
-    "@npmcorp/pui-css-panels": "5.8.0",
-    "@npmcorp/pui-react-helpers": "5.4.0"
+    "@npmcorp/pui-css-panels": "6.1.0",
+    "@npmcorp/pui-react-helpers": "6.1.0"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "version": "5.4.0",
+  "version": "6.1.0",
   "description": "React components that provide large browser-filling containers for content",
   "homepage": "http://styleguide.pivotal.io/react.html#pane_react",
   "dependencies": {
-    "@npmcorp/pui-css-panes": "5.4.0",
-    "@npmcorp/pui-react-helpers": "5.4.0"
+    "@npmcorp/pui-css-panes": "6.1.0",
+    "@npmcorp/pui-react-helpers": "6.1.0"
   }
 }
