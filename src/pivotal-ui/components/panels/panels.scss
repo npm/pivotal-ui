@@ -175,6 +175,43 @@ Add `.panel-table-wrapper` if you're containing a table.
   background-color: $panel-basic-alt-background;
 }
 
+/*doc
+---
+title: Basic Informative
+name: panel_basic_info
+parent: panel
+---
+
+Basic Informative panels are panels with a colored border and background to match. You can have a panel-basic-info with or without a title.
+
+```html_example
+<div class="panel panel-basic-info">
+  <div class="panel-header">
+    <h5 class="panel-title-alt">Basic Title</h5>
+  </div>
+  <div class="panel-body">
+    Basic Panel
+  </div>
+</div>
+
+<div class="panel panel-basic-info">
+  <div class="panel-body">
+    Basic Panel
+  </div>
+</div>
+
+```
+
+*/
+
+.panel-basic-info {
+  border: $panel-basic-info-border;
+  border-radius: $panel-basic-info-border-radius;
+  @include background-clip-fix;
+  background-color: $panel-basic-info-background;
+  color: $neutral-1;
+}
+
 .panel-table-wrapper {
   overflow: hidden;
 }
