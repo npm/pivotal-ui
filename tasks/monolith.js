@@ -1,7 +1,6 @@
 import { exec } from 'child_process';
 import gulp from 'gulp';
 import del from 'del';
-import loadPlugins from 'gulp-load-plugins';
 import { map, pipeline, merge, duplex } from 'event-stream';
 import { setup as setupDrF, copyAssets, generateCss } from '@npmcorp/dr-frankenstyle/dev';
 import { railsUrls } from '@npmcorp/dr-frankenstyle';
