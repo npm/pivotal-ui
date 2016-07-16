@@ -10,7 +10,7 @@ import { read } from 'vinyl-file';
 import webpack from 'webpack-stream';
 import webpackConfig from '../config/webpack';
 
-const plugins = loadPlugins();
+const connect = require('gulp-connect');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const cssnext = require('gulp-cssnext');
@@ -167,10 +167,10 @@ gulp.task('monolith', callback => runSequence('monolith-clean', [
   ], callback));
 
 gulp.task('monolith-serve', ['monolith'], () => {
-  plugins.connect.server({
+  connect.server({
     root: ['build'],
     port: process.env.STYLEGUIDE_PORT || 8000
   });
 });
 
-gulp.task('monolith-kill-server', () => plugins.connect.serverClose());
+gulp.task('monolith-kill-server', () => connect.serverClose());
