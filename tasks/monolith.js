@@ -12,6 +12,7 @@ import webpackConfig from '../config/webpack';
 
 const plugins = loadPlugins();
 const rename = require('gulp-rename');
+const sass = require('gulp-sass');
 const runSequence = require('run-sequence').use(gulp);
 
 gulp.task('monolith-clean', callback => del(['build'], callback));
@@ -38,7 +39,7 @@ gulp.task('monolith-build-css-from-cache', () => {
       }
     }),
 
-    plugins.sass(),
+    sass(),
     plugins.cssnext(),
 
     map((file, callback) => {
@@ -89,7 +90,7 @@ gulp.task('monolith-html', () => gulp.src('src/styleguide/*.html')
 );
 
 gulp.task('monolith-styleguide-css', () => gulp.src('src/styleguide/styleguide.scss')
-    .pipe(plugins.sass())
+    .pipe(sass())
     .pipe(plugins.cssnext())
     .pipe(gulp.dest('build/styleguide'))
 );
