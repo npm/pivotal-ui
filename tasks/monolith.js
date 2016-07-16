@@ -11,6 +11,7 @@ import webpack from 'webpack-stream';
 import webpackConfig from '../config/webpack';
 
 const plugins = loadPlugins();
+const rename = require('gulp-rename');
 const runSequence = require('run-sequence').use(gulp);
 
 gulp.task('monolith-clean', callback => del(['build'], callback));
@@ -74,10 +75,10 @@ gulp.task('monolith-build-css-from-cache', () => {
     cached: true
   })
     .pipe(generateCss(processStyleAssetsStream))
-    .pipe(plugins.rename('pivotal-ui.css'))
+    .pipe(rename('pivotal-ui.css'))
     .pipe(gulp.dest('build/'))
     .pipe(railsUrls())
-    .pipe(plugins.rename('pivotal-ui-rails.css'))
+    .pipe(rename('pivotal-ui-rails.css'))
     .pipe(gulp.dest('build/'));
 });
 
@@ -95,7 +96,7 @@ gulp.task('monolith-styleguide-css', () => gulp.src('src/styleguide/styleguide.s
 
 gulp.task('monolith-build-js', () => gulp.src('./src/pivotal-ui/javascripts/pivotal-ui.js')
     .pipe(webpack(webpackConfig()))
-    .pipe(plugins.rename('pivotal-ui.js'))
+    .pipe(rename('pivotal-ui.js'))
     .pipe(gulp.dest('build'))
 );
 
@@ -106,7 +107,7 @@ gulp.task('monolith-build-react-js', () => {
     .pipe(webpack(webpackConfig({
       watch: watch
     })))
-    .pipe(plugins.rename('pivotal-ui-react.js'))
+    .pipe(rename('pivotal-ui-react.js'))
     .pipe(gulp.dest('build'));
 
   if (!watch) {
@@ -121,7 +122,7 @@ gulp.task('monolith-build-styleguide-react-js', () => {
     .pipe(webpack(webpackConfig({
       watch: watch
     })))
-    .pipe(plugins.rename('styleguide-react.js'))
+    .pipe(rename('styleguide-react.js'))
     .pipe(gulp.dest('build/styleguide'));
 
   if (!watch) {
