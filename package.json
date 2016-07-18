@@ -184,6 +184,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "browserify": "^13.0.1",
     "express": "^4.13.4",
+    "frontmatter": "0.0.3",
+    "fs-extra": "^0.30.0",
     "git-create-deploy-branch": "^1.0.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
@@ -198,12 +200,15 @@
     "karma-tape-reporter": "^1.0.3",
     "lodash.reduce": "^4.6.0",
     "lodash.values": "^4.3.0",
-    "mdcss": "^1.5.2",
+    "markdown-it": "^7.0.0",
     "npm-user-validate": "^0.1.5",
     "postcss-cssnext": "^2.7.0",
     "prismjs": "0.0.1",
     "pui-prismjs": "0.0.1",
     "pui-react-animation": "^0.0.7",
+    "react": "^0.13.3",
+    "react-fa": "^3.4.0",
+    "slugify": "^0.1.1",
     "tape": "^4.6.0"
   },
   "scripts": {
@@ -216,7 +221,7 @@
     "pui-update": "scripts/pui-update.js",
     "dev": "gulp dev",
     "build-monolith": "gulp monolith-build-css-from-scratch",
-    "postinstall": "bundle install && gulp monolith"
+    "postinstall": "gulp monolith"
   },
   "repository": {
     "type": "git",

@@ -14,11 +14,10 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const cssnext = require('postcss-cssnext');
 const postcss = require('gulp-postcss');
+const multiplane = require('../lib/multiplane');
 const runSequence = require('run-sequence').use(gulp);
 
 gulp.task('monolith-clean', callback => del(['build'], callback));
-
-gulp.task('monolith-hologram', callback => exec('bundle exec hologram', callback));
 
 gulp.task('monolith-setup-css-cache', () => {
   return setupDrF({
@@ -79,6 +78,11 @@ gulp.task('monolith-build-css-from-cache', () => {
     cached: true
   })
     .pipe(generateCss(processStyleAssetsStream))
+    .pipe(postcss([
+      multiplane({
+        destination: 'build'
+      })
+    ]))
     .pipe(rename('pivotal-ui.css'))
     .pipe(gulp.dest('build/'))
     .pipe(railsUrls())
@@ -97,7 +101,7 @@ gulp.task('monolith-styleguide-css', () => gulp.src('src/styleguide/styleguide.s
     .pipe(postcss([
       cssnext()
     ]))
-    .pipe(gulp.dest('build/styleguide'))
+    .pipe(gulp.dest('build/'))
 );
 
 gulp.task('monolith-build-js', () => gulp.src('./src/pivotal-ui/javascripts/pivotal-ui.js')
@@ -144,7 +148,7 @@ gulp.task('monolith-styleguide-assets', () => gulp.src([
     'src/styleguide/*.js',
     'src/styleguide/github.css',
     'src/images/*'
-  ]).pipe(gulp.dest('build/styleguide'))
+  ]).pipe(gulp.dest('build/'))
 );
 
 gulp.task('monolith-app-config', () => gulp.src(['src/Staticfile', 'config/nginx.conf'])
@@ -152,7 +156,6 @@ gulp.task('monolith-app-config', () => gulp.src(['src/Staticfile', 'config/nginx
 );
 
 gulp.task('monolith', callback => runSequence('monolith-clean', [
-    'monolith-hologram',
     'monolith-html',
     'handlebars-demos',
     'monolith-styleguide-css',
