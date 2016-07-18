@@ -6545,13 +6545,13 @@ $tabs-active-bg-color: $gray-2;
   background-color: #fcef00 !important; }
 
 .bg-npm-brand-yellow-1-alt {
-  background-color: rgba(252, 239, 0, 0.45) !important; }
+  background-color: rgba(252, 239, 0, 0.15) !important; }
 
 .bg-npm-brand-yellow-2 {
   background-color: #E0CA00 !important; }
 
 .bg-npm-brand-yellow-2-alt {
-  background-color: rgba(224, 202, 0, 0.85) !important; }
+  background-color: rgba(224, 202, 0, 0.35) !important; }
 
 .bg-npm-warm-1 {
   background-color: #EA74F4 !important; }
@@ -22898,13 +22898,13 @@ Basic Informative panels are panels with a colored border and background to matc
 
 */
 .panel-basic-info {
-  border: 1px solid rgba(224, 202, 0, 0.85);
+  border: 1px solid rgba(224, 202, 0, 0.35);
   border-radius: 10px;
   /* Firefox 3.6 */
   /* Safari 4? Chrome 6? */
   background-clip: padding-box;
   /* Firefox 4, Safari 5, Opera 10, IE 9 */
-  background-color: rgba(252, 239, 0, 0.45);
+  background-color: rgba(252, 239, 0, 0.15);
   color: #1a1a1a; }
 
 .panel-table-wrapper {

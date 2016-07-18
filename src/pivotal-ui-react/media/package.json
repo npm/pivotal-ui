@@ -1,9 +1,9 @@
 {
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "React components for laying out images/audio/video next to text content",
   "homepage": "http://styleguide.pivotal.io/react.html#media_react",
   "dependencies": {
     "classnames": "^1.2.0",
-    "@npmcorp/pui-css-media": "6.2.0"
+    "@npmcorp/pui-css-media": "6.2.1"
   }
 }

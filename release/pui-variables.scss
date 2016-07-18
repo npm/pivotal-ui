@@ -153,9 +153,9 @@ $yellow-4: #fcef00;
 $yellow-5: #E0CA00;
 
 $npm-brand-yellow-1: $yellow-4;
-$npm-brand-yellow-1-alt: transparentize($npm-brand-yellow-1, 0.55);
+$npm-brand-yellow-1-alt: rgba($npm-brand-yellow-1, 0.15);
 $npm-brand-yellow-2: $yellow-5;
-$npm-brand-yellow-2-alt: transparentize($npm-brand-yellow-2, 0.15);;
+$npm-brand-yellow-2-alt: rgba($npm-brand-yellow-2, 0.35);
 
 // Orange
 // -------------------------

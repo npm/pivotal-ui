@@ -1,8 +1,8 @@
 {
   "homepage": "http://styleguide.pivotal.io/objects.html#svgeople",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "6.2.0",
-    "@npmcorp/pui-css-forms": "6.2.0"
+    "@npmcorp/pui-css-bootstrap": "6.2.1",
+    "@npmcorp/pui-css-forms": "6.2.1"
   },
-  "version": "6.2.0"
+  "version": "6.2.1"
 }

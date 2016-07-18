@@ -5925,13 +5925,13 @@ button.close {
   background-color: #fcef00 !important; }
 
 .bg-npm-brand-yellow-1-alt {
-  background-color: rgba(252, 239, 0, 0.45) !important; }
+  background-color: rgba(252, 239, 0, 0.15) !important; }
 
 .bg-npm-brand-yellow-2 {
   background-color: #E0CA00 !important; }
 
 .bg-npm-brand-yellow-2-alt {
-  background-color: rgba(224, 202, 0, 0.85) !important; }
+  background-color: rgba(224, 202, 0, 0.35) !important; }
 
 .bg-npm-warm-1 {
   background-color: #EA74F4 !important; }
@@ -8714,10 +8714,10 @@ a {
   background-color: white; }
 
 .panel-basic-info {
-  border: 1px solid rgba(224, 202, 0, 0.85);
+  border: 1px solid rgba(224, 202, 0, 0.35);
   border-radius: 10px;
       background-clip: padding-box;
-    background-color: rgba(252, 239, 0, 0.45);
+    background-color: rgba(252, 239, 0, 0.15);
   color: #1a1a1a; }
 
 .panel-table-wrapper {

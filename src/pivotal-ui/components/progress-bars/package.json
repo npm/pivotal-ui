@@ -1,7 +1,7 @@
 {
   "homepage": "http://styleguide.pivotal.io/objects.html#progress_bar",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "6.2.0"
+    "@npmcorp/pui-css-bootstrap": "6.2.1"
   },
-  "version": "6.2.0"
+  "version": "6.2.1"
 }

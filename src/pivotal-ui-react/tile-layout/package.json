@@ -1,10 +1,10 @@
 {
-  "version": "6.2.0",
+  "version": "6.2.1",
   "description": "React tile layout component",
   "homepage": "http://styleguide.pivotal.io/react.html#tile_layout",
   "dependencies": {
     "classnames": "^1.2.0",
-    "@npmcorp/pui-css-tile-layout": "6.2.0",
-    "@npmcorp/pui-react-helpers": "6.2.0"
+    "@npmcorp/pui-css-tile-layout": "6.2.1",
+    "@npmcorp/pui-react-helpers": "6.2.1"
   }
 }
