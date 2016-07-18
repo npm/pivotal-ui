@@ -147,10 +147,6 @@ gulp.task('monolith-styleguide-assets', () => gulp.src([
   ]).pipe(gulp.dest('build/styleguide'))
 );
 
-gulp.task('monolith-zeroclipboard-assets', () => gulp.src('node_modules/zeroclipboard/dist/ZeroClipboard.{js,swf}')
-    .pipe(gulp.dest('build/zeroclipboard'))
-);
-
 gulp.task('monolith-app-config', () => gulp.src(['src/Staticfile', 'config/nginx.conf'])
     .pipe(gulp.dest('build'))
 );
@@ -166,7 +162,6 @@ gulp.task('monolith', callback => runSequence('monolith-clean', [
     'monolith-build-styleguide-react-js',
     'monolith-prism-assets',
     'monolith-styleguide-assets',
-    'monolith-zeroclipboard-assets',
     'monolith-app-config'
   ], callback));
 
