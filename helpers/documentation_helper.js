@@ -1,4 +1,4 @@
-var babel = require('babel');
+var babel = require('babel-core');
 
 function commentNodes(file) {
   var {ast: {comments}} = babel.transform(file.contents.toString(), {stage: 0});

@@ -4,7 +4,7 @@ const Tab = global.Tab || require('@npmcorp/pui-react-tabs').Tab;
 const Collapse = global.Collapse || require('@npmcorp/pui-react-collapse').Collapse;
 const lodash = require('lodash');
 
-const ComponentList = React.createClass({
+class ComponentList extends React.Component {
   render() {
     const {components} = this.props;
 
@@ -24,14 +24,9 @@ const ComponentList = React.createClass({
       </ul>
     );
   }
-});
+}
 
-const StyleguideNav = React.createClass({
-  propTypes: {
-    defaultLanguage: React.PropTypes.string.isRequired,
-    defaultComponentType: React.PropTypes.string.isRequired,
-    navTree: React.PropTypes.object.isRequired
-  },
+export class StyleguideNav extends React.Component {
   render() {
     const {navTree, defaultLanguage, defaultComponentType} = this.props;
 
@@ -55,6 +50,10 @@ const StyleguideNav = React.createClass({
       </SimpleTabs>
     );
   }
-});
+}
 
-export default StyleguideNav;
+StyleguideNav.propTypes = {
+  defaultLanguage: React.PropTypes.string.isRequired,
+  defaultComponentType: React.PropTypes.string.isRequired,
+  navTree: React.PropTypes.object.isRequired
+}
