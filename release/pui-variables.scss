@@ -153,7 +153,9 @@ $yellow-4: #fcef00;
 $yellow-5: #E0CA00;
 
 $npm-brand-yellow-1: $yellow-4;
+$npm-brand-yellow-1-alt: transparentize($npm-brand-yellow-1, 0.55);
 $npm-brand-yellow-2: $yellow-5;
+$npm-brand-yellow-2-alt: transparentize($npm-brand-yellow-2, 0.15);;
 
 // Orange
 // -------------------------
@@ -1183,8 +1185,8 @@ $panel-basic-alt-border-radius:   10px;
 
 // Panel Basic Info
 // -------------------------
-$panel-basic-info-background:      $warn-3;
-$panel-basic-info-border:          1px solid $warn-2;
+$panel-basic-info-background:      $npm-brand-yellow-1-alt;
+$panel-basic-info-border:          1px solid $npm-brand-yellow-2-alt;
 $panel-basic-info-border-radius:   10px;
 
 // Panel Titles

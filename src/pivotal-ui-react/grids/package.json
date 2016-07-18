@@ -1,9 +1,9 @@
 {
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "React components for laying-out content in a grid",
   "homepage": "http://styleguide.pivotal.io/react.html#grid_react",
   "dependencies": {
-    "@npmcorp/pui-css-grids": "6.1.0",
+    "@npmcorp/pui-css-grids": "6.2.0",
     "classnames": "^1.2.0",
     "react-bootstrap": "0.25.1"
   }

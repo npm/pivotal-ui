@@ -2,8 +2,8 @@
   "homepage": "http://styleguide.pivotal.io/elements.html#button",
   "main": "index.js",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "6.1.0",
-    "@npmcorp/pui-css-typography": "6.1.0"
+    "@npmcorp/pui-css-bootstrap": "6.2.0",
+    "@npmcorp/pui-css-typography": "6.2.0"
   },
-  "version": "6.1.0"
+  "version": "6.2.0"
 }

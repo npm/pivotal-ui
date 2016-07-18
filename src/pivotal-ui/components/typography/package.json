@@ -1,9 +1,9 @@
 {
   "homepage": "http://styleguide.pivotal.io/elements.html#typography",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "6.1.0",
-    "@npmcorp/pui-css-colors": "6.1.0",
+    "@npmcorp/pui-css-bootstrap": "6.2.0",
+    "@npmcorp/pui-css-colors": "6.2.0",
     "font-awesome": "^4.4.0"
   },
-  "version": "6.1.0"
+  "version": "6.2.0"
 }

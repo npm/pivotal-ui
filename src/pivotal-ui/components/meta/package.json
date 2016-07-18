@@ -1,8 +1,8 @@
 {
   "homepage": "https://styleguide-1-west.internal.npmjs.com/css_base_meta.html",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "6.1.0",
-    "@npmcorp/pui-css-typography": "6.1.0"
+    "@npmcorp/pui-css-bootstrap": "6.2.0",
+    "@npmcorp/pui-css-typography": "6.2.0"
   },
-  "version": "6.1.0"
+  "version": "6.2.0"
 }

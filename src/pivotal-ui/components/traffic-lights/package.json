@@ -1,9 +1,9 @@
 {
   "homepage": "http://styleguide.pivotal.io/section.html#traffic-lights",
   "dependencies": {
-    "@npmcorp/pui-css-bootstrap": "6.1.0",
-    "@npmcorp/pui-css-lists": "6.1.0",
-    "@npmcorp/pui-css-iconography": "6.1.0"
+    "@npmcorp/pui-css-bootstrap": "6.2.0",
+    "@npmcorp/pui-css-lists": "6.2.0",
+    "@npmcorp/pui-css-iconography": "6.2.0"
   },
-  "version": "6.1.0"
+  "version": "6.2.0"
 }
