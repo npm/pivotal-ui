@@ -6789,6 +6789,11 @@ label {
 .form-control[readonly] {
   background-color: #eeeeee; }
 
+.form-control-alt-1 {
+  box-shadow: none !important; }
+  .form-control-alt-1.active, .form-control-alt-1:active, .form-control-alt-1.hover, .form-control-alt-1:hover, .form-control-alt-1.focus, .form-control-alt-1:focus {
+    box-shadow: none !important; }
+
 .form-control {
   padding: 8px 14px;
   position: relative;

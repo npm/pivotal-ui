@@ -8949,6 +8949,39 @@ Add the `readonly` boolean attribute on an input to prevent user input and style
 
 /*doc
 ---
+title: Alternate Styles
+name: 02_form_inputs_styles
+parent: 00_forms
+---
+
+Use alternate style class `.form-control-alt-1` for a different look.
+
+```html_example
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control form-control-alt-1" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control form-control-alt-1" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+```
+*/
+.form-control-alt-1 {
+  box-shadow: none !important; }
+  .form-control-alt-1.active, .form-control-alt-1:active, .form-control-alt-1.hover, .form-control-alt-1:hover, .form-control-alt-1.focus, .form-control-alt-1:focus {
+    box-shadow: none !important; }
+
+/*doc
+---
 title: Selects
 name: form_selects
 parent: form_inputs

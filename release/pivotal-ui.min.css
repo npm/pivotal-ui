@@ -1902,6 +1902,7 @@ label{font-weight:700;color:#404040}
 .form-group-search i{position:absolute;left:12px;top:12px}
 .form-group-search input{padding-left:34px}
 .form-control[readonly]{background-color:#eee}
+.form-control-alt-1,.form-control-alt-1.active,.form-control-alt-1.focus,.form-control-alt-1.hover,.form-control-alt-1:active,.form-control-alt-1:focus,.form-control-alt-1:hover{box-shadow:none!important}
 .form-control{padding:8px 14px;position:relative;box-shadow:inset 0 0 20px rgba(127,127,127,.2);font-weight:400;border-radius:10px}
 .form-control:focus,.form-control:hover{border-color:gray}
 .form-control.active,.form-control.focus,.form-control.hover,.form-control:active,.form-control:focus,.form-control:hover{box-shadow:inset 0 0 20px rgba(127,127,127,.4)}
