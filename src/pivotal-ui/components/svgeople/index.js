@@ -1,5 +1,4 @@
 var $ = require('jquery');
-require('@npmcorp/pui-css-forms').stepper;
 
 /**
  * SVGeople constructor takes 4 arguments
