@@ -1,5 +1,5 @@
 {
-  "version": "6.2.1",
+  "version": "6.4.0",
   "description": "Custom build of Bootstrap for Pivotal UI",
   "homepage": "http://styleguide.pivotal.io/",
   "peerDependencies": {

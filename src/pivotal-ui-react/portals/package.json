@@ -1,5 +1,5 @@
 {
-  "version": "6.2.1",
+  "version": "6.4.0",
   "description": "React components that provide portals",
   "homepage": "http://styleguide.pivotal.io/react.html",
   "dependencies": {

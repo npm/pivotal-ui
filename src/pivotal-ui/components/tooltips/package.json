@@ -1,7 +1,7 @@
 {
   "homepage": "http://styleguide.pivotal.io/objects.html#tooltip",
   "dependencies": {
-    "@npmcorp/pui-css-typography": "6.2.1"
+    "@npmcorp/pui-css-typography": "6.4.0"
   },
-  "version": "6.2.1"
+  "version": "6.4.0"
 }

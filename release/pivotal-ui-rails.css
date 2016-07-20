@@ -22904,6 +22904,44 @@ Add `.panel-table-wrapper` if you're containing a table.
 
 /*doc
 ---
+title: Error
+name: panel_error
+parent: panel
+---
+
+Error panels are panels with a colored border and background to match.
+
+```html_example
+<div class="panel panel-error">
+  <div class="panel-header">
+    <h5 class="panel-title-alt">Basic Title</h5>
+  </div>
+  <div class="panel-body">
+    Basic Panel
+  </div>
+</div>
+
+<div class="panel panel-error">
+  <div class="panel-body">
+    Basic Panel
+  </div>
+</div>
+
+```
+
+*/
+.panel-error {
+  border: 1px solid rgba(153, 23, 29, 0.4);
+  border-radius: 10px;
+  /* Firefox 3.6 */
+  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */
+  background-color: #FFD9DB;
+  color: #99171D; }
+
+/*doc
+---
 title: Basic Informative
 name: panel_basic_info
 parent: panel

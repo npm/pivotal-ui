@@ -8718,6 +8718,13 @@ a {
     border-bottom: 1px solid #cccccc;
   background-color: white; }
 
+.panel-error {
+  border: 1px solid rgba(153, 23, 29, 0.4);
+  border-radius: 10px;
+      background-clip: padding-box;
+    background-color: #FFD9DB;
+  color: #99171D; }
+
 .panel-basic-info {
   border: 1px solid rgba(224, 202, 0, 0.35);
   border-radius: 10px;

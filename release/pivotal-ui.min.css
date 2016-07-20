@@ -2389,6 +2389,7 @@ a.link-text{font-weight:600}
 .panel-shadow-4{box-shadow:0 4px rgba(0,0,0,.035)}
 .panel-simple{border:1px solid gray}
 .panel-basic-accent,.panel-basic-alt{border:1px solid #ccc;border-radius:10px;background-clip:padding-box;border-bottom:1px solid #ccc;background-color:#fff}
+.panel-error{border:1px solid rgba(153,23,29,.4);border-radius:10px;background-clip:padding-box;background-color:#FFD9DB;color:#99171D}
 .panel-basic-info{border:1px solid rgba(224,202,0,.35);border-radius:10px;background-clip:padding-box;background-color:rgba(252,239,0,.15);color:#1a1a1a}
 .panel-table-wrapper{overflow:hidden}
 .panel-scrollable{max-height:183px;overflow-y:overlay;overflow-x:hidden}
