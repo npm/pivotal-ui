@@ -177,6 +177,43 @@ Add `.panel-table-wrapper` if you're containing a table.
 
 /*doc
 ---
+title: Error
+name: panel_error
+parent: panel
+---
+
+Error panels are panels with a colored border and background to match.
+
+```html_example
+<div class="panel panel-error">
+  <div class="panel-header">
+    <h5 class="panel-title-alt">Basic Title</h5>
+  </div>
+  <div class="panel-body">
+    Basic Panel
+  </div>
+</div>
+
+<div class="panel panel-error">
+  <div class="panel-body">
+    Basic Panel
+  </div>
+</div>
+
+```
+
+*/
+
+.panel-error {
+  border: $panel-error-border;
+  border-radius: $panel-error-border-radius;
+  @include background-clip-fix;
+  background-color: $panel-error-background;
+  color: $panel-error-text;
+}
+
+/*doc
+---
 title: Basic Informative
 name: panel_basic_info
 parent: panel

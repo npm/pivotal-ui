@@ -1189,6 +1189,13 @@ $panel-basic-info-background:      $npm-brand-yellow-1-alt;
 $panel-basic-info-border:          1px solid $npm-brand-yellow-2-alt;
 $panel-basic-info-border-radius:   10px;
 
+// Panel Error
+// -------------------------
+$panel-error-background:	  $alert-danger-bg;
+$panel-error-border:		  1px solid rgba($alert-danger-text, 0.4);
+$panel-error-text:			  $alert-danger-text;
+$panel-error-border-radius:   10px;
+
 // Panel Titles
 // -------------------------
 $panel-title-padding:          $panel-body-padding;
