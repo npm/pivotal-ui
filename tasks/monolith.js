@@ -151,10 +151,6 @@ gulp.task('monolith-styleguide-assets', () => gulp.src([
   ]).pipe(gulp.dest('build/'))
 );
 
-gulp.task('monolith-app-config', () => gulp.src(['src/Staticfile', 'config/nginx.conf'])
-    .pipe(gulp.dest('build'))
-);
-
 gulp.task('monolith', callback => runSequence('monolith-clean', [
     'monolith-html',
     'handlebars-demos',
@@ -165,8 +161,7 @@ gulp.task('monolith', callback => runSequence('monolith-clean', [
     'monolith-build-styleguide-react-js',
     'monolith-prism-assets',
     'monolith-styleguide-assets',
-    'monolith-app-config'
-  ], callback));
+], callback));
 
 gulp.task('monolith-serve', ['monolith'], () => {
   connect.server({
