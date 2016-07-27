@@ -1,7 +1,6 @@
 const React = global.React || require('react');
-const SimpleTabs = global.SimpleTabs || require('@npmcorp/pui-react-tabs').SimpleTabs;
-const Tab = global.Tab || require('@npmcorp/pui-react-tabs').Tab;
-const Collapse = global.Collapse || require('@npmcorp/pui-react-collapse').Collapse;
+const { Tab, SimpleTabs } = require('../pivotal-ui-react/tabs/tabs');
+const { Collapse } = require('../pivotal-ui-react/collapse/collapse');
 const reduce = require('lodash.reduce');
 const values = require('lodash.values');
 
