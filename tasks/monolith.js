@@ -3,7 +3,6 @@ import gulp from 'gulp';
 import del from 'del';
 import { map, pipeline, merge, duplex } from 'event-stream';
 import { setup as setupDrF, copyAssets, generateCss } from '@npmcorp/dr-frankenstyle/dev';
-import { railsUrls } from '@npmcorp/dr-frankenstyle';
 import path from 'path';
 import { read } from 'vinyl-file';
 import webpack from 'webpack-stream';
@@ -86,9 +85,6 @@ gulp.task('monolith-build-css-from-cache', () => {
     }))
     .pipe(rename('pivotal-ui.css'))
     .pipe(gulp.dest('build/'))
-    .pipe(railsUrls())
-    .pipe(rename('pivotal-ui-rails.css'))
-    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('monolith-build-css-from-scratch', callback => runSequence('monolith-setup-css-cache', 'monolith-build-css-from-cache', callback));
