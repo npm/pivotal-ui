@@ -28,32 +28,32 @@ class ComponentList extends React.Component {
 
 export class StyleguideNav extends React.Component {
   render() {
-    const {navTree, defaultLanguage, defaultComponentType} = this.props;
+    const {navTree} = this.props;
 
-    const languageNames = ['CSS', 'React'];
-    const tabs = languageNames.map((language) => {
-      const componentTypes = navTree[language];
-
-      const components = reduce(values(componentTypes), (e, a) => Object.assign({}, e, a), {});
-
-      return (
-        <Tab eventKey={language.toLowerCase()} key={`nav-tab-${language}`} title={language} className="pvn phn">
-          <ComponentList components={components} />
-        </Tab>
-      );
-
-    });
+    const navByLanguage = {
+      CSS: reduce(values(navTree.CSS), (e, a) => Object.assign({}, e, a), {}),
+      React: reduce(values(navTree.React), (e, a) => Object.assign({}, e, a), {})
+    };
 
     return (
-      <SimpleTabs defaultActiveKey={defaultLanguage.toLowerCase()}>
-        {tabs}
-      </SimpleTabs>
+      <div className="tab-simple">
+        <ul className="nav nav-tabs">
+          <li className="active"><a data-toggle="tab" href="#lang-css">CSS</a></li>
+          <li><a data-toggle="tab" href="#lang-react">React</a></li>
+        </ul>
+        <div className="tab-content">
+          <div className="tab-pane fade in active pan" id="lang-css">
+            <ul className="list-unstyled mlxl">
+              {lodash.map(navByLanguage.CSS, (v, k) => <li key={`component-CSS-${k}`}><a href={v}>{k}</a></li>)}
+            </ul>
+          </div>
+          <div className="tab-pane fade pan" id="lang-react">
+            <ul className="list-unstyled mlxl">
+              {lodash.map(navByLanguage.React, (v, k) => <li key={`component-React-${k}`}><a href={v}>{k}</a></li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
     );
   }
-}
-
-StyleguideNav.propTypes = {
-  defaultLanguage: React.PropTypes.string.isRequired,
-  defaultComponentType: React.PropTypes.string.isRequired,
-  navTree: React.PropTypes.object.isRequired
 }
