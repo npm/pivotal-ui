@@ -78,11 +78,9 @@ gulp.task('monolith-build-css-from-cache', () => {
     cached: true
   })
     .pipe(generateCss(processStyleAssetsStream))
-    .pipe(postcss([
-      multiplane({
+    .pipe(multiplane.gulp({
         destination: 'build'
-      })
-    ]))
+    }))
     .pipe(rename('pivotal-ui.css'))
     .pipe(gulp.dest('build/'))
     .pipe(railsUrls())
