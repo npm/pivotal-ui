@@ -203,6 +203,7 @@
     "markdown-it": "^7.0.0",
     "npm-user-validate": "^0.1.5",
     "postcss-cssnext": "^2.7.0",
+    "postcss-scss": "^0.1.9",
     "prismjs": "0.0.1",
     "pui-prismjs": "0.0.1",
     "pui-react-animation": "^0.0.7",

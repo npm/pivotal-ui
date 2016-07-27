@@ -16,6 +16,7 @@ const cssnext = require('postcss-cssnext');
 const postcss = require('gulp-postcss');
 const multiplane = require('../lib/multiplane');
 const runSequence = require('run-sequence').use(gulp);
+const scss = require('postcss-scss');
 
 gulp.task('monolith-clean', callback => del(['build'], callback));
 
@@ -39,10 +40,12 @@ gulp.task('monolith-build-css-from-cache', () => {
       }
     }),
 
-    sass(),
     postcss([
       cssnext()
-    ]),
+    ], {
+      syntax: scss
+    }),
+    sass(),
 
     map((file, callback) => {
       callback(null, {
@@ -95,11 +98,13 @@ gulp.task('monolith-html', () => gulp.src('src/styleguide/*.html')
 );
 
 gulp.task('monolith-styleguide-css', () => gulp.src('src/styleguide/styleguide.scss')
-    .pipe(sass())
-    .pipe(postcss([
-      cssnext()
-    ]))
-    .pipe(gulp.dest('build/'))
+  .pipe(postcss([
+    cssnext()
+  ], {
+    syntax: scss
+  }))
+  .pipe(sass())
+  .pipe(gulp.dest('build/'))
 );
 
 gulp.task('monolith-build-js', () => gulp.src('./src/pivotal-ui/javascripts/pivotal-ui.js')
