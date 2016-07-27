@@ -7,7 +7,10 @@ export default {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader?stage=0&optional[]=runtime&loose=true'
+        loader: 'babel',
+        query: {
+          presets: ["es2015", "react", "stage-2"]
+        }
       }
     ]
   },

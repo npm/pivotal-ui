@@ -3,12 +3,12 @@ var types = React.PropTypes;
 var classnames = require('classnames');
 import {mergeProps} from '@npmcorp/pui-react-helpers';
 
-var paddingTypes = [
-  for (type of ['p', 'm'])
-  for (location of ['l', 'r', 't', 'b', 'h', 'v', 'a'])
-  for (size of ['n', 's', 'm', 'l', 'xl', 'xxl', 'xxxl', 'xxxxl'])
-  `${type}${location}${size}`
-  ];
+var paddingTypes = [];
+for (let type of ['p', 'm'])
+  for (let location of ['l', 'r', 't', 'b', 'h', 'v', 'a'])
+    for (let size of ['n', 's', 'm', 'l', 'xl', 'xxl', 'xxxl', 'xxxxl'])
+      paddingTypes.push(`${type}${location}${size}`)
+
 var PanelTypes = {
   propTypes: {
     type: types.string,
