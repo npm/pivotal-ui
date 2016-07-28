@@ -82,7 +82,9 @@ gulp.task('monolith-build-css-from-cache', () => {
     .pipe(generateCss(processStyleAssetsStream))
     .pipe(rename('pivotal-ui.css'));
 
-  return merge(css, css.pipe(multiplane.gulp()))
+  const js = gulp.src('./src/**/*.js');
+
+  return merge(css, merge(js, css).pipe(multiplane()))
     .pipe(gulp.dest('build/'))
 });
 

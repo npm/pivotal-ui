@@ -173,9 +173,6 @@ categories:
  - react_base_tables
  - react_all
 ---
-*/
-
-/*doc
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
