@@ -183,6 +183,7 @@
     "babel-polyfill": "^6.9.1",
     "babel-preset-stage-0": "^6.5.0",
     "browserify": "^13.0.1",
+    "duplexer2": "^0.1.4",
     "express": "^4.13.4",
     "frontmatter": "0.0.3",
     "fs-extra": "^0.30.0",
@@ -207,10 +208,12 @@
     "prismjs": "0.0.1",
     "pui-prismjs": "0.0.1",
     "pui-react-animation": "^0.0.7",
+    "pump": "^1.0.1",
     "react": "^0.13.3",
     "react-fa": "^3.4.0",
     "slugify": "^0.1.1",
-    "tape": "^4.6.0"
+    "tape": "^4.6.0",
+    "through2": "^0.6.5"
   },
   "scripts": {
     "deploy": "if [ `git symbolic-ref HEAD` = refs/heads/master ]; then gulp monolith && git create-deploy-branch && git push origin +deploy/master; else echo can only deploy master; exit 1; fi",

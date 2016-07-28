@@ -1,13 +1,12 @@
-import { exec } from 'child_process';
-import gulp from 'gulp';
-import del from 'del';
-import { map, pipeline, merge, duplex } from 'event-stream';
-import { setup as setupDrF, copyAssets, generateCss } from '@npmcorp/dr-frankenstyle/dev';
-import path from 'path';
-import { read } from 'vinyl-file';
-import webpack from 'webpack-stream';
-import webpackConfig from '../config/webpack';
-
+const { exec } = require('child_process');
+const gulp = require('gulp');
+const del = require('del');
+const { map, pipeline, merge, duplex } = require('event-stream');
+const { setup: setupDrF, copyAssets, generateCss } = require('@npmcorp/dr-frankenstyle/dev');
+const path = require('path');
+const { read } = require('vinyl-file');
+const webpack = require('webpack-stream');
+const webpackConfig = require('../config/webpack');
 const connect = require('gulp-connect');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
@@ -16,6 +15,7 @@ const postcss = require('gulp-postcss');
 const multiplane = require('../lib/multiplane');
 const runSequence = require('run-sequence').use(gulp);
 const scss = require('postcss-scss');
+const through2 = require('through2');
 
 gulp.task('monolith-clean', callback => del(['build'], callback));
 
@@ -76,14 +76,13 @@ gulp.task('monolith-build-css-from-cache', () => {
     )
   );
 
-  return setupDrF({
+  const css = setupDrF({
     cached: true
   })
     .pipe(generateCss(processStyleAssetsStream))
-    .pipe(multiplane.gulp({
-      destination: 'build'
-    }))
-    .pipe(rename('pivotal-ui.css'))
+    .pipe(rename('pivotal-ui.css'));
+
+  return merge(css, css.pipe(multiplane.gulp()))
     .pipe(gulp.dest('build/'))
 });
 
