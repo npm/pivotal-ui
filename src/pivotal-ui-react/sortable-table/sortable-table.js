@@ -188,7 +188,9 @@ var TableHeader = require('@npmcorp/pui-react-sortable-table').TableHeader;
 var TableRow = require('@npmcorp/pui-react-sortable-table').TableRow;
 var TableCell = require('@npmcorp/pui-react-sortable-table').TableCell;
 ```
+*/
 
+/*doc
 ---
 title: Sortable
 name: table_sortable_react
