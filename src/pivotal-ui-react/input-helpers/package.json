@@ -1,9 +1,0 @@
-{
-  "version": "7.2.1",
-  "description": "A React component for showing helper text dependent on the input value",
-  "homepage": "https://styleguide.internal.npmjs.com/react.html#label_react",
-  "dependencies": {
-    "@npmcorp/pui-css-forms": "7.2.1",
-    "@npmcorp/pui-react-helpers": "6.4.0"
-  }
-}
