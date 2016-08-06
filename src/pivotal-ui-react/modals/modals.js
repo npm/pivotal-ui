@@ -1,6 +1,5 @@
 var React = require('react/addons');
 var {DefaultH4} = require('@npmcorp/pui-react-typography');
-require('classlist-polyfill');
 import {mergeProps} from '@npmcorp/pui-react-helpers';
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
