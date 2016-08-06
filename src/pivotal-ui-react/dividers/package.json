@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "React components providing horizontal rules for dividing content",
   "homepage": "http://styleguide.pivotal.io/react.html#divider_react",
+  "main": "dividers.js",
   "dependencies": {
     "classnames": "^1.2.0",
     "@npmcorp/pui-css-dividers": "6.4.0",

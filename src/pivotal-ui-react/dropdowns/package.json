@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "A React dropdown component",
   "homepage": "http://styleguide.pivotal.io/react.html#dropdown_react",
+  "main": "dropdowns.js",
   "dependencies": {
     "react-bootstrap": "0.25.1",
     "@npmcorp/pui-css-dropdowns": "6.4.0",

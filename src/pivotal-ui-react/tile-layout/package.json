@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "React tile layout component",
   "homepage": "http://styleguide.pivotal.io/react.html#tile_layout",
+  "main": "tile-layout.js",
   "dependencies": {
     "classnames": "^1.2.0",
     "@npmcorp/pui-css-tile-layout": "6.4.0",

@@ -2,6 +2,7 @@
   "version": "7.2.1",
   "description": "React autocomplete component",
   "homepage": "http://styleguide.pivotal.io/react.html#autocomplete_react",
+  "main": "autocomplete.js",
   "dependencies": {
     "classnames": "^1.2.0",
     "event-stream": "^3.3.1",

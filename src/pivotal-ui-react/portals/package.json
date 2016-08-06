@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "React components that provide portals",
   "homepage": "http://styleguide.pivotal.io/react.html",
+  "main": "portals.js",
   "dependencies": {
     "node-event-emitter": "^0.0.1"
   }

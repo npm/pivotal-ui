@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "React components providing accordions for showing and hiding content",
   "homepage": "http://styleguide.pivotal.io/react.html#collapse_react",
+  "main": "collapse.js",
   "dependencies": {
     "react-bootstrap": "0.25.1",
     "classnames": "^1.2.0",

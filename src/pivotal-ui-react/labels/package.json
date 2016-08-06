@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "A React component for showing a colored pill of text",
   "homepage": "http://styleguide.pivotal.io/react.html#label_react",
+  "main": "labels.js",
   "dependencies": {
     "@npmcorp/pui-css-labels": "6.4.0",
     "@npmcorp/pui-react-helpers": "6.4.0"
