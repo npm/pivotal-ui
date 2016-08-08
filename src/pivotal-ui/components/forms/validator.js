@@ -31,13 +31,13 @@ var handleInput = function handleInput(e) {
   var $input = $(input);
   var err;
 
-  var isNoMatch = $input.is("[data-nomatch]");
+  var isNoMatch = $input.is("[data-validate-nomatch]");
 
   if(isNoMatch) {
     var label = $input.closest(".form-group").find("label");
-    var labelText = label.attr("data-nomatch-label") || label.text();
-    var matchName = $input.attr("data-nomatch-name") || input.name;
-    err = input.value === $input.attr("data-nomatch") ? new Error(labelText + " cannot match existing " + matchName) : err;
+    var labelText = label.attr("data-validate-nomatch-label") || label.text();
+    var matchName = $input.attr("data-validate-nomatch-name") || input.name;
+    err = input.value === $input.attr("data-validate-nomatch") ? new Error(labelText + " cannot match existing " + matchName) : err;
   }
 
   if(err) {
