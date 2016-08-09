@@ -1,7 +1,7 @@
 var babel = require('babel-core');
 
 function commentNodes(file) {
-  var {ast: {comments}} = babel.transform(file.contents.toString(), {stage: 0});
+  var {ast: {comments}} = babel.transform(file.contents.toString(), {presets: ["stage-0", "react"]});
   return comments;
 }
 

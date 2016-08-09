@@ -179,6 +179,7 @@
     "@npmcorp/pui-react-tooltip": "6.4.0",
     "@npmcorp/pui-react-typography": "6.4.0",
     "babel-polyfill": "^6.9.1",
+    "babel-preset-stage-0": "^6.5.0",
     "browserify": "^13.0.1",
     "express": "^4.13.4",
     "git-create-deploy-branch": "^1.0.1",
