@@ -389,7 +389,7 @@ h1#intro.styleguide {
     max-width: none; }
 
 .bg-gradient-1 {
-  background-image: -webkit-linear-gradient(90deg, #1F7BA6 0%, #46B1E3 100%);
+  background-image: -webkit-linear-gradient(bottom, #1F7BA6 0%, #46B1E3 100%);
   background-image: linear-gradient(0deg, #1F7BA6 0%, #46B1E3 100%); }
 
 .styleguide-title {

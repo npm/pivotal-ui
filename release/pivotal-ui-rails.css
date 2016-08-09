@@ -1,13 +1,13 @@
 /*!
- *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.6.1 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: asset-url('font-awesome/fontawesome-webfont.eot?v=4.5.0');
-  src: asset-url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), asset-url('font-awesome/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), asset-url('font-awesome/fontawesome-webfont.woff?v=4.5.0') format('woff'), asset-url('font-awesome/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), asset-url('font-awesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+  src: asset-url('font-awesome/fontawesome-webfont.eot?v=4.6.1');
+  src: asset-url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), asset-url('font-awesome/fontawesome-webfont.woff2?v=4.6.1') format('woff2'), asset-url('font-awesome/fontawesome-webfont.woff?v=4.6.1') format('woff'), asset-url('font-awesome/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), asset-url('font-awesome/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -118,31 +118,31 @@
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -2083,6 +2083,98 @@
 }
 .fa-percent:before {
   content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 
 /* ==========================================================================
@@ -9646,7 +9738,7 @@ A toggle switch is a horizontally styled checkbox which represents true with blu
     background-color: #b3b3b3;
     color: #1a1a1a;
     -webkit-transition: background 0.4s;
-            transition: background 0.4s;
+    transition: background 0.4s;
     cursor: pointer;
     outline: none;
     text-indent: -99999px; }
@@ -9658,7 +9750,7 @@ A toggle switch is a horizontally styled checkbox which represents true with blu
       display: block;
       background-color: white;
       -webkit-transition: margin 0.4s, background 0.4s;
-              transition: margin 0.4s, background 0.4s;
+      transition: margin 0.4s, background 0.4s;
       content: ""; }
   .toggle-switch:checked + label {
     background-color: #176799; }
@@ -9712,7 +9804,8 @@ text field by interacting with one of two buttons.
     margin: 0; }
   .form-stepper input[type=number] {
     -moz-appearance: textfield;
-    appearance: textfield;
+    -webkit-appearance: textfield;
+            appearance: textfield;
     width: 5em;
     text-align: center; }
   .form-stepper button {
@@ -9789,16 +9882,16 @@ in a value that matches something you don't want them to type.
 
 To use this style of validation, add two attributes to your input:
 
-<code>data-nomatch</code>: The value that the input should not match
+<code>data-validate-nomatch</code>: The value that the input should not match
 
-<code>data-nomatch-name</code>: A human readable name for the value you don't
+<code>data-validate-nomatch-name</code>: A human readable name for the value you don't
 want to match. Used for error reporting.
 
-<code>data-nomatch-label</code> (optional): In case you have a label that doesn't
+<code>data-validate-nomatch-label</code> (optional): In case you have a label that doesn't
 match what you'd like to show, you can put this data attribute on the label for
 error handling. If unused, the label's contents will be shown.
 
-The <code>data-nomatch</code> and the <code>label</code> for the input will both
+The <code>data-validate-nomatch</code> and the <code>label</code> for the input will both
 be used in the error generation.
 
 Here is a simple example, type <code>bobs-test-org</code> into the following input,
@@ -9809,7 +9902,7 @@ you should see an error that says <code>Username cannot match existing Org Name<
 <div class="form-group">
   <label for="username">Username</label>
   <div class="input-wrapper">
-    <input name="username" id="username" class="form-control" required data-nomatch="bobs-test-org" data-nomatch-name="Org Name">
+    <input name="username" id="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name">
   </div>
 </div>
 <button class="btn btn-highlight-1" type="submit">Submit</button>
@@ -9826,15 +9919,49 @@ you should see an error that says <code>New Username cannot match existing usern
 ```html_example
 <form data-validate>
   <div class="form-group link-updater-container">
-    <label for="new-user" data-nomatch-label="New Username">Choose a Username</label>
+    <label for="new-user" data-validate-nomatch-label="New Username">Choose a Username</label>
     <div class="input-wrapper link-updater">
-      <input name="new-user" id="new-user" class="form-control" required data-nomatch="bobs-test-org" data-nomatch-name="username">
+      <input name="new-user" id="new-user" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="username">
       <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
     </div>
   </div>
 
   <button class="btn btn-highlight-1" type="submit">Upgrade to Organization for $14/mo</button>
   </section>
+</form>
+```
+*/
+/*doc
+---
+title: No Error Shown Input
+name: form_input_no_error
+parent: form_validation
+---
+
+The No Error Shown Input is used when you want to make sure validation checks fail on an element
+(disabiling the submit button),
+but you also want to omit the error being shown.
+
+In the following example, if you fill in the input with <code>bobs-test-org</code>, you will see that
+the submit button no longer is active, but the error
+does not show. Contrast this with error example
+beneath it.
+
+```html_example
+<form data-validate>
+<div class="form-group">
+  <label for="username">Username No Error</label>
+  <div class="input-wrapper">
+    <input name="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name" data-validate-no-error>
+  </div>
+</div>
+<div class="form-group">
+  <label for="username">Username With Error</label>
+  <div class="input-wrapper">
+    <input name="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name">
+  </div>
+</div>
+<button class="btn btn-highlight-1" type="submit">Submit</button>
 </form>
 ```
 
@@ -9881,7 +10008,7 @@ For an organization name input:
 */
 .link-updater-container {
   -webkit-transition: margin-bottom .1s;
-          transition: margin-bottom .1s; }
+  transition: margin-bottom .1s; }
   .link-updater-container .link-updater {
     position: relative; }
   .link-updater-container p {
@@ -10043,7 +10170,7 @@ To use this validation on your form, add <code>data-validate</code> to the form 
 */
 .form-group {
   -webkit-transition: margin-bottom .1s;
-          transition: margin-bottom .1s; }
+  transition: margin-bottom .1s; }
   .form-group .input-wrapper {
     position: relative; }
   .form-group.has-error {
@@ -10582,7 +10709,7 @@ a {
     content: "\2665";
     font-size: 14px;
     -webkit-transition: all 0.3s;
-            transition: all 0.3s;
+    transition: all 0.3s;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     position: absolute;
@@ -10749,7 +10876,7 @@ parent: background
   background: #f2f2f2 asset-url("@npmcorp/pui-css-backgrounds/gray-cloud.png") no-repeat 50% 50%; }
 
 .bg-glow {
-  background: -webkit-radial-gradient(ellipse at 50% bottom, #4b6475 0%, #243640 60%);
+  background: -webkit-radial-gradient(50% bottom ellipse, #4b6475 0%, #243640 60%);
   background: radial-gradient(ellipse at 50% bottom, #4b6475 0%, #243640 60%); }
 
 /*doc
@@ -11145,7 +11272,7 @@ parent: button
   outline: none;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
-  background: -webkit-linear-gradient(90deg, rgba(202, 56, 56, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(bottom, rgba(202, 56, 56, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(0deg, rgba(202, 56, 56, 0.15) 0%, rgba(255, 255, 255, 0) 100%); }
   .btn-secondary:hover, .btn-secondary:focus {
     color: #d04c4b;
@@ -11178,7 +11305,7 @@ parent: button
   fieldset[disabled] .btn-secondary.active {
     opacity: 0.5; }
   .btn-secondary:hover {
-    background: -webkit-linear-gradient(90deg, rgba(255, 3, 3, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(bottom, rgba(255, 3, 3, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(0deg, rgba(255, 3, 3, 0.15) 0%, rgba(255, 255, 255, 0) 100%); }
 
 .btn-tertiary {
@@ -12608,6 +12735,9 @@ categories:
  - css_base_embeds
  - css_all
 ---
+
+These are components for embedded objects such as YouTube video.
+
 */
 /*doc
 ---
@@ -13456,6 +13586,7 @@ page](/containers.html).
 
 */
 .container-fullwidth {
+  max-width: none !important;
   max-width: initial !important; }
 
 /* ==========================================================================
@@ -13565,6 +13696,9 @@ categories:
  - css_base_images
  - css_all
 ---
+
+These components are for placing and sizing images.
+
 */
 /*doc
 ---
@@ -22464,7 +22598,9 @@ Using the `fromPackage` helper:
     -webkit-transform: translate(0, -25%);
     transform: translate(0, -25%);
     -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out; }
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
   .modal.in .modal-dialog, .modal.modal-fade-enter-active .modal-dialog {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
@@ -23329,6 +23465,7 @@ In the html, the width should be set to match the `aria-valuenow` if the progres
 */
 .progress-bar-animated {
   -webkit-transition: width 1s ease-in-out;
+  -webkit-transition: width 2s ease-in-out;
   transition: width 2s ease-in-out; }
 
 /* ==========================================================================
@@ -23764,7 +23901,9 @@ form stepper component. Use the piece below to see how it works.
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
     -webkit-transition: -webkit-transform .2s;
-            transition: transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
     padding: 0 1%; }
     .svgeople .person-container.show {
       -webkit-transform: translateY(0%);
@@ -24171,7 +24310,6 @@ We are making the assumption here that table-hover will *only* be used if the ta
 .table-sortable .sortable, .table-sortable [sortable] {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -24687,7 +24825,7 @@ parent: tab
     color: #1B78B3;
     background-color: #cccccc;
     -webkit-transition: background-color 150ms ease-out;
-            transition: background-color 150ms ease-out; }
+    transition: background-color 150ms ease-out; }
   .tab-highlight .nav > li > a:hover {
     z-index: 100;
     background-color: #e6e6e6; }
@@ -25048,7 +25186,7 @@ You can use any 130px by 130px svg for the icon in the center of the tab. Please
     background-color: #cccccc;
     border-radius: 130px;
     -webkit-transition: all 300ms ease;
-            transition: all 300ms ease;
+    transition: all 300ms ease;
     color: gray; }
     .tabs-images .nav-tabs-images li a[data-toggle=tab]:hover, .tabs-images .nav-tabs-images li a[data-toggle=tab]:focus, .tabs-images .nav-tabs-images li a[data-toggle=tab].disabled, .tabs-images .nav-tabs-images li a[data-toggle=tab][disabled],
     fieldset[disabled] .tabs-images .nav-tabs-images li a[data-toggle=tab] {
@@ -27086,15 +27224,15 @@ Traffic lights are used to show the status of the application. "On" is used for 
     opacity: 0.4; }
   .traffic-lights .green-light i {
     -webkit-transition: opacity 1500ms ease-out;
-            transition: opacity 1500ms ease-out;
+    transition: opacity 1500ms ease-out;
     color: #00A79D; }
   .traffic-lights .gray-light i {
     -webkit-transition: opacity 1500ms ease-out;
-            transition: opacity 1500ms ease-out;
+    transition: opacity 1500ms ease-out;
     color: #666666; }
   .traffic-lights .red-light i {
     -webkit-transition: opacity 1500ms ease-out;
-            transition: opacity 1500ms ease-out;
+    transition: opacity 1500ms ease-out;
     color: #CC1F27; }
   .traffic-lights .loading-red {
     -webkit-animation: loadingFade 2s ease-in-out infinite;
@@ -27252,10 +27390,6 @@ So, for extra small (`xs`) screens for example, the available `.visible-*-*` cla
 title: Background Images
 name: responsive_background_images
 parent: responsive_utilities
-categories:
- - css_utilities_responsive-utilities
- - react_utilities_responsive-utilities
- - css_all
 ---
 
 <table class="styleguide">
@@ -27871,7 +28005,7 @@ header a {
     color: white;
     text-decoration: none;
     -webkit-transition: color 0.1s ease, background 0.1s ease;
-            transition: color 0.1s ease, background 0.1s ease; }
+    transition: color 0.1s ease, background 0.1s ease; }
   header a.active {
     color: currentColor; }
 
@@ -28043,6 +28177,7 @@ header .drop-down-menu-toggle.toggle-is-open svg {
 
 @media (min-width: 768px) {
   header {
+    max-height: none;
     max-height: initial;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -28053,6 +28188,7 @@ header .drop-down-menu-toggle.toggle-is-open svg {
     padding: 0 20px;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
             align-items: stretch; }
   header > .header-item {
     -ms-flex-preferred-size: auto;
@@ -28243,7 +28379,7 @@ header.header-light {
   header.header-light .drop-down-menu-section li:hover {
     color: #cb3837;
     -webkit-transition: color 0.1s ease;
-            transition: color 0.1s ease; }
+    transition: color 0.1s ease; }
   header.header-light .drop-down-menu a:hover,
   header.header-light .drop-down-menu button:hover {
     color: #681b1b; }
