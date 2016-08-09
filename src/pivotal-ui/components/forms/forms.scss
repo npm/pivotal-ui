@@ -1505,6 +1505,41 @@ you should see an error that says <code>New Username cannot match existing usern
   </section>
 </form>
 ```
+*/
+
+/*doc
+---
+title: No Error Shown Input
+name: form_input_no_error
+parent: form_validation
+---
+
+The No Error Shown Input is used when you want to make sure validation checks fail on an element
+(disabiling the submit button),
+but you also want to omit the error being shown.
+
+In the following example, if you fill in the input with <code>bobs-test-org</code>, you will see that
+the submit button no longer is active, but the error
+does not show. Contrast this with error example
+beneath it.
+
+```html_example
+<form data-validate>
+<div class="form-group">
+  <label for="username">Username No Error</label>
+  <div class="input-wrapper">
+    <input name="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name" data-validate-no-error>
+  </div>
+</div>
+<div class="form-group">
+  <label for="username">Username With Error</label>
+  <div class="input-wrapper">
+    <input name="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name">
+  </div>
+</div>
+<button class="btn btn-highlight-1" type="submit">Submit</button>
+</form>
+```
 
 
 */

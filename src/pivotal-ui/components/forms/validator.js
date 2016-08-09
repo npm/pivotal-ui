@@ -91,7 +91,9 @@ ValidatedForm.prototype.addListeners = function addListners() {
  *
  */
 ValidatedForm.prototype.reflectValidity = function reflectValidity(input, message){
-  if(!input.checkValidity() || message) {
+  if($(input).is("[data-validate-no-error]")) {
+    //no-op
+  } else if(!input.checkValidity() || message) {
     removeError(input);
     addError(input, message);
   } else {
