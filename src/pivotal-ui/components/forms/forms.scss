@@ -1457,16 +1457,16 @@ in a value that matches something you don't want them to type.
 
 To use this style of validation, add two attributes to your input:
 
-<code>data-nomatch</code>: The value that the input should not match
+<code>data-validate-nomatch</code>: The value that the input should not match
 
-<code>data-nomatch-name</code>: A human readable name for the value you don't
+<code>data-validate-nomatch-name</code>: A human readable name for the value you don't
 want to match. Used for error reporting.
 
-<code>data-nomatch-label</code> (optional): In case you have a label that doesn't
+<code>data-validate-nomatch-label</code> (optional): In case you have a label that doesn't
 match what you'd like to show, you can put this data attribute on the label for
 error handling. If unused, the label's contents will be shown.
 
-The <code>data-nomatch</code> and the <code>label</code> for the input will both
+The <code>data-validate-nomatch</code> and the <code>label</code> for the input will both
 be used in the error generation.
 
 Here is a simple example, type <code>bobs-test-org</code> into the following input,
@@ -1477,7 +1477,7 @@ you should see an error that says <code>Username cannot match existing Org Name<
 <div class="form-group">
   <label for="username">Username</label>
   <div class="input-wrapper">
-    <input name="username" id="username" class="form-control" required data-nomatch="bobs-test-org" data-nomatch-name="Org Name">
+    <input name="username" id="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name">
   </div>
 </div>
 <button class="btn btn-highlight-1" type="submit">Submit</button>
@@ -1494,15 +1494,50 @@ you should see an error that says <code>New Username cannot match existing usern
 ```html_example
 <form data-validate>
   <div class="form-group link-updater-container">
-    <label for="new-user" data-nomatch-label="New Username">Choose a Username</label>
+    <label for="new-user" data-validate-nomatch-label="New Username">Choose a Username</label>
     <div class="input-wrapper link-updater">
-      <input name="new-user" id="new-user" class="form-control" required data-nomatch="bobs-test-org" data-nomatch-name="username">
+      <input name="new-user" id="new-user" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="username">
       <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
     </div>
   </div>
 
   <button class="btn btn-highlight-1" type="submit">Upgrade to Organization for $14/mo</button>
   </section>
+</form>
+```
+*/
+
+/*doc
+---
+title: No Error Shown Input
+name: form_input_no_error
+parent: form_validation
+---
+
+The No Error Shown Input is used when you want to make sure validation checks fail on an element
+(disabiling the submit button),
+but you also want to omit the error being shown.
+
+In the following example, if you fill in the input with <code>bobs-test-org</code>, you will see that
+the submit button no longer is active, but the error
+does not show. Contrast this with error example
+beneath it.
+
+```html_example
+<form data-validate>
+<div class="form-group">
+  <label for="username">Username No Error</label>
+  <div class="input-wrapper">
+    <input name="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name" data-validate-no-error>
+  </div>
+</div>
+<div class="form-group">
+  <label for="username">Username With Error</label>
+  <div class="input-wrapper">
+    <input name="username" class="form-control" required data-validate-nomatch="bobs-test-org" data-validate-nomatch-name="Org Name">
+  </div>
+</div>
+<button class="btn btn-highlight-1" type="submit">Submit</button>
 </form>
 ```
 
