@@ -1,5 +1,6 @@
 import del from 'del';
 import gulp from 'gulp';
+import { pipeline } from 'event-stream';
 import mergeStream from 'merge-stream';
 import runSequence from 'run-sequence';
 import license from './helpers/license-helper';
@@ -9,6 +10,9 @@ import path from 'path';
 
 const plugins = require('gulp-load-plugins')();
 const argv = require('yargs').argv;
+
+const cssnext = require('postcss-cssnext');
+const postcss = require('gulp-postcss');
 
 const componentsGlob = ['src/pivotal-ui/components/*', '!src/**/*.scss'];
 const buildFolder = 'dist/css';
@@ -32,10 +36,12 @@ gulp.task('css-build-readme', () =>
 );
 
 gulp.task('css-build-src', function() {
-  return gulp.src(['src/pivotal-ui/components/**/*.scss', '!src/pivotal-ui/components/*.scss'])
-    .pipe(plugins.sass({outputStyle: 'compressed'}))
-    .pipe(plugins.cssnext())
-    .pipe(gulp.dest(buildFolder));
+  return pipeline(gulp.src(['src/pivotal-ui/components/**/*.scss', '!src/pivotal-ui/components/*.scss']),
+    plugins.sass({outputStyle: 'compressed'}),
+    postcss([
+      cssnext()
+    ]),
+    gulp.dest(buildFolder));
 });
 
 gulp.task('css-build-assets', function() {
