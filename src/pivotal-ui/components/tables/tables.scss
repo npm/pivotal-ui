@@ -73,6 +73,123 @@ table, .table {
 
 /*doc
 ---
+title: Rounded Table
+name: 1_table_round
+parent: table
+---
+
+This is a table used to display many rows of data, with headers and
+footers. Use it for tables of information or associations such as
+user lists with permissions and action menus
+
+```html_example
+<table class="table table-rounded table-header-gray-10">
+  <thead>
+    <tr>
+      <th>Wombat Type</th>
+      <th>Surprisingness</th>
+      <th>Cuteness</th>
+    </tr>
+  </thead>
+  <tbody class="bg-neutral-11">
+    <tr>
+      <td>Baby Wombat</td>
+      <td>100</td>
+      <td>Infinity</td>
+    </tr>
+    <tr>
+      <td>World's Largest</td>
+      <td>1000</td>
+      <td>99.5</td>
+    </tr>
+    <tr>
+      <td>In native habitat</td>
+      <td>12</td>
+      <td>315</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Average</th>
+      <td>506</td>
+      <td>Infinity</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+*/
+
+.table-rounded {
+  border-collapse: separate;
+  >thead:first-child>tr:first-child, >tfoot:first-child>tr:first-child, >tbody:first-child>tr:first-child, >tr:first-child {
+    >th:first-child, >td:first-child {
+      border-top-left-radius: 10px !important;
+    }
+    >th:last-child, >td:last-child {
+      border-top-right-radius: 10px !important;
+    }
+    >th, >td {
+      border-top: 1px solid $gray-8;
+    }
+  }
+  >thead>tr, >tbody>tr, >tfoot>tr, >tr {
+    >:first-child {
+      border-left: 1px solid $gray-8;
+    }
+    >:last-child {
+      border-right: 1px solid $gray-8;
+    }
+  }
+  >thead:last-child>tr:last-child, >tfoot:last-child>tr:last-child, >tbody:last-child>tr:last-child, >tr:last-child {
+    >th:first-child, >td:first-child {
+      border-bottom-left-radius: 10px !important;
+    }
+    >th:last-child, >td:last-child {
+      border-bottom-right-radius: 10px !important;
+    }
+    >th, >td {
+      border-bottom: 1px solid $gray-8;
+    }
+  }
+}
+
+/*doc
+---
+title: Header Color
+name: table_header_color
+parent: table
+---
+
+Table header colors:
+
+```html_example
+<table class="table table-rounded table-header-gray-10">
+  <thead>
+    <tr><th>Greeting</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Hello, World</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><th>Winning!</th></tr>
+  </tfoot>
+</table>
+```
+
+*/
+
+.table-header-gray-10 {
+  >thead>tr, >tfoot>tr, >tr {
+    >th, >td {
+      background-color: $gray-10;
+    }
+  }
+}
+
+
+/*doc
+---
 title: Data
 name: 1_table_data
 parent: table
