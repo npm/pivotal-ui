@@ -1,7 +1,7 @@
 
 $(document).ready(() => {
   const { StyleguideNav } = require('./styleguide-nav');
-  const getComponentPath = require('./get-component-path');
+  const getComponentPath = require('./get-component-path').default;
 
   const {language, componentType} = getComponentPath(window.location.pathname);
 
