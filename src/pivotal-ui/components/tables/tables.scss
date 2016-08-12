@@ -73,8 +73,8 @@ table, .table {
 
 /*doc
 ---
-title: Rounded Table
-name: 1_table_round
+title: Friendly Table
+name: 1_table_friendly
 parent: table
 ---
 
@@ -83,7 +83,7 @@ footers. Use it for tables of information or associations such as
 user lists with permissions and action menus
 
 ```html_example
-<table class="table table-rounded table-header-gray-10">
+<table class="table table-friendly table-header-gray-10">
   <thead>
     <tr>
       <th>Wombat Type</th>
@@ -120,7 +120,7 @@ user lists with permissions and action menus
 
 */
 
-.table-rounded {
+.table-friendly {
   border-collapse: separate;
   >thead:first-child>tr:first-child, >tfoot:first-child>tr:first-child, >tbody:first-child>tr:first-child, >tr:first-child {
     >th:first-child, >td:first-child {
@@ -164,7 +164,7 @@ parent: table
 Table header colors:
 
 ```html_example
-<table class="table table-rounded table-header-gray-10">
+<table class="table table-friendly table-header-gray-10">
   <thead>
     <tr><th>Greeting</th></tr>
   </thead>
