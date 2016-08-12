@@ -120,35 +120,35 @@ user lists with permissions and action menus
 
 */
 
-.table-friendly {
+table.table-friendly { // tag name included to get enough specificity to override bootstrap rules.
   border-collapse: separate;
-  >thead:first-child>tr:first-child, >tfoot:first-child>tr:first-child, >tbody:first-child>tr:first-child, >tr:first-child {
-    >th:first-child, >td:first-child {
+  > :first-child > tr:first-child, > tr:first-child {
+    > :first-child {
       border-top-left-radius: 10px !important;
     }
-    >th:last-child, >td:last-child {
+    > :last-child {
       border-top-right-radius: 10px !important;
     }
-    >th, >td {
+    >td, >th {
       border-top: 1px solid $gray-8;
     }
   }
-  >thead>tr, >tbody>tr, >tfoot>tr, >tr {
-    >:first-child {
+  > * > tr, > tr {
+    > :first-child {
       border-left: 1px solid $gray-8;
     }
-    >:last-child {
+    > :last-child {
       border-right: 1px solid $gray-8;
     }
   }
-  >thead:last-child>tr:last-child, >tfoot:last-child>tr:last-child, >tbody:last-child>tr:last-child, >tr:last-child {
-    >th:first-child, >td:first-child {
+  > :last-child > tr:last-child, > tr:last-child {
+    > :first-child {
       border-bottom-left-radius: 10px !important;
     }
-    >th:last-child, >td:last-child {
+    > :last-child {
       border-bottom-right-radius: 10px !important;
     }
-    >th, >td {
+    > td, > th {
       border-bottom: 1px solid $gray-8;
     }
   }
@@ -180,8 +180,8 @@ Table header colors:
 */
 
 .table-header-gray-10 {
-  >thead>tr, >tfoot>tr, >tr {
-    >th, >td {
+  > * > tr, > tr {
+    > th, > td {
       background-color: $gray-10;
     }
   }
