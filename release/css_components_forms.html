@@ -1596,7 +1596,7 @@ handleInput function in the validator.js file mentioned above and
 insert this code:</p><script>var isGiraffeInput = $(input).attr("name") === "gotta-say-giraffe";
 
 if(isGiraffeInput) {
-  if(input.value !== 'giraffe'){
+  if($(input).val() !== 'giraffe'){
     input.setCustomValidity("This must say giraffe");
   } else {
     input.setCustomValidity("");
@@ -1608,7 +1608,7 @@ if(isGiraffeInput) {
     <pre><span class="kd">var</span> <span class="nx">isGiraffeInput</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">input</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"name"</span><span class="p">)</span> <span class="o">===</span> <span class="s2">"gotta-say-giraffe"</span><span class="p">;</span>
 
 <span class="k">if</span><span class="p">(</span><span class="nx">isGiraffeInput</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">!==</span> <span class="s1">'giraffe'</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">input</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">'giraffe'</span><span class="p">){</span>
     <span class="nx">input</span><span class="p">.</span><span class="nx">setCustomValidity</span><span class="p">(</span><span class="s2">"This must say giraffe"</span><span class="p">);</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="nx">input</span><span class="p">.</span><span class="nx">setCustomValidity</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
@@ -1648,9 +1648,12 @@ if(isLinkUpdater) {
   </button>
 </div>
 
-<p class="styleguide">Setting the custom validity to a value will mean you&#39;re informing the browser that
+<p class="styleguide">Setting the custom validity to a value will mean you are informing the browser that
 there is indeed an error here. If you set the value to an empty string, that means
-that there no longer is an error.</p><p class="styleguide">To use this validation on your form, add <code>data-validate</code> to the form element.</p><div class="codeExample">
+that there no longer is an error.</p><p class="styleguide">To use this validation on your form, add <code>data-validate</code> to the form element.</p><p class="styleguide">By default, our inputs only validate on <code>blur</code>. This means that we only will check
+correctness if the user leaves the input element or removes focus from the element. If you would
+like to have the validator validate on the <code>input</code> event (on any user input) as well
+as when focus is taken away, add the data attribute and value <code>data-validate-event=&quot;input blur&quot;</code>.</p><p class="styleguide">If you would only like to listen to the <code>input&gt;</code> event, try <code>data-validate-event=&quot;input&quot;</code>.</p><div class="codeExample">
   <div class="exampleOutput"><form data-validate action="/signup" method="post" role="form">
   <div class="row">
     <div class="col-sm-12">
@@ -1681,7 +1684,7 @@ that there no longer is an error.</p><p class="styleguide">To use this validatio
   <div class="form-group link-updater-container">
     <label for="name">Username</label>
     <div class="link-updater input-wrapper">
-      <input class="form-control" id="name" name="name" placeholder="username" required="" type="text">
+      <input class="form-control" id="name" name="name" placeholder="username" required="" type="text" data-validate-event="input blur">
       <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
     </div>
   </div>
@@ -1747,7 +1750,7 @@ that there no longer is an error.</p><p class="styleguide">To use this validatio
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group link-updater-container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-updater input-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"username"</span> <span class="na">required=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"username"</span> <span class="na">required=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">data-validate-event=</span><span class="s">"input blur"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mtl"</span><span class="nt">&gt;</span>https://www.npmjs.com/~<span class="nt">&lt;strong&gt;</span>username<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>

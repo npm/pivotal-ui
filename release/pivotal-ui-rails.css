@@ -10071,7 +10071,7 @@ insert this code:
 var isGiraffeInput = $(input).attr("name") === "gotta-say-giraffe";
 
 if(isGiraffeInput) {
-  if(input.value !== 'giraffe'){
+  if($(input).val() !== 'giraffe'){
     input.setCustomValidity("This must say giraffe");
   } else {
     input.setCustomValidity("");
@@ -10095,11 +10095,18 @@ if(isLinkUpdater) {
 }
 ```
 
-Setting the custom validity to a value will mean you're informing the browser that
+Setting the custom validity to a value will mean you are informing the browser that
 there is indeed an error here. If you set the value to an empty string, that means
 that there no longer is an error.
 
 To use this validation on your form, add <code>data-validate</code> to the form element.
+
+By default, our inputs only validate on <code>blur</code>. This means that we only will check
+correctness if the user leaves the input element or removes focus from the element. If you would
+like to have the validator validate on the <code>input</code> event (on any user input) as well
+as when focus is taken away, add the data attribute and value <code>data-validate-event="input blur"</code>.
+
+If you would only like to listen to the <code>input></code> event, try <code>data-validate-event="input"</code>.
 
 
 ```html_example
@@ -10133,7 +10140,7 @@ To use this validation on your form, add <code>data-validate</code> to the form 
   <div class="form-group link-updater-container">
     <label for="name">Username</label>
     <div class="link-updater input-wrapper">
-      <input class="form-control" id="name" name="name" placeholder="username" required="" type="text">
+      <input class="form-control" id="name" name="name" placeholder="username" required="" type="text" data-validate-event="input blur">
       <p class="mtl">https://www.npmjs.com/~<strong>username</strong></p>
     </div>
   </div>
@@ -10167,6 +10174,7 @@ To use this validation on your form, add <code>data-validate</code> to the form 
   </p>
 </form>
 ```
+
 */
 .form-group {
   -webkit-transition: margin-bottom .1s;
