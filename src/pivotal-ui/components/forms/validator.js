@@ -1,5 +1,11 @@
 var $ = require('jquery');
 
+var isEventListenedFor = function isEventListenedFor(input, event, standard) {
+  var events = $(input).data("validate-event") || "";
+
+  return (standard && events.length === 0) || (events.length > 0 && events.split(" ").indexOf(event) > -1);
+};
+
 var addError = function addError(input, err) {
   var msg = err || input.validationMessage;
   $(input).closest(".form-group").addClass('has-error');
@@ -23,6 +29,10 @@ var handleSubmit = function handleSubmit(e){
 };
 
 var handleBlur = function handleBlur(e) {
+  if(!isEventListenedFor(e.target, "blur", true)){
+    return;
+  }
+
   this.reflectValidity(e.target);
 };
 
@@ -30,6 +40,11 @@ var handleInput = function handleInput(e) {
   var input = e.target;
   var $input = $(input);
   var err;
+
+
+  if(!isEventListenedFor(input, "input")) {
+    return;
+  }
 
   var isNoMatch = $input.is("[data-validate-nomatch]");
 
@@ -52,6 +67,11 @@ var handleInput = function handleInput(e) {
 var handleInputError = function handleInputError(e) {
   var input = e.target;
   var message = e.message;
+
+  if(!isEventListenedFor(input, "input")) {
+    return;
+  }
+
 
   this.reflectValidity(input, message);
 };
