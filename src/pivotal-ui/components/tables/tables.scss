@@ -152,38 +152,8 @@ table.table-friendly { // tag name included to get enough specificity to overrid
       border-bottom: 1px solid $gray-8;
     }
   }
-}
-
-/*doc
----
-title: Header Color
-name: table_header_color
-parent: table
----
-
-Table header colors:
-
-```html_example
-<table class="table table-friendly table-header-gray-10">
-  <thead>
-    <tr><th>Greeting</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Hello, World</td></tr>
-  </tbody>
-  <tfoot>
-    <tr><th>Winning!</th></tr>
-  </tfoot>
-</table>
-```
-
-*/
-
-.table-header-gray-10 {
-  > * > tr, > tr {
-    > th, > td {
-      background-color: $gray-10;
-    }
+  > thead, > tfoot {
+    background-color: $gray-10;
   }
 }
 
