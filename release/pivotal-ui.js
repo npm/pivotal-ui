@@ -67,7 +67,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * jQuery JavaScript Library v2.2.3
+	 * jQuery JavaScript Library v2.2.2
 	 * http://jquery.com/
 	 *
 	 * Includes Sizzle.js
@@ -77,7 +77,7 @@
 	 * Released under the MIT license
 	 * http://jquery.org/license
 	 *
-	 * Date: 2016-04-05T19:26Z
+	 * Date: 2016-03-17T17:51Z
 	 */
 	
 	(function( global, factory ) {
@@ -133,7 +133,7 @@
 	
 	
 	var
-		version = "2.2.3",
+		version = "2.2.2",
 	
 		// Define a local copy of jQuery
 		jQuery = function( selector, context ) {
@@ -9543,7 +9543,7 @@
 			// If it fails, this function gets "jqXHR", "status", "error"
 			} ).always( callback && function( jqXHR, status ) {
 				self.each( function() {
-					callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
+					callback.apply( self, response || [ jqXHR.responseText, status, jqXHR ] );
 				} );
 			} );
 		}
@@ -21808,18 +21808,6 @@
 
 	var $ = __webpack_require__(1);
 	
-	var isEventListenedFor = function isEventListenedFor(input, event, standard) {
-	  var events = $(input).data("validate-event") || "";
-	
-	  console.log(input, event, standard);
-	  console.log(standard && events.length === 0)
-	  console.log(events.length);
-	  console.log(events.split(" "));
-	  console.log(events.split(" ").indexOf(event));
-	  console.log(events.length > 0 && events.split(" ").indexOf(event) > -1);
-	  return (standard && events.length === 0) || (events.length > 0 && events.split(" ").indexOf(event) > -1);
-	};
-	
 	var addError = function addError(input, err) {
 	  var msg = err || input.validationMessage;
 	  $(input).closest(".form-group").addClass('has-error');
@@ -21843,10 +21831,6 @@
 	};
 	
 	var handleBlur = function handleBlur(e) {
-	  if(!isEventListenedFor(e.target, "blur", true)){
-	    return;
-	  }
-	
 	  this.reflectValidity(e.target);
 	};
 	
@@ -21854,11 +21838,6 @@
 	  var input = e.target;
 	  var $input = $(input);
 	  var err;
-	
-	
-	  if(!isEventListenedFor(input, "input")) {
-	    return;
-	  }
 	
 	  var isNoMatch = $input.is("[data-validate-nomatch]");
 	
@@ -21881,12 +21860,6 @@
 	var handleInputError = function handleInputError(e) {
 	  var input = e.target;
 	  var message = e.message;
-	
-	  console.log("handleInputError");
-	  if(!isEventListenedFor(input, "input")) {
-	    return;
-	  }
-	
 	
 	  this.reflectValidity(input, message);
 	};

@@ -94,8 +94,9 @@
 
 <ul class="section-nav">
   <li><a href="#table_alignment">Alignment</a></li>
-  <li><a href="#1_table_data">Data</a></li>
-  <li><a href="#2_table_alt">Alternate</a></li>
+  <li><a href="#1_table_friendly">Friendly Table</a></li>
+  <li><a href="#1_table_data">Data (Deprecated)</a></li>
+  <li><a href="#2_table_alt">Alternate (Deprecated)</a></li>
   <li><a href="#3_table_borderless">Borderless</a></li>
   <li><a href="#table_key_value">Key-Value</a></li>
   <li><a href="#scrollable_table">Scrollable</a></li>
@@ -129,8 +130,8 @@ npm install @npmcorp/pui-css-tables --save
 <td>Removes all borders from a table</td>
 </tr>
  </table><p class="styleguide">You can use grid column classes on <code class="styleguide">th</code> and <code class="styleguide">td</code> elements. See key-value table for example.</p>
-<h2 id="1_table_data" class="styleguide">Data</h2>
-<p class="styleguide">This is a table used to display many rows of data (it is pretty much the default table).</p><div class="codeExample">
+<h2 id="1_table_data" class="styleguide">Data (Deprecated)</h2>
+<p class="styleguide">This is a table used to display many rows of data.</p><div class="codeExample">
   <div class="exampleOutput"><div class="panel panel-basic-alt panel-table-wrapper">
   <div class="panel-body pan">
     <table class="table table-data man">
@@ -201,7 +202,87 @@ npm install @npmcorp/pui-css-tables --save
   </div>
 </div>
 
-<h2 id="2_table_alt" class="styleguide">Alternate</h2>
+<h2 id="1_table_friendly" class="styleguide">Friendly Table</h2>
+<p class="styleguide">This is a table used to display many rows of data, with headers and
+footers. Use it for tables of information or associations such as
+user lists with permissions and action menus</p><div class="codeExample">
+  <div class="exampleOutput"><table class="table table-friendly table-header-gray-10">
+  <thead>
+    <tr>
+      <th>Wombat Type</th>
+      <th>Surprisingness</th>
+      <th>Cuteness</th>
+    </tr>
+  </thead>
+  <tbody class="bg-neutral-11">
+    <tr>
+      <td>Baby Wombat</td>
+      <td>100</td>
+      <td>Infinity</td>
+    </tr>
+    <tr>
+      <td>World's Largest</td>
+      <td>1000</td>
+      <td>99.5</td>
+    </tr>
+    <tr>
+      <td>In native habitat</td>
+      <td>12</td>
+      <td>315</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Average</th>
+      <td>506</td>
+      <td>Infinity</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+  <div class="codeBlock" aria-hidden="true">
+    <div class="highlight" data-code-to-copy>
+      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-friendly table-header-gray-10"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Wombat Type<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Surprisingness<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Cuteness<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">class=</span><span class="s">"bg-neutral-11"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Baby Wombat<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>100<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Infinity<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>World's Largest<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>1000<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>99.5<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>In native habitat<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>315<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Average<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>506<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Infinity<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span></pre>
+    </div>
+    <button class="btn btn-default btn-copy" data-btn-copy data-placement="left">
+      Copy
+    </button>
+  </div>
+</div>
+
+<h2 id="2_table_alt" class="styleguide">Alternate (Deprecated)</h2>
 <p class="styleguide">Another table style we intend to use.</p><div class="codeExample">
   <div class="exampleOutput"><div class="panel panel-basic-alt panel-table-wrapper">
   <div class="panel-body pan">

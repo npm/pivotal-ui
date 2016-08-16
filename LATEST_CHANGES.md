@@ -1,3 +1,13 @@
+<a name="7.1.0"></a>
+# 7.1.0 (2016-08-16)
+
+
+### Features
+
+* **tables:** Rounded corner tables ([5aa07fe](https://github.com/pivotal-cf/pivotal-ui/commit/5aa07fe))
+
+
+
 <a name="7.0.0"></a>
 # 7.0.0 (2016-08-15)
 
@@ -17,8 +27,8 @@
 
 ### BREAKING CHANGES
 
-* **forms:** Any input that we would also like to listen for `input`
-will need this attribute added. This includes all `link-updater` and
-`nomatch` inputs. ([9ecdb98](https://github.com/pivotal-cf/pivotal-ui/commits/9ecdb98))
+* **forms:** Any input that we would also like to listen for &#x60;input&#x60;
+will need this attribute added. This includes all &#x60;link-updater&#x60; and
+&#x60;nomatch&#x60; inputs. ([9ecdb98](https://github.com/pivotal-cf/pivotal-ui/commits/9ecdb98))
 
 
