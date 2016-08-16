@@ -73,12 +73,99 @@ table, .table {
 
 /*doc
 ---
-title: Data
+title: Friendly Table
+name: 1_table_friendly
+parent: table
+---
+
+This is a table used to display many rows of data, with headers and
+footers. Use it for tables of information or associations such as
+user lists with permissions and action menus
+
+```html_example
+<table class="table table-friendly table-header-gray-10">
+  <thead>
+    <tr>
+      <th>Wombat Type</th>
+      <th>Surprisingness</th>
+      <th>Cuteness</th>
+    </tr>
+  </thead>
+  <tbody class="bg-neutral-11">
+    <tr>
+      <td>Baby Wombat</td>
+      <td>100</td>
+      <td>Infinity</td>
+    </tr>
+    <tr>
+      <td>World's Largest</td>
+      <td>1000</td>
+      <td>99.5</td>
+    </tr>
+    <tr>
+      <td>In native habitat</td>
+      <td>12</td>
+      <td>315</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Average</th>
+      <td>506</td>
+      <td>Infinity</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+*/
+
+table.table-friendly { // tag name included to get enough specificity to override bootstrap rules.
+  border-collapse: separate;
+  > :first-child > tr:first-child, > tr:first-child {
+    > :first-child {
+      border-top-left-radius: 10px !important;
+    }
+    > :last-child {
+      border-top-right-radius: 10px !important;
+    }
+    >td, >th {
+      border-top: 1px solid $gray-8;
+    }
+  }
+  > * > tr, > tr {
+    > :first-child {
+      border-left: 1px solid $gray-8;
+    }
+    > :last-child {
+      border-right: 1px solid $gray-8;
+    }
+  }
+  > :last-child > tr:last-child, > tr:last-child {
+    > :first-child {
+      border-bottom-left-radius: 10px !important;
+    }
+    > :last-child {
+      border-bottom-right-radius: 10px !important;
+    }
+    > td, > th {
+      border-bottom: 1px solid $gray-8;
+    }
+  }
+  > thead, > tfoot {
+    background-color: $gray-10;
+  }
+}
+
+
+/*doc
+---
+title: Data (Deprecated)
 name: 1_table_data
 parent: table
 ---
 
-This is a table used to display many rows of data (it is pretty much the default table).
+This is a table used to display many rows of data.
 
 ```html_example
 <div class="panel panel-basic-alt panel-table-wrapper">
@@ -117,7 +204,7 @@ This is a table used to display many rows of data (it is pretty much the default
 
 /*doc
 ---
-title: Alternate
+title: Alternate (Deprecated)
 name: 2_table_alt
 parent: table
 ---
