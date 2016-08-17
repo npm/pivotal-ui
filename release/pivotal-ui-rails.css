@@ -24006,21 +24006,21 @@ user lists with permissions and action menus
 */
 table.table-friendly {
   border-collapse: separate; }
-  table.table-friendly > :first-child > tr:first-child > :first-child, table.table-friendly > tr:first-child > :first-child {
+  table.table-friendly > *:first-child > tr:first-child > *:first-child, table.table-friendly > tr:first-child > *:first-child {
     border-top-left-radius: 10px !important; }
-  table.table-friendly > :first-child > tr:first-child > :last-child, table.table-friendly > tr:first-child > :last-child {
+  table.table-friendly > *:first-child > tr:first-child > *:last-child, table.table-friendly > tr:first-child > *:last-child {
     border-top-right-radius: 10px !important; }
-  table.table-friendly > :first-child > tr:first-child > td, table.table-friendly > :first-child > tr:first-child > th, table.table-friendly > tr:first-child > td, table.table-friendly > tr:first-child > th {
+  table.table-friendly > *:first-child > tr:first-child > td, table.table-friendly > *:first-child > tr:first-child > th, table.table-friendly > tr:first-child > td, table.table-friendly > tr:first-child > th {
     border-top: 1px solid #cccccc; }
-  table.table-friendly > * > tr > :first-child, table.table-friendly > tr > :first-child {
+  table.table-friendly > * > tr > *:first-child, table.table-friendly > tr > *:first-child {
     border-left: 1px solid #cccccc; }
-  table.table-friendly > * > tr > :last-child, table.table-friendly > tr > :last-child {
+  table.table-friendly > * > tr > *:last-child, table.table-friendly > tr > *:last-child {
     border-right: 1px solid #cccccc; }
-  table.table-friendly > :last-child > tr:last-child > :first-child, table.table-friendly > tr:last-child > :first-child {
+  table.table-friendly > *:last-child > tr:last-child > *:first-child, table.table-friendly > tr:last-child > *:first-child {
     border-bottom-left-radius: 10px !important; }
-  table.table-friendly > :last-child > tr:last-child > :last-child, table.table-friendly > tr:last-child > :last-child {
+  table.table-friendly > *:last-child > tr:last-child > *:last-child, table.table-friendly > tr:last-child > *:last-child {
     border-bottom-right-radius: 10px !important; }
-  table.table-friendly > :last-child > tr:last-child > td, table.table-friendly > :last-child > tr:last-child > th, table.table-friendly > tr:last-child > td, table.table-friendly > tr:last-child > th {
+  table.table-friendly > *:last-child > tr:last-child > td, table.table-friendly > *:last-child > tr:last-child > th, table.table-friendly > tr:last-child > td, table.table-friendly > tr:last-child > th {
     border-bottom: 1px solid #cccccc; }
   table.table-friendly > thead, table.table-friendly > tfoot {
     background-color: #f2f2f2; }
