@@ -122,11 +122,11 @@ user lists with permissions and action menus
 
 table.table-friendly { // tag name included to get enough specificity to override bootstrap rules.
   border-collapse: separate;
-  > :first-child > tr:first-child, > tr:first-child {
-    > :first-child {
+  > *:first-child > tr:first-child, > tr:first-child {
+    > *:first-child {
       border-top-left-radius: 10px !important;
     }
-    > :last-child {
+    > *:last-child {
       border-top-right-radius: 10px !important;
     }
     >td, >th {
@@ -134,18 +134,18 @@ table.table-friendly { // tag name included to get enough specificity to overrid
     }
   }
   > * > tr, > tr {
-    > :first-child {
+    > *:first-child {
       border-left: 1px solid $gray-8;
     }
-    > :last-child {
+    > *:last-child {
       border-right: 1px solid $gray-8;
     }
   }
-  > :last-child > tr:last-child, > tr:last-child {
-    > :first-child {
+  > *:last-child > tr:last-child, > tr:last-child {
+    > *:first-child {
       border-bottom-left-radius: 10px !important;
     }
-    > :last-child {
+    > *:last-child {
       border-bottom-right-radius: 10px !important;
     }
     > td, > th {
