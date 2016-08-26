@@ -1,0 +1,8 @@
+{
+  "homepage": "http://styleguide.pivotal.io/section.html#shovey-downy",
+  "dependencies": {
+    "@npmcorp/pui-css-bootstrap": "6.4.0",
+    "@npmcorp/pui-css-media": "6.4.0"
+  },
+  "version": "1.0.0"
+}

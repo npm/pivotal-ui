@@ -1,0 +1,56 @@
+@import "../pui-variables";
+
+/*doc
+---
+title: Shovey Downy
+name: shovey_downy
+categories:
+ - css_components_shovey_downy
+ - css_all
+---
+
+<code class="pam">
+<i class="fa fa-download" alt="Install the Component">
+npm install @npmcorp/pui-css-shovey-downy --save
+</i>
+</code>
+
+The shovey downy component does some shovey pushy stuff when it inserts itself in the page,
+and pushes the content down underneath it as it drops down. In that way, it's very different
+than a dropdown.
+
+*/
+
+.shovey-downy {
+}
+
+
+/*doc
+---
+title: Placeholder
+name: shovey_downy_placeholder
+parent: shovey_downy
+---
+
+```html_example
+<div class="shovey-downy">
+  <div class="media media-stackable-xs placeholder">
+    <div class="media-left media-middle" property="avatar">
+      <img alt="avatar" class="media-object img-circle avatar" property="small" src="styleguide/wombat-avatar-88.png" width="40" height="40">
+    </div>
+    <div class="media-body media-middle">
+      <h6 property="resource" class="mtn mbn">
+        <img alt="username placeholder" class="placeholder-image" src="styleguide/placeholder-username.svg">
+      </h6>
+      <span property="name"><img alt="name placeholder" class="placeholder-image" src="styleguide/placeholder-name.svg"></span>
+    </div>
+  </div>
+</div>
+```
+*/
+
+
+.shovey-downy .placeholder-image {
+  height: 1em;
+}
+
