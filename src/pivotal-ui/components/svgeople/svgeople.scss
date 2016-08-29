@@ -60,11 +60,8 @@ form stepper component. Use the piece below to see how it works.
 
 .svgeople {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  align-items: flex-end;
   justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
   overflow-y: hidden;
 
   .person-container {
