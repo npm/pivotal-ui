@@ -2448,7 +2448,7 @@ a.link-text{font-weight:600}
 .icon-gigantic{font-size:71px}
 .icon-sm{font-size:13px}
 .icon-xs{font-size:12px}
-.svgeople{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-line-pack:stretch;align-content:stretch;overflow-y:hidden}
+.svgeople{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;overflow-y:hidden}
 .svgeople .person-container{-webkit-box-flex:1;-ms-flex:1 auto;flex:1 auto;-webkit-transform:translateY(100%);transform:translateY(100%);-webkit-transition:-webkit-transform .2s;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s;padding:0 1%}
 .svgeople .person-container.show{-webkit-transform:translateY(0);transform:translateY(0)}
 .svgeople .person-container:first-child{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}

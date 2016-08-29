@@ -2,7 +2,7 @@
   "name": "pivotal-ui",
   "private": true,
   "description": "***",
-  "version": "7.1.1",
+  "version": "7.1.2",
   "main": "gulpfile.js",
   "devDependencies": {
     "@npmcorp/dr-frankenstyle": "^1.1.0",
@@ -138,7 +138,7 @@
     "@npmcorp/pui-css-ribbons": "6.4.0",
     "@npmcorp/pui-css-spinners": "6.4.0",
     "@npmcorp/pui-css-svg-iconography": "6.4.0",
-    "@npmcorp/pui-css-svgeople": "6.4.0",
+    "@npmcorp/pui-css-svgeople": "7.1.2",
     "@npmcorp/pui-css-tables": "7.1.1",
     "@npmcorp/pui-css-tabs": "6.4.0",
     "@npmcorp/pui-css-tile-layout": "6.4.0",
