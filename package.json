@@ -2,7 +2,7 @@
   "name": "pivotal-ui",
   "private": true,
   "description": "***",
-  "version": "7.1.2",
+  "version": "7.2.0",
   "main": "gulpfile.js",
   "devDependencies": {
     "@npmcorp/dr-frankenstyle": "^1.1.0",
