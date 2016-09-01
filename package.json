@@ -136,6 +136,7 @@
     "@npmcorp/pui-css-panes": "6.4.0",
     "@npmcorp/pui-css-progress-bars": "6.4.0",
     "@npmcorp/pui-css-ribbons": "6.4.0",
+    "@npmcorp/pui-css-shovey-downy": "^7.2.0",
     "@npmcorp/pui-css-spinners": "6.4.0",
     "@npmcorp/pui-css-svg-iconography": "6.4.0",
     "@npmcorp/pui-css-svgeople": "7.1.2",
