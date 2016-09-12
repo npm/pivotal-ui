@@ -9,12 +9,12 @@ var isEventListenedFor = function isEventListenedFor(input, event, standard) {
 var addError = function addError(input, err) {
   var msg = err || input.validationMessage;
   $(input).closest(".form-group").addClass('has-error');
-  $(input).closest(".input-wrapper").append("<span class='help-block has-error'>" + msg + "</span>");
+  $(input).closest(".input-wrapper").append($("<span class='help-block has-error'>" + msg + "</span>").hide().slideDown(100));
 };
 
 var removeError = function removeError(input) {
   $(input).closest(".form-group").removeClass('has-error');
-  $(input).closest(".input-wrapper").find(".has-error").remove();
+  $(input).closest(".input-wrapper").find(".has-error").slideUp(100).promise().then(function(el){ $(el).remove() });
 };
 
 
