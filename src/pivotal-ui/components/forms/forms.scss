@@ -1585,23 +1585,15 @@ For an organization name input:
 */
 
 .link-updater-container {
-  transition: margin-bottom .1s;
-
-  .link-updater {
-    position: relative;
-  }
   p {
     color: $form-label-color;
     word-break: break-all;
   }
 
   &.has-error {
-    margin-bottom: 35px;
-  }
-
-  .has-error {
-    position: absolute;
-    bottom: -35px;
+    p {
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -1691,7 +1683,7 @@ correctness if the user leaves the input element or removes focus from the eleme
 like to have the validator validate on the <code>input</code> event (on any user input) as well
 as when focus is taken away, add the data attribute and value <code>data-validate-event="input blur"</code>.
 
-If you would only like to listen to the <code>input></code> event, try <code>data-validate-event="input"</code>.
+If you would only like to listen to the <code>input</code> event, try <code>data-validate-event="input"</code>.
 
 
 ```html_example
@@ -1762,21 +1754,13 @@ If you would only like to listen to the <code>input></code> event, try <code>dat
 
 */
 
-$form-input-error-height: 35px;
-
 .form-group {
-  transition: margin-bottom .1s;
-
-  .input-wrapper {
-    position: relative;
-  }
 
   &.has-error {
-    margin-bottom: $form-input-error-height;
+    margin-bottom: 0;
   }
 
   .has-error {
-    position: absolute;
-    bottom: -$form-input-error-height;
+    margin-top: 7px;
   }
 }
