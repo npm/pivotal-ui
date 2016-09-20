@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@font-face{font-family:FontAwesome;src:url(font-awesome/fontawesome-webfont.eot?v=4.6.1);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.6.1) format('embedded-opentype'),url(font-awesome/fontawesome-webfont.woff2?v=4.6.1) format('woff2'),url(font-awesome/fontawesome-webfont.woff?v=4.6.1) format('woff'),url(font-awesome/fontawesome-webfont.ttf?v=4.6.1) format('truetype'),url(font-awesome/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:FontAwesome;src:url(font-awesome/fontawesome-webfont.eot?v=4.6.3);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'),url(font-awesome/fontawesome-webfont.woff2?v=4.6.3) format('woff2'),url(font-awesome/fontawesome-webfont.woff?v=4.6.3) format('woff'),url(font-awesome/fontawesome-webfont.ttf?v=4.6.3) format('truetype'),url(font-awesome/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
@@ -418,7 +418,7 @@
 .fa-stumbleupon:before{content:"\f1a4"}
 .fa-delicious:before{content:"\f1a5"}
 .fa-digg:before{content:"\f1a6"}
-.fa-pied-piper:before{content:"\f1a7"}
+.fa-pied-piper-pp:before{content:"\f1a7"}
 .fa-pied-piper-alt:before{content:"\f1a8"}
 .fa-drupal:before{content:"\f1a9"}
 .fa-joomla:before{content:"\f1aa"}
@@ -456,7 +456,7 @@
 .fa-jsfiddle:before{content:"\f1cc"}
 .fa-life-bouy:before,.fa-life-buoy:before,.fa-life-ring:before,.fa-life-saver:before,.fa-support:before{content:"\f1cd"}
 .fa-circle-o-notch:before{content:"\f1ce"}
-.fa-ra:before,.fa-rebel:before{content:"\f1d0"}
+.fa-ra:before,.fa-rebel:before,.fa-resistance:before{content:"\f1d0"}
 .fa-empire:before,.fa-ge:before{content:"\f1d1"}
 .fa-git-square:before{content:"\f1d2"}
 .fa-git:before{content:"\f1d3"}
@@ -663,6 +663,12 @@
 .fa-snapchat:before{content:"\f2ab"}
 .fa-snapchat-ghost:before{content:"\f2ac"}
 .fa-snapchat-square:before{content:"\f2ad"}
+.fa-pied-piper:before{content:"\f2ae"}
+.fa-first-order:before{content:"\f2b0"}
+.fa-yoast:before{content:"\f2b1"}
+.fa-themeisle:before{content:"\f2b2"}
+.fa-google-plus-circle:before,.fa-google-plus-official:before{content:"\f2b3"}
+.fa-fa:before,.fa-font-awesome:before{content:"\f2b4"}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
@@ -1992,15 +1998,10 @@ p.form-control-static{color:#404040}
 .scope-input{position:relative}
 .scope-input-inner{padding-left:1.5em}
 .scope-input::after{position:absolute;top:0;left:0;content:"@";speak:none;padding:8px;color:gray}
-.link-updater-container{-webkit-transition:margin-bottom .1s;transition:margin-bottom .1s}
-.link-updater-container .link-updater{position:relative}
 .link-updater-container p{color:#404040;word-break:break-all}
-.link-updater-container.has-error{margin-bottom:35px}
-.link-updater-container .has-error{position:absolute;bottom:-35px}
-.form-group{-webkit-transition:margin-bottom .1s;transition:margin-bottom .1s}
-.form-group .input-wrapper{position:relative}
-.form-group.has-error{margin-bottom:35px}
-.form-group .has-error{position:absolute;bottom:-35px}
+.link-updater-container.has-error p{margin-bottom:3px}
+.form-group.has-error{margin-bottom:0}
+.form-group .has-error{margin-top:7px}
 .autocomplete{position:relative}
 .form-inline .autocomplete{display:inline-block}
 .autocomplete .autocomplete-input{box-shadow:0 2px 0 #b3b3b3}
@@ -2347,24 +2348,6 @@ a.link-text{font-weight:600}
 .marketing.modular-revolution .text-container{padding-top:0;padding-bottom:90px;margin-top:-20px}
 .marketing.modular-revolution .svg-container{bottom:90px}
 .marketing.modular-revolution .svg-container>svg{max-height:calc(100% - 180px)}}
-.media{margin-top:15px}
-.media:first-child{margin-top:0}
-.media-right,.media>.pull-right{padding-left:10px}
-.media-left,.media>.pull-left{padding-right:10px}
-.media-body,.media-left,.media-right{display:table-cell;vertical-align:top}
-.media-middle{vertical-align:middle}
-.media-bottom{vertical-align:bottom}
-.media-heading{margin-top:0;margin-bottom:5px}
-.media-list{padding-left:0;list-style:none}
-@media (max-width:480px){.media.media-stackable-xs .media-left,.media.media-stackable-xs>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
-.media.media-stackable-xs .media-left .media-object,.media.media-stackable-xs>.pull-left .media-object{margin-left:auto;margin-right:auto}}
-@media (max-width:768px){.media.media-stackable-sm .media-left,.media.media-stackable-sm>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
-.media.media-stackable-sm .media-left .media-object,.media.media-stackable-sm>.pull-left .media-object{margin-left:auto;margin-right:auto}}
-@media (max-width:992px){.media.media-stackable-md .media-left,.media.media-stackable-md>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
-.media.media-stackable-md .media-left .media-object,.media.media-stackable-md>.pull-left .media-object{margin-left:auto;margin-right:auto}}
-@media (max-width:1200px){.media.media-stackable-lg .media-left,.media.media-stackable-lg>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
-.media.media-stackable-lg .media-left .media-object,.media.media-stackable-lg>.pull-left .media-object{margin-left:auto;margin-right:auto}}
-.media .media-body{width:1000000px}
 .need-help:not(.collapsed){display:none}
 .modal-open{overflow:hidden}
 .modal{display:none;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}
@@ -2455,6 +2438,25 @@ a.link-text{font-weight:600}
 .ribbon-primary:after{border-color:#00A79D transparent #00A79D #00A79D}
 .ribbon-banner{position:fixed;top:20px;left:0;padding:4px 18px 4px 24px;margin-left:0;margin-right:32px;color:#fff;font-size:16px;font-weight:700;text-align:center;text-transform:uppercase;background-color:#99171D}
 .ribbon-banner:after{content:"";position:absolute;display:block;top:0;right:-32px;border-style:solid;border-width:16px;border-color:#99171D transparent #99171D #99171D}
+.media{margin-top:15px}
+.media:first-child{margin-top:0}
+.media-right,.media>.pull-right{padding-left:10px}
+.media-left,.media>.pull-left{padding-right:10px}
+.media-body,.media-left,.media-right{display:table-cell;vertical-align:top}
+.media-middle{vertical-align:middle}
+.media-bottom{vertical-align:bottom}
+.media-heading{margin-top:0;margin-bottom:5px}
+.media-list{padding-left:0;list-style:none}
+@media (max-width:480px){.media.media-stackable-xs .media-left,.media.media-stackable-xs>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
+.media.media-stackable-xs .media-left .media-object,.media.media-stackable-xs>.pull-left .media-object{margin-left:auto;margin-right:auto}}
+@media (max-width:768px){.media.media-stackable-sm .media-left,.media.media-stackable-sm>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
+.media.media-stackable-sm .media-left .media-object,.media.media-stackable-sm>.pull-left .media-object{margin-left:auto;margin-right:auto}}
+@media (max-width:992px){.media.media-stackable-md .media-left,.media.media-stackable-md>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
+.media.media-stackable-md .media-left .media-object,.media.media-stackable-md>.pull-left .media-object{margin-left:auto;margin-right:auto}}
+@media (max-width:1200px){.media.media-stackable-lg .media-left,.media.media-stackable-lg>.pull-left{display:block;float:none;clear:both;margin:0 auto 10px!important}
+.media.media-stackable-lg .media-left .media-object,.media.media-stackable-lg>.pull-left .media-object{margin-left:auto;margin-right:auto}}
+.media .media-body{width:1000000px}
+.shovey-downy .placeholder-image{height:1em}
 .spinner-lg{margin-top:64px;text-align:center}
 .spinner-lg .fa-spin{font-size:48px;opacity:.5}
 .spinner-sm{text-align:center;min-height:320px}
