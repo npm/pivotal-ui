@@ -1,5 +1,4 @@
 global.$ = global.jQuery = require('jquery');
-global._ = require('lodash');
 require('../../../node_modules/bootstrap/js/tooltip');
 
 require('pui-prismjs');
@@ -11,6 +10,6 @@ global.React = require('react/addons');
 
 import UI from './components.js';
 
-_.each(UI, function(value, key) {
-    global[key] = value;
-});
+for (var k in UI) {
+    global[k] = UI[k];
+};
