@@ -141,6 +141,7 @@ header a {
 .logo-container {
   padding: 0;
   width: 80px;
+  height: 32px;
   vertical-align: middle;
 }
 .logo-container svg {
@@ -162,6 +163,7 @@ header a {
 }
 .nav-toggle {
   width: 54px;
+  height: 54px;
   padding: 0 5px;
 }
 
@@ -288,6 +290,7 @@ header {
 }
 .anonymous .user-info-salutation > li:last-child {
   width: 45px;
+  height: 45px;
 }
 .anonymous .header-nav-menu-container {
   width: 44px;
@@ -431,6 +434,7 @@ header {
   }
   .logo-container {
     width: 125px;
+    height: 50px;
   }
   .site-search input[type="search"] {
     height: 3.125em;
