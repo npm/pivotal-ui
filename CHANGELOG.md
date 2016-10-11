@@ -1,3 +1,11 @@
+<a name="7.2.2"></a>
+## 7.2.2 (2016-10-11)
+
+### Bug Fixes
+
+* **header** Give SVG-containing cells explicit heights so they don't default to 150px in ie (#256) ([72f747ef](https://github.com/pivotal-cf/pivotal-ui/commit/72f747ef))
+
+
 <a name="7.2.1"></a>
 ## 7.2.1 (2016-09-20)
 
