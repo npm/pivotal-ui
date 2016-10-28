@@ -1,0 +1,524 @@
+@import "../pui-variables";
+@import '../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+/*doc
+---
+title: Flex Grids
+name: flex-grid
+parent: grid
+---
+
+```html_example
+<div class="frow mbxl">
+ <div class="fitem-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+</div>
+<div class="frow mbxl">
+ <div class="fitem-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+ <div class="fitem-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+</div>
+<div class="frow mbxl">
+ <div class="fitem-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+ <div class="fitem-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+ <div class="fitem-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+</div>
+```
+
+Holy grail layout:
+
+```html_example
+<div class="frow flex-justify-center-xs">
+ <div class="fitem-xs-6 fcol">
+  <div class="fitem-xs fcol panel panel-basic-accent panel-accent-npm-brand">
+   <div class="panel-header">
+    <h5 class="panel-title-alt">Short Panel</h5>
+   </div>
+   <div class="panel-body fitem-xs">
+    Short content
+   </div>
+   <div class="panel-footer">
+    Footer
+   </div>
+  </div>
+ </div>
+ <div class="fitem-xs-6 fcol">
+  <div class="fitem-xs fcol panel panel-basic-accent panel-accent-npm-blue-2">
+   <div class="panel-header">
+    <h5 class="panel-title-alt">Long Panel</h5>
+   </div>
+   <div class="panel-body fitem-xs">
+    Long content<br>
+    Long content<br>
+    Long content<br>
+    Long content<br>
+    Long content<br>
+   </div>
+   <div class="panel-footer">
+    Footer
+   </div>
+  </div>
+ </div>
+ <div class="fitem-xs-6 fcol">
+  <div class="fitem-xs fcol panel panel-basic-accent panel-accent-npm-warm-3">
+   <div class="panel-header">
+    <h5 class="panel-title-alt">Medium Panel</h5>
+   </div>
+   <div class="panel-body fitem-xs">
+    Medium content<br>
+    Medium content<br>
+    Medium content<br>
+   </div>
+   <div class="panel-footer">
+    Footer
+   </div>
+ </div>
+</div>
+```
+
+Grid sizes
+
+```html_example
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-1 bg-neutral-10">
+  1
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-2 bg-neutral-10">
+  2
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-3 bg-neutral-10">
+  3
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-4 bg-neutral-10">
+  4
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-5 bg-neutral-10">
+  5
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-6 bg-neutral-10">
+  6
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-7 bg-neutral-10">
+  7
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-8 bg-neutral-10">
+  8
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-9 bg-neutral-10">
+  9
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-10 bg-neutral-10">
+  10
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-11 bg-neutral-10">
+  11
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-12 bg-neutral-10">
+  12
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-13 bg-neutral-10">
+  13
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-14 bg-neutral-10">
+  14
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-15 bg-neutral-10">
+  15
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-16 bg-neutral-10">
+  16
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-17 bg-neutral-10">
+  17
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-18 bg-neutral-10">
+  18
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-19 bg-neutral-10">
+  19
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-20 bg-neutral-10">
+  20
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-21 bg-neutral-10">
+  21
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-22 bg-neutral-10">
+  22
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-23 bg-neutral-10">
+  23
+ </div>
+</div>
+<div class="frow mvxl">
+ <div class="txt-r fitem-xs-24 bg-neutral-10">
+  24
+ </div>
+</div>
+```
+
+Row-major:
+
+```html_example
+<div class="fcol">
+ <div class="fitem-xs frow mvxl">
+  <div class="fitem-xs"><div style="height: 300px" class="pal bg-neutral-10">Tall</div></div>
+  <div class="fitem-xs"><div style="height: 200px" class="pal bg-neutral-10">World</div></div>
+ </div>
+ <div class="fitem-xs frow mvxl">
+  <div class="fitem-xs"><div style="height: 300px" class="pal bg-neutral-10">Tall</div></div>
+  <div class="fitem-xs"><div style="height: 200px" class="pal bg-neutral-10">World</div></div>
+ </div>
+</div>
+```
+
+Wrapping and offsetting:
+
+```html_example
+<div class="frow">
+ <div class="fitem-xs-offset-6 fitem-xs-12 mbxl">
+  <div class="bg-neutral-10">Offset 6, Size 12</div>
+ </div>
+ <div class="fitem-xs-6 mbxl">
+  <div class="bg-neutral-10">Offset 0, Size 6</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">Offset 0, Size 4</div>
+ </div>
+ <div class="fitem-xs-offset-4 fitem-xs-16 mbxl">
+  <div class="bg-neutral-10">Offset 4, Size 16</div>
+ </div>
+</div>
+```
+
+Alignment and justification:
+
+```html_example
+<div class="frow flex-justify-start-xs">
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">justify start</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+</div>
+<div class="frow flex-justify-center-xs">
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">justify center</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+</div>
+<div class="frow flex-justify-end-xs">
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs-4 mbxl">
+  <div class="bg-neutral-10">justify end</div>
+ </div>
+</div>
+
+<hr>
+
+<div class="frow flex-align-start-xs">
+ <div class="fitem-xs mbxl"><div class="bg-neutral-10 pal" style="height: 5em">Tall</div></div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">align start</div>
+ </div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+</div>
+<div class="frow flex-align-center-xs">
+ <div class="fitem-xs mbxl"><div class="bg-neutral-10 pal" style="height: 5em">Tall</div></div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">align center</div>
+ </div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+</div>
+<div class="frow flex-align-end-xs">
+ <div class="fitem-xs mbxl"><div class="bg-neutral-10 pal" style="height: 5em">Tall</div></div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">&nbsp;</div>
+ </div>
+ <div class="fitem-xs mbxl">
+  <div class="bg-neutral-10">align end</div>
+ </div>
+</div>
+
+*/
+
+.frow {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -(floor($grid-gutter-width / 2));
+  margin-right: -(ceil($grid-gutter-width / 2));
+}
+
+.fcol {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.frow.reverse {
+  flex-direction: row-reverse;
+}
+
+.fcol.reverse {
+  flex-direction: column-reverse;
+}
+
+@mixin flex-base {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  .frow>& { // Only horizontally do we make gutters
+    padding-left: floor($grid-gutter-width / 2);
+    padding-right: ceil($grid-gutter-width / 2);
+  }
+}
+
+.fitem-xs {
+  @include flex-base;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+ .fitem-xs-offset-#{$i} {
+   @include flex-base;
+   margin-left: (100% / $grid-columns * $i);
+ }
+ .fitem-xs-#{$i} {
+   @include flex-base;
+   flex-basis: (100% / $grid-columns * $i) !important;
+   max-width: (100% / $grid-columns * $i);
+ }
+ @media (max-width: $screen-sm-min) {
+  .fitem-sm-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .fitem-sm-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+ @media (max-width: $screen-md-max) {
+  .fitem-md-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .fitem-md-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+ @media (max-width: $screen-lg-max) {
+  .fitem-lg-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .fitem-lg-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+}
+
+.flex-justify-start-xs {
+  justify-content: flex-start;
+}
+
+.flex-justify-center-xs {
+  justify-content: center;
+}
+
+.flex-justify-end-xs {
+  justify-content: flex-end;
+}
+
+.flex-align-start-xs {
+  align-items: flex-start;
+}
+
+.flex-align-center-xs {
+  align-items: center;
+}
+
+.flex-align-end-xs {
+  align-items: flex-end;
+}
+
+@media (max-width: $screen-sm-min) {
+  .flex-justify-start-sm {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-sm {
+    justify-content: center;
+  }
+
+  .flex-justify-end-sm {
+    justify-content: flex-end;
+  }
+
+  .flex-align-start-sm {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-sm {
+    align-items: center;
+  }
+
+  .flex-align-end-sm {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .flex-justify-start-md {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-md {
+    justify-content: center;
+  }
+
+  .flex-justify-end-md {
+    justify-content: flex-end;
+  }
+
+  .flex-align-start-md {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-md {
+    align-items: center;
+  }
+
+  .flex-align-end-md {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: $screen-lg-max) {
+  .flex-justify-start-lg {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-lg {
+    justify-content: center;
+  }
+
+  .flex-justify-end-lg {
+    justify-content: flex-end;
+  }
+
+  .flex-justify-start-lg {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-lg {
+    align-items: center;
+  }
+
+  .flex-align-end-lg {
+    align-items: flex-end;
+  }
+}
