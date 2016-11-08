@@ -2,7 +2,8 @@ const React = global.React || require('react');
 const SimpleTabs = global.SimpleTabs || require('@npmcorp/pui-react-tabs').SimpleTabs;
 const Tab = global.Tab || require('@npmcorp/pui-react-tabs').Tab;
 const Collapse = global.Collapse || require('@npmcorp/pui-react-collapse').Collapse;
-const lodash = require('lodash');
+const reduce = require('lodash.reduce');
+const values = require('lodash.values');
 
 class ComponentList extends React.Component {
   render() {
@@ -34,7 +35,7 @@ export class StyleguideNav extends React.Component {
     const tabs = languageNames.map((language) => {
       const componentTypes = navTree[language];
 
-      const components = lodash.reduce(lodash.values(componentTypes), (e, a) => Object.assign({}, e, a), {});
+      const components = reduce(values(componentTypes), (e, a) => Object.assign({}, e, a), {});
 
       return (
         <Tab eventKey={language.toLowerCase()} key={`nav-tab-${language}`} title={language} className="pvn phn">
