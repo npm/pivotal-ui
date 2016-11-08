@@ -344,3 +344,42 @@ The marginalia size you use should match the gutter size you use. Only sizes `xx
   position: absolute;
   width: $whitespace-xxl - $whitespace-s;
 }
+
+/*doc
+---
+title: Screen-filling
+name: screen-fill
+categories:
+ - css_utilities_screen-fill
+ - css_all
+---
+
+Screen-filling classes are utilities to make the root elements behave in a way that lets us attach footers to the actual bottom of the page, rather than filling space at the foot.
+
+```html_example
+<div class="screen-fill-root" style="height: 300px">
+  <div class="screen-fill-body">
+    <div class="h1 bg-neutral-8">Header</div>
+    <div class="screen-fill-main">Content</div>
+    <dic class="h1 bg-neutral-8">Footer</div>
+  </div>
+</div>
+```
+*/
+
+.screen-fill-root {
+  height: 100%;
+  display: flex; // This must be a flex to fix an IE flex bug: https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
+  flex-direction: column;
+}
+
+.screen-fill-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+}
+
+.screen-fill-main {
+  flex: auto 1 0;
+}
