@@ -8,46 +8,7 @@ name: flex-grid
 parent: grid
 ---
 
-```html_example
-<div class="flex-row mbxl">
- <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
- </div>
-</div>
-<div class="flex-row mbxl">
- <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
- </div>
- <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
- </div>
-</div>
-<div class="flex-row mbxl">
- <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
- </div>
- <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
- </div>
- <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
- </div>
-</div>
-```
-
-Holy grail layout:
+Holy grail layout (three columns of equal height):
 
 ```html_example
 <div class="flex-row flex-justify-center-xs">
@@ -94,6 +55,47 @@ Holy grail layout:
    <div class="panel-footer">
     Footer
    </div>
+ </div>
+</div>
+```
+
+Auto-sized flex items: Each divides space with its siblings to fill the row.
+
+```html_example
+<div class="flex-row mbxl">
+ <div class="flex-item-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+</div>
+<div class="flex-row mbxl">
+ <div class="flex-item-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+ <div class="flex-item-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+</div>
+<div class="flex-row mbxl">
+ <div class="flex-item-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+ <div class="flex-item-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
+ </div>
+ <div class="flex-item-xs">
+  <div class="bg-neutral-10">
+   &nbsp;
+  </div>
  </div>
 </div>
 ```
