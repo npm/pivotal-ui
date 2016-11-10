@@ -576,6 +576,17 @@ Alignment and justification:
     max-width: (100% / $grid-columns * $i);
   }
  }
+ @media (min-width: $screen-xl-min) {
+  .flex-item-xl-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .flex-item-xl-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
 }
 
 .flex-justify-start-xs {
@@ -676,6 +687,32 @@ Alignment and justification:
   }
 
   .flex-align-end-lg {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  .flex-justify-start-xl {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-xl {
+    justify-content: center;
+  }
+
+  .flex-justify-end-xl {
+    justify-content: flex-end;
+  }
+
+  .flex-justify-start-xl {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-xl {
+    align-items: center;
+  }
+
+  .flex-align-end-xl {
     align-items: flex-end;
   }
 }
