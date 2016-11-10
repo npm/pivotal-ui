@@ -543,7 +543,7 @@ Alignment and justification:
    flex-basis: (100% / $grid-columns * $i) !important;
    max-width: (100% / $grid-columns * $i);
  }
- @media (max-width: $screen-sm-min) {
+ @media (min-width: $screen-sm-min) {
   .flex-item-sm-offset-#{$i} {
     @include flex-base;
     margin-left: (100% / $grid-columns * $i);
@@ -554,7 +554,7 @@ Alignment and justification:
     max-width: (100% / $grid-columns * $i);
   }
  }
- @media (max-width: $screen-md-max) {
+ @media (min-width: $screen-md-min) {
   .flex-item-md-offset-#{$i} {
     @include flex-base;
     margin-left: (100% / $grid-columns * $i);
@@ -565,7 +565,7 @@ Alignment and justification:
     max-width: (100% / $grid-columns * $i);
   }
  }
- @media (max-width: $screen-lg-max) {
+ @media (min-width: $screen-lg-min) {
   .flex-item-lg-offset-#{$i} {
     @include flex-base;
     margin-left: (100% / $grid-columns * $i);
@@ -602,7 +602,7 @@ Alignment and justification:
   align-items: flex-end;
 }
 
-@media (max-width: $screen-sm-min) {
+@media (min-width: $screen-sm-min) {
   .flex-justify-start-sm {
     justify-content: flex-start;
   }
@@ -628,7 +628,7 @@ Alignment and justification:
   }
 }
 
-@media (max-width: $screen-md-max) {
+@media (min-width: $screen-md-min) {
   .flex-justify-start-md {
     justify-content: flex-start;
   }
@@ -654,7 +654,7 @@ Alignment and justification:
   }
 }
 
-@media (max-width: $screen-lg-max) {
+@media (min-width: $screen-lg-min) {
   .flex-justify-start-lg {
     justify-content: flex-start;
   }
