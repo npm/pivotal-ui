@@ -8,7 +8,74 @@ name: flex-grid
 parent: grid
 ---
 
-Holy grail layout (three columns of equal height):
+<table class="styleguide">
+  <tr>
+    <th>Class</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <th colspan=2>
+      Containers. Each flex group needs one. A flex item can also be a container.
+    </th>
+  </tr>
+  <tr>
+    <td>flex-row</td>
+    <td>Contains row-oriented flex items, with wrapping if the rows are overfilled.</td>
+   </tr>
+  <tr>
+    <td>flex-col</td>
+    <td>Contains column-oriented flex items, with wrapping if the columns are overfilled.</td>
+   </tr>
+  <tr>
+    <th colspan=2>
+      Justification (in a row, justifies the row horizontally, in a column, vertically).
+    </th>
+  </tr>
+  <tr>
+    <td>flex-justify-start-{xs,sm,md,lg,xl}</td>
+    <td>Start</td>
+  </tr>
+  <tr>
+    <td>flex-justify-center-{xs,sm,md,lg,xl}</td>
+    <td>Center</td>
+  </tr>
+  <tr>
+    <td>flex-justify-end-{xs,sm,md,lg,xl}</td>
+    <td>End</td>
+  </tr>
+  <tr>
+    <th colspan=2>
+      Alignment (in a row, aligns the cells vertically, in a column, hosrizontally).
+    </th>
+  </tr>
+  <tr>
+    <td>flex-align-start-{xs,sm,md,lg,xl}</td>
+    <td>Start</td>
+  </tr>
+  <tr>
+    <td>flex-align-center-{xs,sm,md,lg,xl}</td>
+    <td>Center</td>
+  </tr>
+  <tr>
+    <td>flex-align-end-{xs,sm,md,lg,xl}</td>
+    <td>End</td>
+  </tr>
+  <tr>
+    <th colspan=2>
+      Flex Items (Boxes)
+    </th>
+  </tr>
+  <tr>
+    <td>flex-item-[1-24]-{xs,sm,md,lg,xl}</td>
+    <td>A flex item with a fixed portion size, from 1/24th to 24/24ths of a row. Fixed sizes only work in rows, as we have no standard unit of height that makes sense.</td>
+  </tr>
+  <tr>
+    <td>flex-item-{xs,sm,md,lg,xl}</td>
+    <td>A flex item that expands to fit. Works in both rows and columns.</td>
+  </tr>
+</table>
+
+<h3>Holy grail layout (three columns of equal height)</h3>
 
 ```html_example
 <div class="flex-row flex-justify-center-xs">
@@ -59,336 +126,91 @@ Holy grail layout (three columns of equal height):
 </div>
 ```
 
-Auto-sized flex items: Each divides space with its siblings to fill the row.
+<h3>Auto-sized flex items: Each divides space with its siblings to fill the row.</h3>
 
 ```html_example
-<div class="flex-row mbxl">
+<div class="flex-row mbxl grid-show">
  <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
  </div>
 </div>
-<div class="flex-row mbxl">
+<div class="flex-row mbxl grid-show">
  <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
  </div>
  <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
  </div>
 </div>
-<div class="flex-row mbxl">
+<div class="flex-row mbxl grid-show">
  <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
  </div>
  <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
  </div>
  <div class="flex-item-xs">
-  <div class="bg-neutral-10">
-   &nbsp;
-  </div>
  </div>
 </div>
 ```
 
-Grid sizes
+<h3>Grid sizes</h3>
 
 ```html_example
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-1">
-  <div class="bg-neutral-10">
-   1
-  </div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-1" example-content="1">
  </div>
- <div class="txt-c flex-item-xs-23">
-  <div class="bg-neutral-10">
-   23
-  </div>
+ <div class="flex-item-xs-1" example-content="1">
  </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-2">
-  <div class="bg-neutral-10">
-   2
-  </div>
+ <div class="flex-item-xs-1" example-content="1">
  </div>
- <div class="txt-c flex-item-xs-22">
-  <div class="bg-neutral-10">
-   22
-  </div>
+ <div class="flex-item-xs-3" example-content="3">
+ </div>
+ <div class="flex-item-xs-3" example-content="3">
+ </div>
+ <div class="flex-item-xs-3" example-content="3">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
  </div>
 </div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-3">
-  <div class="bg-neutral-10">
-   3
-  </div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-12">
  </div>
- <div class="txt-c flex-item-xs-21">
-  <div class="bg-neutral-10">
-   21
-  </div>
+ <div class="flex-item-xs-12">
  </div>
 </div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-4">
-  <div class="bg-neutral-10">
-   4
-  </div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-2" example-content="2">
  </div>
- <div class="txt-c flex-item-xs-20">
-  <div class="bg-neutral-10">
-   20
-  </div>
+ <div class="flex-item-xs-2" example-content="2">
  </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-5">
-  <div class="bg-neutral-10">
-   5
-  </div>
+ <div class="flex-item-xs-2" example-content="2">
  </div>
- <div class="txt-c flex-item-xs-19">
-  <div class="bg-neutral-10">
-   19
-  </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-4" example-content="4">
+ </div>
+ <div class="flex-item-xs-4" example-content="4">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-4" example-content="4">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
  </div>
 </div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-6">
-  <div class="bg-neutral-10">
-   6
-  </div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-8">
  </div>
- <div class="txt-c flex-item-xs-18">
-  <div class="bg-neutral-10">
-   18
-  </div>
+ <div class="flex-item-xs-8">
+ </div>
+ <div class="flex-item-xs-8">
  </div>
 </div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-7">
-  <div class="bg-neutral-10">
-   7
-  </div>
- </div>
- <div class="txt-c flex-item-xs-17">
-  <div class="bg-neutral-10">
-   17
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-8">
-  <div class="bg-neutral-10">
-   8
-  </div>
- </div>
- <div class="txt-c flex-item-xs-16">
-  <div class="bg-neutral-10">
-   16
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-9">
-  <div class="bg-neutral-10">
-   9
-  </div>
- </div>
- <div class="txt-c flex-item-xs-15">
-  <div class="bg-neutral-10">
-   15
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-10">
-  <div class="bg-neutral-10">
-   10
-  </div>
- </div>
- <div class="txt-c flex-item-xs-14">
-  <div class="bg-neutral-10">
-   14
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-11">
-  <div class="bg-neutral-10">
-   11
-  </div>
- </div>
- <div class="txt-c flex-item-xs-13">
-  <div class="bg-neutral-10">
-   13
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-12">
-  <div class="bg-neutral-10">
-   12
-  </div>
- </div>
- <div class="txt-c flex-item-xs-12">
-  <div class="bg-neutral-10">
-   12
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-13">
-  <div class="bg-neutral-10">
-   13
-  </div>
- </div>
- <div class="txt-c flex-item-xs-11">
-  <div class="bg-neutral-10">
-   11
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-14">
-  <div class="bg-neutral-10">
-   14
-  </div>
- </div>
- <div class="txt-c flex-item-xs-10">
-  <div class="bg-neutral-10">
-   10
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-15">
-  <div class="bg-neutral-10">
-   15
-  </div>
- </div>
- <div class="txt-c flex-item-xs-9">
-  <div class="bg-neutral-10">
-   9
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-16">
-  <div class="bg-neutral-10">
-   16
-  </div>
- </div>
- <div class="txt-c flex-item-xs-8">
-  <div class="bg-neutral-10">
-   8
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-17">
-  <div class="bg-neutral-10">
-   17
-  </div>
- </div>
- <div class="txt-c flex-item-xs-7">
-  <div class="bg-neutral-10">
-   7
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-18">
-  <div class="bg-neutral-10">
-   18
-  </div>
- </div>
- <div class="txt-c flex-item-xs-6">
-  <div class="bg-neutral-10">
-   6
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-19">
-  <div class="bg-neutral-10">
-   19
-  </div>
- </div>
- <div class="txt-c flex-item-xs-5">
-  <div class="bg-neutral-10">
-   5
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-20">
-  <div class="bg-neutral-10">
-   20
-  </div>
- </div>
- <div class="txt-c flex-item-xs-4">
-  <div class="bg-neutral-10">
-   4
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-21">
-  <div class="bg-neutral-10">
-   21
-  </div>
- </div>
- <div class="txt-c flex-item-xs-3">
-  <div class="bg-neutral-10">
-   3
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-22">
-  <div class="bg-neutral-10">
-   22
-  </div>
- </div>
- <div class="txt-c flex-item-xs-2">
-  <div class="bg-neutral-10">
-   2
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-23">
-  <div class="bg-neutral-10">
-   23
-  </div>
- </div>
- <div class="txt-c flex-item-xs-1">
-  <div class="bg-neutral-10">
-   1
-  </div>
- </div>
-</div>
-<div class="flex-row mvxl">
- <div class="txt-c flex-item-xs-24">
-  <div class="bg-neutral-10">
-   24
-  </div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-24">
  </div>
 </div>
 ```
 
-Row-major:
+<h3>Row-major</h3>
 
 ```html_example
 <div class="flex-col">
@@ -408,16 +230,16 @@ Wrapping and offsetting:
 ```html_example
 <div class="flex-row">
  <div class="flex-item-xs-offset-6 flex-item-xs-12 mbxl">
-  <div class="bg-neutral-10">Offset 6, Size 12</div>
+  <div class="pal bg-neutral-10">Offset 6, Size 12</div>
  </div>
  <div class="flex-item-xs-6 mbxl">
-  <div class="bg-neutral-10">Offset 0, Size 6</div>
+  <div class="pal bg-neutral-10">Offset 0, Size 6</div>
  </div>
  <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">Offset 0, Size 4</div>
+  <div class="pal bg-neutral-10">Offset 0, Size 4</div>
  </div>
  <div class="flex-item-xs-offset-4 flex-item-xs-16 mbxl">
-  <div class="bg-neutral-10">Offset 4, Size 16</div>
+  <div class="pal bg-neutral-10">Offset 4, Size 16</div>
  </div>
 </div>
 ```
@@ -425,76 +247,67 @@ Wrapping and offsetting:
 Alignment and justification:
 
 ```html_example
-<div class="flex-row flex-justify-start-xs">
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">flex-justify-start-xs</div>
+<h4>flex-justify-start-*</h4>
+<div class="flex-row flex-justify-start-xs grid-show mbxl">
+ <div class="flex-item-xs-6">
  </div>
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs-6">
  </div>
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs-6">
  </div>
 </div>
-<div class="flex-row flex-justify-center-xs">
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+<h4>flex-justify-center-*</h4>
+<div class="flex-row flex-justify-center-xs grid-show mbxl">
+ <div class="flex-item-xs-6">
  </div>
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">flex-justify-center-xs</div>
+ <div class="flex-item-xs-6">
  </div>
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs-6">
  </div>
 </div>
-<div class="flex-row flex-justify-end-xs">
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+<h4>flex-justify-end-*</h4>
+<div class="flex-row flex-justify-end-xs grid-show mbxl">
+ <div class="flex-item-xs-6">
  </div>
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs-6">
  </div>
- <div class="flex-item-xs-4 mbxl">
-  <div class="bg-neutral-10">flex-justify-end-xs</div>
+ <div class="flex-item-xs-6">
  </div>
 </div>
 
 <hr>
 
-<div class="flex-row flex-align-start-xs">
- <div class="flex-item-xs mbxl"><div class="bg-neutral-10 pal" style="height: 5em">Tall</div></div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">align start</div>
+<h4>flex-align-start-*</h4>
+<div class="flex-row flex-align-start-xs grid-show mbxl">
+ <div class="flex-item-xs grid-placeholder-tall">
  </div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs">
  </div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs">
  </div>
-</div>
-<div class="flex-row flex-align-center-xs">
- <div class="flex-item-xs mbxl"><div class="bg-neutral-10 pal" style="height: 5em">Tall</div></div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
- </div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">align center</div>
- </div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs">
  </div>
 </div>
-<div class="flex-row flex-align-end-xs">
- <div class="flex-item-xs mbxl"><div class="bg-neutral-10 pal" style="height: 5em">Tall</div></div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+<h4>flex-align-center-*</h4>
+<div class="flex-row flex-align-center-xs grid-show mbxl">
+ <div class="flex-item-xs grid-placeholder-tall">
  </div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">&nbsp;</div>
+ <div class="flex-item-xs">
  </div>
- <div class="flex-item-xs mbxl">
-  <div class="bg-neutral-10">align end</div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+</div>
+<h4>flex-align-end-*</h4>
+<div class="flex-row flex-align-end-xs grid-show mbxl">
+ <div class="flex-item-xs grid-placeholder-tall">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
  </div>
 </div>
 
@@ -715,4 +528,23 @@ Alignment and justification:
   .flex-align-end-xl {
     align-items: flex-end;
   }
+}
+
+.flex-row.grid-show [class*=flex-item]::before {
+  content: attr(class);
+  //white-space: pre;
+  text-align: center;
+  display: block;
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  outline: 1px solid gray;
+}
+
+.flex-row.grid-show [class*=flex-item][example-content]::before {
+  content: attr(example-content);
+}
+
+.flex-row.grid-show [class*=flex-item].grid-placeholder-tall::before {
+  height: 5em;
+  content: " ";
 }
