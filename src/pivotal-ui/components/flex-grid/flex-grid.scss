@@ -1,0 +1,550 @@
+@import "../pui-variables";
+@import '../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+/*doc
+---
+title: Flex Grids
+name: flex-grid
+parent: grid
+---
+
+<table class="styleguide">
+  <tr>
+    <th>Class</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <th colspan=2>
+      Containers. Each flex group needs one. A flex item can also be a container.
+    </th>
+  </tr>
+  <tr>
+    <td>flex-row</td>
+    <td>Contains row-oriented flex items, with wrapping if the rows are overfilled.</td>
+   </tr>
+  <tr>
+    <td>flex-col</td>
+    <td>Contains column-oriented flex items, with wrapping if the columns are overfilled.</td>
+   </tr>
+  <tr>
+    <th colspan=2>
+      Justification (in a row, justifies the row horizontally, in a column, vertically).
+    </th>
+  </tr>
+  <tr>
+    <td>flex-justify-start-{xs,sm,md,lg,xl}</td>
+    <td>Start</td>
+  </tr>
+  <tr>
+    <td>flex-justify-center-{xs,sm,md,lg,xl}</td>
+    <td>Center</td>
+  </tr>
+  <tr>
+    <td>flex-justify-end-{xs,sm,md,lg,xl}</td>
+    <td>End</td>
+  </tr>
+  <tr>
+    <th colspan=2>
+      Alignment (in a row, aligns the cells vertically, in a column, hosrizontally).
+    </th>
+  </tr>
+  <tr>
+    <td>flex-align-start-{xs,sm,md,lg,xl}</td>
+    <td>Start</td>
+  </tr>
+  <tr>
+    <td>flex-align-center-{xs,sm,md,lg,xl}</td>
+    <td>Center</td>
+  </tr>
+  <tr>
+    <td>flex-align-end-{xs,sm,md,lg,xl}</td>
+    <td>End</td>
+  </tr>
+  <tr>
+    <th colspan=2>
+      Flex Items (Boxes)
+    </th>
+  </tr>
+  <tr>
+    <td>flex-item-[1-24]-{xs,sm,md,lg,xl}</td>
+    <td>A flex item with a fixed portion size, from 1/24th to 24/24ths of a row. Fixed sizes only work in rows, as we have no standard unit of height that makes sense.</td>
+  </tr>
+  <tr>
+    <td>flex-item-{xs,sm,md,lg,xl}</td>
+    <td>A flex item that expands to fit. Works in both rows and columns.</td>
+  </tr>
+</table>
+
+<h3>Holy grail layout (three columns of equal height)</h3>
+
+```html_example
+<div class="flex-row flex-justify-center-xs">
+ <div class="flex-item-xs-6 flex-col">
+  <div class="flex-item-xs flex-col panel panel-basic-accent panel-accent-npm-brand">
+   <div class="panel-header">
+    <h5 class="panel-title-alt">Short Panel</h5>
+   </div>
+   <div class="panel-body flex-item-xs">
+    Short content
+   </div>
+   <div class="panel-footer">
+    Footer
+   </div>
+  </div>
+ </div>
+ <div class="flex-item-xs-6 flex-col">
+  <div class="flex-item-xs flex-col panel panel-basic-accent panel-accent-npm-blue-2">
+   <div class="panel-header">
+    <h5 class="panel-title-alt">Long Panel</h5>
+   </div>
+   <div class="panel-body flex-item-xs">
+    Long content<br>
+    Long content<br>
+    Long content<br>
+    Long content<br>
+    Long content<br>
+   </div>
+   <div class="panel-footer">
+    Footer
+   </div>
+  </div>
+ </div>
+ <div class="flex-item-xs-6 flex-col">
+  <div class="flex-item-xs flex-col panel panel-basic-accent panel-accent-npm-warm-3">
+   <div class="panel-header">
+    <h5 class="panel-title-alt">Medium Panel</h5>
+   </div>
+   <div class="panel-body flex-item-xs">
+    Medium content<br>
+    Medium content<br>
+    Medium content<br>
+   </div>
+   <div class="panel-footer">
+    Footer
+   </div>
+ </div>
+</div>
+```
+
+<h3>Auto-sized flex items: Each divides space with its siblings to fill the row.</h3>
+
+```html_example
+<div class="flex-row mbxl grid-show">
+ <div class="flex-item-xs">
+ </div>
+</div>
+<div class="flex-row mbxl grid-show">
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+</div>
+<div class="flex-row mbxl grid-show">
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+</div>
+```
+
+<h3>Grid sizes</h3>
+
+```html_example
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-1" example-content="1">
+ </div>
+ <div class="flex-item-xs-1" example-content="1">
+ </div>
+ <div class="flex-item-xs-1" example-content="1">
+ </div>
+ <div class="flex-item-xs-3" example-content="3">
+ </div>
+ <div class="flex-item-xs-3" example-content="3">
+ </div>
+ <div class="flex-item-xs-3" example-content="3">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+</div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-12">
+ </div>
+ <div class="flex-item-xs-12">
+ </div>
+</div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-4" example-content="4">
+ </div>
+ <div class="flex-item-xs-4" example-content="4">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+ <div class="flex-item-xs-4" example-content="4">
+ </div>
+ <div class="flex-item-xs-2" example-content="2">
+ </div>
+</div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-8">
+ </div>
+ <div class="flex-item-xs-8">
+ </div>
+ <div class="flex-item-xs-8">
+ </div>
+</div>
+<div class="flex-row mvxl grid-show">
+ <div class="flex-item-xs-24">
+ </div>
+</div>
+```
+
+<h3>Row-major</h3>
+
+```html_example
+<div class="flex-col">
+ <div class="flex-item-xs flex-row mvxl">
+  <div class="flex-item-xs"><div style="height: 300px" class="pal bg-neutral-10">Tall</div></div>
+  <div class="flex-item-xs"><div style="height: 200px" class="pal bg-neutral-10">World</div></div>
+ </div>
+ <div class="flex-item-xs flex-row mvxl">
+  <div class="flex-item-xs"><div style="height: 300px" class="pal bg-neutral-10">Tall</div></div>
+  <div class="flex-item-xs"><div style="height: 200px" class="pal bg-neutral-10">World</div></div>
+ </div>
+</div>
+```
+
+Wrapping and offsetting:
+
+```html_example
+<div class="flex-row">
+ <div class="flex-item-xs-offset-6 flex-item-xs-12 mbxl">
+  <div class="pal bg-neutral-10">Offset 6, Size 12</div>
+ </div>
+ <div class="flex-item-xs-6 mbxl">
+  <div class="pal bg-neutral-10">Offset 0, Size 6</div>
+ </div>
+ <div class="flex-item-xs-4 mbxl">
+  <div class="pal bg-neutral-10">Offset 0, Size 4</div>
+ </div>
+ <div class="flex-item-xs-offset-4 flex-item-xs-16 mbxl">
+  <div class="pal bg-neutral-10">Offset 4, Size 16</div>
+ </div>
+</div>
+```
+
+Alignment and justification:
+
+```html_example
+<h4>flex-justify-start-*</h4>
+<div class="flex-row flex-justify-start-xs grid-show mbxl">
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+</div>
+<h4>flex-justify-center-*</h4>
+<div class="flex-row flex-justify-center-xs grid-show mbxl">
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+</div>
+<h4>flex-justify-end-*</h4>
+<div class="flex-row flex-justify-end-xs grid-show mbxl">
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+ <div class="flex-item-xs-6">
+ </div>
+</div>
+
+<hr>
+
+<h4>flex-align-start-*</h4>
+<div class="flex-row flex-align-start-xs grid-show mbxl">
+ <div class="flex-item-xs grid-placeholder-tall">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+</div>
+<h4>flex-align-center-*</h4>
+<div class="flex-row flex-align-center-xs grid-show mbxl">
+ <div class="flex-item-xs grid-placeholder-tall">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+</div>
+<h4>flex-align-end-*</h4>
+<div class="flex-row flex-align-end-xs grid-show mbxl">
+ <div class="flex-item-xs grid-placeholder-tall">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+ <div class="flex-item-xs">
+ </div>
+</div>
+
+*/
+
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -(floor($grid-gutter-width / 2));
+  margin-right: -(ceil($grid-gutter-width / 2));
+}
+
+.flex-col {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin flex-base {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  .flex-row>& { // Only horizontally do we make gutters
+    padding-left: floor($grid-gutter-width / 2);
+    padding-right: ceil($grid-gutter-width / 2);
+  }
+}
+
+.flex-item-xs {
+  @include flex-base;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns {
+ .flex-item-xs-offset-#{$i} {
+   @include flex-base;
+   margin-left: (100% / $grid-columns * $i);
+ }
+ .flex-item-xs-#{$i} {
+   @include flex-base;
+   flex-basis: (100% / $grid-columns * $i) !important;
+   max-width: (100% / $grid-columns * $i);
+ }
+ @media (min-width: $screen-sm-min) {
+  .flex-item-sm-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .flex-item-sm-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+ @media (min-width: $screen-md-min) {
+  .flex-item-md-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .flex-item-md-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+ @media (min-width: $screen-lg-min) {
+  .flex-item-lg-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .flex-item-lg-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+ @media (min-width: $screen-xl-min) {
+  .flex-item-xl-offset-#{$i} {
+    @include flex-base;
+    margin-left: (100% / $grid-columns * $i);
+  }
+  .flex-item-xl-#{$i} {
+    @include flex-base;
+    flex-basis: (100% / $grid-columns * $i) !important;
+    max-width: (100% / $grid-columns * $i);
+  }
+ }
+}
+
+.flex-justify-start-xs {
+  justify-content: flex-start;
+}
+
+.flex-justify-center-xs {
+  justify-content: center;
+}
+
+.flex-justify-end-xs {
+  justify-content: flex-end;
+}
+
+.flex-align-start-xs {
+  align-items: flex-start;
+}
+
+.flex-align-center-xs {
+  align-items: center;
+}
+
+.flex-align-end-xs {
+  align-items: flex-end;
+}
+
+@media (min-width: $screen-sm-min) {
+  .flex-justify-start-sm {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-sm {
+    justify-content: center;
+  }
+
+  .flex-justify-end-sm {
+    justify-content: flex-end;
+  }
+
+  .flex-align-start-sm {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-sm {
+    align-items: center;
+  }
+
+  .flex-align-end-sm {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .flex-justify-start-md {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-md {
+    justify-content: center;
+  }
+
+  .flex-justify-end-md {
+    justify-content: flex-end;
+  }
+
+  .flex-align-start-md {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-md {
+    align-items: center;
+  }
+
+  .flex-align-end-md {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .flex-justify-start-lg {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-lg {
+    justify-content: center;
+  }
+
+  .flex-justify-end-lg {
+    justify-content: flex-end;
+  }
+
+  .flex-justify-start-lg {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-lg {
+    align-items: center;
+  }
+
+  .flex-align-end-lg {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  .flex-justify-start-xl {
+    justify-content: flex-start;
+  }
+
+  .flex-justify-center-xl {
+    justify-content: center;
+  }
+
+  .flex-justify-end-xl {
+    justify-content: flex-end;
+  }
+
+  .flex-justify-start-xl {
+    align-items: flex-start;
+  }
+
+  .flex-align-center-xl {
+    align-items: center;
+  }
+
+  .flex-align-end-xl {
+    align-items: flex-end;
+  }
+}
+
+.flex-row.grid-show [class*=flex-item]::before {
+  content: attr(class);
+  //white-space: pre;
+  text-align: center;
+  display: block;
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  outline: 1px solid gray;
+}
+
+.flex-row.grid-show [class*=flex-item][example-content]::before {
+  content: attr(example-content);
+}
+
+.flex-row.grid-show [class*=flex-item].grid-placeholder-tall::before {
+  height: 5em;
+  content: " ";
+}
