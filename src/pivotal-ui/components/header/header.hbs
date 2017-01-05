@@ -79,8 +79,8 @@
         </div> <!-- .drop-down-menu-container -->
       {{else}}
         <ul class="user-info-salutation single">
-          <li><a href="/signup">sign up</a> or <a href="/login">log in</a></li>
-          <li><a href="/login"><span class="a11y-only">log in</span>{{svg "@npmcorp/pui-css-header/wombat-head.svg" .}}</a></li>
+          <li><a href="/signup">sign up</a> or <a href="/login{{#if donePath}}?done={{donePath}}{{/if}}">log in</a></li>
+          <li><a href="/login{{#if donePath}}?done={{donePath}}{{/if}}"><span class="a11y-only">log in</span>{{svg "@npmcorp/pui-css-header/wombat-head.svg" .}}</a></li>
         </ul>
       {{/if}}
     </div> <!-- .user-info -->
