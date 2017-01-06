@@ -3532,6 +3532,7 @@ ul[class*=lv]>li{margin-top:0!important}
 .marginalia-xxl{position:absolute;width:35px}
 .screen-fill-root{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .screen-fill-body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-height:100%;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.screen-fill-body>*{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto}
 .screen-fill-main{-webkit-box-flex:1;-ms-flex:auto 1 0;flex:auto 1 0}
 .aligner{height:230px;display:-ms-flexbox;display:flex;display:-webkit-box;display:-webkit-flex;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-flex-flow:row wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-items:center}
 .aligner .aligner-item{-webkit-box-flex:0;-ms-flex:0 100%;flex:0 100%;-webkit-flex:0 100%}
@@ -3562,7 +3563,7 @@ ul[class*=lv]>li{margin-top:0!important}
 .drop-down-menu-toggle.toggle-is-open{background-color:#283546;border-radius:5px 5px 0 0}
 .drop-down-menu-toggle.toggle-is-open:after{background-image:url(@npmcorp/pui-css-drop-down-menu/arrow-up.svg)}
 .drop-down-menu-toggle.toggle-is-closed{background-color:none}
-header{font-size:16px;padding:.875em 20px .0625em;border-bottom:1px solid #d3d3d3;max-height:7.47813em;background:#2a333c;color:rgba(255,255,255,.8);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+header{z-index:0;font-size:16px;padding:.875em 20px .0625em;border-bottom:1px solid #d3d3d3;max-height:7.47813em;background:#2a333c;color:rgba(255,255,255,.8);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 header.hero-transparent{background:0 0;border-bottom:0}
 header.hero-transparent+.pane{margin-top:-7.47813em;padding-top:7.47813em}
 header>.header-item{-webkit-box-flex:1;-ms-flex:1 auto;flex:1 auto}

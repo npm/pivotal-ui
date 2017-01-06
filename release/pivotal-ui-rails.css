@@ -30922,6 +30922,10 @@ Screen-filling classes are utilities to make the root elements behave in a way t
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .screen-fill-body > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
 
 .screen-fill-main {
   -webkit-box-flex: 1;
@@ -31253,6 +31257,7 @@ View the [regular header on its own page](/header.html) to see mobile sizing fea
 
 */
 header {
+  z-index: 0;
   font-size: 16px;
   padding: 0.875em 20px 0.0625em;
   border-bottom: 1px solid #d3d3d3;
