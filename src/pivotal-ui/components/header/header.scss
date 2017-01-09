@@ -52,7 +52,7 @@ View the [regular header on its own page](/header.html) to see mobile sizing fea
 */
 
 header {
-  z-index: 0; // A separate rendering context because browsers are 💩 and full of bugs.
+  z-index: $zindex-navbar; // A separate rendering context because browsers are 💩 and full of bugs.
   font-size: 16px;
   padding: 0.875em 20px 0.0625em;
   border-bottom: 1px solid #d3d3d3;
