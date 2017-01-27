@@ -13916,7 +13916,7 @@ ul[class*="lv"] > li {
 
 @charset "UTF-8";
 header {
-  z-index: 2;
+  z-index: 1000;
   font-size: 16px;
   padding: 0.875em 20px 0.0625em;
   border-bottom: 1px solid #d3d3d3;

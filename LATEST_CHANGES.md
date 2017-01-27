@@ -1,10 +1,10 @@
-<a name="8.2.2"></a>
-## 8.2.2 (2017-01-26)
+<a name="8.2.3"></a>
+## 8.2.3 (2017-01-27)
 
 
 ### Bug Fixes
 
-* **header:** place in higher context for clicking ([dbee0b5](https://github.com/pivotal-cf/pivotal-ui/commit/dbee0b5))
+* **header:** bump that z-index a little ([256d811](https://github.com/pivotal-cf/pivotal-ui/commit/256d811))
 
 
 
