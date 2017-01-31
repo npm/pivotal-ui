@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "A collection of React components that provide standard typographical headers",
   "homepage": "http://styleguide.pivotal.io/react.html#type_react",
+  "main": "typography.js",
   "dependencies": {
     "@npmcorp/pui-css-typography": "6.4.0",
     "@npmcorp/pui-react-helpers": "6.4.0"

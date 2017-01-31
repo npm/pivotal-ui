@@ -548,4 +548,5 @@ const DeathStar = React.createClass({
     );
   }
 });
+
 export default IntroPage;

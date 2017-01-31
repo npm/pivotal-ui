@@ -1,6 +1,7 @@
 {
   "version": "6.4.0",
   "description": "A collection of helpers used by pivotal-ui-react components",
+  "main": "helpers.js",
   "dependencies": {
     "classnames": "^2.1.2"
   }

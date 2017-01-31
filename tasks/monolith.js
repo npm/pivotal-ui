@@ -1,24 +1,23 @@
-import { exec } from 'child_process';
-import gulp from 'gulp';
-import del from 'del';
-import { map, pipeline, merge, duplex } from 'event-stream';
-import { setup as setupDrF, copyAssets, generateCss } from '@npmcorp/dr-frankenstyle/dev';
-import { railsUrls } from '@npmcorp/dr-frankenstyle';
-import path from 'path';
-import { read } from 'vinyl-file';
-import webpack from 'webpack-stream';
-import webpackConfig from '../config/webpack';
-
+const { exec } = require('child_process');
+const gulp = require('gulp');
+const del = require('del');
+const { map, pipeline, merge, duplex } = require('event-stream');
+const { setup: setupDrF, copyAssets, generateCss } = require('@npmcorp/dr-frankenstyle/dev');
+const path = require('path');
+const { read } = require('vinyl-file');
+const webpack = require('webpack-stream');
+const webpackConfig = require('../config/webpack');
 const connect = require('gulp-connect');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const cssnext = require('postcss-cssnext');
 const postcss = require('gulp-postcss');
+const multiplane = require('../lib/multiplane');
 const runSequence = require('run-sequence').use(gulp);
+const scss = require('postcss-scss');
+const through2 = require('through2');
 
 gulp.task('monolith-clean', callback => del(['build'], callback));
-
-gulp.task('monolith-hologram', callback => exec('bundle exec hologram', callback));
 
 gulp.task('monolith-setup-css-cache', () => {
   return setupDrF({
@@ -40,10 +39,12 @@ gulp.task('monolith-build-css-from-cache', () => {
       }
     }),
 
-    sass(),
     postcss([
       cssnext()
-    ]),
+    ], {
+      syntax: scss
+    }),
+    sass(),
 
     map((file, callback) => {
       callback(null, {
@@ -75,35 +76,38 @@ gulp.task('monolith-build-css-from-cache', () => {
     )
   );
 
-  return setupDrF({
+  const css = setupDrF({
     cached: true
   })
     .pipe(generateCss(processStyleAssetsStream))
-    .pipe(rename('pivotal-ui.css'))
+    .pipe(rename('pivotal-ui.css'));
+
+  const js = gulp.src('./src/**/*.js');
+
+  return merge(css, merge(js, css).pipe(multiplane()))
     .pipe(gulp.dest('build/'))
-    .pipe(railsUrls())
-    .pipe(rename('pivotal-ui-rails.css'))
-    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('monolith-build-css-from-scratch', callback => runSequence('monolith-setup-css-cache', 'monolith-build-css-from-cache', callback));
 
 gulp.task('monolith-html', () => gulp.src('src/styleguide/*.html')
-    .pipe(gulp.dest('build'))
+  .pipe(gulp.dest('build'))
 );
 
 gulp.task('monolith-styleguide-css', () => gulp.src('src/styleguide/styleguide.scss')
-    .pipe(sass())
-    .pipe(postcss([
-      cssnext()
-    ]))
-    .pipe(gulp.dest('build/styleguide'))
+  .pipe(postcss([
+    cssnext()
+  ], {
+    syntax: scss
+  }))
+  .pipe(sass())
+  .pipe(gulp.dest('build/'))
 );
 
 gulp.task('monolith-build-js', () => gulp.src('./src/pivotal-ui/javascripts/pivotal-ui.js')
-    .pipe(webpack(webpackConfig()))
-    .pipe(rename('pivotal-ui.js'))
-    .pipe(gulp.dest('build'))
+  .pipe(webpack(webpackConfig()))
+  .pipe(rename('pivotal-ui.js'))
+  .pipe(gulp.dest('build'))
 );
 
 gulp.task('monolith-build-react-js', () => {
@@ -121,49 +125,26 @@ gulp.task('monolith-build-react-js', () => {
   }
 });
 
-gulp.task('monolith-build-styleguide-react-js', () => {
-  const watch = Boolean(process.env.WEBPACK_WATCH);
-
-  const task = gulp.src('./src/styleguide/styleguide-react.js')
-    .pipe(webpack(webpackConfig({
-      watch: watch
-    })))
-    .pipe(rename('styleguide-react.js'))
-    .pipe(gulp.dest('build/styleguide'));
-
-  if (!watch) {
-    return task;
-  }
-});
-
 gulp.task('monolith-prism-assets', () => gulp.src('node_modules/prismjs/themes/{prism,prism-okaidia}.css')
-    .pipe(gulp.dest('build/prismjs'))
+  .pipe(gulp.dest('build/prismjs'))
 );
 
 gulp.task('monolith-styleguide-assets', () => gulp.src([
-    'src/styleguide/*.js',
-    'src/styleguide/github.css',
-    'src/images/*'
-  ]).pipe(gulp.dest('build/styleguide'))
-);
-
-gulp.task('monolith-app-config', () => gulp.src(['src/Staticfile', 'config/nginx.conf'])
-    .pipe(gulp.dest('build'))
+  'src/styleguide/github.css',
+  'src/images/*'
+]).pipe(gulp.dest('build/'))
 );
 
 gulp.task('monolith', callback => runSequence('monolith-clean', [
-    'monolith-hologram',
-    'monolith-html',
-    'handlebars-demos',
-    'monolith-styleguide-css',
-    'monolith-build-css-from-scratch',
-    'monolith-build-js',
-    'monolith-build-react-js',
-    'monolith-build-styleguide-react-js',
-    'monolith-prism-assets',
-    'monolith-styleguide-assets',
-    'monolith-app-config'
-  ], callback));
+  'monolith-html',
+  'handlebars-demos',
+  'monolith-styleguide-css',
+  'monolith-build-css-from-scratch',
+  'monolith-build-js',
+  'monolith-build-react-js',
+  'monolith-prism-assets',
+  'monolith-styleguide-assets',
+], callback));
 
 gulp.task('monolith-serve', ['monolith'], () => {
   connect.server({

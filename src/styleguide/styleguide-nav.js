@@ -1,7 +1,6 @@
 const React = global.React || require('react');
-const SimpleTabs = global.SimpleTabs || require('@npmcorp/pui-react-tabs').SimpleTabs;
-const Tab = global.Tab || require('@npmcorp/pui-react-tabs').Tab;
-const Collapse = global.Collapse || require('@npmcorp/pui-react-collapse').Collapse;
+const { Tab, SimpleTabs } = require('../pivotal-ui-react/tabs/tabs');
+const { Collapse } = require('../pivotal-ui-react/collapse/collapse');
 const reduce = require('lodash.reduce');
 const values = require('lodash.values');
 
@@ -29,32 +28,34 @@ class ComponentList extends React.Component {
 
 export class StyleguideNav extends React.Component {
   render() {
-    const {navTree, defaultLanguage, defaultComponentType} = this.props;
+    const {navTree, lang} = this.props;
 
-    const languageNames = ['CSS', 'React'];
-    const tabs = languageNames.map((language) => {
-      const componentTypes = navTree[language];
+    const navByLanguage = {
+      CSS: reduce(values(navTree.CSS), (e, a) => Object.assign({}, e, a), {}),
+      React: reduce(values(navTree.React), (e, a) => Object.assign({}, e, a), {})
+    };
 
-      const components = reduce(values(componentTypes), (e, a) => Object.assign({}, e, a), {});
-
-      return (
-        <Tab eventKey={language.toLowerCase()} key={`nav-tab-${language}`} title={language} className="pvn phn">
-          <ComponentList components={components} />
-        </Tab>
-      );
-
-    });
-
+    const cssActive = lang == 'css' ? 'active in' : '';
+    const reactActive = lang == 'react' ? 'active in' : '';
     return (
-      <SimpleTabs defaultActiveKey={defaultLanguage.toLowerCase()}>
-        {tabs}
-      </SimpleTabs>
+      <div className="tab-simple">
+        <ul className="nav nav-tabs">
+          <li className={cssActive}><a data-toggle="tab" href="#lang-css">CSS</a></li>
+          <li className={reactActive}><a data-toggle="tab" href="#lang-react">React</a></li>
+        </ul>
+        <div className="tab-content">
+          <div className={`tab-pane fade in ${cssActive} pan`} id="lang-css">
+            <ul className="list-unstyled mlxl">
+              {lodash.map(navByLanguage.CSS, (v, k) => <li key={`component-CSS-${k}`}><a href={v}>{k}</a></li>)}
+            </ul>
+          </div>
+          <div className={`tab-pane fade ${reactActive} pan`} id="lang-react">
+            <ul className="list-unstyled mlxl">
+              {lodash.map(navByLanguage.React, (v, k) => <li key={`component-React-${k}`}><a href={v}>{k}</a></li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
     );
   }
-}
-
-StyleguideNav.propTypes = {
-  defaultLanguage: React.PropTypes.string.isRequired,
-  defaultComponentType: React.PropTypes.string.isRequired,
-  navTree: React.PropTypes.object.isRequired
 }

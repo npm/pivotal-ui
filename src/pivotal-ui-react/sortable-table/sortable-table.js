@@ -173,9 +173,6 @@ categories:
  - react_base_tables
  - react_all
 ---
-*/
-
-/*doc
 
 <code class="pam">
 <i class="fa fa-download" alt="Install the Component">
@@ -191,7 +188,9 @@ var TableHeader = require('@npmcorp/pui-react-sortable-table').TableHeader;
 var TableRow = require('@npmcorp/pui-react-sortable-table').TableRow;
 var TableCell = require('@npmcorp/pui-react-sortable-table').TableCell;
 ```
+*/
 
+/*doc
 ---
 title: Sortable
 name: table_sortable_react

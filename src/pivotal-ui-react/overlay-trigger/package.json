@@ -1,6 +1,7 @@
 {
   "version": "6.4.0",
   "description": "A React component for displaying a tooltip or popover on user action",
+  "main": "overlay-trigger.js",
   "dependencies": {
     "lodash.uniqueid": "^3.0.0",
     "react-bootstrap": "0.25.1"

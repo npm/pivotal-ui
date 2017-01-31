@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "React Back to Top component",
   "homepage": "http://styleguide.pivotal.io/react.html#back_to_top",
+  "main": "back-to-top.js",
   "dependencies": {
     "@npmcorp/pui-css-back-to-top": "6.4.0",
     "@npmcorp/pui-react-helpers": "6.4.0",

@@ -58,13 +58,8 @@ gulp.task('rspec-features', function(done) {
   rspec('features', done);
 });
 
-gulp.task('rspec-unit', function(done) {
-  rspec('hologram', done);
-});
-
-
 gulp.task('rspec', function(done) {
-  runSequence('set-ci-port', 'monolith-serve', 'rspec-features', 'monolith-kill-server', 'rspec-unit', done);
+  runSequence('set-ci-port', 'monolith-serve', 'rspec-features', 'monolith-kill-server', done);
 });
 
 gulp.task('css-critic-prepare', ['monolith'], function() {

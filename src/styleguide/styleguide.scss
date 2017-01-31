@@ -1,62 +1,20 @@
 // Styles specific to the styleguide, otherwise, not used
-@import './ie-specific-styles.scss';
 @import '../pivotal-ui/components/pui-variables.scss';
 @import '../pivotal-ui/components/mixins.scss';
 
-$nav-menu-width: 300px;
+section.styleguide {
+  p {
+    margin-bottom: 10.5px;
+  }
+}
 
 html {
   background-color: $neutral-11;
 }
 
-.container {
-  max-width: 1128px;
-  width: auto;
-  margin: 0 auto;
-}
-
-.content {
-  margin-top: 5px;
-}
-
-
-.main > h1 {
-  margin-top: 30px;
-}
-
-.main > h1:first-child {
-  margin-top: 0;
-}
-
-h1.styleguide,
-h2.styleguide,
-h3.styleguide,
-h4.styleguide,
-h5.styleguide,
-h6.styleguide {
-  color: $dark-2;
-  font-weight: 600;
-  margin-top: 0;
-  @media screen and (min-width: $screen-md-min) {
-    padding-top: 50px;
-  }
-}
-
-
-h1.styleguide {
-  font-size: $font-size-title;
-}
-
 footer {
   margin-top: 20px;
   text-align: center;
-}
-
-
-.componentMenu {
-  max-height: 535px;
-  width: 175px;
-  overflow-y: auto;
 }
 
 blockquote:before {
@@ -74,62 +32,6 @@ blockquote {
 
 }
 
-main {
-  padding-left: $nav-menu-width
-}
-
-.styleguide-header {
-  width: $nav-menu-width;
-  height: 100%;
-  z-index: 100;
-  overflow: auto;
-
-  position: fixed;
-  top: 0;
-
-  background: $neutral-11;
-
-  border-right: 1px solid $neutral-9;
-
-  .visible-on-focus {
-    position: absolute;
-    left: 0px;
-    top: -40px;
-    &:focus, &:hover {
-      top: 40px;
-    }
-  }
-
-  .logo-type-company, .logo-type-app {
-    display: block;
-    line-height: 1;
-  }
-
-  #styleguide-navbar {
-    .nav {
-      display: flex;
-      text-align: center;
-
-      > li {
-        flex: 1;
-      }
-    }
-
-    .nav-component-type {
-      margin: 0;
-      background-color: white;
-
-      .panel-body {
-        padding-top: 0;
-        padding-bottom: 0;
-
-        a {
-          display: block;
-        }
-      }
-    }
-  }
-}
 // Back to top component
 .exampleOutput .back-to-top {
   position: absolute;
@@ -523,31 +425,4 @@ h1#intro.styleguide {
     border-color: white;
     background: transparent;
   }
-}
-
-.styleguide-intro-tile {
-  border: solid $dark-10;
-  border-width: 0 1px 1px 0;
-  padding: 6vw 2.5vw;
-
-  margin: -1px 0;
-
-  font-size: 14px;
-
-  h2 {
-    font-size: 32px;
-    margin: 0;
-    color: $neutral-2;
-  }
-}
-
-.styleguide-demo {
-  width: 100%;
-  border: 1px solid #ccc;
-  height: 500px;
-}
-
-.crazy-logo {
-  width: 32vw;
-  margin: 0 auto 0 auto;
 }

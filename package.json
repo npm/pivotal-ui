@@ -182,8 +182,12 @@
     "babel-plugin-transform-runtime": "^6.12.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-stage-0": "^6.5.0",
+    "babylon": "^6.8.4",
     "browserify": "^13.0.1",
+    "duplexify": "^3.4.5",
     "express": "^4.13.4",
+    "frontmatter": "0.0.3",
+    "fs-extra": "^0.30.0",
     "git-create-deploy-branch": "^1.0.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
@@ -198,13 +202,22 @@
     "karma-tape-reporter": "^1.0.3",
     "lodash.reduce": "^4.6.0",
     "lodash.values": "^4.3.0",
-    "mdcss": "^1.5.2",
+    "markdown-it": "^7.0.0",
+    "merge2": "^1.0.2",
     "npm-user-validate": "^0.1.5",
     "postcss-cssnext": "^2.7.0",
+    "postcss-scss": "^0.1.9",
     "prismjs": "0.0.1",
     "pui-prismjs": "0.0.1",
     "pui-react-animation": "^0.0.7",
-    "tape": "^4.6.0"
+    "pump": "^1.0.1",
+    "pumpify": "^1.3.5",
+    "react": "^0.13.3",
+    "react-fa": "^3.4.0",
+    "slugify": "^0.1.1",
+    "tape": "^4.6.0",
+    "through2": "^0.6.5",
+    "verror": "^1.6.1"
   },
   "scripts": {
     "deploy": "if [ `git symbolic-ref HEAD` = refs/heads/master ]; then gulp monolith && git create-deploy-branch && git push origin +deploy/master; else echo can only deploy master; exit 1; fi",
@@ -216,7 +229,7 @@
     "pui-update": "scripts/pui-update.js",
     "dev": "gulp dev",
     "build-monolith": "gulp monolith-build-css-from-scratch",
-    "postinstall": "bundle install && gulp monolith"
+    "postinstall": "gulp monolith"
   },
   "repository": {
     "type": "git",

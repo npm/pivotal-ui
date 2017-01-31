@@ -2,6 +2,7 @@
   "version": "6.4.0",
   "description": "React components for opening and closing modal windows",
   "homepage": "http://styleguide.pivotal.io/react.html#modal_react",
+  "main": "modals.js",
   "dependencies": {
     "classlist-polyfill": "^1.0.1",
     "@npmcorp/pui-css-modals": "6.4.0",
