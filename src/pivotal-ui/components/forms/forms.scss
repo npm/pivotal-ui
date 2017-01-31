@@ -882,6 +882,38 @@ input[type="radio"] {
 
 /*doc
 ---
+title: Radio Groups
+name: form_radio_group
+parent: form_checkboxes
+---
+Radios are for selecting one option from many.
+
+```html_example
+<form class="styleguide-form radio-box pvn phn" role="form">
+  <div class="radio pbn mtxl mhxl">
+    <label>
+      <input id="optionsRadios1" name="optionsRadios" type="radio" value="option1" checked="checked">
+      Option one is this and that&mdash;be sure to include why it's great
+    </label>
+  </div>
+  <hr class="divider-alternate-1"/>
+  <div class="radio ptn mbxl mhxl">
+    <label>
+      <input id="optionsRadios2" name="optionsRadios" type="radio" value="option2">
+      Option two can be something else and selecting it will deselect option one
+    </label>
+  </div>
+</form>
+```
+
+*/
+.radio-box {
+  border-radius: $border-radius-large;
+  border: $panel-basic-alt-border;
+}
+
+/*doc
+---
 title: Inline Checkboxes & Radios
 name: form_checkboxes_inline
 parent: form_checkboxes
