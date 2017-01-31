@@ -414,3 +414,55 @@ Using the `fromPackage` helper:
 ```
 
 */
+
+
+/*doc
+---
+title: Sidebar Checklist
+name: meta_sidebar_list
+parent: meta
+---
+
+Replaces the default bullet image with the font awesome checkmark.
+
+```html_example
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-basic-alt ptxl pbs phxl">
+    <div class="row">
+      <span class="phl type-neutral-2 h5 pbl pts">Both plans include:</span>
+      <hr class="divider-alternate-1"/>
+    </div>
+      <div class="row">
+        <ul class="list-checked pbs">
+          <li>
+            Managing members (npm team)
+          </li>
+          <li>
+            Managing packages (npm access)
+          </li>
+          <li>
+            Unlimited Public Packages
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.panel .list-checked {
+  list-style: none;
+  padding-left: 20px;
+  line-height: 1.7em;
+
+  > li:before {
+    font-family: 'FontAwesome';
+    // Font Awesome unicode for fa-check
+    content: '\f00c';
+    margin: 0 10px 0 -9px;
+    color: $success-4;
+  }
+}
