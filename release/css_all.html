@@ -487,6 +487,50 @@ Wrap inputs in grid columns, or any custom parent element, to easily enforce des
   </div>
 </div>
 
+<h3 id="form_radio_group" class="styleguide">Radio Groups</h3>
+<p class="styleguide">Radios are for selecting one option from many.</p><div class="codeExample">
+  <div class="exampleOutput"><h6 class="phm">Choose your Plan</h6>
+<form class="styleguide-form radio-box pvn phn" role="form">
+  <div class="radio pbn mtxl mhxl">
+    <label>
+      <input id="optionsRadios1" name="optionsRadios" type="radio" value="option1" checked="checked">
+      Option one is this and that&mdash;be sure to include why it's great
+    </label>
+  </div>
+  <hr class="divider-alternate-1"/>
+  <div class="radio ptn mbxl mhxl">
+    <label>
+      <input id="optionsRadios2" name="optionsRadios" type="radio" value="option2">
+      Option two can be something else and selecting it will deselect option one
+    </label>
+  </div>
+</form>
+</div>
+  <div class="codeBlock" aria-hidden="true">
+    <div class="highlight" data-code-to-copy>
+      <pre><span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"phm"</span><span class="nt">&gt;</span>Choose your Plan<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"styleguide-form radio-box pvn phn"</span> <span class="na">role=</span><span class="s">"form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio pbn mtxl mhxl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked=</span><span class="s">"checked"</span><span class="nt">&gt;</span>
+      Option one is this and that<span class="ni">&amp;mdash;</span>be sure to include why it's great
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"divider-alternate-1"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio ptn mbxl mhxl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
+      Option two can be something else and selecting it will deselect option one
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+    <button class="btn btn-default btn-copy" data-btn-copy data-placement="left">
+      Copy
+    </button>
+  </div>
+</div>
+
 <h2 id="form_disabled_controls" class="styleguide">Disabled Controls</h2>
 <p class="styleguide">Controls will occasionally need to be disabled.
 You can do that by adding the <code class="styleguide">disabled</code> attribute.
@@ -24859,6 +24903,7 @@ For example, <code class="styleguide">.media-stackable-xs</code> is stacked on s
   <li><a href="#01_meta_expandable_sidebar">Expandable Sidebar Component</a></li>
   <li><a href="#02_meta_need_help_orgs">Need Help Orgs Module</a></li>
   <li><a href="#orgs_features">Orgs Features</a></li>
+  <li><a href="#meta_sidebar_list">Sidebar Checklist</a></li>
 </ul>
 <p class="styleguide">This section is for all of the meta components that we will be using throughout the site. More often than not, they&#39;re examples for code that will need to be reused, but will not necessarily be components to use in and of themselves. They are meta components, composed by other components.</p><p class="styleguide">It&#39;s super meta.</p>
 <h2 id="00_meta_sidebar" class="styleguide">Sidebar Component</h2>
@@ -25219,6 +25264,62 @@ For example, <code class="styleguide">.media-stackable-xs</code> is stacked on s
 </span></pre>
   </div>
 </div>
+<h2 id="meta_sidebar_list" class="styleguide">Sidebar Checklist</h2>
+<p class="styleguide">Replaces the default bullet image with the font awesome checkmark.</p><div class="codeExample">
+  <div class="exampleOutput"><div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-basic-alt ptxl pbs phxl">
+    <div class="row pbl ptl txt-c">
+      <span class="phl type-neutral-2 h5 pbl pts">Both plans include</span>
+    </div>
+      <div class="row">
+        <ul class="list-checked pbs">
+          <li>
+            Managing members (npm team)
+          </li>
+          <li>
+            Managing packages (npm access)
+          </li>
+          <li>
+            Unlimited Public Packages
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <div class="codeBlock" aria-hidden="true">
+    <div class="highlight" data-code-to-copy>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-basic-alt ptxl pbs phxl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row pbl ptl txt-c"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"phl type-neutral-2 h5 pbl pts"</span><span class="nt">&gt;</span>Both plans include<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-checked pbs"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            Managing members (npm team)
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            Managing packages (npm access)
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            Unlimited Public Packages
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+    <button class="btn btn-default btn-copy" data-btn-copy data-placement="left">
+      Copy
+    </button>
+  </div>
+</div>
+
 <h2 id="orgs_features" class="styleguide">Orgs Features</h2>
 
 <style>

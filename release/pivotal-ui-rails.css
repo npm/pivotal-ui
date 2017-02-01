@@ -9347,6 +9347,38 @@ input[type="radio"] {
 
 /*doc
 ---
+title: Radio Groups
+name: form_radio_group
+parent: form_checkboxes
+---
+Radios are for selecting one option from many.
+
+```html_example
+<h6 class="phm">Choose your Plan</h6>
+<form class="styleguide-form radio-box pvn phn" role="form">
+  <div class="radio pbn mtxl mhxl">
+    <label>
+      <input id="optionsRadios1" name="optionsRadios" type="radio" value="option1" checked="checked">
+      Option one is this and that&mdash;be sure to include why it's great
+    </label>
+  </div>
+  <hr class="divider-alternate-1"/>
+  <div class="radio ptn mbxl mhxl">
+    <label>
+      <input id="optionsRadios2" name="optionsRadios" type="radio" value="option2">
+      Option two can be something else and selecting it will deselect option one
+    </label>
+  </div>
+</form>
+```
+
+*/
+.radio-box {
+  border-radius: 10px;
+  border: 1px solid #cccccc; }
+
+/*doc
+---
 title: Inline Checkboxes & Radios
 name: form_checkboxes_inline
 parent: form_checkboxes
@@ -25446,6 +25478,50 @@ Using the `fromPackage` helper:
 ```
 
 */
+/*doc
+---
+title: Sidebar Checklist
+name: meta_sidebar_list
+parent: meta
+---
+
+Replaces the default bullet image with the font awesome checkmark.
+
+```html_example
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-basic-alt ptxl pbs phxl">
+    <div class="row pbl ptl txt-c">
+      <span class="phl type-neutral-2 h5 pbl pts">Both plans include</span>
+    </div>
+      <div class="row">
+        <ul class="list-checked pbs">
+          <li>
+            Managing members (npm team)
+          </li>
+          <li>
+            Managing packages (npm access)
+          </li>
+          <li>
+            Unlimited Public Packages
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+.panel .list-checked {
+  list-style: none;
+  padding-left: 20px;
+  line-height: 1.7em; }
+  .panel .list-checked > li:before {
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin: 0 10px 0 -9px;
+    color: #7BCC1F; }
 
 /* ==========================================================================
   Browser support

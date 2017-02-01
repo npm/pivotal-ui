@@ -1952,6 +1952,7 @@ select.form-control.disabled,select.form-control:disabled{color:#404040}
 .select-fancy.disabled:hover{color:#ccc;background-color:#f2f2f2}
 .select-fancy.disabled:after{display:none}
 input[type=radio]{margin-top:2px}
+.radio-box{border-radius:10px;border:1px solid #ccc}
 .form-inline.inline-labels .form-group input,.form-inline.inline-labels .form-group select{width:auto!important}
 .has-success{position:relative}
 .has-success:before{content:"\f00c";display:block;position:absolute;bottom:0;right:0;height:39px;width:39px;line-height:39px;border-top-right-radius:10px;border-bottom-right-radius:10px;color:#025A53;font-family:FontAwesome;font-weight:400;font-style:normal;text-decoration:inherit;text-align:center}
@@ -2860,6 +2861,8 @@ a.link-text{font-weight:600}
 .marketing.modular-revolution .svg-container{bottom:90px}
 .marketing.modular-revolution .svg-container>svg{max-height:calc(100% - 180px)}}
 .need-help:not(.collapsed){display:none}
+.panel .list-checked{list-style:none;padding-left:20px;line-height:1.7em}
+.panel .list-checked>li:before{font-family:FontAwesome;content:'\f00c';margin:0 10px 0 -9px;color:#7BCC1F}
 .modal-open{overflow:hidden}
 .modal{display:none;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}
 .modal.fade .modal-dialog,.modal.modal-fade-enter .modal-dialog,.modal.modal-fade-leave .modal-dialog{-webkit-transform:translate(0,-25%);transform:translate(0,-25%);-webkit-transition:-webkit-transform .3s ease-out;transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out}

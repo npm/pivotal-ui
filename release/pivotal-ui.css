@@ -7014,6 +7014,10 @@ select.form-control {
 input[type="radio"] {
   margin-top: 2px; }
 
+.radio-box {
+  border-radius: 10px;
+  border: 1px solid #cccccc; }
+
 .form-inline.inline-labels .form-group input, .form-inline.inline-labels .form-group select {
   width: auto !important; }
 
@@ -11379,6 +11383,15 @@ a {
 .need-help:not(.collapsed) {
   display: none; }
 
+.panel .list-checked {
+  list-style: none;
+  padding-left: 20px;
+  line-height: 1.7em; }
+  .panel .list-checked > li:before {
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin: 0 10px 0 -9px;
+    color: #7BCC1F; }
 
 .modal-open {
   overflow: hidden; }
