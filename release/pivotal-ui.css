@@ -12449,6 +12449,43 @@ table.table-friendly {
 .tab-simple-small-screen .panel-body, .tab-simple-alt-small-screen .panel-body, .tab-left-small-screen .panel-body {
   padding: 15px; }
 
+.tab-old .nav-tabs {
+  border-bottom-color: #cccccc; }
+  .tab-old .nav-tabs li {
+    float: left;
+    position: relative;
+    text-align: center;
+    color: #ababab;
+    margin-bottom: 0; }
+    .tab-old .nav-tabs li > a {
+      color: inherit;
+      background: #f8f8f8;
+      width: 150px;
+      height: 40px;
+      padding: 0.5em 0;
+      margin-left: 5px;
+      border: 1px solid #cccccc;
+      border-bottom-color: transparent;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px; }
+    .tab-old .nav-tabs li.active > a {
+      color: #000000;
+      border-top: none;
+      background: transparent; }
+    .tab-old .nav-tabs li.active:after {
+      content: "\0020";
+      position: absolute;
+      bottom: 0;
+      background-color: #cb3837;
+      display: block;
+      bottom: auto;
+      top: 0;
+      left: 5px;
+      width: 150px;
+      height: 4px;
+      border: 1px solid #cb3837;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px; }
 
 .tile-layout {
   display: -webkit-box;
