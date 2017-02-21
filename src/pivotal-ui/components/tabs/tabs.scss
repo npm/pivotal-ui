@@ -604,3 +604,77 @@ Controls tabbed content via dropdown.
 [Find docs and code example in dropdowns.](/css_components_dropdowns.html#dropdown_dropdown_driven_tabs)
 
 */
+
+/*doc
+---
+title: Old Tabs
+name: 07_tab_old_tabs
+parent: tab
+---
+
+Tabs from the old npmjs.com design
+
+```html_example
+<div class="tab-old">
+  <ul role="navigation" class="nav nav-tabs">
+    <li><a href="#">210 packages</a></li>
+    <li><a href="#">3 teams</a></li>
+    <li><a href="#">22 members</a></li>
+    <li class="active" ><a href="#">billing</a></li>
+  </ul>
+</div>
+```
+
+*/
+
+.tab-old {
+  .nav-tabs {
+    border-bottom-color: $gray-8;
+
+    li {
+      float: left;
+      position: relative;
+      text-align: center;
+      color: #ababab;
+      margin-bottom: 0;
+
+      > a {
+        color: inherit;
+        background: #f8f8f8;
+        width: 150px;
+        height: 40px;
+        padding: 0.5em 0;
+        margin-left: 5px;
+        border: 1px solid $gray-8;
+        border-bottom-color: transparent;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+
+      &.active {
+
+        > a {
+          color: $gray-0;
+          border-top: none;
+          background: transparent;
+        }
+
+        &:after {
+          content: "\0020";
+          position: absolute;
+          bottom: 0;
+          background-color: #cb3837;
+          display: block;
+          bottom: auto;
+          top: 0;
+          left: 5px;
+          width: 150px;
+          height: 4px;
+          border: 1px solid #cb3837;
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+        }
+      }
+    }
+  }
+}
