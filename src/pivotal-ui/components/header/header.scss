@@ -98,6 +98,9 @@ header.hero-transparent + .pane {
   margin-top: -($header-height-max-sm);
   padding-top: $header-height-max-sm;
 }
+header.hero-transparent #site-search-container {
+  background-color: rgba(0,0,0,0.1);
+}
 header > .header-item {
   flex: 1 auto;
 }
@@ -129,13 +132,13 @@ header ul li {
 header a {
   color: $header-subtle-text-color;
   &:hover {
-    color: $header-text-color;
-    text-decoration: none;
-    transition: color 0.1s ease, background 0.1s ease;
+	color: $header-text-color;
+	text-decoration: none;
+	transition: color 0.1s ease, background 0.1s ease;
   }
 
   &.active {
-    color: currentColor;
+	color: currentColor;
   }
 }
 
@@ -170,27 +173,27 @@ header a {
 
 header {
   .drop-down-menu-section li {
-    border-bottom: 1px solid #808080;
+	border-bottom: 1px solid #808080;
   }
 
   .drop-down-menu-toggle,
   .drop-down-menu-section a,
   .drop-down-menu button,
   .drop-down-menu {
-    background-color: inherit;
-    color: inherit;
+	background-color: inherit;
+	color: inherit;
   }
 
   .drop-down-menu-toggle.toggle-is-open,
   .drop-down-menu {
-    background-color: $header-secondary;
+	background-color: $header-secondary;
   }
 
   .drop-down-menu-toggle::after {
-    display: none;
+	display: none;
   }
   .drop-down-menu-toggle.toggle-is-open svg {
-    transform: rotate(180deg);
+	transform: rotate(180deg);
   }
 
 }
@@ -219,7 +222,7 @@ header {
 .site-search input[type=search] {
   background-color: transparent;
   color: inherit;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 0;
   margin: 0 0 20px;
   padding: 5px;
@@ -237,10 +240,10 @@ header {
   width: 34px;
   padding: 6px;
   @media (min-width: $screen-sm-min) {
-    height: 48px;
-    width: 48px;
-    padding: 14px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+	height: 48px;
+	width: 48px;
+	padding: 14px;
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
   margin-bottom: 0px;
   border: 0;
@@ -310,150 +313,150 @@ header {
   color: $header-subtle-text-color;
 
   a {
-    color: $header-subtle-text-color;
-    text-decoration: none;
-    &:hover {
-      color: $gray-11;
-    }
+	color: $header-subtle-text-color;
+	text-decoration: none;
+	&:hover {
+	  color: $gray-11;
+	}
   }
 }
 
 
 @media (min-width: $screen-sm-min) {
   header {
-    max-height: initial;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    padding: 0 20px;
-    align-items: stretch;
+	max-height: initial;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	padding: 0 20px;
+	align-items: stretch;
   }
   header > .header-item {
-    flex-basis: auto;
-    flex-shrink: 0;
-    padding: 1.25em 0;
+	flex-basis: auto;
+	flex-shrink: 0;
+	padding: 1.25em 0;
   }
   header > .brand-container {
-    order: 1;
-    flex-grow: 0;
-    width: 125px;
+	order: 1;
+	flex-grow: 0;
+	width: 125px;
   }
   header > .header-search-container {
-    order: 2;
-    flex-grow: 1;
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+	order: 2;
+	flex-grow: 1;
+	width: auto;
+	padding-left: 20px;
+	padding-right: 20px;
   }
   header > .user-info-container {
-    order: 3;
-    flex-grow: 0;
-    width: auto;
-    min-width: 212px;
-    text-align: left;
+	order: 3;
+	flex-grow: 0;
+	width: auto;
+	min-width: 212px;
+	text-align: left;
   }
   header > .header-nav-menu-container {
-    order: 4;
-    flex-grow: 1;
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 -20px;
-    background-color: $npm-menu-red;
-    display: flex;
-    align-content: space-between;
-    align-items: center;
+	order: 4;
+	flex-grow: 1;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 -20px;
+	background-color: $npm-menu-red;
+	display: flex;
+	align-content: space-between;
+	align-items: center;
   }
   header > .header-nav-menu-container .npm-expansions,
   header > .header-nav-menu-container .nav-menu-container {
-    flex: 1 auto;
+	flex: 1 auto;
   }
   header > .header-nav-menu-container .npm-expansions {
-    flex-grow: 10;
+	flex-grow: 10;
   }
   header.hero-transparent + .pane {
-    margin-top: -6em;
-    padding-top: 6em;
+	margin-top: -6em;
+	padding-top: 6em;
   }
   header.anonymous .user-info-container {
-    width: auto;
-    min-width: auto;
+	width: auto;
+	min-width: auto;
   }
   header.anonymous .user-info-container,
   header.anonymous .user-info {
-    text-align: right;
+	text-align: right;
   }
   header.anonymous .header-nav-menu-container {
-    width: 100%;
+	width: 100%;
   }
   .header-nav-menu-container a {
-    font-size: 0.9em;
+	font-size: 0.9em;
   }
   .drop-down-menu-container {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
   }
   .nav-menu-container .drop-down-menu-container li a {
-    text-align: center;
+	text-align: center;
   }
   .nav-menu-container .drop-down-menu-container li a:hover {
-    background: header-nav-highlight-bg;
+	background: header-nav-highlight-bg;
   }
   .npm-expansions {
-    display: block;
+	display: block;
   }
   .nav-toggle {
-    display: none;
+	display: none;
   }
   .header-item .product-navigation,
   .header-item .product-navigation.hidden {
-    display: block !important;
-    position: static;
-    background-color: transparent;
-    border-radius: 0;
-    width: auto;
+	display: block !important;
+	position: static;
+	background-color: transparent;
+	border-radius: 0;
+	width: auto;
   }
   .header-item .products-list {
-    display: flex;
-    flex-direction: row;
-    align-content: flex-end;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-content: flex-end;
+	justify-content: center;
+	align-items: center;
   }
   .header-item .products-list li {
-    padding: 0 0 0 0.9375em;
-    border-bottom: 0;
-    flex: 1 auto;
+	padding: 0 0 0 0.9375em;
+	border-bottom: 0;
+	flex: 1 auto;
   }
   .header-item .products-list li a,
   .header-item .npm-expansions {
-    padding: 0.625em 0;
-    color: $header-subtle-text-color;
+	padding: 0.625em 0;
+	color: $header-subtle-text-color;
   }
   .header-item .products-list li a:hover,
   .npm-expansions:hover {
-    color: $header-text-color;
-    text-decoration: none;
+	color: $header-text-color;
+	text-decoration: none;
   }
   .logo-container {
-    width: 125px;
-    height: 50px;
+	width: 125px;
+	height: 50px;
   }
   .site-search input[type="search"] {
-    height: 3.125em;
-    margin: 0;
+	height: 3.125em;
+	margin: 0;
   }
   .site-search input[type="submit"] {
-    width: 70px;
-    height: 2.777em;
-    border-left: 1px solid rgba(255,255,255,0.2);
-    text-indent: -9999em;
-    background-position: 50% 50%;
-    background-size: 16px 16px;
+	width: 70px;
+	height: 2.777em;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	text-indent: -9999em;
+	background-position: 50% 50%;
+	background-size: 16px 16px;
   }
   .site-search input[type="submit"]:focus {
-    border: 1px solid rgba(255,255,255,0.8);
+	border: 1px solid rgba(255,255,255,0.8);
   }
   .logged-in .user-info-salutation {
-    display: inline-block;
+	display: inline-block;
   }
 }
 
@@ -491,74 +494,74 @@ header.header-light {
   border-bottom: 0;
 
   a, button {
-    color: $npm-brand;
+	color: $npm-brand;
   }
 
   .header-item .products-list li a:hover,
   .npm-expansions:hover {
-    color: $neutral-11;
+	color: $neutral-11;
   }
 
   > .user-info-container {
-    color: $text-color;
+	color: $text-color;
   }
 
   .site-search input[type=search] {
-    border: 1px solid $gray-8;
+	border: 1px solid $gray-8;
   }
   .site-search input[type=submit] {
-    color: inherit;
+	color: inherit;
   }
 
   .drop-down-menu-toggle {
-    border: 1px solid transparent; // To avoid layout jank when the border shows on open
+	border: 1px solid transparent; // To avoid layout jank when the border shows on open
   }
 
   .drop-down-menu-toggle:hover,
   .drop-down-menu-toggle:focus,
   .drop-down-menu-toggle.toggle-is-open,
   .drop-down-menu-section li:hover {
-    color: $link-color;
-    transition: color 0.1s ease;
+	color: $link-color;
+	transition: color 0.1s ease;
   }
 
   .drop-down-menu a:hover,
   .drop-down-menu button:hover {
-    color: darken($link-color, 25%);
+	color: darken($link-color, 25%);
   }
 
   .drop-down-menu-toggle:hover,
   .drop-down-menu-toggle:focus,
   .drop-down-menu-toggle.toggle-is-open,
   .drop-down-menu {
-    box-shadow: 0 3px 5px $gray-8;
-    border: 1px solid $gray-8;
-    background-color: inherit;
+	box-shadow: 0 3px 5px $gray-8;
+	border: 1px solid $gray-8;
+	background-color: inherit;
   }
 
   .drop-down-menu {
-    background-color: white;
-    @media (min-width: $screen-sm-min) {
-      border: none;
-    }
+	background-color: white;
+	@media (min-width: $screen-sm-min) {
+	  border: none;
+	}
 
   }
   .drop-down-menu-section li {
-    border-bottom: 1px solid $gray-8;
-    @media (min-width: $screen-sm-min) {
-      border: 1px solid $gray-8;
-    }
+	border-bottom: 1px solid $gray-8;
+	@media (min-width: $screen-sm-min) {
+	  border: 1px solid $gray-8;
+	}
   }
 
   @media (min-width: $screen-sm-min) {
-    .product-navigation {
-      box-shadow: none;
-      border: none;
-      background-color: transparent;
-      .drop-down-menu-section li {
-        border: none;
-      }
-    }
+	.product-navigation {
+	  box-shadow: none;
+	  border: none;
+	  background-color: transparent;
+	  .drop-down-menu-section li {
+		border: none;
+	  }
+	}
   }
 }
 
@@ -577,44 +580,44 @@ View the [enterprise header on its own page](/header-enterprise.html) to see mob
 
 header.header-enterprise {
   .header-nav-menu-container {
-    @media (max-width: $screen-xxs-max) {
-      order: 2;
-    }
+	@media (max-width: $screen-xxs-max) {
+	  order: 2;
+	}
   }
 
   .brand-container,
   .logo-container {
-    width: auto;
+	width: auto;
   }
   .brand-container {
-    flex-grow: 0;
-    padding-right: 1em;
-    display: flex;
-    align-items: center;;
-    @media (max-width: $screen-xxs-max) {
-      margin-bottom: 10px
-    }
+	flex-grow: 0;
+	padding-right: 1em;
+	display: flex;
+	align-items: center;;
+	@media (max-width: $screen-xxs-max) {
+	  margin-bottom: 10px
+	}
   }
 
   .header-search-container {
-    flex-grow: 1;
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-    }
+	flex-grow: 1;
+	@media (max-width: $screen-xs-max) {
+	  width: 100%;
+	}
   }
 
   .header-drop-down-icon {
-    font-size: 54px;
+	font-size: 54px;
   }
 
   .logo-container svg {
-    width: 5em;
-    vertical-align: middle;
+	width: 5em;
+	vertical-align: middle;
   }
 
   .cobrand {
-    @media (max-width: $screen-xxs-max) {
-      display: none;
-    }
+	@media (max-width: $screen-xxs-max) {
+	  display: none;
+	}
   }
 }
