@@ -14023,6 +14023,9 @@ header > .header-nav-menu-container {
   width: 60px;
   text-align: right; }
 
+header.hero-transparent #site-search-container {
+  background-color: rgba(0, 0, 0, 0.1); }
+
 header ul,
 header li,
 header ul li {

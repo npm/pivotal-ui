@@ -3573,6 +3573,7 @@ header>.brand-container{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;wid
 header>.header-search-container{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}
 header>.user-info-container{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2;width:calc(50% - 60px);text-align:right}
 header>.header-nav-menu-container{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;width:60px;text-align:right}
+header.hero-transparent #site-search-container{background-color:rgba(0,0,0,.1)}
 header li,header ul,header ul li{list-style:none;padding:0;margin:0}
 header a{color:rgba(255,255,255,.8)}
 header a:hover{color:#fff;text-decoration:none;-webkit-transition:color .1s ease,background .1s ease;transition:color .1s ease,background .1s ease}
