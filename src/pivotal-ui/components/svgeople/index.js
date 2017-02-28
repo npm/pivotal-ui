@@ -141,8 +141,10 @@ SVGeople.prototype.changePeopleShown = function(number) {
 $(function() {
   var el = $('.svgeople');
 
-  var svgeople = new SVGeople(el);
-  svgeople.populate();
+  $.each(el, function(idx, el) {
+    var svgeople = new SVGeople(el);
+    svgeople.populate();
+  });
 
   /**
    * This is a tie in to the formstepper currently. It's a one-way dependency that is
