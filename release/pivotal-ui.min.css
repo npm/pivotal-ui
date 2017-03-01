@@ -3118,6 +3118,11 @@ table.table-friendly>tfoot,table.table-friendly>thead{background-color:#f2f2f2}
 .tab-old .nav-tabs li>a{color:inherit;background:#f8f8f8;width:150px;height:40px;padding:.5em 0;margin-left:5px;border:1px solid #ccc;border-bottom-color:transparent;border-top-left-radius:2px;border-top-right-radius:2px}
 .tab-old .nav-tabs li.active>a{color:#000;border-top:none;background:0 0}
 .tab-old .nav-tabs li.active:after{content:"\0020";position:absolute;background-color:#cb3837;display:block;bottom:auto;top:0;left:5px;width:150px;height:4px;border:1px solid #cb3837;border-top-left-radius:2px;border-top-right-radius:2px}
+.tab-old-simple{border-bottom:1px solid #ddd;text-align:center}
+.tab-old-simple .nav-tabs{display:inline-block;border-bottom:0;max-width:1180px;margin:0 auto}
+.tab-old-simple .nav-tabs>li{margin:0 30px -4px 0}
+.tab-old-simple .nav-tabs>li>a{color:rgba(0,0,0,.4);padding:.98125em 0}
+.tab-old-simple .nav-tabs>li.active>a{color:rgba(0,0,0,.8);background-color:transparent;border:0;border-bottom:2px solid #cb3837}
 .tile-layout{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap}
 .tile-layout .tile-item{display:-webkit-box;display:-ms-flexbox;display:flex;box-sizing:border-box}
 .tile-layout .tile-item>*{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}

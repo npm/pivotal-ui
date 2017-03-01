@@ -12487,6 +12487,29 @@ table.table-friendly {
       border-top-left-radius: 2px;
       border-top-right-radius: 2px; }
 
+.tab-old-simple {
+  border-bottom: 1px solid #ddd;
+  text-align: center; }
+
+.tab-old-simple .nav-tabs {
+  display: inline-block;
+  border-bottom: 0;
+  max-width: 1180px;
+  margin: 0 auto; }
+
+.tab-old-simple .nav-tabs > li {
+  margin: 0 30px -4px 0; }
+
+.tab-old-simple .nav-tabs > li > a {
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0.98125em 0px; }
+
+.tab-old-simple .nav-tabs > li.active > a {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #cb3837; }
+
 .tile-layout {
   display: -webkit-box;
   display: -ms-flexbox;

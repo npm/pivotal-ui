@@ -1,10 +1,10 @@
-<a name="8.3.2"></a>
-## 8.3.2 (2017-02-28)
+<a name="8.4.0"></a>
+# 8.4.0 (2017-03-01)
 
 
-### Bug Fixes
+### Features
 
-* **svgeople:** let's make this not fire unless svgeople is on the page ([cda110d](https://github.com/pivotal-cf/pivotal-ui/commit/cda110d))
+* **tabs:** tabs-old-simple ([75f3ee5](https://github.com/pivotal-cf/pivotal-ui/commit/75f3ee5))
 
 
 
