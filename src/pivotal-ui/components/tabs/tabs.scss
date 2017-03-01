@@ -678,3 +678,53 @@ Tabs from the old npmjs.com design
     }
   }
 }
+
+/*doc
+---
+title: Old Simple Tabs
+name: 07_tab_old_simple_tabs
+parent: tab
+---
+
+Simpler tabs from the old npmjs.com design
+
+```html_example
+<div class="tab-old-simple">
+  <ul role="navigation" class="nav nav-tabs">
+    <li><a href="#">210 packages</a></li>
+    <li><a href="#">3 teams</a></li>
+    <li><a href="#">22 members</a></li>
+    <li class="active" ><a href="#">billing</a></li>
+  </ul>
+</div>
+```
+
+*/
+
+.tab-old-simple {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.tab-old-simple .nav-tabs {
+  display: inline-block;
+  border-bottom: 0;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.tab-old-simple .nav-tabs > li {
+  margin: 0 30px -4px 0;
+}
+
+.tab-old-simple .nav-tabs > li > a {
+  color: rgba(0,0,0,0.4);
+  padding: 0.98125em 0px;
+}
+
+.tab-old-simple .nav-tabs > li.active > a {
+  color: rgba(0,0,0,0.8);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #cb3837;
+}
