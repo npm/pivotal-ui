@@ -216,7 +216,10 @@
     "pui-update": "scripts/pui-update.js",
     "dev": "gulp dev",
     "build-monolith": "gulp monolith-build-css-from-scratch",
-    "postinstall": "bundle install && gulp monolith"
+    "postinstall": "bundle install && gulp monolith",
+    "release-prepare": "gulp release-prepare",
+    "release-commit": "gulp release-commit",
+    "release-push": "gulp release-push"
   },
   "repository": {
     "type": "git",
