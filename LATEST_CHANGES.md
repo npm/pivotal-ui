@@ -1,10 +1,10 @@
-<a name="8.4.0"></a>
-# 8.4.0 (2017-03-01)
+<a name="8.4.1"></a>
+## 8.4.1 (2017-03-14)
 
 
-### Features
+### Bug Fixes
 
-* **tabs:** tabs-old-simple ([75f3ee5](https://github.com/pivotal-cf/pivotal-ui/commit/75f3ee5))
+* **svgeople:** context matters ([0e421c8](https://github.com/pivotal-cf/pivotal-ui/commit/0e421c8))
 
 
 
