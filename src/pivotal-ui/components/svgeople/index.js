@@ -144,15 +144,15 @@ $(function() {
   $.each(el, function(idx, el) {
     var svgeople = new SVGeople(el);
     svgeople.populate();
-  });
 
-  /**
-   * This is a tie in to the formstepper currently. It's a one-way dependency that is
-   * included in the require at the top of this file to force builds to respect
-   * it in browserify/webpack
-   */
-  $(document).on("FormStepper:changed", function(e, number) {
-    svgeople.changePeopleShown(number);
+    /**
+     * This is a tie in to the formstepper currently. It's a one-way dependency that is
+     * included in the require at the top of this file to force builds to respect
+     * it in browserify/webpack
+     */
+    $(document).on("FormStepper:changed", function(e, number) {
+      svgeople.changePeopleShown(number);
+    });
   });
 });
 
