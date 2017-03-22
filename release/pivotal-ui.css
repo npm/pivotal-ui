@@ -6378,6 +6378,9 @@ small,
 .type-gigantic {
   font-size: 71px; }
 
+.type-base {
+  font-size: 16px; }
+
 .em-low {
   font-weight: 300 !important; }
 

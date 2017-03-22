@@ -1,10 +1,10 @@
 {
-  "version": "6.4.0",
+  "version": "8.5.0",
   "description": "A React component for showing a dynamically growing list of items",
   "homepage": "http://styleguide.pivotal.io/react.html#12_list_stream_react",
   "dependencies": {
-    "@npmcorp/pui-react-buttons": "6.4.0",
-    "@npmcorp/pui-react-lists": "6.4.0",
+    "@npmcorp/pui-react-buttons": "8.5.0",
+    "@npmcorp/pui-react-lists": "8.5.0",
     "pui-react-animation": "^0.0.7"
   }
 }

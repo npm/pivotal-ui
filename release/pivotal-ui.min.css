@@ -1764,6 +1764,7 @@ td.visible-print,th.visible-print{display:table-cell!important}}
 .type-terms,.type-xs{font-size:12px}
 .title{font-size:48px}
 .type-gigantic{font-size:71px}
+.type-base{font-size:16px}
 .em-low{font-weight:300!important}
 .em-default{font-weight:400!important}
 .em-medium{font-weight:600!important}

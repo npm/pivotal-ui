@@ -1,7 +1,7 @@
 {
   "homepage": "http://styleguide.pivotal.io/elements.html#iconography_spinner",
   "dependencies": {
-    "@npmcorp/pui-css-iconography": "6.4.0"
+    "@npmcorp/pui-css-iconography": "8.5.0"
   },
-  "version": "6.4.0"
+  "version": "8.5.0"
 }
