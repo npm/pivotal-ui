@@ -7,7 +7,8 @@ const globPromise = promisify(require('glob'));
 let exec = promisify(require('child_process').exec);
 
 export function getTagFromTagString(tagString) {
-  return tagString.split('-').slice(0, -2).join('-');
+  // should handle values like `v5.1.1\n` or `v2.0.0-alpha.4-7-gc936d0b`
+  return tagString.trim().split('-').slice(0, 2).join('-');
 }
 
 export function isBlank(string) {
@@ -21,7 +22,8 @@ export function getPathsFromDiff(diff) {
 }
 
 export async function getLastTag() {
-  const tagString = await exec('git fetch && git describe --tags origin/master');
+  await exec('git fetch');
+  const tagString = await exec('git describe --tags origin/master');
   return getTagFromTagString(tagString);
 }
 
