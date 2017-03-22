@@ -73,6 +73,8 @@ Set font sizes using headings and modifier classes.
 
 <p>base font size 16px</p>
 
+<h1 class="type-base">base font size 16px</h1>
+
 <p class="type-sm">small text 13px</p>
 
 <p class="type-xs">extra small text 12px</p>
@@ -187,6 +189,10 @@ small,
 
 .type-gigantic {
   font-size: $font-size-gigantic;
+}
+
+.type-base {
+  font-size: $font-size-base;
 }
 
 /*doc
